@@ -1,5 +1,5 @@
 library(testthat)
 library(checkr)
-library(dttr)
+library(dttr2)
 
-test_check("dttr")
+test_check("dttr2")
