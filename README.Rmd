@@ -22,15 +22,13 @@ knitr::opts_chunk$set(
 
 # dttr2
 
-`dttr2` (Dates, Times and a TimeR) is an R package to manipulate date (Date), date time (POSIXct) and time (hms) vectors.
-It provides functions to perform simple conversions and manipulations.
-It also provides a timer.
+`dttr2` (Dates, Times and a TimeR) is an R package to manipulate date (Date), datetime (POSIXct) and time (hms) vectors which it collectively refers to as date/time vectors.
 
 Key design principles include
 
 1. use existing classes
-2. date times are discrete
-3. floor date times
+2. date/times are discrete
+3. floor date/times
 4. wrap times
 5. keep the same time zone
 6. use a default origin
@@ -58,7 +56,7 @@ devtools::install_github("poissonconsulting/dttr2")
 
 ### Time Units
 
-`dttr2` floors any objects it encounters to the nearest time unit (days for Date and seconds for POSIXct and hms).
+`dttr2` floors any date/time objects it encounters to the nearest time unit (days for Date and seconds for POSIXct and hms).
 
 ```{r}
 library(dttr2)
@@ -123,28 +121,6 @@ date
 time <- dtt_time(date_time)
 time
 dtt_date_time(date, time)
-```
-
-### Timer
-
-An timer is a hms scalar with a start attribute indicating the time in seconds since 1970-01-01 00:00:00 GMT when it started.
-`dtt_elapsed()` returns the duration for which the timer has been
-running (see below).
-
-```{r}
-timer <- dtt_timer(start = TRUE)
-dtt_elapsed(timer)
-Sys.sleep(1)
-dtt_elapsed(timer)
-Sys.sleep(1)
-dtt_elapsed(timer)
-timer <- dtt_stop(timer)
-dtt_elapsed(timer)
-Sys.sleep(1)
-dtt_elapsed(timer)
-timer <- dtt_start(timer)
-Sys.sleep(1)
-dtt_elapsed(timer)
 ```
 
 ## Inspiration
