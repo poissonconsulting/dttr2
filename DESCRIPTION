@@ -1,0 +1,25 @@
+Package: dttr2
+Title: Dates, Times and DateTimes 
+Version: 0.0.0.9000
+Authors@R: 
+  person("Joe", "Thorley", email = "joe@poissonconsulting.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592"))
+Description: Simple manipulations and conversions for date (Date), date time (POSIXct) 
+    and time (hms) objects.
+    As well as functions to get, set, add and subtract time units it includes 
+    functions to floor objects, set or adjust time zones and complete sequences. 
+    It also provides a timer.
+License: MIT + file LICENSE
+Depends: R (>= 3.4.0)
+Imports: 
+    checkr,
+    hms (>= 0.4.2.9003)
+Suggests: 
+    testthat,
+    covr
+Remotes:
+    tidyverse/hms
+URL: https://github.com/poissonconsulting/dttr
+BugReports: https://github.com/poissonconsulting/dttr/issues
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
