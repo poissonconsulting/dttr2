@@ -12,11 +12,9 @@
 \usage{
 dtt_date_time(x, ...)
 
-\method{dtt_date_time}{integer}(x, tz = dtt_default_tz(),
-  origin = as.POSIXct("1970-01-01", tz = "GMT"), ...)
+\method{dtt_date_time}{integer}(x, tz = dtt_default_tz(), ...)
 
-\method{dtt_date_time}{double}(x, tz = dtt_default_tz(),
-  origin = as.POSIXct("1970-01-01", tz = "GMT"), ...)
+\method{dtt_date_time}{double}(x, tz = dtt_default_tz(), ...)
 
 \method{dtt_date_time}{character}(x, tz = dtt_default_tz(), ...)
 
@@ -34,8 +32,6 @@ dtt_date_time(x, ...)
 \item{...}{Unused.}
 
 \item{tz}{A string of the time zone.}
-
-\item{origin}{A POSIXct vector of the start date time.}
 
 \item{time}{A hms vector of the time.}
 
@@ -66,8 +62,6 @@ Coerces vectors to floored POSIXct vectors.
 dtt_date_time(1L)
 dtt_date_time(-1)
 dtt_date_time(1, tz = "Etc/GMT+8")
-dtt_date_time(1, origin = as.POSIXct("1970-01-01", tz = "Etc/GMT+8"))
-dtt_date_time(1, tz = "Etc/GMT+8", origin = as.POSIXct("1970-01-01", tz = "Etc/GMT+8"))
 dtt_date_time(as.Date("2000-01-02"))
 dtt_date_time(as.Date("2000-01-02"), time = hms::as_hms("04:05:06"))
 }

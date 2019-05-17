@@ -12,9 +12,9 @@
 \usage{
 dtt_date(x, ...)
 
-\method{dtt_date}{integer}(x, origin = as.Date("1970-01-01"), ...)
+\method{dtt_date}{integer}(x, ...)
 
-\method{dtt_date}{double}(x, origin = as.Date("1970-01-01"), ...)
+\method{dtt_date}{double}(x, ...)
 
 \method{dtt_date}{character}(x, ...)
 
@@ -22,14 +22,12 @@ dtt_date(x, ...)
 
 \method{dtt_date}{POSIXct}(x, ...)
 
-\method{dtt_date}{hms}(x, origin = as.Date("1970-01-01"), ...)
+\method{dtt_date}{hms}(x, ...)
 }
 \arguments{
 \item{x}{A vector.}
 
 \item{...}{Unused.}
-
-\item{origin}{A Date vector of the start date.}
 }
 \value{
 A floored Date vector.
@@ -55,7 +53,6 @@ Coerces vectors to floored Date vectors.
 \examples{
 dtt_date(1L)
 dtt_date(-1)
-dtt_date(1:2, origin = as.Date(c("1970-01-01", "2000-01-02")))
 dtt_date("2000-01-01")
 as.Date(as.POSIXct("2019-05-01", tz = "Etc/GMT-8"))
 dtt_date(as.POSIXct("2019-05-01", tz = "Etc/GMT-8"))

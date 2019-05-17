@@ -6,8 +6,8 @@ test_that("date.integer", {
   expect_identical(as.integer(as.Date("1970-01-01")), 0L)
   expect_identical(dtt_date(0L), as.Date("1970-01-01"))
   expect_identical(dtt_date(c(2L, NA)), as.Date(c("1970-01-03", NA)))
-  expect_identical(dtt_date(1:2, origin = as.Date(c("1970-01-01", "1971-01-01"))), 
-                   as.Date(c("1970-01-02", "1971-01-03")))
+  expect_identical(dtt_date(1:2), 
+                   as.Date(c("1970-01-02", "1970-01-03")))
 })
 
 test_that("date.double", {
@@ -16,8 +16,8 @@ test_that("date.double", {
   expect_identical(dtt_date(1.999), dtt_date(1L))
   expect_identical(dtt_date(-1.999), dtt_date(-2L))
   expect_identical(dtt_date(c(2, NA)), as.Date(c("1970-01-03", NA)))
-  expect_identical(dtt_date(c(1, 2), origin = as.Date(c("1970-01-01", "1971-01-01"))), 
-                   as.Date(c("1970-01-02", "1971-01-03")))
+  expect_identical(dtt_date(c(1, 2)), 
+                   as.Date(c("1970-01-02", "1970-01-03")))
 })
 
 test_that("date.character", {
@@ -60,8 +60,8 @@ test_that("date.hms", {
   expect_identical(dtt_date(hms::as_hms(-1L)), as.Date("1969-12-31"))
   expect_identical(dtt_date(hms::as_hms(-dtt_units_per_unit())), as.Date("1969-12-31"))
   expect_identical(dtt_date(hms::as_hms(-dtt_units_per_unit()-1)), as.Date("1969-12-30"))
-  expect_identical(dtt_date(hms::as_hms(-1:0), origin = as.Date(c("1970-01-01", "1971-01-01"))), 
-                   as.Date(c("1969-12-31", "1971-01-01")))
+  expect_identical(dtt_date(hms::as_hms(-1:0)), 
+                   as.Date(c("1969-12-31", "1970-01-01")))
   expect_identical(dtt_date(hms::as_hms(c(-1L, NA))), as.Date(c("1969-12-31", NA)))
 })
 

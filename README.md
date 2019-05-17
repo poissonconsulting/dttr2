@@ -1,6 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<!-- badges: start -->
+
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis build
 status](https://travis-ci.com/poissonconsulting/dttr2.svg?branch=master)](https://travis-ci.com/poissonconsulting/dttr2)
@@ -11,22 +13,24 @@ status](https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/dttr2)](https://cran.r-project.org/package=dttr2)
+<!-- badges: end -->
 
 # dttr2
 
-`dttr2` (Dates, Times and a TimeR) is an R package to manipulate date
-(Date), date time (POSIXct) and time (hms) vectors. It provides
-functions to perform simple conversions and manipulations. It also
-provides a timer.
+`dttr2` (Dates, Times and dateTimes in R) is a light-weight R package to
+perform simple manipulations on date (Date), datetime (POSIXct) and time
+(hms) vectors (collectively referred to as date/times).
 
 Key design principles include
 
-1.  use existing classes
-2.  date times are discrete
-3.  floor date times
-4.  wrap times
-5.  keep the same time zone
-6.  use a default origin
+1.  use existing classes (Date, POSIXct, hms)
+2.  date/times are discrete (floor when encountered)
+3.  times are times (wrap when encountered)
+4.  maintain the current timezone (principle of least astonishment)
+5.  the origin is always assumed to be 1970-01-01 UTC (keep it simple)
+6.  minimize the number of dependencies
+
+`dttr` has not yet been optimized for speed.
 
 ## Installation
 
@@ -51,11 +55,15 @@ To install the latest development version from
 
 ### Time Units
 
-`dttr2` floors any objects it encounters to the nearest time unit (days
-for Date and seconds for POSIXct and hms).
+`dttr2` floors any date/time objects it encounters to the nearest time
+unit (days for Date and seconds for POSIXct and hms).
 
 ``` r
 library(dttr2)
+#> Registered S3 methods overwritten by 'dttr2':
+#>   method    from
+#>   c.POSIXct base
+#>   c.hms     hms
 date <- as.Date(1.75, origin = "1970-01-01")
 date
 #> [1] "1970-01-02"
@@ -147,37 +155,11 @@ dtt_date_time(date, time)
 #> [1] "1970-01-01 03:00:00 -10"
 ```
 
-### Timer
-
-An timer is a hms scalar with a start attribute indicating the time in
-seconds since 1970-01-01 00:00:00 GMT when it started. `dtt_elapsed()`
-returns the duration for which the timer has been running (see below).
-
-``` r
-timer <- dtt_timer(start = TRUE)
-dtt_elapsed(timer)
-#> 00:00:00
-Sys.sleep(1)
-dtt_elapsed(timer)
-#> 00:00:01
-Sys.sleep(1)
-dtt_elapsed(timer)
-#> 00:00:02
-timer <- dtt_stop(timer)
-dtt_elapsed(timer)
-#> 00:00:02
-Sys.sleep(1)
-dtt_elapsed(timer)
-#> 00:00:02
-timer <- dtt_start(timer)
-Sys.sleep(1)
-dtt_elapsed(timer)
-#> 00:00:03
-```
-
 ## Inspiration
 
-[lubridate](https://lubridate.tidyverse.org)
+dttr2 was influenced by [lubridate](https://lubridate.tidyverse.org). It
+aims to provide a more light-weight alternative for simple
+manipulations.
 
 ## Contribution
 
