@@ -60,7 +60,7 @@ dtt_hour.hms <- function(x, ...) {
   tz <- dtt_tz(x)
   x <- as.POSIXlt(x, tz = tz)
   x$hour <- value
-  as.POSIXct(x, tz = tz)
+  as.POSIXct(format(x), tz = tz)
 }
 
 #' @describeIn dtt_hour Set hour values for a hms vector

@@ -61,5 +61,5 @@ dtt_month.POSIXct <- function(x, ...) {
   tz <- dtt_tz(x)
   x <- as.POSIXlt(x, tz = tz)
   x$mon <- value - 1L
-  as.POSIXct(x, tz = tz)
+  as.POSIXct(format(x), tz = tz)
 }

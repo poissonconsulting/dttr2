@@ -60,7 +60,7 @@ dtt_second.hms <- function(x, ...) {
   tz <- dtt_tz(x)
   x <- as.POSIXlt(x, tz = tz)
   x$sec <- value
-  as.POSIXct(x, tz = tz)
+  as.POSIXct(format(x), tz = tz)
 }
 
 #' @describeIn dtt_second Set second values for a hms vector

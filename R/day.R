@@ -61,5 +61,5 @@ dtt_day.POSIXct <- function(x, ...) {
   tz <- dtt_tz(x)
   x <- as.POSIXlt(x, tz = tz)
   x$mday <- value
-  as.POSIXct(x, tz = tz)
+  as.POSIXct(format(x), tz = tz)
 }
