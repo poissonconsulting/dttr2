@@ -30,8 +30,6 @@ Key design principles include
 5.  the origin is always assumed to be 1970-01-01 UTC (keep it simple)
 6.  minimize the number of dependencies
 
-`dttr` has not yet been optimized for speed.
-
 ## Installation
 
 To install the latest development version from the Poisson drat
@@ -56,7 +54,7 @@ To install the latest development version from
 ### Time Units
 
 `dttr2` floors any date/time objects it encounters to the nearest time
-unit (days for Date and seconds for POSIXct and hms).
+unit (by default days for Date and seconds for POSIXct and hms).
 
 ``` r
 library(dttr2)
