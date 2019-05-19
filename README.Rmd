@@ -33,7 +33,6 @@ Key design principles include
 3. times are times (wrap when encountered)
 4. maintain the current timezone (principle of least astonishment)
 5. the origin is always assumed to be 1970-01-01 UTC (keep it simple)
-6. minimize the number of dependencies
 
 ## Installation
 

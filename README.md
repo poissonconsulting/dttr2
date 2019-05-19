@@ -28,7 +28,6 @@ Key design principles include
 3.  times are times (wrap when encountered)
 4.  maintain the current timezone (principle of least astonishment)
 5.  the origin is always assumed to be 1970-01-01 UTC (keep it simple)
-6.  minimize the number of dependencies
 
 ## Installation
 
@@ -58,10 +57,6 @@ unit (by default days for Date and seconds for POSIXct and hms).
 
 ``` r
 library(dttr2)
-#> Registered S3 methods overwritten by 'dttr2':
-#>   method    from
-#>   c.POSIXct base
-#>   c.hms     hms
 date <- as.Date(1.75, origin = "1970-01-01")
 date
 #> [1] "1970-01-02"
