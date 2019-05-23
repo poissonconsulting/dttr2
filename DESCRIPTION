@@ -11,6 +11,9 @@ License: MIT + file LICENSE
 Depends: R (>= 3.4.0)
 Imports: 
     checkr,
+    pkgconfig,
+    rlang, 
+    vctrs,
     hms (>= 0.4.2.9003)
 Suggests: 
     testthat,
