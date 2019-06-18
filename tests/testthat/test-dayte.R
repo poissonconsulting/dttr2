@@ -23,13 +23,13 @@ test_that("dayte.Date with start and leap year", {
   expect_identical(dtt_dayte(more_dates, start_month = 2L, start_day = 27L), 
                    as.Date(c("1972-02-27", "1972-02-28", "1972-02-29", "1972-03-01", "1972-03-02")))
   expect_identical(dtt_dayte(more_dates, start_month = 2L, start_day = 28L), 
-                  as.Date(c("1971-02-27", "1972-02-28", "1972-02-29", "1972-03-01", "1972-03-02")))
+                  as.Date(c("1973-02-27", "1972-02-28", "1972-02-29", "1972-03-01", "1972-03-02")))
   expect_identical(dtt_dayte(more_dates, start_month = 2L, start_day = 29L), 
-                  as.Date(c("1971-02-27", "1971-02-28", "1972-02-29", "1972-03-01", "1972-03-02")))
+                  as.Date(c("1973-02-27", "1973-02-28", "1972-02-29", "1972-03-01", "1972-03-02")))
   expect_identical(dtt_dayte(more_dates, start_month = 3L), 
-                  as.Date(c("1972-02-27", "1972-02-28", "1972-02-29", "1973-03-01", "1973-03-02")))
+                  as.Date(c("1972-02-27", "1972-02-28", "1972-02-29", "1971-03-01", "1971-03-02")))
   expect_identical(dtt_dayte(more_dates, start_month = 3L, start_day = 2L), 
-                  as.Date(c("1972-02-27", "1972-02-28", "1972-02-29", "1972-03-01", "1973-03-02")))
+                  as.Date(c("1972-02-27", "1972-02-28", "1972-02-29", "1972-03-01", "1971-03-02")))
   expect_identical(dtt_dayte(more_dates, start_month = 3L, start_day = 3L), 
                   as.Date(c("1972-02-27", "1972-02-28", "1972-02-29", "1972-03-01", "1972-03-02")))
 })

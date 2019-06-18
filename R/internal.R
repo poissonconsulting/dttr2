@@ -73,8 +73,8 @@ daytte <- function(x, start_month, start_day) {
     err("start_month and start_day must define valid dates")
   start_in_leap <- start_date <= as.Date("1972-02-29")
   date_in_start <- dtt_date(x) >= start_date
-  dtt_year(x[start_in_leap & !date_in_start]) <- 1971L
-  dtt_year(x[!start_in_leap & date_in_start]) <- 1973L
+  dtt_year(x[start_in_leap & !date_in_start]) <- 1973L
+  dtt_year(x[!start_in_leap & date_in_start]) <- 1971L
   x
 }
 
