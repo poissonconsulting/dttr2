@@ -4,14 +4,12 @@
 \alias{dtt_daytt}
 \title{Dayte Time}
 \usage{
-dtt_daytt(x, start_month = 1L, start_day = 1L)
+dtt_daytt(x, start = 1L)
 }
 \arguments{
 \item{x}{A Date or POSIXct vector.}
 
-\item{start_month}{An integer vector specifying the start month of the year.}
-
-\item{start_day}{An integer vector specifying the start day of the year.}
+\item{start}{An integer vector specifying the start month of the year or a Date vector of the start dayte.}
 
 \item{...}{Unused.}
 }

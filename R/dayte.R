@@ -1,8 +1,7 @@
 #' Dayte
 #'
 #' @param x A date time vector.
-#' @param start_month An integer scalar specifying the start month of the year.
-#' @param start_day An integer scalar specifying the start day of the year.
+#' @param start An integer scalar of the starting month or a Date scalar of the starting date.
 #' @return A Date vector with the year set to year.
 #' @param ... Unused.
 #' @return A Date vector of the daytes.
@@ -16,14 +15,14 @@ dtt_dayte <- function(x, ...) {
 
 #' @describeIn dtt_dayte Dayte a Date vector
 #' @export
-dtt_dayte.Date <- function(x, start_month = 1L, start_day = 1L, ...) {
+dtt_dayte.Date <- function(x, start = 1L, ...) {
   check_unused(...)
-  daytte(x, start_month = start_month, start_day = start_day)
+  daytte(x, start = start)
 }
 
 #' @describeIn dtt_dayte Dayte a POSIXct vector
 #' @export
-dtt_dayte.POSIXct <- function(x, start_month = 1L, start_day = 1L, ...) {
+dtt_dayte.POSIXct <- function(x, start = 1L,...) {
   check_unused(...)
-  dtt_dayte(dtt_date(x), start_month = start_month, start_day = start_day)
+  dtt_dayte(dtt_date(x), start = start)
 }

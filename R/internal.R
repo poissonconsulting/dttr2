@@ -58,23 +58,25 @@ unique.hms <- function(x, incomparables = FALSE, ...) {
   x[!duplicated(as.integer(x), incomparables = incomparables)]
 }
 
-daytte <- function(x, start_month, start_day) {
-  check_vector(start_month, c(1L, 12L), length = 1L)
-  check_vector(start_day, c(1L, 31L), length = 1L)
+daytte <- function(x, start) {
+  checkor(check_vector(start, c(1L, 12L), length = 1L),
+          check_vector(start, Sys.Date(), length = 1L))
 
   if(!length(x)) return(x)
   
   dtt_year(x) <- 1972L
-  if(start_month == 1L & start_day == 1L) return(x)
   
-  start_date <- paste(1972, start_month, start_day, sep = "-")
-  start_date <- try(dtt_date(start_date), silent = TRUE)
-  if(inherits(start_date, "try-error"))
-    err("start_month and start_day must define valid dates")
-  start_in_leap <- start_date <= as.Date("1972-02-29")
-  date_in_start <- dtt_date(x) >= start_date
-  dtt_year(x[start_in_leap & !date_in_start]) <- 1973L
+  if(is.integer(start)) {
+    start <- dtt_date(paste("1972", start, "01", sep = "-"))
+  } else
+    dtt_year(start) <- 1972L
+  
+  if(all(start == as.Date("1972-01-01"))) return(x)
+
+  start_in_leap <- start <= as.Date("1972-02-29")
+  date_in_start <- dtt_date(x) >= start
   dtt_year(x[!start_in_leap & date_in_start]) <- 1971L
+  dtt_year(x[start_in_leap & !date_in_start]) <- 1973L
   x
 }
 

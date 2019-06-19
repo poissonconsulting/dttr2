@@ -7,17 +7,14 @@
 \usage{
 dtt_dayte_time(x, ...)
 
-\method{dtt_dayte_time}{POSIXct}(x, start_month = 1L, start_day = 1L,
-  ...)
+\method{dtt_dayte_time}{POSIXct}(x, start = 1L, ...)
 }
 \arguments{
 \item{x}{A date time vector.}
 
 \item{...}{Unused.}
 
-\item{start_month}{An integer vector specifying the start month of the year.}
-
-\item{start_day}{An integer vector specifying the start day of the year.}
+\item{start}{An integer scalar of the starting month or a Date scalar of the starting date.}
 }
 \value{
 A Date vector with the year set to year.

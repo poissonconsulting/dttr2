@@ -9,7 +9,7 @@ dtt_study_year(x, start = 1L, full = TRUE)
 \arguments{
 \item{x}{A Date or POSIXct vector.}
 
-\item{start}{An integer scalar of the starting month or a Date scalar of the starting dayte.}
+\item{start}{An integer vector of the starting month or a Date vector of the starting date.}
 
 \item{full}{A flag specifying whether to return a character vector of the study years (or an integer vector of the first year)}
 }

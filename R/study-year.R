@@ -1,7 +1,7 @@
 #' Study Year
 #'
 #' @param x A Date or POSIXct vector.
-#' @param start An integer scalar of the starting month or a Date scalar of the starting dayte.
+#' @param start An integer vector of the starting month or a Date vector of the starting date.
 #' @param full A flag specifying whether to return a character vector of the study years (or an integer vector of the first year)
 #' @return A character vector of the study year or an integer vector of the first year.
 #' @export
@@ -14,14 +14,18 @@ dtt_study_year <- function(x, start = 1L, full = TRUE) {
           check_vector(x, Sys.time()))
   
   checkor(check_vector(start, c(1L, 12L), length = 1L),
-          check_vector(start, as.Date(c("1972-01-01", "1972-12-31")), length = 1L))
+          check_vector(start, Sys.Date(), length = 1L))
   check_flag(full)
   
   if(!length(x)) {
     if(!full) return(integer(0))
     return(character(0))
   }
-  if(is.integer(start)) start <- dtt_date(paste("1972", start, "01", sep = "-"))
+  if(is.integer(start)) {
+    start <- dtt_date(paste("1972", start, "01", sep = "-"))
+  } else
+    start <- dtt_dayte(start)
+  
   year <- dtt_year(x)
   start <- dtt_floor(start)
   if(identical(start, dtt_date("1972-01-01"))) {
