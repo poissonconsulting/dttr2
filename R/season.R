@@ -6,51 +6,58 @@
 #' the last season is considered to wrap into the following year.
 #'
 #' @param x A Date or POSIXct vector
-#' @param seasons A uniquely named integer vector of the first month of each season
-#' or a uniquely named Date vector of the first dayte of each season.
+#' @param start A uniquely named integer vector of the first month of each season
+#' or a uniquely named Date vector of the first date of each season.
 #'
 #' @return An ordered factor of the seasons.
 #' @export
 #' @examples
 #' dates <- as.Date(c("2001-01-01", "2001-02-28", "2012-09-01", "2012-12-01"))
 #' dtt_season(dates)
-#' dtt_season(dates, season = c(Monsoon = 2L, `Dry Period` = 6L))
-#' dtt_season(dates, season = c(First = dtt_date("1972-01-01"), Second = dtt_date("1972-06-01")))
-dtt_season <- function (x, seasons = c(Spring = 3L, Summer = 6L,
-                                       Autumn = 9L, Winter = 12L)) {
+#' dtt_season(dates, start = c(Monsoon = 2L, `Dry Period` = 6L))
+#' dtt_season(dates, start = c(First = dtt_date("2000-01-01"), Second = dtt_date("2000-06-01")))
+dtt_season <- function (x, start = c(Spring = 3L, Summer = 6L,
+                                     Autumn = 9L, Winter = 12L)) {
   checkor(check_vector(x, c(Sys.Date(), NA)),
           check_vector(x, c(Sys.time(), NA_POSIXct_)))
   checkor(
-    check_vector(seasons, c(1L, 12L), length = TRUE,
-                 unique = TRUE, sorted = TRUE), 
-    check_vector(seasons, dtt_date(c("1972-01-01", "1972-12-31")), length = TRUE,
-                 unique = TRUE, sorted = TRUE))
+    check_vector(start, c(1L, 12L), length = TRUE,
+                 unique = TRUE), 
+    check_vector(start, Sys.Date(), length = TRUE,
+                 unique = TRUE))
   
-  check_names(seasons, unique = TRUE)
+  check_names(start, unique = TRUE)
   
-  if(is.integer(seasons)) {
-    breaks <- paste("1972", seasons, "01", sep = "-")
-    breaks <- dtt_date(breaks)
-    names(breaks) <- names(seasons)
-    seasons <- breaks
+  if(is.integer(start)) {
+    breaks <- dtt_date(paste("1972", start, "01", sep = "-"))
+    names(breaks) <- names(start)
+    start <- breaks
+  } else {
+    names <- names(start)
+    start <- dtt_dayte(start)
+    names(start) <- names
   }
-  seasons <- dtt_floor(seasons)
+
+  start <- dtt_floor(start)
+  start <- sort(start)
+
+  if(anyDuplicated(unname(start))) err("The values in start must be unique.")
   
   is_length <- length(x)
   if(!is_length) x <- as.Date("2000-01-01")
   
-  if(seasons[1] != dtt_date(c("1972-01-01"))) {
-    start <- dtt_date(c("1972-01-01"))
-    names(start) <- names(seasons)[length(seasons)]
-    seasons <- c(start, seasons)
+  if(start[1] != dtt_date(c("1972-01-01"))) {
+    first <- dtt_date("1972-01-01")
+    names(first) <- names(start)[length(start)]
+    start <- c(first, start)
   }
   
-  breaks <- c(seasons, dtt_date("1973-12-31"))
+  breaks <- c(start, dtt_date("1973-12-31"))
   
   x <- dtt_dayte(x)
   x <- cut(x, breaks = breaks, include.lowest = TRUE, ordered_result = TRUE)
   
-  levels(x) <- names(seasons)
+  levels(x) <- names(start)
   if(!is_length) x <- x[-1]
   x  
 }
