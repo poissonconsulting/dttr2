@@ -16,6 +16,9 @@ Suggests:
     testthat,
     covr
 Remotes:
+    r-lib/rlang,
+    r-lib/ellipsis,
+    r-lib/pillar,
     r-lib/vctrs,
     tidyverse/hms
 URL: https://github.com/poissonconsulting/dttr
