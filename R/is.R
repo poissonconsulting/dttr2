@@ -17,4 +17,4 @@ is.Date <- function(x) inherits(x, "Date")
 
 #' @rdname is.datetime
 #' @export
-is.hms <- function(x) inherits(x, "Date")
+is.hms <- function(x) inherits(x, "hms")
