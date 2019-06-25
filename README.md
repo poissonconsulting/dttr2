@@ -32,7 +32,7 @@ Key design principles include
 ## Installation
 
 To install the latest official release from
-[CRAN](https://CRAN.R-project.org/package=dttr3)
+[CRAN](https://CRAN.R-project.org/package=dttr2)
 
     install.packages("dttr2")
 
