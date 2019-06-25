@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">dttr2</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9007</span>
       </span>
     </div>
 
@@ -116,10 +116,10 @@
     <pre class="usage"><span class='fu'>dtt_date</span>(<span class='no'>x</span>, <span class='no'>...</span>)
 
 <span class='co'># S3 method for integer</span>
-<span class='fu'>dtt_date</span>(<span class='no'>x</span>, <span class='kw'>origin</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.Date'>as.Date</a></span>(<span class='st'>"1970-01-01"</span>), <span class='no'>...</span>)
+<span class='fu'>dtt_date</span>(<span class='no'>x</span>, <span class='no'>...</span>)
 
 <span class='co'># S3 method for double</span>
-<span class='fu'>dtt_date</span>(<span class='no'>x</span>, <span class='kw'>origin</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.Date'>as.Date</a></span>(<span class='st'>"1970-01-01"</span>), <span class='no'>...</span>)
+<span class='fu'>dtt_date</span>(<span class='no'>x</span>, <span class='no'>...</span>)
 
 <span class='co'># S3 method for character</span>
 <span class='fu'>dtt_date</span>(<span class='no'>x</span>, <span class='no'>...</span>)
@@ -131,7 +131,7 @@
 <span class='fu'>dtt_date</span>(<span class='no'>x</span>, <span class='no'>...</span>)
 
 <span class='co'># S3 method for hms</span>
-<span class='fu'>dtt_date</span>(<span class='no'>x</span>, <span class='kw'>origin</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.Date'>as.Date</a></span>(<span class='st'>"1970-01-01"</span>), <span class='no'>...</span>)</pre>
+<span class='fu'>dtt_date</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -143,10 +143,6 @@
     <tr>
       <th>...</th>
       <td><p>Unused.</p></td>
-    </tr>
-    <tr>
-      <th>origin</th>
-      <td><p>A Date vector of the start date.</p></td>
     </tr>
     </table>
     
@@ -167,7 +163,7 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>dtt_date</span>(<span class='fl'>1L</span>)</div><div class='output co'>#&gt; [1] "1970-01-02"</div><div class='input'><span class='fu'>dtt_date</span>(-<span class='fl'>1</span>)</div><div class='output co'>#&gt; [1] "1969-12-31"</div><div class='input'><span class='fu'>dtt_date</span>(<span class='fl'>1</span>:<span class='fl'>2</span>, <span class='kw'>origin</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.Date'>as.Date</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"1970-01-01"</span>, <span class='st'>"2000-01-02"</span>)))</div><div class='output co'>#&gt; [1] "1970-01-02" "2000-01-04"</div><div class='input'><span class='fu'>dtt_date</span>(<span class='st'>"2000-01-01"</span>)</div><div class='output co'>#&gt; [1] "2000-01-01"</div><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.Date'>as.Date</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.POSIXlt'>as.POSIXct</a></span>(<span class='st'>"2019-05-01"</span>, <span class='kw'>tz</span> <span class='kw'>=</span> <span class='st'>"Etc/GMT-8"</span>))</div><div class='output co'>#&gt; [1] "2019-04-30"</div><div class='input'><span class='fu'>dtt_date</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.POSIXlt'>as.POSIXct</a></span>(<span class='st'>"2019-05-01"</span>, <span class='kw'>tz</span> <span class='kw'>=</span> <span class='st'>"Etc/GMT-8"</span>))</div><div class='output co'>#&gt; [1] "2019-05-01"</div><div class='input'><span class='fu'>dtt_date</span>(<span class='kw pkg'>hms</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/hms/topics/hms'>as_hms</a></span>(<span class='st'>"23:59:59"</span>))</div><div class='output co'>#&gt; [1] "1970-01-01"</div><div class='input'><span class='fu'>dtt_date</span>(<span class='kw pkg'>hms</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/hms/topics/hms'>as_hms</a></span>(<span class='st'>"24:00:00"</span>))</div><div class='output co'>#&gt; [1] "1970-01-02"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>dtt_date</span>(<span class='fl'>1L</span>)</div><div class='output co'>#&gt; [1] "1970-01-02"</div><div class='input'><span class='fu'>dtt_date</span>(-<span class='fl'>1</span>)</div><div class='output co'>#&gt; [1] "1969-12-31"</div><div class='input'><span class='fu'>dtt_date</span>(<span class='st'>"2000-01-01"</span>)</div><div class='output co'>#&gt; [1] "2000-01-01"</div><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.Date'>as.Date</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.POSIXlt'>as.POSIXct</a></span>(<span class='st'>"2019-05-01"</span>, <span class='kw'>tz</span> <span class='kw'>=</span> <span class='st'>"Etc/GMT-8"</span>))</div><div class='output co'>#&gt; [1] "2019-04-30"</div><div class='input'><span class='fu'>dtt_date</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.POSIXlt'>as.POSIXct</a></span>(<span class='st'>"2019-05-01"</span>, <span class='kw'>tz</span> <span class='kw'>=</span> <span class='st'>"Etc/GMT-8"</span>))</div><div class='output co'>#&gt; [1] "2019-05-01"</div><div class='input'><span class='fu'>dtt_date</span>(<span class='kw pkg'>hms</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/hms/topics/hms'>as.hms</a></span>(<span class='st'>"23:59:59"</span>))</div><div class='output co'>#&gt; [1] "1970-01-01"</div><div class='input'><span class='fu'>dtt_date</span>(<span class='kw pkg'>hms</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/hms/topics/hms'>as.hms</a></span>(<span class='st'>"24:00:00"</span>))</div><div class='output co'>#&gt; [1] "1970-01-02"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

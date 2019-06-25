@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">dttr2</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9007</span>
       </span>
     </div>
 
@@ -113,7 +113,7 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>dtt_study_year</span>(<span class='no'>x</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='fl'>1L</span>)</pre>
+    <pre class="usage"><span class='fu'>dtt_study_year</span>(<span class='no'>x</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>full</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -124,17 +124,21 @@
     </tr>
     <tr>
       <th>start</th>
-      <td><p>An integer scalar of the starting month or a Date scalar of the starting dayte.</p></td>
+      <td><p>An integer vector of the starting month or a Date vector of the starting date.</p></td>
+    </tr>
+    <tr>
+      <th>full</th>
+      <td><p>A flag specifying whether to return a character vector of the study years (or an integer vector of the first year)</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A character vector of the study year.</p>
+    <p>A character vector of the study year or an integer vector of the first year.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>dtt_study_year</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.Date'>as.Date</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"2000-03-31"</span>, <span class='st'>"2000-04-01"</span>, <span class='st'>"2001-04-01"</span>)), <span class='kw'>start</span> <span class='kw'>=</span> <span class='fl'>4L</span>)</div><div class='output co'>#&gt; [1] "1999-2000" "2000-2001" "2001-2002"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>dtt_study_year</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.Date'>as.Date</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"2000-03-31"</span>, <span class='st'>"2000-04-01"</span>, <span class='st'>"2001-04-01"</span>)), <span class='kw'>start</span> <span class='kw'>=</span> <span class='fl'>4L</span>)</div><div class='output co'>#&gt; [1] "1999-2000" "2000-2001" "2001-2002"</div><div class='input'><span class='fu'>dtt_study_year</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.Date'>as.Date</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"2000-03-31"</span>, <span class='st'>"2000-04-01"</span>, <span class='st'>"2001-04-01"</span>)), <span class='kw'>start</span> <span class='kw'>=</span> <span class='fl'>4L</span>, <span class='kw'>full</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; [1] 1999 2000 2001</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

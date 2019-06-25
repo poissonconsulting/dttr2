@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">dttr2</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9007</span>
       </span>
     </div>
 
@@ -174,7 +174,7 @@
     <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.POSIXlt'>as.POSIXct</a></span>(<span class='st'>"1990-01-02 23:40:51"</span>)
 <span class='fu'>dtt_second</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt; [1] 51</div><div class='input'><span class='fu'>dtt_second</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='fl'>27L</span>
 <span class='no'>x</span></div><div class='output co'>#&gt; [1] "1990-01-02 23:40:27 PST"</div><div class='input'>
-<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>hms</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/hms/topics/hms'>as_hms</a></span>(<span class='st'>"23:40:51"</span>)
+<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>hms</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/hms/topics/hms'>as.hms</a></span>(<span class='st'>"23:40:51"</span>)
 <span class='fu'>dtt_second</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt; [1] 51</div><div class='input'><span class='fu'>dtt_second</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='fl'>27L</span>
 <span class='no'>x</span></div><div class='output co'>#&gt; 23:40:27</div></pre>
   </div>

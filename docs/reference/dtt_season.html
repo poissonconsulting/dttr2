@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">dttr2</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9007</span>
       </span>
     </div>
 
@@ -113,7 +113,7 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>dtt_season</span>(<span class='no'>x</span>, <span class='kw'>seasons</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='kw'>Spring</span> <span class='kw'>=</span> <span class='fl'>3L</span>, <span class='kw'>Summer</span> <span class='kw'>=</span> <span class='fl'>6L</span>, <span class='kw'>Autumn</span> <span class='kw'>=</span> <span class='fl'>9L</span>, <span class='kw'>Winter</span> <span class='kw'>=</span>
+    <pre class="usage"><span class='fu'>dtt_season</span>(<span class='no'>x</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='kw'>Spring</span> <span class='kw'>=</span> <span class='fl'>3L</span>, <span class='kw'>Summer</span> <span class='kw'>=</span> <span class='fl'>6L</span>, <span class='kw'>Autumn</span> <span class='kw'>=</span> <span class='fl'>9L</span>, <span class='kw'>Winter</span> <span class='kw'>=</span>
   <span class='fl'>12L</span>))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -124,9 +124,9 @@
       <td><p>A Date or POSIXct vector</p></td>
     </tr>
     <tr>
-      <th>seasons</th>
+      <th>start</th>
       <td><p>A uniquely named integer vector of the first month of each season
-or a uniquely named Date vector of the first dayte of each season.</p></td>
+or a uniquely named Date vector of the first date of each season.</p></td>
     </tr>
     </table>
     
@@ -143,8 +143,8 @@ the last season is considered to wrap into the following year.</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>dates</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.Date'>as.Date</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"2001-01-01"</span>, <span class='st'>"2001-02-28"</span>, <span class='st'>"2012-09-01"</span>, <span class='st'>"2012-12-01"</span>))
 <span class='fu'>dtt_season</span>(<span class='no'>dates</span>)</div><div class='output co'>#&gt; [1] Winter Winter Autumn Winter
-#&gt; Levels: Winter &lt; Spring &lt; Summer &lt; Autumn</div><div class='input'><span class='fu'>dtt_season</span>(<span class='no'>dates</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='kw'>Monsoon</span> <span class='kw'>=</span> <span class='fl'>2L</span>, <span class='kw'>`Dry Period`</span> <span class='kw'>=</span> <span class='fl'>6L</span>))</div><div class='output co'>#&gt; [1] Dry Period Monsoon    Dry Period Dry Period
-#&gt; Levels: Dry Period &lt; Monsoon</div><div class='input'><span class='fu'>dtt_season</span>(<span class='no'>dates</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='kw'>First</span> <span class='kw'>=</span> <span class='fu'><a href='dtt_date.html'>dtt_date</a></span>(<span class='st'>"1972-01-01"</span>), <span class='kw'>Second</span> <span class='kw'>=</span> <span class='fu'><a href='dtt_date.html'>dtt_date</a></span>(<span class='st'>"1972-06-01"</span>)))</div><div class='output co'>#&gt; [1] First  First  Second Second
+#&gt; Levels: Winter &lt; Spring &lt; Summer &lt; Autumn</div><div class='input'><span class='fu'>dtt_season</span>(<span class='no'>dates</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='kw'>Monsoon</span> <span class='kw'>=</span> <span class='fl'>2L</span>, <span class='kw'>`Dry Period`</span> <span class='kw'>=</span> <span class='fl'>6L</span>))</div><div class='output co'>#&gt; [1] Dry Period Monsoon    Dry Period Dry Period
+#&gt; Levels: Dry Period &lt; Monsoon</div><div class='input'><span class='fu'>dtt_season</span>(<span class='no'>dates</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='kw'>First</span> <span class='kw'>=</span> <span class='fu'><a href='dtt_date.html'>dtt_date</a></span>(<span class='st'>"2000-01-01"</span>), <span class='kw'>Second</span> <span class='kw'>=</span> <span class='fu'><a href='dtt_date.html'>dtt_date</a></span>(<span class='st'>"2000-06-01"</span>)))</div><div class='output co'>#&gt; [1] First  First  Second Second
 #&gt; Levels: First &lt; Second</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
