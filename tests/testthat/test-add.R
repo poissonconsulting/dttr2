@@ -130,24 +130,24 @@ test_that("add_hours.POSIXct", {
 test_that("add_hours.hms", {
   expect_identical(dtt_add_hours(NA_hms_[-1]), NA_hms_[-1])
   expect_identical(dtt_add_hours(NA_hms_), NA_hms_)
-  expect_identical(dtt_add_hours(hms::as_hms("00:00:00"), 0L), 
-                   hms::as_hms("00:00:00"))
-  expect_identical(dtt_add_hours(hms::as_hms("00:00:00"), 2L), 
-                   hms::as_hms("02:00:00"))
-  expect_identical(dtt_add_hours(hms::as_hms(c("00:00:00", "00:00:00")), 2L), 
-                   hms::as_hms(c("02:00:00", "02:00:00")))
+  expect_identical(dtt_add_hours(hms::as.hms("00:00:00"), 0L), 
+                   hms::as.hms("00:00:00"))
+  expect_identical(dtt_add_hours(hms::as.hms("00:00:00"), 2L), 
+                   hms::as.hms("02:00:00"))
+  expect_identical(dtt_add_hours(hms::as.hms(c("00:00:00", "00:00:00")), 2L), 
+                   hms::as.hms(c("02:00:00", "02:00:00")))
 
-  expect_identical(dtt_add_hours(hms::as_hms(c("00:00:00", "00:00:00")), 2:3), 
-                   hms::as_hms(c("02:00:00", "03:00:00")))
+  expect_identical(dtt_add_hours(hms::as.hms(c("00:00:00", "00:00:00")), 2:3), 
+                   hms::as.hms(c("02:00:00", "03:00:00")))
 
-  expect_identical(dtt_add_hours(c(hms::as_hms("00:00:00"), NA), 2:3), 
-                   c(hms::as_hms("02:00:00"), NA))
+  expect_identical(dtt_add_hours(c(hms::as.hms("00:00:00"), NA), 2:3), 
+                   c(hms::as.hms("02:00:00"), NA))
   
-  expect_identical(dtt_add_hours(c(hms::as_hms("00:00:00"), NA), 3L), 
-                   c(hms::as_hms("03:00:00"), NA))
+  expect_identical(dtt_add_hours(c(hms::as.hms("00:00:00"), NA), 3L), 
+                   c(hms::as.hms("03:00:00"), NA))
   
-  expect_identical(dtt_add_hours(c(hms::as_hms("00:00:00"), NA), -3L), 
-                   c(hms::as_hms("21:00:00"), NA))
+  expect_identical(dtt_add_hours(c(hms::as.hms("00:00:00"), NA), -3L), 
+                   c(hms::as.hms("21:00:00"), NA))
 })
 
 test_that("add_minutes.POSIXct", {
@@ -172,24 +172,24 @@ test_that("add_minutes.POSIXct", {
 test_that("add_minutes.hms", {
   expect_identical(dtt_add_minutes(NA_hms_[-1]), NA_hms_[-1])
   expect_identical(dtt_add_minutes(NA_hms_), NA_hms_)
-  expect_identical(dtt_add_minutes(hms::as_hms("00:00:00"), 0L), 
-                   hms::as_hms("00:00:00"))
-  expect_identical(dtt_add_minutes(hms::as_hms("00:00:00"), 2L), 
-                   hms::as_hms("00:02:00"))
-  expect_identical(dtt_add_minutes(hms::as_hms(c("00:00:00", "00:00:00")), 2L), 
-                   hms::as_hms(c("00:02:00", "00:02:00")))
+  expect_identical(dtt_add_minutes(hms::as.hms("00:00:00"), 0L), 
+                   hms::as.hms("00:00:00"))
+  expect_identical(dtt_add_minutes(hms::as.hms("00:00:00"), 2L), 
+                   hms::as.hms("00:02:00"))
+  expect_identical(dtt_add_minutes(hms::as.hms(c("00:00:00", "00:00:00")), 2L), 
+                   hms::as.hms(c("00:02:00", "00:02:00")))
 
-  expect_identical(dtt_add_minutes(hms::as_hms(c("00:00:00", "00:00:00")), 2:3), 
-                   hms::as_hms(c("00:02:00", "00:03:00")))
+  expect_identical(dtt_add_minutes(hms::as.hms(c("00:00:00", "00:00:00")), 2:3), 
+                   hms::as.hms(c("00:02:00", "00:03:00")))
 
-  expect_identical(dtt_add_minutes(c(hms::as_hms("00:00:00"), NA), 2:3), 
-                   c(hms::as_hms("00:02:00"), NA))
+  expect_identical(dtt_add_minutes(c(hms::as.hms("00:00:00"), NA), 2:3), 
+                   c(hms::as.hms("00:02:00"), NA))
   
-  expect_identical(dtt_add_minutes(c(hms::as_hms("00:00:00"), NA), 3L), 
-                   c(hms::as_hms("00:03:00"), NA))
+  expect_identical(dtt_add_minutes(c(hms::as.hms("00:00:00"), NA), 3L), 
+                   c(hms::as.hms("00:03:00"), NA))
   
-  expect_identical(dtt_add_minutes(c(hms::as_hms("00:00:00"), NA), -3L), 
-                   c(hms::as_hms("23:57:00"), NA))
+  expect_identical(dtt_add_minutes(c(hms::as.hms("00:00:00"), NA), -3L), 
+                   c(hms::as.hms("23:57:00"), NA))
 })
 
 test_that("add_seconds.POSIXct", {
@@ -214,22 +214,22 @@ test_that("add_seconds.POSIXct", {
 test_that("add_seconds.hms", {
   expect_identical(dtt_add_seconds(NA_hms_[-1]), NA_hms_[-1])
   expect_identical(dtt_add_seconds(NA_hms_), NA_hms_)
-  expect_identical(dtt_add_seconds(hms::as_hms("00:00:00"), 0L), 
-                   hms::as_hms("00:00:00"))
-  expect_identical(dtt_add_seconds(hms::as_hms("00:00:00"), 2L), 
-                   hms::as_hms("00:00:02"))
-  expect_identical(dtt_add_seconds(hms::as_hms(c("00:00:00", "00:00:00")), 2L), 
-                   hms::as_hms(c("00:00:02", "00:00:02")))
+  expect_identical(dtt_add_seconds(hms::as.hms("00:00:00"), 0L), 
+                   hms::as.hms("00:00:00"))
+  expect_identical(dtt_add_seconds(hms::as.hms("00:00:00"), 2L), 
+                   hms::as.hms("00:00:02"))
+  expect_identical(dtt_add_seconds(hms::as.hms(c("00:00:00", "00:00:00")), 2L), 
+                   hms::as.hms(c("00:00:02", "00:00:02")))
 
-  expect_identical(dtt_add_seconds(hms::as_hms(c("00:00:00", "00:00:00")), 2:3), 
-                   hms::as_hms(c("00:00:02", "00:00:03")))
+  expect_identical(dtt_add_seconds(hms::as.hms(c("00:00:00", "00:00:00")), 2:3), 
+                   hms::as.hms(c("00:00:02", "00:00:03")))
 
-  expect_identical(dtt_add_seconds(c(hms::as_hms("00:00:00"), NA), 2:3), 
-                   c(hms::as_hms("00:00:02"), NA))
+  expect_identical(dtt_add_seconds(c(hms::as.hms("00:00:00"), NA), 2:3), 
+                   c(hms::as.hms("00:00:02"), NA))
   
-  expect_identical(dtt_add_seconds(c(hms::as_hms("00:00:00"), NA), 3L), 
-                   c(hms::as_hms("00:00:03"), NA))
+  expect_identical(dtt_add_seconds(c(hms::as.hms("00:00:00"), NA), 3L), 
+                   c(hms::as.hms("00:00:03"), NA))
   
-  expect_identical(dtt_add_seconds(c(hms::as_hms("00:00:00"), NA), -3L), 
-                   c(hms::as_hms("23:59:57"), NA))
+  expect_identical(dtt_add_seconds(c(hms::as.hms("00:00:00"), NA), -3L), 
+                   c(hms::as.hms("23:59:57"), NA))
 })

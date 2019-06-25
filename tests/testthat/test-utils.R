@@ -29,5 +29,5 @@ test_that("c.POSIXct", {
 })
 
 test_that("c.hms", {
-  expect_identical(c(hms::as_hms("00:00:00")), hms::as_hms("00:00:00"))
+  expect_identical(c(hms::as.hms("00:00:00")), hms::as.hms("00:00:00"))
 })

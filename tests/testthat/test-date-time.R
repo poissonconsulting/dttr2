@@ -53,9 +53,9 @@ test_that("date_time.Date", {
   expect_identical(dtt_date_time(Sys.Date()[-1]), as.POSIXct("1970-01-01", tz = "UTC")[-1])
   expect_identical(dtt_date_time(NA_Date_), NA_POSIXct_)
   expect_identical(dtt_date_time(as.Date("2000-01-01")), as.POSIXct("2000-01-01", tz = "UTC"))
-  expect_identical(dtt_date_time(as.Date("2000-01-01"), time = hms::as_hms("01:02:03")), 
+  expect_identical(dtt_date_time(as.Date("2000-01-01"), time = hms::as.hms("01:02:03")), 
                    as.POSIXct("2000-01-01 01:02:03", tz = "UTC"))
-  expect_identical(dtt_date_time(as.Date("2000-01-01"), time = hms::as_hms("01:02:03"), tz = "Etc/GMT+8"), 
+  expect_identical(dtt_date_time(as.Date("2000-01-01"), time = hms::as.hms("01:02:03"), tz = "Etc/GMT+8"), 
                    as.POSIXct("2000-01-01 01:02:03", tz = "Etc/GMT+8"))
   expect_identical(dtt_date_time(as.Date("1970-01-04") + 0.999), 
                    as.POSIXct("1970-01-04", tz = "UTC"))
@@ -80,29 +80,29 @@ test_that("date_time.POSIXct", {
 })
 
 test_that("date_time.hms", {
-  expect_identical(dtt_date_time(hms::as_hms(3L)[-1]), as.POSIXct("1970-01-01", tz = "UTC")[-1])
+  expect_identical(dtt_date_time(hms::as.hms(3L)[-1]), as.POSIXct("1970-01-01", tz = "UTC")[-1])
   expect_identical(dtt_date_time(NA_hms_), NA_POSIXct_)
   
-  expect_identical(dtt_date_time(hms::as_hms(0L)), 
+  expect_identical(dtt_date_time(hms::as.hms(0L)), 
                    as.POSIXct("1970-01-01", tz = "UTC"))
-  expect_identical(dtt_date_time(hms::as_hms(3L)), 
+  expect_identical(dtt_date_time(hms::as.hms(3L)), 
                    as.POSIXct("1970-01-01 00:00:03", tz = "UTC"))
   
-  expect_identical(dtt_date_time(hms::as_hms(dtt_units_per_unit())), 
+  expect_identical(dtt_date_time(hms::as.hms(dtt_units_per_unit())), 
                    as.POSIXct("1970-01-01", tz = "UTC"))
-  expect_identical(dtt_date_time(hms::as_hms(-1L)), as.POSIXct("1970-01-01 23:59:59", tz = "UTC"))
+  expect_identical(dtt_date_time(hms::as.hms(-1L)), as.POSIXct("1970-01-01 23:59:59", tz = "UTC"))
   
-  expect_identical(dtt_date_time(hms::as_hms(dtt_units_per_unit()), tz = "Etc/GMT+8"), 
+  expect_identical(dtt_date_time(hms::as.hms(dtt_units_per_unit()), tz = "Etc/GMT+8"), 
                    as.POSIXct("1970-01-01", tz = "Etc/GMT+8"))
-  expect_identical(dtt_date_time(hms::as_hms(-1L), tz = "Etc/GMT+8"), 
+  expect_identical(dtt_date_time(hms::as.hms(-1L), tz = "Etc/GMT+8"), 
                    as.POSIXct("1970-01-01 23:59:59", tz = "Etc/GMT+8"))
   
-  expect_identical(dtt_date_time(hms::as_hms(-dtt_units_per_unit())), 
+  expect_identical(dtt_date_time(hms::as.hms(-dtt_units_per_unit())), 
                    as.POSIXct("1970-01-01", tz = "UTC"))
-  expect_identical(dtt_date_time(hms::as_hms(-dtt_units_per_unit()-1)), 
+  expect_identical(dtt_date_time(hms::as.hms(-dtt_units_per_unit()-1)), 
                    as.POSIXct("1970-01-01 23:59:59", tz = "UTC"))
-  expect_identical(dtt_date_time(hms::as_hms(-1:0)), 
+  expect_identical(dtt_date_time(hms::as.hms(-1:0)), 
                    as.POSIXct(c("1970-01-01 23:59:59", "1970-01-01 00:00:00"), tz = "UTC"))
-  expect_identical(dtt_date_time(hms::as_hms(c(-1L, NA))), 
+  expect_identical(dtt_date_time(hms::as.hms(c(-1L, NA))), 
                    as.POSIXct(c("1970-01-01 23:59:59", NA), tz = "UTC"))
 })

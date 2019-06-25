@@ -1,6 +1,6 @@
 Package: dttr2
 Title: Manipulate Dates, DateTimes and Times
-Version: 0.0.0.9006
+Version: 0.0.0.9007
 Authors@R: 
   person("Joe", "Thorley", email = "joe@poissonconsulting.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592"))
 Description: Manipulates date (Date), datetime (POSIXct) and time (hms) vectors.
@@ -11,7 +11,7 @@ License: MIT + file LICENSE
 Depends: R (>= 3.4.0)
 Imports: 
     checkr,
-    hms (>= 0.4.2.9004)
+    hms
 Suggests: 
     testthat,
     covr

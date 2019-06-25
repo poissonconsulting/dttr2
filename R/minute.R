@@ -14,7 +14,7 @@
 #' dtt_minute(x) <- 27L
 #' x
 #' 
-#' x <- hms::as_hms("23:40:51")
+#' x <- hms::as.hms("23:40:51")
 #' dtt_minute(x)
 #' dtt_minute(x) <- 27L
 #' x

@@ -49,20 +49,20 @@ test_that("date.POSIXct", {
 })
 
 test_that("date.hms", {
-  expect_identical(dtt_date(hms::as_hms(3L))[-1], Sys.Date()[-1])
+  expect_identical(dtt_date(hms::as.hms(3L))[-1], Sys.Date()[-1])
   expect_identical(dtt_date(NA_hms_), NA_Date_)
-  expect_identical(dtt_date(hms::as_hms(0L)), as.Date("1970-01-01"))
-  expect_identical(dtt_date(hms::as_hms("23:59:59")), as.Date("1970-01-01"))
-  expect_identical(dtt_date(hms::as_hms("24:00:00")), as.Date("1970-01-02"))
-  expect_identical(dtt_date(hms::as_hms(0L)), as.Date("1970-01-01"))
-  expect_identical(dtt_date(hms::as_hms(3L)), as.Date("1970-01-01"))
-  expect_identical(dtt_date(hms::as_hms(dtt_units_per_unit())), as.Date("1970-01-02"))
-  expect_identical(dtt_date(hms::as_hms(-1L)), as.Date("1969-12-31"))
-  expect_identical(dtt_date(hms::as_hms(-dtt_units_per_unit())), as.Date("1969-12-31"))
-  expect_identical(dtt_date(hms::as_hms(-dtt_units_per_unit()-1)), as.Date("1969-12-30"))
-  expect_identical(dtt_date(hms::as_hms(-1:0)), 
+  expect_identical(dtt_date(hms::as.hms(0L)), as.Date("1970-01-01"))
+  expect_identical(dtt_date(hms::as.hms("23:59:59")), as.Date("1970-01-01"))
+  expect_identical(dtt_date(hms::as.hms("24:00:00")), as.Date("1970-01-02"))
+  expect_identical(dtt_date(hms::as.hms(0L)), as.Date("1970-01-01"))
+  expect_identical(dtt_date(hms::as.hms(3L)), as.Date("1970-01-01"))
+  expect_identical(dtt_date(hms::as.hms(dtt_units_per_unit())), as.Date("1970-01-02"))
+  expect_identical(dtt_date(hms::as.hms(-1L)), as.Date("1969-12-31"))
+  expect_identical(dtt_date(hms::as.hms(-dtt_units_per_unit())), as.Date("1969-12-31"))
+  expect_identical(dtt_date(hms::as.hms(-dtt_units_per_unit()-1)), as.Date("1969-12-30"))
+  expect_identical(dtt_date(hms::as.hms(-1:0)), 
                    as.Date(c("1969-12-31", "1970-01-01")))
-  expect_identical(dtt_date(hms::as_hms(c(-1L, NA))), as.Date(c("1969-12-31", NA)))
+  expect_identical(dtt_date(hms::as.hms(c(-1L, NA))), as.Date(c("1969-12-31", NA)))
 })
 
 

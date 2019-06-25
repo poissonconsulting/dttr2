@@ -83,10 +83,10 @@ dtt_complete.POSIXct <- function(x, from = min(x), to = max(x), units = "seconds
 #' @export
 dtt_complete.hms <- function(x, from = min(x), to = max(x), units = "seconds", 
                              unique = TRUE, sort = TRUE, ...) {
-  check_vector(x, hms::as_hms(1), length = TRUE)
+  check_vector(x, hms::as.hms(1), length = TRUE)
   
-  check_scalar(from, hms::as_hms(1), named = NA)
-  check_scalar(to, hms::as_hms(1), named = NA)
+  check_scalar(from, hms::as.hms(1), named = NA)
+  check_scalar(to, hms::as.hms(1), named = NA)
   check_scalar(units, .units_hms)
   check_flag(unique)
   check_flag(sort)

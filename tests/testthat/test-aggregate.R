@@ -50,30 +50,30 @@ test_that("aggregate.POSIXct", {
   expect_identical(dtt_aggregate(as.POSIXct("1969-01-01 23:59:59", tz = "UTC"), "days"), 
                    as.POSIXct("1969-01-01 00:00:00", tz = "UTC"))
   
-  expect_identical(dtt_aggregate(hms::as_hms(c("02:12:59", "03:12:59")), "hours"),
-                   hms::as_hms(c("02:00:00", "03:00:00")))
-  expect_identical(dtt_aggregate(hms::as_hms(c("02:12:59", "02:14:16")), "hours"),
-                   hms::as_hms("02:00:00"))
-  expect_identical(dtt_aggregate(hms::as_hms(c("02:12:59", NA, "02:14:16")), "hours"),
-                   hms::as_hms(c("02:00:00", NA)))
-  expect_identical(dtt_aggregate(hms::as_hms(c(NA, "02:12:59", NA, "02:14:16")), "hours"),
-                   hms::as_hms(c(NA, "02:00:00")))
+  expect_identical(dtt_aggregate(hms::as.hms(c("02:12:59", "03:12:59")), "hours"),
+                   hms::as.hms(c("02:00:00", "03:00:00")))
+  expect_identical(dtt_aggregate(hms::as.hms(c("02:12:59", "02:14:16")), "hours"),
+                   hms::as.hms("02:00:00"))
+  expect_identical(dtt_aggregate(hms::as.hms(c("02:12:59", NA, "02:14:16")), "hours"),
+                   hms::as.hms(c("02:00:00", NA)))
+  expect_identical(dtt_aggregate(hms::as.hms(c(NA, "02:12:59", NA, "02:14:16")), "hours"),
+                   hms::as.hms(c(NA, "02:00:00")))
 })
 
 test_that("aggregate.hms", {
   expect_identical(dtt_aggregate(NA_hms_[-1]), NA_hms_[-1])
   expect_identical(dtt_aggregate(NA_hms_), NA_hms_)
-  expect_identical(dtt_aggregate(hms::as_hms("02:12:59")), hms::as_hms("02:12:59"))
-  expect_identical(dtt_aggregate(hms::as_hms("02:12:59"), "minutes"), 
-                   hms::as_hms("02:12:00"))
-  expect_identical(dtt_aggregate(hms::as_hms("02:12:59"), "hours"), 
-                                 hms::as_hms("02:00:00"))
-  expect_identical(dtt_aggregate(hms::as_hms(c("02:12:59", "03:12:59")), "hours"),
-                   hms::as_hms(c("02:00:00", "03:00:00")))
-  expect_identical(dtt_aggregate(hms::as_hms(c("02:12:59", "02:14:16")), "hours"),
-                   hms::as_hms("02:00:00"))
-  expect_identical(dtt_aggregate(hms::as_hms(c("02:12:59", NA, "02:14:16")), "hours"),
-                   hms::as_hms(c("02:00:00", NA)))
-  expect_identical(dtt_aggregate(hms::as_hms(c(NA, "02:12:59", NA, "02:14:16")), "hours"),
-                   hms::as_hms(c(NA, "02:00:00")))
+  expect_identical(dtt_aggregate(hms::as.hms("02:12:59")), hms::as.hms("02:12:59"))
+  expect_identical(dtt_aggregate(hms::as.hms("02:12:59"), "minutes"), 
+                   hms::as.hms("02:12:00"))
+  expect_identical(dtt_aggregate(hms::as.hms("02:12:59"), "hours"), 
+                                 hms::as.hms("02:00:00"))
+  expect_identical(dtt_aggregate(hms::as.hms(c("02:12:59", "03:12:59")), "hours"),
+                   hms::as.hms(c("02:00:00", "03:00:00")))
+  expect_identical(dtt_aggregate(hms::as.hms(c("02:12:59", "02:14:16")), "hours"),
+                   hms::as.hms("02:00:00"))
+  expect_identical(dtt_aggregate(hms::as.hms(c("02:12:59", NA, "02:14:16")), "hours"),
+                   hms::as.hms(c("02:00:00", NA)))
+  expect_identical(dtt_aggregate(hms::as.hms(c(NA, "02:12:59", NA, "02:14:16")), "hours"),
+                   hms::as.hms(c(NA, "02:00:00")))
 })
