@@ -72,7 +72,7 @@ dtt_tz.POSIXct <- function(x, ...) {
 #' @export
 #'
 #' @examples
-#' dtt_set_tz(Sys.time(), tz = "UTC")
+#' dtt_set_tz(as.POSIXct("1970-01-01", tz = "Etc/GMT+8"), tz = "UTC")
 dtt_set_tz <- function(x, tz = dtt_default_tz(), ...) {
   UseMethod("dtt_set_tz")
 }
@@ -100,7 +100,7 @@ dtt_set_tz.POSIXct <- function(x, tz = dtt_default_tz(), ...) {
 #' @export
 #'
 #' @examples
-#' dtt_adjust_tz(Sys.time(), tz = "UTC")
+#' dtt_adjust_tz(as.POSIXct("1970-01-01", tz = "Etc/GMT+8"), tz = "UTC")
 dtt_adjust_tz <- function(x, tz = dtt_default_tz(), ...) {
   UseMethod("dtt_adjust_tz")
 }

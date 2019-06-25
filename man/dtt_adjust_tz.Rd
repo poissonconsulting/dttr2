@@ -30,7 +30,7 @@ Equivalent to \code{lubridate::with_tz()}.
 }}
 
 \examples{
-dtt_adjust_tz(Sys.time(), tz = "UTC")
+dtt_adjust_tz(as.POSIXct("1970-01-01", tz = "Etc/GMT+8"), tz = "UTC")
 }
 \seealso{
 \code{\link{dtt_set_tz}()}
