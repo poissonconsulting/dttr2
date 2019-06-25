@@ -89,12 +89,12 @@ dtt_add_months(date, 24L)
 actual clock time.
 
 ``` r
-time <- hms::as_hms(-3)
+time <- hms::as.hms(-3)
 time
 #> -00:00:03
 dtt_time(time)
 #> 23:59:57
-dtt_time(hms::as_hms("24:00:00"))
+dtt_time(hms::as.hms("24:00:00"))
 #> 00:00:00
 ```
 
@@ -143,9 +143,9 @@ date
 #> [1] "1970-01-01"
 time <- dtt_time(date_time)
 time
-#> 03:00:00
+#> 19:00:00
 dtt_date_time(date, time)
-#> [1] "1970-01-01 03:00:00 -10"
+#> [1] "1970-01-01 19:00:00 -10"
 ```
 
 ## Inspiration
