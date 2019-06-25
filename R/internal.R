@@ -10,14 +10,6 @@ set_attr <- function(x, attr, value) {
 
 err <- function(...) stop(..., call. = FALSE, domain = NA)
 
-wrn <- function(...) warning(..., call. = FALSE, domain = NA)
-
-units_less_than <- function(x, y) {
-  x <- ordered(x, levels = .units_POSIXct)
-  y <- ordered(y, levels = .units_POSIXct)
-  x < y
-}
-
 units2by <- function(x) {
   x <- sub("ond", "", x)
   x <- sub("ute", "", x)
