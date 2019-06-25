@@ -30,6 +30,7 @@ test_that("dtt_day<-.Date", {
   expect_identical(xNA, NA_Date_)
   
   x <- as.Date("1970-01-01")
+  expect_identical(dtt_set_day(x, 22L), as.Date("1970-01-22"))
   dtt_day(x) <- 22L
   expect_identical(x, as.Date("1970-01-22"))
   
@@ -55,6 +56,8 @@ test_that("dtt_day<-.POSIXct", {
   expect_identical(xNA, NA_POSIXct_)
   
   x <- as.POSIXct("1970-01-01", tz = "UTC")
+  expect_identical(dtt_set_day(x, 22L), 
+                   as.POSIXct("1970-01-22 00:00:00", tz = "UTC"))
   dtt_day(x) <- 22L
   expect_identical(x, as.POSIXct("1970-01-22 00:00:00", tz = "UTC"))
   

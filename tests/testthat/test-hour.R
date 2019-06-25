@@ -42,6 +42,8 @@ test_that("dtt_hour<-.POSIXct", {
   expect_identical(xNA, NA_POSIXct_)
   
   x <- as.POSIXct("1970-01-01", tz = "UTC")
+  expect_identical(dtt_set_hour(x, 22L), 
+                   as.POSIXct("1970-01-01 22:00:00", tz = "UTC"))
   dtt_hour(x) <- 22L
   expect_identical(x, as.POSIXct("1970-01-01 22:00:00", tz = "UTC"))
   
@@ -79,6 +81,7 @@ test_that("dtt_hour<-.hms", {
   expect_identical(dtt_hour(xNA), NA_integer_)
   
   x <- hms::as.hms("12:13:14")
+  expect_identical(dtt_set_hour(x, 23L), hms::as.hms("23:13:14"))
   dtt_hour(x) <- 23L
   expect_identical(x, hms::as.hms("23:13:14"))
 

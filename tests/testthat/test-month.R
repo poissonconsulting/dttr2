@@ -30,6 +30,7 @@ test_that("dtt_month<-.Date", {
   expect_identical(xNA, NA_Date_)
   
   x <- as.Date("1970-01-01")
+  expect_identical(dtt_set_month(x, 11L), as.Date("1970-11-01"))
   dtt_month(x) <- 11L
   expect_identical(x, as.Date("1970-11-01"))
   
@@ -59,6 +60,8 @@ test_that("dtt_month<-.POSIXct", {
   expect_identical(x, as.POSIXct("1970-11-01 00:00:00", tz = "UTC"))
   
   x <- as.POSIXct("1970-01-01", tz = "Etc/GMT+1")
+  expect_identical(dtt_set_month(x, 10L), 
+                   as.POSIXct("1970-10-01 00:00:00", tz = "Etc/GMT+1"))
   dtt_month(x) <- 10L
   expect_identical(x, as.POSIXct("1970-10-01 00:00:00", tz = "Etc/GMT+1"))
   

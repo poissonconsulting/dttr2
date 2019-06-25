@@ -46,6 +46,8 @@ test_that("dtt_minute<-.POSIXct", {
   expect_identical(x, as.POSIXct("1970-01-01 00:30:00", tz = "UTC"))
   
   x <- as.POSIXct("1970-01-01", tz = "Etc/GMT+1")
+  expect_identical(dtt_set_minute(x, 30L), 
+                   as.POSIXct("1970-01-01 00:30:00", tz = "Etc/GMT+1"))
   dtt_minute(x) <- 30L
   expect_identical(x, as.POSIXct("1970-01-01 00:30:00", tz = "Etc/GMT+1"))
   
@@ -79,6 +81,7 @@ test_that("dtt_minute<-.hms", {
   expect_identical(dtt_minute(xNA), NA_integer_)
   
   x <- hms::as.hms("12:13:14")
+  expect_identical(dtt_set_minute(x, 30L),  hms::as.hms("12:30:14"))
   dtt_minute(x) <- 30L
   expect_identical(x, hms::as.hms("12:30:14"))
 
