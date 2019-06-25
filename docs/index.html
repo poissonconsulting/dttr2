@@ -12,7 +12,7 @@
 <script src="pkgdown.js"></script><meta property="og:title" content="Manipulate Dates, DateTimes and Times">
 <meta property="og:description" content="Manipulates date (Date), datetime (POSIXct) and time (hms) vectors.
     Date/times are considered discrete and are floored whenever encountered.
-    Times are wrapped and time zones are maintained unless explicity altered 
+    Times are wrapped and time zones are maintained unless explicitly altered 
     by the user.">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">dttr2</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9007</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
 
@@ -92,17 +92,10 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
+<p>To install the latest official release from <a href="https://CRAN.R-project.org/package=dttr3">CRAN</a></p>
+<pre><code><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages("dttr2")</a></code></pre>
 <p>To install the latest development version from the Poisson drat <a href="https://github.com/poissonconsulting/drat">repository</a></p>
-<pre><code>if(!"drat" %in% installed.packages()[,1]) 
-  install.packages("drat")
-drat::addRepo("poissonconsulting")
-install.packages("dttr2")</code></pre>
-<p>To install the latest development version from <a href="https://github.com/poissonconsulting/checkr">GitHub</a></p>
-<pre><code>if(!"devtools" %in% installed.packages()[,1]) 
-  install.packages("devtools")
-devtools::install_github("poissonconsulting/err")
-devtools::install_github("poissonconsulting/checkr")
-devtools::install_github("poissonconsulting/dttr2")</code></pre>
+<pre><code><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages("dttr2", repos = "http://poissonconsulting.github.io/drat")</a></code></pre>
 </div>
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
@@ -175,9 +168,9 @@ devtools::install_github("poissonconsulting/dttr2")</code></pre>
 <a class="sourceLine" id="cb8-5" title="5"><span class="co">#&gt; [1] "1970-01-01"</span></a>
 <a class="sourceLine" id="cb8-6" title="6">time &lt;-<span class="st"> </span><span class="kw"><a href="reference/dtt_time.html">dtt_time</a></span>(date_time)</a>
 <a class="sourceLine" id="cb8-7" title="7">time</a>
-<a class="sourceLine" id="cb8-8" title="8"><span class="co">#&gt; 19:00:00</span></a>
+<a class="sourceLine" id="cb8-8" title="8"><span class="co">#&gt; 03:00:00</span></a>
 <a class="sourceLine" id="cb8-9" title="9"><span class="kw"><a href="reference/dtt_date_time.html">dtt_date_time</a></span>(date, time)</a>
-<a class="sourceLine" id="cb8-10" title="10"><span class="co">#&gt; [1] "1970-01-01 19:00:00 -10"</span></a></code></pre></div>
+<a class="sourceLine" id="cb8-10" title="10"><span class="co">#&gt; [1] "1970-01-01 03:00:00 -10"</span></a></code></pre></div>
 </div>
 </div>
 <div id="inspiration" class="section level2">
@@ -190,7 +183,7 @@ devtools::install_github("poissonconsulting/dttr2")</code></pre>
 <a href="#contribution" class="anchor"></a>Contribution</h2>
 <p>Please report any <a href="https://github.com/poissonconsulting/dttr2/issues">issues</a>.</p>
 <p><a href="https://github.com/poissonconsulting/dttr2/pulls">Pull requests</a> are always welcome.</p>
-<p>Please note that the ‘dttr2’ project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<p>Please note that the ‘dttr2’ project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms</p>
 </div>
 </div>
   </div>

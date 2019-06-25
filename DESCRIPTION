@@ -1,11 +1,11 @@
 Package: dttr2
 Title: Manipulate Dates, DateTimes and Times
-Version: 0.0.0.9008
+Version: 0.0.1
 Authors@R: 
   person("Joe", "Thorley", email = "joe@poissonconsulting.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592"))
 Description: Manipulates date (Date), datetime (POSIXct) and time (hms) vectors.
     Date/times are considered discrete and are floored whenever encountered.
-    Times are wrapped and time zones are maintained unless explicity altered 
+    Times are wrapped and time zones are maintained unless explicitly altered 
     by the user.
 License: MIT + file LICENSE
 Depends: R (>= 3.4.0)
@@ -20,3 +20,4 @@ BugReports: https://github.com/poissonconsulting/dttr/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
+Language: en-US

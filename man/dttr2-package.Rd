@@ -8,12 +8,12 @@
 \description{
 Manipulates date (Date), datetime (POSIXct) and time (hms) vectors.
     Date/times are considered discrete and are floored whenever encountered.
-    Times are wrapped and time zones are maintained unless explicity altered 
+    Times are wrapped and time zones are maintained unless explicitly altered 
     by the user.
 
 Manipulates date (Date), datetime (POSIXct) and time (hms) vectors.
     Date/times are considered discrete and are floored whenever encountered.
-    Times are wrapped and time zones are maintained unless explicity altered 
+    Times are wrapped and time zones are maintained unless explicitly altered 
     by the user.
 }
 \seealso{
