@@ -143,9 +143,9 @@ date
 #> [1] "1970-01-01"
 time <- dtt_time(date_time)
 time
-#> 19:00:00
+#> 03:00:00
 dtt_date_time(date, time)
-#> [1] "1970-01-01 19:00:00 -10"
+#> [1] "1970-01-01 03:00:00 -10"
 ```
 
 ## Inspiration
@@ -164,4 +164,4 @@ always welcome.
 
 Please note that the ‘dttr2’ project is released with a [Contributor
 Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
-you agree to abide by its terms.
+you agree to abide by its terms
