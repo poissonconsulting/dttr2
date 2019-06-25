@@ -57,7 +57,8 @@ dtt_time.hms <- function(x, ...) {
 #' @export
 dtt_time.POSIXct <- function(x, ...) {
   check_unused(...)
-  dtt_time(as.hms(x))
+  x <- hms::hms(dtt_second(x), dtt_minute(x), dtt_hour(x))
+  dtt_time(x)
 }
 
 #' @describeIn dtt_time Coerce POSIXlt vector to a floored hms vector

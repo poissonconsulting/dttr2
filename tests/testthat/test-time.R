@@ -44,6 +44,8 @@ test_that("time.POSIXct", {
   expect_identical(dtt_time(NA_POSIXct_), NA_hms_)
   expect_identical(dtt_time(as.POSIXct("1970-01-03 00:00:00", tz = "Etc/GMT+8")), 
                    hms::as.hms("00:00:00"))
+  expect_identical(dtt_time(as.POSIXct("1970-01-03 00:00:00", tz = "Etc/GMT+7")), 
+                   hms::as.hms("00:00:00"))
   expect_identical(dtt_time(as.POSIXct("1970-01-03 23:59:59", tz = "Etc/GMT+8")), 
                    hms::as.hms("23:59:59"))
   expect_identical(dtt_time(c(as.POSIXct("1970-01-03 23:59:59", tz = "Etc/GMT+8"), NA_POSIXct_)), 
