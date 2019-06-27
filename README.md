@@ -161,5 +161,5 @@ Please report any
 always welcome.
 
 Please note that this project is released with a [Contributor Code of
-Conduct](https://poissonconsulting.github.io/dttr2/CONDUCT.html). By
-contributing to this project, you agree to abide by its terms.
+Conduct](https://poissonconsulting.github.io/dttr2/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
