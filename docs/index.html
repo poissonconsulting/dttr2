@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manipulate Dates, DateTimes and Times • dttr2</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Manipulate Dates, DateTimes and Times">
 <meta property="og:description" content="Manipulates date (Date), datetime (POSIXct) and time (hms) vectors.
     Date/times are considered discrete and are floored whenever encountered.
@@ -41,7 +42,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -55,7 +56,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/poissonconsulting/dttr">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -68,6 +69,7 @@
 <!--/.navbar -->
 
       
+
       </header><div class="row">
   <div class="col-md-9 contents">
     
@@ -92,10 +94,15 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>To install the latest official release from <a href="https://CRAN.R-project.org/package=dttr2">CRAN</a></p>
-<pre><code><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages("dttr2")</a></code></pre>
+<p>To install the latest development version from <a href="https://github.com/poissonconsulting/dttr2">GitHub</a></p>
+<pre><code>if(!"remotes" %in% installed.packages()[,1]) 
+  install.packages("remotes")
+remotes::install_github("poissonconsulting/dttr2")</code></pre>
 <p>To install the latest development version from the Poisson drat <a href="https://github.com/poissonconsulting/drat">repository</a></p>
-<pre><code><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages("dttr2", repos = "http://poissonconsulting.github.io/drat")</a></code></pre>
+<pre><code>if(!"drat" %in% installed.packages()[,1]) 
+  install.packages("drat")
+drat::addRepo("poissonconsulting")
+install.packages("dttr2")</code></pre>
 </div>
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
@@ -104,17 +111,17 @@
 <h3 class="hasAnchor">
 <a href="#time-units" class="anchor"></a>Time Units</h3>
 <p><code>dttr2</code> floors any date/time objects it encounters to the nearest time unit (by default days for Date and seconds for POSIXct and hms).</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(dttr2)</a>
-<a class="sourceLine" id="cb3-2" title="2">date &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/as.Date">as.Date</a></span>(<span class="fl">1.75</span>, <span class="dt">origin =</span> <span class="st">"1970-01-01"</span>)</a>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dttr2)</a>
+<a class="sourceLine" id="cb3-2" title="2">date &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="fl">1.75</span>, <span class="dt">origin =</span> <span class="st">"1970-01-01"</span>)</a>
 <a class="sourceLine" id="cb3-3" title="3">date</a>
 <a class="sourceLine" id="cb3-4" title="4"><span class="co">#&gt; [1] "1970-01-02"</span></a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/numeric">as.numeric</a></span>(date)</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="kw"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(date)</a>
 <a class="sourceLine" id="cb3-6" title="6"><span class="co">#&gt; [1] 1.75</span></a>
 <a class="sourceLine" id="cb3-7" title="7"></a>
 <a class="sourceLine" id="cb3-8" title="8">date &lt;-<span class="st"> </span><span class="kw"><a href="reference/dtt_date.html">dtt_date</a></span>(date)</a>
 <a class="sourceLine" id="cb3-9" title="9">date</a>
 <a class="sourceLine" id="cb3-10" title="10"><span class="co">#&gt; [1] "1970-01-02"</span></a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/numeric">as.numeric</a></span>(date)</a>
+<a class="sourceLine" id="cb3-11" title="11"><span class="kw"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(date)</a>
 <a class="sourceLine" id="cb3-12" title="12"><span class="co">#&gt; [1] 1</span></a></code></pre></div>
 <p>Similarly, the time unit accessor (<code><a href="reference/dtt_second.html">dtt_second()</a></code>, <code><a href="reference/dtt_minute.html">dtt_minute()</a></code> etc) and settor functions as well as the functions to add (ie <code><a href="reference/dtt_add_units.html">dtt_add_seconds()</a></code>) and subtract time units return or require integers.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw"><a href="reference/dtt_day.html">dtt_day</a></span>(date)</a>
@@ -128,12 +135,12 @@
 <h3 class="hasAnchor">
 <a href="#times" class="anchor"></a>Times</h3>
 <p><code>dttr2</code> wraps negative times or times greater than 23:59:59 to the actual clock time.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">time &lt;-<span class="st"> </span>hms<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/hms/topics/hms">as.hms</a></span>(<span class="op">-</span><span class="dv">3</span>)</a>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">time &lt;-<span class="st"> </span>hms<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/hms/man/hms.html">as.hms</a></span>(<span class="op">-</span><span class="dv">3</span>)</a>
 <a class="sourceLine" id="cb5-2" title="2">time</a>
 <a class="sourceLine" id="cb5-3" title="3"><span class="co">#&gt; -00:00:03</span></a>
 <a class="sourceLine" id="cb5-4" title="4"><span class="kw"><a href="reference/dtt_time.html">dtt_time</a></span>(time)</a>
 <a class="sourceLine" id="cb5-5" title="5"><span class="co">#&gt; 23:59:57</span></a>
-<a class="sourceLine" id="cb5-6" title="6"><span class="kw"><a href="reference/dtt_time.html">dtt_time</a></span>(hms<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/hms/topics/hms">as.hms</a></span>(<span class="st">"24:00:00"</span>))</a>
+<a class="sourceLine" id="cb5-6" title="6"><span class="kw"><a href="reference/dtt_time.html">dtt_time</a></span>(hms<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/hms/man/hms.html">as.hms</a></span>(<span class="st">"24:00:00"</span>))</a>
 <a class="sourceLine" id="cb5-7" title="7"><span class="co">#&gt; 00:00:00</span></a></code></pre></div>
 </div>
 <div id="time-zones" class="section level3">
@@ -183,7 +190,7 @@
 <a href="#contribution" class="anchor"></a>Contribution</h2>
 <p>Please report any <a href="https://github.com/poissonconsulting/dttr2/issues">issues</a>.</p>
 <p><a href="https://github.com/poissonconsulting/dttr2/pulls">Pull requests</a> are always welcome.</p>
-<p>Please note that the ‘dttr2’ project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms</p>
+<p>Please note that this project is released with a <a href="https://poissonconsulting.github.io/dttr2/CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
   </div>
@@ -205,10 +212,16 @@
 <li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+<div class="community">
+<h2>Community</h2>
+<ul class="list-unstyled">
+<li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
+</ul>
+</div>
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Joe Thorley <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7683-4592" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
+<li>Joe Thorley <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7683-4592" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID"></a> </li>
 </ul>
 </div>
 
@@ -228,17 +241,20 @@
 </div>
 
 
+
       <footer><div class="copyright">
   <p>Developed by Joe Thorley.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>

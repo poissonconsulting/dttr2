@@ -31,15 +31,20 @@ Key design principles include
 
 ## Installation
 
-To install the latest official release from
-[CRAN](https://CRAN.R-project.org/package=dttr2)
+To install the latest development version from
+[GitHub](https://github.com/poissonconsulting/dttr2)
 
-    install.packages("dttr2")
+    if(!"remotes" %in% installed.packages()[,1]) 
+      install.packages("remotes")
+    remotes::install_github("poissonconsulting/dttr2")
 
 To install the latest development version from the Poisson drat
 [repository](https://github.com/poissonconsulting/drat)
 
-    install.packages("dttr2", repos = "http://poissonconsulting.github.io/drat")
+    if(!"drat" %in% installed.packages()[,1]) 
+      install.packages("drat")
+    drat::addRepo("poissonconsulting")
+    install.packages("dttr2")
 
 ## Introduction
 
@@ -155,6 +160,6 @@ Please report any
 [Pull requests](https://github.com/poissonconsulting/dttr2/pulls) are
 always welcome.
 
-Please note that the ‘dttr2’ project is released with a [Contributor
-Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
-you agree to abide by its terms
+Please note that this project is released with a [Contributor Code of
+Conduct](https://poissonconsulting.github.io/dttr2/CONDUCT.html). By
+contributing to this project, you agree to abide by its terms.
