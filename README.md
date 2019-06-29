@@ -40,15 +40,11 @@ To install the latest release version from
 To install the latest development version from
 [GitHub](https://github.com/poissonconsulting/dttr2)
 
-    if(!"remotes" %in% installed.packages()[,1]) 
-      install.packages("remotes")
     remotes::install_github("poissonconsulting/dttr2")
 
 To install the latest development version from the Poisson drat
 [repository](https://github.com/poissonconsulting/drat)
 
-    if(!"drat" %in% installed.packages()[,1]) 
-      install.packages("drat")
     drat::addRepo("poissonconsulting")
     install.packages("dttr2")
 

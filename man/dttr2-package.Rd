@@ -19,15 +19,15 @@ Manipulates date (Date), datetime (POSIXct) and time (hms) vectors.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/poissonconsulting/dttr}
-  \item Report bugs at \url{https://github.com/poissonconsulting/dttr/issues}
+  \item \url{https://github.com/poissonconsulting/dttr2}
+  \item Report bugs at \url{https://github.com/poissonconsulting/dttr2/issues}
 }
 
 
 Useful links:
 \itemize{
-  \item \url{https://github.com/poissonconsulting/dttr}
-  \item Report bugs at \url{https://github.com/poissonconsulting/dttr/issues}
+  \item \url{https://github.com/poissonconsulting/dttr2}
+  \item Report bugs at \url{https://github.com/poissonconsulting/dttr2/issues}
 }
 
 }
