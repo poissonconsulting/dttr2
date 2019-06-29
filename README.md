@@ -10,6 +10,7 @@ status](https://travis-ci.com/poissonconsulting/dttr2.svg?branch=master)](https:
 status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/dttr2?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/dttr2)
 [![Coverage
 status](https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg)](https://codecov.io/github/poissonconsulting/dttr2?branch=master)
+[![status](https://tinyverse.netlify.com/badge/dttr2)](https://CRAN.R-project.org/package=dttr2)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/dttr2)](https://cran.r-project.org/package=dttr2)
@@ -30,6 +31,11 @@ Key design principles include
 5.  the origin is always assumed to be 1970-01-01 UTC (keep it simple)
 
 ## Installation
+
+To install the latest release version from
+[CRAN](https://cran.r-project.org/package=dttr2)
+
+    install.packages("dttr2")
 
 To install the latest development version from
 [GitHub](https://github.com/poissonconsulting/dttr2)
