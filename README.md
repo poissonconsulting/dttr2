@@ -10,17 +10,20 @@ status](https://travis-ci.com/poissonconsulting/dttr2.svg?branch=master)](https:
 status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/dttr2?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/dttr2)
 [![Coverage
 status](https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg)](https://codecov.io/github/poissonconsulting/dttr2?branch=master)
-[![status](https://tinyverse.netlify.com/badge/dttr2)](https://CRAN.R-project.org/package=dttr2)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/dttr2)](https://cran.r-project.org/package=dttr2)
+[![Tinyverse
+status](https://tinyverse.netlify.com/badge/dttr2)](https://CRAN.R-project.org/package=dttr2)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/dttr2)](https://cran.r-project.org/package=dttr2)
+![CRAN downloads](http://cranlogs.r-pkg.org/badges/dttr2)
 <!-- badges: end -->
 
 # dttr2
 
-`dttr2` (Dates, Times and dateTimes in R) is a light-weight R package to
-perform simple manipulations on date (Date), datetime (POSIXct) and time
-(hms) vectors (collectively referred to as date/times).
+`dttr2` (Dates, Times and dateTimes in R) is an R package to perform
+simple manipulations on date (Date), datetime (POSIXct) and time (hms)
+vectors (collectively referred to as date/times).
 
 Key design principles include
 
@@ -41,12 +44,6 @@ To install the latest development version from
 [GitHub](https://github.com/poissonconsulting/dttr2)
 
     remotes::install_github("poissonconsulting/dttr2")
-
-To install the latest development version from the Poisson drat
-[repository](https://github.com/poissonconsulting/drat)
-
-    drat::addRepo("poissonconsulting")
-    install.packages("dttr2")
 
 ## Introduction
 
@@ -90,6 +87,8 @@ actual clock time.
 
 ``` r
 time <- hms::as.hms(-3)
+#> Warning: as.hms() is deprecated, please use as_hms().
+#> This warning is displayed once per session.
 time
 #> -00:00:03
 dtt_time(time)
@@ -151,8 +150,7 @@ dtt_date_time(date, time)
 ## Inspiration
 
 dttr2 was influenced by [lubridate](https://lubridate.tidyverse.org). It
-aims to provide a more light-weight alternative for simple
-manipulations.
+aims to provide an alternative for simple manipulations.
 
 ## Contribution
 

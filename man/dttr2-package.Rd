@@ -6,12 +6,12 @@
 \alias{dttr2-package}
 \title{dttr2: Manipulate Dates, DateTimes and Times}
 \description{
-Manipulates date (Date), datetime (POSIXct) and time (hms) vectors.
+Manipulates date ('Date'), datetime ('POSIXct') and time ('hms') vectors.
     Date/times are considered discrete and are floored whenever encountered.
     Times are wrapped and time zones are maintained unless explicitly altered 
     by the user.
 
-Manipulates date (Date), datetime (POSIXct) and time (hms) vectors.
+Manipulates date ('Date'), datetime ('POSIXct') and time ('hms') vectors.
     Date/times are considered discrete and are floored whenever encountered.
     Times are wrapped and time zones are maintained unless explicitly altered 
     by the user.
@@ -34,8 +34,18 @@ Useful links:
 \author{
 \strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca} (0000-0002-7683-4592)
 
+Other contributors:
+\itemize{
+  \item Poisson Consulting [copyright holder, funder]
+}
+
 
 \strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca} (0000-0002-7683-4592)
+
+Other contributors:
+\itemize{
+  \item Poisson Consulting [copyright holder, funder]
+}
 
 }
 \keyword{internal}
