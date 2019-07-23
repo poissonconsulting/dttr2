@@ -106,57 +106,57 @@ test_that("seq.POSIXct", {
 test_that("seq.hms", {
   expect_error(dtt_seq(NA_hms_[-1], NA_hms_[-1]), "from must have 1 element")
   expect_error(dtt_seq(NA_hms_, NA_hms_[-1]), "from must not include missing values")
-  expect_error(dtt_seq(hms::as.hms("00:00:00"), NA_hms_[-1]), "to must have 1 element")
-  expect_error(dtt_seq(hms::as.hms("00:00:00"), NA_hms_), 
+  expect_error(dtt_seq(hms::as_hms("00:00:00"), NA_hms_[-1]), "to must have 1 element")
+  expect_error(dtt_seq(hms::as_hms("00:00:00"), NA_hms_), 
                "to must not include missing values")
-  expect_error(dtt_seq(hms::as.hms("00:00:00"), hms::as.hms("00:00:00"), units = "days"),
+  expect_error(dtt_seq(hms::as_hms("00:00:00"), hms::as_hms("00:00:00"), units = "days"),
                "units can only include values 'hours', 'minutes' or 'seconds'")
 
-  expect_error(dtt_seq(hms::as.hms("00:00:00"), length_out = 86401L), 
+  expect_error(dtt_seq(hms::as_hms("00:00:00"), length_out = 86401L), 
                    "length_out of units must not exceed 24 hours")
 
-  expect_error(dtt_seq(hms::as.hms("00:00:00"), length_out = 25L, units = "hours"), 
+  expect_error(dtt_seq(hms::as_hms("00:00:00"), length_out = 25L, units = "hours"), 
                    "length_out of units must not exceed 24 hours")
 
-  expect_identical(dtt_seq(hms::as.hms("00:00:00"), length_out = 0L), 
-                   hms::as.hms("00:00:00")[-1])
+  expect_identical(dtt_seq(hms::as_hms("00:00:00"), length_out = 0L), 
+                   hms::as_hms("00:00:00")[-1])
 
-  expect_identical(dtt_seq(hms::as.hms("00:00:00"), length_out = 2L), 
-                   hms::as.hms(c("00:00:00", "00:00:01")))
+  expect_identical(dtt_seq(hms::as_hms("00:00:00"), length_out = 2L), 
+                   hms::as_hms(c("00:00:00", "00:00:01")))
 
-  expect_identical(dtt_seq(hms::as.hms("00:00:00"), length_out = 24L, units = "hours"), 
-                   hms::as.hms(paste0(c("00", "01", "02", "03", "04", "05",
+  expect_identical(dtt_seq(hms::as_hms("00:00:00"), length_out = 24L, units = "hours"), 
+                   hms::as_hms(paste0(c("00", "01", "02", "03", "04", "05",
                                         "06", "07", "08", "09", 10:23), ":00:00")))
 
-  expect_identical(dtt_seq(hms::as.hms("01:00:00"), length_out = 24L, units = "hours"), 
-                   hms::as.hms(paste0(c("01", "02", "03", "04", "05",
+  expect_identical(dtt_seq(hms::as_hms("01:00:00"), length_out = 24L, units = "hours"), 
+                   hms::as_hms(paste0(c("01", "02", "03", "04", "05",
                                         "06", "07", "08", "09", 10:23, "00"), ":00:00")))
   
-  expect_identical(length(dtt_seq(hms::as.hms("00:00:00"), length_out = -2L)), 
+  expect_identical(length(dtt_seq(hms::as_hms("00:00:00"), length_out = -2L)), 
                    86400L)
   
-  expect_identical(dtt_seq(hms::as.hms("00:00:00"), hms::as.hms("00:00:00")), 
-                   hms::as.hms("00:00:00"))
+  expect_identical(dtt_seq(hms::as_hms("00:00:00"), hms::as_hms("00:00:00")), 
+                   hms::as_hms("00:00:00"))
   
-  expect_identical(dtt_seq(hms::as.hms("00:00:00"), hms::as.hms("00:00:02")),
-                   hms::as.hms(c("00:00:00", "00:00:01", "00:00:02")))
+  expect_identical(dtt_seq(hms::as_hms("00:00:00"), hms::as_hms("00:00:02")),
+                   hms::as_hms(c("00:00:00", "00:00:01", "00:00:02")))
   
-  expect_identical(dtt_seq(hms::as.hms("00:00:00"), hms::as.hms("00:00:02"), units = "hours"),
-                   hms::as.hms("00:00:00"))
+  expect_identical(dtt_seq(hms::as_hms("00:00:00"), hms::as_hms("00:00:02"), units = "hours"),
+                   hms::as_hms("00:00:00"))
   
-  expect_identical(dtt_seq(hms::as.hms("00:00:00"), hms::as.hms("00:02:02"), units = "minutes"),
-                   hms::as.hms(c("00:00:00", "00:01:00", "00:02:00")))
+  expect_identical(dtt_seq(hms::as_hms("00:00:00"), hms::as_hms("00:02:02"), units = "minutes"),
+                   hms::as_hms(c("00:00:00", "00:01:00", "00:02:00")))
   
-  expect_identical(dtt_seq(hms::as.hms("00:00:00"), hms::as.hms("01:02:02"), units = "hours"),
-                   hms::as.hms(c("00:00:00", "01:00:00")))
+  expect_identical(dtt_seq(hms::as_hms("00:00:00"), hms::as_hms("01:02:02"), units = "hours"),
+                   hms::as_hms(c("00:00:00", "01:00:00")))
   
-  expect_identical(dtt_seq(hms::as.hms("00:59:59"), hms::as.hms("01:00:00"), units = "hours"),
-                   hms::as.hms(c("00:00:00", "01:00:00")))
+  expect_identical(dtt_seq(hms::as_hms("00:59:59"), hms::as_hms("01:00:00"), units = "hours"),
+                   hms::as_hms(c("00:00:00", "01:00:00")))
   
-  expect_identical(length(dtt_seq(hms::as.hms("00:00:01"), hms::as.hms("23:59:59"))),
+  expect_identical(length(dtt_seq(hms::as_hms("00:00:01"), hms::as_hms("23:59:59"))),
                    86399L)
-  expect_identical(length(dtt_seq(hms::as.hms("23:59:59"), hms::as.hms("00:00:01"), wrap = FALSE)),
+  expect_identical(length(dtt_seq(hms::as_hms("23:59:59"), hms::as_hms("00:00:01"), wrap = FALSE)),
                    86399L)
-  expect_identical(dtt_seq(hms::as.hms("23:59:59"), hms::as.hms("00:00:01")),
-                   hms::as.hms(c("23:59:59", "00:00:00", "00:00:01")))
+  expect_identical(dtt_seq(hms::as_hms("23:59:59"), hms::as_hms("00:00:01")),
+                   hms::as_hms(c("23:59:59", "00:00:00", "00:00:01")))
 })

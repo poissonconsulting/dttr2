@@ -65,7 +65,7 @@ dtt_hour(x)
 dtt_hour(x) <- 01L
 x
 
-x <- hms::as.hms("23:40:51")
+x <- hms::as_hms("23:40:51")
 dtt_hour(x)
 dtt_hour(x) <- 01L
 x

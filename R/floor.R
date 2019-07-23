@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-#' dtt_floor(hms::as.hms("23:59:59"), "hours")
+#' dtt_floor(hms::as_hms("23:59:59"), "hours")
 dtt_floor <- function(x, units, ...) {
   UseMethod("dtt_floor")
 }

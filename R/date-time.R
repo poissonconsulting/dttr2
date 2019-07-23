@@ -16,7 +16,7 @@
 #' dtt_date_time(-1)
 #' dtt_date_time(1, tz = "Etc/GMT+8")
 #' dtt_date_time(as.Date("2000-01-02"))
-#' dtt_date_time(as.Date("2000-01-02"), time = hms::as.hms("04:05:06"))
+#' dtt_date_time(as.Date("2000-01-02"), time = hms::as_hms("04:05:06"))
 dtt_date_time <- function(x, ...) {
   UseMethod("dtt_date_time")
 }
@@ -48,10 +48,10 @@ dtt_date_time.character <- function(x, tz = dtt_default_tz(), ...) {
 
 #' @describeIn dtt_date_time Coerce Date vector to a floored POSIXct vector
 #' @export
-dtt_date_time.Date <- function(x, time = hms::as.hms("00:00:00"), tz = dtt_default_tz(), ...) {
+dtt_date_time.Date <- function(x, time = hms::as_hms("00:00:00"), tz = dtt_default_tz(), ...) {
   check_unused(...)
   check_string(tz)
-  check_vector(time, hms::as.hms("00:00:00"), length = c(1L, 1L, length(x)))
+  check_vector(time, hms::as_hms("00:00:00"), length = c(1L, 1L, length(x)))
   
   if(!length(x)) return(dtt_date_time(integer(0), tz = tz))
   

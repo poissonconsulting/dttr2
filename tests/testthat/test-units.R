@@ -22,7 +22,7 @@ test_that("units.POSIXct", {
 test_that("units.hms", {
   expect_identical(dtt_units(NA_hms_), "seconds")
   expect_identical(dtt_units(NA_hms_[-1]), "seconds")
-  expect_identical(dtt_units(hms::as.hms("01:00:00")), "hours")
-  expect_identical(dtt_units(hms::as.hms("00:01:00")), "minutes")
-  expect_identical(dtt_units(hms::as.hms("00:00:01")), "seconds")
+  expect_identical(dtt_units(hms::as_hms("01:00:00")), "hours")
+  expect_identical(dtt_units(hms::as_hms("00:01:00")), "minutes")
+  expect_identical(dtt_units(hms::as_hms("00:00:01")), "seconds")
 })

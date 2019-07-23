@@ -94,7 +94,7 @@ dtt_seq.POSIXct <- function(from, to = from, units = "seconds", length_out = NUL
 #' @export
 dtt_seq.hms <- function(from, to = from, units = "seconds", length_out = NULL, 
                         wrap = TRUE, ...) {
-  check_scalar(from, hms::as.hms(0), named = NA)
+  check_scalar(from, hms::as_hms(0), named = NA)
   check_scalar(units, .units_hms)
   checkor(check_null(length_out), check_int(length_out))
   check_flag(wrap)
@@ -112,7 +112,7 @@ dtt_seq.hms <- function(from, to = from, units = "seconds", length_out = NULL,
     } else
       to <- dtt_add_units(from, n = length_out -1L, units = units)
   } 
-  check_scalar(to, hms::as.hms(0), named = NA)
+  check_scalar(to, hms::as_hms(0), named = NA)
   to <- dtt_floor(to, units = units)
   if(from == to) return(from)
   

@@ -56,6 +56,6 @@ dtt_date(-1)
 dtt_date("2000-01-01")
 as.Date(as.POSIXct("2019-05-01", tz = "Etc/GMT-8"))
 dtt_date(as.POSIXct("2019-05-01", tz = "Etc/GMT-8"))
-dtt_date(hms::as.hms("23:59:59"))
-dtt_date(hms::as.hms("24:00:00"))
+dtt_date(hms::as_hms("23:59:59"))
+dtt_date(hms::as_hms("24:00:00"))
 }

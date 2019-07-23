@@ -18,7 +18,7 @@ dtt_date_time(x, ...)
 
 \method{dtt_date_time}{character}(x, tz = dtt_default_tz(), ...)
 
-\method{dtt_date_time}{Date}(x, time = hms::as.hms("00:00:00"),
+\method{dtt_date_time}{Date}(x, time = hms::as_hms("00:00:00"),
   tz = dtt_default_tz(), ...)
 
 \method{dtt_date_time}{POSIXct}(x, tz = dtt_tz(x), ...)
@@ -63,5 +63,5 @@ dtt_date_time(1L)
 dtt_date_time(-1)
 dtt_date_time(1, tz = "Etc/GMT+8")
 dtt_date_time(as.Date("2000-01-02"))
-dtt_date_time(as.Date("2000-01-02"), time = hms::as.hms("04:05:06"))
+dtt_date_time(as.Date("2000-01-02"), time = hms::as_hms("04:05:06"))
 }

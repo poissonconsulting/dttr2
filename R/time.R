@@ -22,7 +22,7 @@ dtt_time <- function(x, ...) {
 #' @export
 dtt_time.integer <- function(x, ...) {
   check_unused(...)
-  dtt_wrap(as.hms(x))
+  dtt_wrap(as_hms(x))
 }
 
 #' @describeIn dtt_time Coerce double vector to a floored hms vector
@@ -36,7 +36,7 @@ dtt_time.double <- function(x, ...) {
 #' @export
 dtt_time.character <- function(x, ...) {
   check_unused(...)
-  dtt_time(as.hms(x))
+  dtt_time(as_hms(x))
 }
 
 #' @describeIn dtt_time Coerce Date vector to a floored hms vector

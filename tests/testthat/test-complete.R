@@ -71,18 +71,18 @@ test_that("complete.hms", {
   expect_error(dtt_complete(NA_hms_[-1]), "x must have at least 1 element")
   expect_error(dtt_complete(NA_hms_), "x must not include missing values")
   
-  expect_identical(dtt_complete(hms::as.hms(c("00:00:00", "00:00:00"))), 
-                   hms::as.hms("00:00:00"))
+  expect_identical(dtt_complete(hms::as_hms(c("00:00:00", "00:00:00"))), 
+                   hms::as_hms("00:00:00"))
   
-  expect_identical(dtt_complete(hms::as.hms(c("00:00:00", "00:00:02"))), 
-                   hms::as.hms(c("00:00:00", "00:00:01", "00:00:02")))
+  expect_identical(dtt_complete(hms::as_hms(c("00:00:00", "00:00:02"))), 
+                   hms::as_hms(c("00:00:00", "00:00:01", "00:00:02")))
   
-  expect_identical(dtt_complete(hms::as.hms(c("00:00:04", "00:00:02")), sort = FALSE), 
-                   hms::as.hms(c("00:00:04", "00:00:02", "00:00:03")))
-  expect_identical(dtt_complete(hms::as.hms(c("00:00:04", "00:00:02"))), 
-                   hms::as.hms(c("00:00:02", "00:00:03", "00:00:04")))
-  expect_identical(length(dtt_complete(hms::as.hms(c("23:59:59", "00:00:01")))), 
+  expect_identical(dtt_complete(hms::as_hms(c("00:00:04", "00:00:02")), sort = FALSE), 
+                   hms::as_hms(c("00:00:04", "00:00:02", "00:00:03")))
+  expect_identical(dtt_complete(hms::as_hms(c("00:00:04", "00:00:02"))), 
+                   hms::as_hms(c("00:00:02", "00:00:03", "00:00:04")))
+  expect_identical(length(dtt_complete(hms::as_hms(c("23:59:59", "00:00:01")))), 
                    86399L)
-  expect_identical(length(dtt_complete(hms::as.hms(c("23:59:59", "00:00:01")), units = "hours")), 
+  expect_identical(length(dtt_complete(hms::as_hms(c("23:59:59", "00:00:01")), units = "hours")), 
                    24L)
 })

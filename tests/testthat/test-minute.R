@@ -21,15 +21,15 @@ test_that("dtt_minute.POSIXct", {
 })
 
 test_that("dtt_minute.hms", {
-  expect_identical(dtt_minute(hms::as.hms(1)[-1]), integer(0))
+  expect_identical(dtt_minute(hms::as_hms(1)[-1]), integer(0))
   expect_identical(dtt_minute(NA_hms_), NA_integer_)
-  expect_identical(dtt_minute(hms::as.hms(60)), 1L)
-  expect_identical(dtt_minute(hms::as.hms(1)), 0L)
-  expect_identical(dtt_minute(hms::as.hms(-1)), 59L)
-  expect_identical(dtt_minute(hms::as.hms("20:30:32")), 30L)
-  expect_identical(dtt_minute(hms::as.hms(-63)), 58L)
-  expect_identical(dtt_minute(c(hms::as.hms(60), NA_hms_)), c(1L, NA_integer_))
-  expect_identical(dtt_minute(hms::as.hms("24:00:00")), 0L)
+  expect_identical(dtt_minute(hms::as_hms(60)), 1L)
+  expect_identical(dtt_minute(hms::as_hms(1)), 0L)
+  expect_identical(dtt_minute(hms::as_hms(-1)), 59L)
+  expect_identical(dtt_minute(hms::as_hms("20:30:32")), 30L)
+  expect_identical(dtt_minute(hms::as_hms(-63)), 58L)
+  expect_identical(dtt_minute(c(hms::as_hms(60), NA_hms_)), c(1L, NA_integer_))
+  expect_identical(dtt_minute(hms::as_hms("24:00:00")), 0L)
 })
 
 test_that("dtt_minute<-.POSIXct", {
@@ -72,7 +72,7 @@ test_that("dtt_minute<-.POSIXct", {
 })
 
 test_that("dtt_minute<-.hms", {
-  x0 <- hms::as.hms(1)[-1]
+  x0 <- hms::as_hms(1)[-1]
   dtt_minute(x0) <- 30L
   expect_identical(dtt_minute(x0), integer(0))
   
@@ -80,12 +80,12 @@ test_that("dtt_minute<-.hms", {
   dtt_minute(xNA) <- 30L
   expect_identical(dtt_minute(xNA), NA_integer_)
   
-  x <- hms::as.hms("12:13:14")
-  expect_identical(dtt_set_minute(x, 30L),  hms::as.hms("12:30:14"))
+  x <- hms::as_hms("12:13:14")
+  expect_identical(dtt_set_minute(x, 30L),  hms::as_hms("12:30:14"))
   dtt_minute(x) <- 30L
-  expect_identical(x, hms::as.hms("12:30:14"))
+  expect_identical(x, hms::as_hms("12:30:14"))
 
-  x2 <- hms::as.hms(c("12:13:14", "15:16:17"))
+  x2 <- hms::as_hms(c("12:13:14", "15:16:17"))
   dtt_minute(x2) <- 30L
   expect_identical(dtt_minute(x2), c(30L, 30L))
 

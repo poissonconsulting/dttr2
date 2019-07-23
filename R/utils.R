@@ -5,5 +5,5 @@ c.POSIXct <- function(..., recursive = FALSE) {
 
 c.hms <- function(..., recursive = FALSE) {
   dots <- list(...)
-  hms::as.hms(c(unlist(lapply(dots, unclass))))
+  hms::as_hms(c(unlist(lapply(dots, unclass))))
 }

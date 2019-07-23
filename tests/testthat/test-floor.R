@@ -43,15 +43,15 @@ test_that("floor.POSXIct", {
 test_that("floor.hms", {
   expect_identical(dtt_floor(NA_hms_[-1]), NA_hms_[-1])
   expect_identical(dtt_floor(NA_hms_), NA_hms_)
-  expect_identical(as.double(dtt_floor(hms::as.hms(1.99))), 1)
-  expect_identical(dtt_floor(hms::as.hms(-1.99)), hms::as.hms("23:59:58"))
-  expect_identical(as.double(dtt_floor(hms::as.hms(-1.99))), 86398)
+  expect_identical(as.double(dtt_floor(hms::as_hms(1.99))), 1)
+  expect_identical(dtt_floor(hms::as_hms(-1.99)), hms::as_hms("23:59:58"))
+  expect_identical(as.double(dtt_floor(hms::as_hms(-1.99))), 86398)
   
-  expect_identical(dtt_floor(hms::as.hms("23:59:59")), hms::as.hms("23:59:59"))
-  expect_identical(dtt_floor(hms::as.hms("23:59:59"), "minutes"), hms::as.hms("23:59:00"))
-  expect_identical(dtt_floor(hms::as.hms("23:59:59"), "hours"), hms::as.hms("23:00:00"))
-  expect_identical(dtt_floor(hms::as.hms(c("23:59:59", "01:02:03")), "hours"), 
-                   hms::as.hms(c("23:00:00", "01:00:00")))
-  expect_identical(dtt_floor(hms::as.hms(c("23:59:59", NA)), "hours"), 
-                   hms::as.hms(c("23:00:00", NA)))
+  expect_identical(dtt_floor(hms::as_hms("23:59:59")), hms::as_hms("23:59:59"))
+  expect_identical(dtt_floor(hms::as_hms("23:59:59"), "minutes"), hms::as_hms("23:59:00"))
+  expect_identical(dtt_floor(hms::as_hms("23:59:59"), "hours"), hms::as_hms("23:00:00"))
+  expect_identical(dtt_floor(hms::as_hms(c("23:59:59", "01:02:03")), "hours"), 
+                   hms::as_hms(c("23:00:00", "01:00:00")))
+  expect_identical(dtt_floor(hms::as_hms(c("23:59:59", NA)), "hours"), 
+                   hms::as_hms(c("23:00:00", NA)))
 })
