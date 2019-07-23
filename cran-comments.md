@@ -1,5 +1,3 @@
-Replaced deprecated `hms::as.hms()` with `hms::as_hms()`
-
 ## Test environments
 
 * OS X (local) - release
