@@ -1,5 +1,5 @@
 #' Get and Set Second Values
-#' 
+#'
 #' Gets and sets second values for date/time vectors.
 #'
 #' @param x A date/time vector.
@@ -13,7 +13,7 @@
 #' dtt_second(x)
 #' dtt_second(x) <- 27L
 #' x
-#' 
+#'
 #' x <- hms::as_hms("23:40:51")
 #' dtt_second(x)
 #' dtt_second(x) <- 27L
@@ -56,7 +56,9 @@ dtt_second.hms <- function(x, ...) {
 #' @export
 `dtt_second<-.POSIXct` <- function(x, value) {
   check_vector(value, c(0L, 59L), length = c(1L, 1L, length(x)))
-  if(!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   tz <- dtt_tz(x)
   x <- as.POSIXlt(x, tz = tz)
   x$sec <- value
@@ -67,7 +69,9 @@ dtt_second.hms <- function(x, ...) {
 #' @export
 `dtt_second<-.hms` <- function(x, value) {
   check_vector(value, c(0L, 59L), length = c(1L, 1L, length(x)))
-  if(!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   x <- as.POSIXlt(x)
   x$sec <- value
   dtt_time(x)

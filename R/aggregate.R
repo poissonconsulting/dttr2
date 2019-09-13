@@ -1,7 +1,7 @@
 #' Aggregates
-#' 
+#'
 #' Aggregates a date/time vector
-#' 
+#'
 #' The possible units values are 'seconds', 'minutes', 'hours', 'days', 'months'
 #'  or 'years'.
 #'

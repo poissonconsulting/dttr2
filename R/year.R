@@ -1,5 +1,5 @@
 #' Get and Set Year Values
-#' 
+#'
 #' Gets and sets year values for date/time vectors.
 #'
 #' @param x A date/time vector.
@@ -13,7 +13,7 @@
 #' dtt_year(x)
 #' dtt_year(x) <- 11L
 #' x
-#' 
+#'
 #' x <- as.POSIXct("1990-01-02 23:40:51")
 #' dtt_year(x)
 #' dtt_year(x) <- 2022L
@@ -47,9 +47,13 @@ dtt_year.POSIXct <- function(x, ...) {
 #' @export
 `dtt_year<-.Date` <- function(x, value) {
   check_vector(value, c(1L, 2999L), length = c(1L, 1L, length(x)))
-  if(!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   x <- format(x)
-  if(identical(length(value), 1L)) return(dtt_date(sub_year(x, value)))
+  if (identical(length(value), 1L)) {
+    return(dtt_date(sub_year(x, value)))
+  }
   dtt_date(mapply(FUN = sub_year, x, value))
 }
 
@@ -57,7 +61,9 @@ dtt_year.POSIXct <- function(x, ...) {
 #' @export
 `dtt_year<-.POSIXct` <- function(x, value) {
   check_vector(value, c(1L, 2999L), length = c(1L, 1L, length(x)))
-  if(!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   tz <- dtt_tz(x)
   x <- as.POSIXlt(x, tz = tz)
   x$year <- value - 1900L

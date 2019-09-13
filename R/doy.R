@@ -38,7 +38,9 @@ dtt_doy_to_date <- function(x, year = 1972L) {
   check_vector(x, c(1L, 366L, NA))
   check_vector(year, c(-3000L, 3000L), length = c(1L, 1L, length(x)))
 
-  if(!length(x)) return(dtt_date(character(0)))
+  if (!length(x)) {
+    return(dtt_date(character(0)))
+  }
 
   dtt_date(paste0(year - 1, "-12-31")) + x
 }

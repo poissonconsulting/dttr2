@@ -3,7 +3,7 @@
 #' @param x A date/time vector.
 #' @param ... Unused.
 #' @export
-#' @examples 
+#' @examples
 #' dtt_wrap(hms::as_hms("24:00:00"))
 dtt_wrap <- function(x, ...) {
   UseMethod("dtt_wrap")

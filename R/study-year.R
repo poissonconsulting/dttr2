@@ -10,34 +10,46 @@
 #' dtt_study_year(as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")), start = 4L)
 #' dtt_study_year(as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")), start = 4L, full = FALSE)
 dtt_study_year <- function(x, start = 1L, full = TRUE) {
-  checkor(check_vector(x, Sys.Date()),
-          check_vector(x, Sys.time()))
-  
-  checkor(check_vector(start, c(1L, 12L), length = 1L),
-          check_vector(start, Sys.Date(), length = 1L))
+  checkor(
+    check_vector(x, Sys.Date()),
+    check_vector(x, Sys.time())
+  )
+
+  checkor(
+    check_vector(start, c(1L, 12L), length = 1L),
+    check_vector(start, Sys.Date(), length = 1L)
+  )
   check_flag(full)
-  
-  if(!length(x)) {
-    if(!full) return(integer(0))
+
+  if (!length(x)) {
+    if (!full) {
+      return(integer(0))
+    }
     return(character(0))
   }
-  if(is.integer(start)) {
+  if (is.integer(start)) {
     start <- dtt_date(paste("1972", start, "01", sep = "-"))
-  } else
+  } else {
     start <- dtt_dayte(start)
-  
+  }
+
   year <- dtt_year(x)
   start <- dtt_floor(start)
-  if(identical(start, dtt_date("1972-01-01"))) {
-    if(!full) return(year)
+  if (identical(start, dtt_date("1972-01-01"))) {
+    if (!full) {
+      return(year)
+    }
     return(paste(year, year, sep = "-"))
   }
   start <- rep(start, length(year))
   start <- try(dtt_set_year(start, year), silent = TRUE)
-  if(inherits(start, "try-error"))
+  if (inherits(start, "try-error")) {
     err("argument start must be a valid date for each year")
+  }
   date_in_start <- dtt_date(x) >= start
   year[!date_in_start] <- year[!date_in_start] - 1L
-  if(!full) return(year)
+  if (!full) {
+    return(year)
+  }
   paste(year, year + 1L, sep = "-")
 }

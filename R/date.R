@@ -1,7 +1,7 @@
 #' Date
 #'
 #' Coerces vectors to floored Date vectors.
-#' 
+#'
 #' @param x A vector.
 #' @param ... Unused.
 #'

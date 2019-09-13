@@ -1,7 +1,7 @@
 #' Check Time Zone
-#' 
+#'
 #' Checks an object's time zone as returned by \code{dtt_tz()}.
-#' 
+#'
 #' @inheritParams checkr::check_sorted
 #' @param tz A string of the time zone to check that x's matches.
 #' @inheritParams dtt_tz
@@ -17,10 +17,11 @@ check_tz <- function(x, tz = dtt_tz(x),
   x_name <- chk_deparse(x_name)
   check_string(tz)
   check_flag(error)
-  
+
   if (!identical(tz, dtt_tz(x))) {
-    chk_fail(x_name, "'s time zone must be '", tz, "' not ('", dtt_tz(x),"')", 
-             error = error)
+    chk_fail(x_name, "'s time zone must be '", tz, "' not ('", dtt_tz(x), "')",
+      error = error
+    )
   }
   invisible(x)
 }

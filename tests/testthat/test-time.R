@@ -31,36 +31,56 @@ test_that("time.Date", {
   expect_identical(dtt_time(Sys.Date()[-1]), hms::as_hms(1)[-1])
   expect_identical(dtt_time(NA_Date_), hms::as_hms("00:00:00"))
   expect_identical(dtt_time(as.Date("2000-01-01")), hms::as_hms("00:00:00"))
-  expect_identical(dtt_time(c(as.Date("2000-01-01"), NA_Date_)), 
-                            c(hms::as_hms("00:00:00"), hms::as_hms("00:00:00")))
-  expect_identical(dtt_time(as.Date("1970-01-04") + 0.999), 
-                   hms::as_hms("00:00:00"))
-  expect_identical(dtt_time(as.Date("1970-01-04") - 0.001), 
-                   hms::as_hms("00:00:00"))
+  expect_identical(
+    dtt_time(c(as.Date("2000-01-01"), NA_Date_)),
+    c(hms::as_hms("00:00:00"), hms::as_hms("00:00:00"))
+  )
+  expect_identical(
+    dtt_time(as.Date("1970-01-04") + 0.999),
+    hms::as_hms("00:00:00")
+  )
+  expect_identical(
+    dtt_time(as.Date("1970-01-04") - 0.001),
+    hms::as_hms("00:00:00")
+  )
 })
 
 test_that("time.POSIXct", {
   expect_identical(dtt_time(Sys.time()[-1]), hms::as_hms(1)[-1])
   expect_identical(dtt_time(NA_POSIXct_), NA_hms_)
-  expect_identical(dtt_time(as.POSIXct("1970-01-03 00:00:00", tz = "Etc/GMT+8")), 
-                   hms::as_hms("00:00:00"))
-  expect_identical(dtt_time(as.POSIXct("1970-01-03 00:00:00", tz = "Etc/GMT+7")), 
-                   hms::as_hms("00:00:00"))
-  expect_identical(dtt_time(as.POSIXct("1970-01-03 23:59:59", tz = "Etc/GMT+8")), 
-                   hms::as_hms("23:59:59"))
-  expect_identical(dtt_time(c(as.POSIXct("1970-01-03 23:59:59", tz = "Etc/GMT+8"), NA_POSIXct_)), 
-                   c(hms::as_hms("23:59:59"), NA_hms_))
+  expect_identical(
+    dtt_time(as.POSIXct("1970-01-03 00:00:00", tz = "Etc/GMT+8")),
+    hms::as_hms("00:00:00")
+  )
+  expect_identical(
+    dtt_time(as.POSIXct("1970-01-03 00:00:00", tz = "Etc/GMT+7")),
+    hms::as_hms("00:00:00")
+  )
+  expect_identical(
+    dtt_time(as.POSIXct("1970-01-03 23:59:59", tz = "Etc/GMT+8")),
+    hms::as_hms("23:59:59")
+  )
+  expect_identical(
+    dtt_time(c(as.POSIXct("1970-01-03 23:59:59", tz = "Etc/GMT+8"), NA_POSIXct_)),
+    c(hms::as_hms("23:59:59"), NA_hms_)
+  )
 })
 
 test_that("time.POSIXlt", {
   expect_identical(dtt_time(as.POSIXlt(Sys.time()[-1])), hms::as_hms(1)[-1])
   expect_identical(dtt_time(as.POSIXlt(NA_POSIXct_)), NA_hms_)
-  expect_identical(dtt_time(as.POSIXlt("1970-01-03 00:00:00", tz = "Etc/GMT+8")), 
-                   hms::as_hms("00:00:00"))
-  expect_identical(dtt_time(as.POSIXlt("1970-01-03 23:59:59", tz = "Etc/GMT+8")), 
-                   hms::as_hms("23:59:59"))
-  expect_identical(dtt_time(as.POSIXlt(c(as.POSIXct("1970-01-03 23:59:59", tz = "Etc/GMT+8"), NA_POSIXct_))), 
-                   c(hms::as_hms("23:59:59"), NA_hms_))
+  expect_identical(
+    dtt_time(as.POSIXlt("1970-01-03 00:00:00", tz = "Etc/GMT+8")),
+    hms::as_hms("00:00:00")
+  )
+  expect_identical(
+    dtt_time(as.POSIXlt("1970-01-03 23:59:59", tz = "Etc/GMT+8")),
+    hms::as_hms("23:59:59")
+  )
+  expect_identical(
+    dtt_time(as.POSIXlt(c(as.POSIXct("1970-01-03 23:59:59", tz = "Etc/GMT+8"), NA_POSIXct_))),
+    c(hms::as_hms("23:59:59"), NA_hms_)
+  )
 })
 
 test_that("time.hms", {
@@ -68,6 +88,8 @@ test_that("time.hms", {
   expect_identical(dtt_time(NA_hms_), NA_hms_)
   expect_identical(dtt_time(hms::as_hms("01:02:03")), hms::as_hms("01:02:03"))
   expect_identical(dtt_time(hms::as_hms("01:02:03.99999")), hms::as_hms("01:02:03"))
-  expect_identical(dtt_time(c(hms::as_hms("01:02:03"), NA_hms_)), 
-                   c(hms::as_hms("01:02:03"), NA_hms_))
+  expect_identical(
+    dtt_time(c(hms::as_hms("01:02:03"), NA_hms_)),
+    c(hms::as_hms("01:02:03"), NA_hms_)
+  )
 })

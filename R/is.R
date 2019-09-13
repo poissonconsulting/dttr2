@@ -1,7 +1,7 @@
 #' Is Date/Time
-#' 
+#'
 #' Tests whether an object is a Date, POSIXct, or hms vector.
-#' 
+#'
 #' @param x An object
 #' @return A flag indicating whether x inherits from Date, POSIXct or hms.
 #' @name is.datetime

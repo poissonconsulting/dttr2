@@ -22,7 +22,7 @@ dtt_dayte.Date <- function(x, start = 1L, ...) {
 
 #' @describeIn dtt_dayte Dayte a POSIXct vector
 #' @export
-dtt_dayte.POSIXct <- function(x, start = 1L,...) {
+dtt_dayte.POSIXct <- function(x, start = 1L, ...) {
   check_unused(...)
   dtt_dayte(dtt_date(x), start = start)
 }

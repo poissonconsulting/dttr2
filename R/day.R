@@ -1,5 +1,5 @@
 #' Get and Set Day Values
-#' 
+#'
 #' Gets and sets day values for date/time vectors.
 #'
 #' @param x A date/time vector.
@@ -13,7 +13,7 @@
 #' dtt_day(x)
 #' dtt_day(x) <- 27L
 #' x
-#' 
+#'
 #' x <- as.POSIXct("1990-01-02 23:40:51")
 #' dtt_day(x)
 #' dtt_day(x) <- 27L
@@ -47,9 +47,13 @@ dtt_day.POSIXct <- function(x, ...) {
 #' @export
 `dtt_day<-.Date` <- function(x, value) {
   check_vector(value, c(1L, 31L), length = c(1L, 1L, length(x)))
-  if(!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   x <- format(x)
-  if(identical(length(value), 1L)) return(dtt_date(sub_day(x, value)))
+  if (identical(length(value), 1L)) {
+    return(dtt_date(sub_day(x, value)))
+  }
   dtt_date(mapply(sub_day, x, value))
 }
 
@@ -57,7 +61,9 @@ dtt_day.POSIXct <- function(x, ...) {
 #' @export
 `dtt_day<-.POSIXct` <- function(x, value) {
   check_vector(value, c(1L, 31L), length = c(1L, 1L, length(x)))
-  if(!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   tz <- dtt_tz(x)
   x <- as.POSIXlt(x, tz = tz)
   x$mday <- value

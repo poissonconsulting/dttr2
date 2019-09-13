@@ -1,5 +1,5 @@
 #' Floored
-#' 
+#'
 #' Test whether a date time vector is floored.
 #' @param x A Date, POSIXct or hms vector.
 #' @param units A string of the time units to floor by.

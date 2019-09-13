@@ -29,7 +29,7 @@ dtt_adjust_units <- function(x, from = "seconds", to = "seconds") {
 }
 
 #' Get Units
-#' 
+#'
 #' Gets the smallest units for a date time vector.
 #' The possible values are 'seconds', 'minutes', 'hours', 'days', 'months' or 'years'.
 #'
@@ -51,10 +51,16 @@ dtt_units <- function(x, ...) {
 dtt_units.Date <- function(x, ...) {
   check_unused(...)
   x <- x[!is.na(x)]
-  if(!length(x)) return("days")
-  
-  if(any(dtt_day(x) != 1L)) return("days")
-  if(any(dtt_month(x) != 1L)) return("months")
+  if (!length(x)) {
+    return("days")
+  }
+
+  if (any(dtt_day(x) != 1L)) {
+    return("days")
+  }
+  if (any(dtt_month(x) != 1L)) {
+    return("months")
+  }
   "years"
 }
 
@@ -63,13 +69,25 @@ dtt_units.Date <- function(x, ...) {
 dtt_units.POSIXct <- function(x, ...) {
   check_unused(...)
   x <- x[!is.na(x)]
-  if(!length(x)) return("seconds")
-  
-  if(any(dtt_second(x) != 0L)) return("seconds")
-  if(any(dtt_minute(x) != 0L)) return("minutes")
-  if(any(dtt_hour(x) != 0L)) return("hours")
-  if(any(dtt_day(x) != 1L)) return("days")
-  if(any(dtt_month(x) != 1L)) return("months")
+  if (!length(x)) {
+    return("seconds")
+  }
+
+  if (any(dtt_second(x) != 0L)) {
+    return("seconds")
+  }
+  if (any(dtt_minute(x) != 0L)) {
+    return("minutes")
+  }
+  if (any(dtt_hour(x) != 0L)) {
+    return("hours")
+  }
+  if (any(dtt_day(x) != 1L)) {
+    return("days")
+  }
+  if (any(dtt_month(x) != 1L)) {
+    return("months")
+  }
   "years"
 }
 
@@ -78,9 +96,15 @@ dtt_units.POSIXct <- function(x, ...) {
 dtt_units.hms <- function(x, ...) {
   check_unused(...)
   x <- x[!is.na(x)]
-  if(!length(x)) return("seconds")
-  
-  if(any(dtt_second(x) != 0L)) return("seconds")
-  if(any(dtt_minute(x) != 0L)) return("minutes")
+  if (!length(x)) {
+    return("seconds")
+  }
+
+  if (any(dtt_second(x) != 0L)) {
+    return("seconds")
+  }
+  if (any(dtt_minute(x) != 0L)) {
+    return("minutes")
+  }
   "hours"
 }

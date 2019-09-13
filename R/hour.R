@@ -1,5 +1,5 @@
 #' Get and Set Hour Values
-#' 
+#'
 #' Gets and sets hour values for date/time vectors.
 #'
 #' @param x A date/time vector.
@@ -13,7 +13,7 @@
 #' dtt_hour(x)
 #' dtt_hour(x) <- 01L
 #' x
-#' 
+#'
 #' x <- hms::as_hms("23:40:51")
 #' dtt_hour(x)
 #' dtt_hour(x) <- 01L
@@ -56,7 +56,9 @@ dtt_hour.hms <- function(x, ...) {
 #' @export
 `dtt_hour<-.POSIXct` <- function(x, value) {
   check_vector(value, c(0L, 23L), length = c(1L, 1L, length(x)))
-  if(!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   tz <- dtt_tz(x)
   x <- as.POSIXlt(x, tz = tz)
   x$hour <- value
@@ -67,7 +69,9 @@ dtt_hour.hms <- function(x, ...) {
 #' @export
 `dtt_hour<-.hms` <- function(x, value) {
   check_vector(value, c(0L, 23L), length = c(1L, 1L, length(x)))
-  if(!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   x <- as.POSIXlt(x)
   x$hour <- value
   dtt_time(x)

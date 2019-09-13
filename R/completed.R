@@ -1,5 +1,5 @@
 #' Completed
-#' 
+#'
 #' Tests whether a date time is complete.
 #'
 #' @param x A date time vector
@@ -15,60 +15,84 @@ dtt_completed <- function(x, ...) {
 
 #' @describeIn dtt_completed Test if Date vector is complete
 #' @export
-dtt_completed.Date <- function(x, units = "days", unique = TRUE, sorted = TRUE,  
+dtt_completed.Date <- function(x, units = "days", unique = TRUE, sorted = TRUE,
                                ...) {
   check_scalar(units, .units_Date)
   check_flag(unique)
   check_flag(sorted)
   check_unused(...)
 
-  if(anyNA(x)) return(NA)
-  
+  if (anyNA(x)) {
+    return(NA)
+  }
+
   x <- dtt_floor(x, units)
-  if(length(x) <= 1) return(TRUE)
-  if(unique && anyDuplicated(x)) return(FALSE)
-  if(sorted && is.unsorted(x)) return(FALSE)
+  if (length(x) <= 1) {
+    return(TRUE)
+  }
+  if (unique && anyDuplicated(x)) {
+    return(FALSE)
+  }
+  if (sorted && is.unsorted(x)) {
+    return(FALSE)
+  }
   x <- unique(x)
   seq <- dtt_seq(min(x), max(x), units = units)
-  identical(length(x), length(seq)) 
+  identical(length(x), length(seq))
 }
 
 #' @describeIn dtt_completed Test if POSIXct vector is complete
 #' @export
-dtt_completed.POSIXct <- function(x, units = "seconds", unique = TRUE, sorted = TRUE,  
-                               ...) {
+dtt_completed.POSIXct <- function(x, units = "seconds", unique = TRUE, sorted = TRUE,
+                                  ...) {
   check_scalar(units, .units_POSIXct)
   check_flag(unique)
   check_flag(sorted)
   check_unused(...)
 
-  if(anyNA(x)) return(NA)
-  
+  if (anyNA(x)) {
+    return(NA)
+  }
+
   x <- dtt_floor(x, units)
-  if(length(x) <= 1) return(TRUE)
-  if(unique && anyDuplicated(x)) return(FALSE)
-  if(sorted && is.unsorted(x)) return(FALSE)
+  if (length(x) <= 1) {
+    return(TRUE)
+  }
+  if (unique && anyDuplicated(x)) {
+    return(FALSE)
+  }
+  if (sorted && is.unsorted(x)) {
+    return(FALSE)
+  }
   x <- unique(x)
   seq <- dtt_seq(min(x), max(x), units = units)
-  identical(length(x), length(seq)) 
+  identical(length(x), length(seq))
 }
 
 #' @describeIn dtt_completed Test if POSIXct vector is complete
 #' @export
-dtt_completed.hms <- function(x, units = "seconds", unique = TRUE, sorted = TRUE,  
-                               ...) {
+dtt_completed.hms <- function(x, units = "seconds", unique = TRUE, sorted = TRUE,
+                              ...) {
   check_scalar(units, .units_hms)
   check_flag(unique)
   check_flag(sorted)
   check_unused(...)
 
-  if(anyNA(x)) return(NA)
-  
+  if (anyNA(x)) {
+    return(NA)
+  }
+
   x <- dtt_floor(x, units)
-  if(length(x) <= 1) return(TRUE)
-  if(unique && anyDuplicated(x)) return(FALSE)
-  if(sorted && is.unsorted(x)) return(FALSE)
+  if (length(x) <= 1) {
+    return(TRUE)
+  }
+  if (unique && anyDuplicated(x)) {
+    return(FALSE)
+  }
+  if (sorted && is.unsorted(x)) {
+    return(FALSE)
+  }
   x <- unique(x)
   seq <- dtt_seq(min(x), max(x), units = units)
-  identical(length(x), length(seq)) 
+  identical(length(x), length(seq))
 }

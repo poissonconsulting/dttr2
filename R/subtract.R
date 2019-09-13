@@ -1,5 +1,5 @@
 #' Subtract Units
-#' 
+#'
 #' Subtract time units from a date time vector.
 #'
 #' @param x A date time vector.
@@ -14,7 +14,7 @@
 #' @examples
 #' dtt_subtract_units(as.Date("1999-12-31"), 2L, "days")
 dtt_subtract_units <- function(x, n = 1L, units = dtt_units(x)) {
-  dtt_add_units(x, units = units, n =  n * -1L)
+  dtt_add_units(x, units = units, n = n * -1L)
 }
 
 #' @rdname dtt_subtract_units

@@ -1,13 +1,13 @@
 #' Time
 #'
 #' Coerces vectors to floored (and wrapped) hms vectors.
-#' 
+#'
 #' @param x A vector.
 #' @param ... Unused.
 #'
 #' @return A floored hms vector.
 #' @export
-#' @examples 
+#' @examples
 #' dtt_time(1L)
 #' dtt_time(1.999)
 #' dtt_time(-0.001)
