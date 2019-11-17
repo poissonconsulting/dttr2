@@ -18,6 +18,8 @@ Imports:
 Suggests: 
     testthat,
     covr
+Remotes:
+    poissonconsulting/chk
 URL: https://github.com/poissonconsulting/dttr2
 BugReports: https://github.com/poissonconsulting/dttr2/issues
 Encoding: UTF-8
