@@ -4,8 +4,7 @@
 \alias{dtt_season}
 \title{Season}
 \usage{
-dtt_season(x, start = c(Spring = 3L, Summer = 6L, Autumn = 9L, Winter =
-  12L))
+dtt_season(x, start = c(Spring = 3L, Summer = 6L, Autumn = 9L, Winter = 12L))
 }
 \arguments{
 \item{x}{A Date or POSIXct vector}

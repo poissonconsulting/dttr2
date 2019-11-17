@@ -9,14 +9,11 @@
 \usage{
 dtt_completed(x, ...)
 
-\method{dtt_completed}{Date}(x, units = "days", unique = TRUE,
-  sorted = TRUE, ...)
+\method{dtt_completed}{Date}(x, units = "days", unique = TRUE, sorted = TRUE, ...)
 
-\method{dtt_completed}{POSIXct}(x, units = "seconds", unique = TRUE,
-  sorted = TRUE, ...)
+\method{dtt_completed}{POSIXct}(x, units = "seconds", unique = TRUE, sorted = TRUE, ...)
 
-\method{dtt_completed}{hms}(x, units = "seconds", unique = TRUE,
-  sorted = TRUE, ...)
+\method{dtt_completed}{hms}(x, units = "seconds", unique = TRUE, sorted = TRUE, ...)
 }
 \arguments{
 \item{x}{A date time vector}

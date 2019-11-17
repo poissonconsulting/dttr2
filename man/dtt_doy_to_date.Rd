@@ -18,5 +18,5 @@ A Date vector.
 Day of the Year to Date
 }
 \examples{
-dtt_doy_to_date(3L)
+dtt_doy_to_date(3)
 }

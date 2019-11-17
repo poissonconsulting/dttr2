@@ -9,14 +9,35 @@
 \usage{
 dtt_complete(x, ...)
 
-\method{dtt_complete}{Date}(x, from = min(x), to = max(x),
-  units = "days", unique = TRUE, sort = TRUE, ...)
+\method{dtt_complete}{Date}(
+  x,
+  from = min(x),
+  to = max(x),
+  units = "days",
+  unique = TRUE,
+  sort = TRUE,
+  ...
+)
 
-\method{dtt_complete}{POSIXct}(x, from = min(x), to = max(x),
-  units = "seconds", unique = TRUE, sort = TRUE, ...)
+\method{dtt_complete}{POSIXct}(
+  x,
+  from = min(x),
+  to = max(x),
+  units = "seconds",
+  unique = TRUE,
+  sort = TRUE,
+  ...
+)
 
-\method{dtt_complete}{hms}(x, from = min(x), to = max(x),
-  units = "seconds", unique = TRUE, sort = TRUE, ...)
+\method{dtt_complete}{hms}(
+  x,
+  from = min(x),
+  to = max(x),
+  units = "seconds",
+  unique = TRUE,
+  sort = TRUE,
+  ...
+)
 }
 \arguments{
 \item{x}{A date/time vector.}
