@@ -80,7 +80,7 @@ daytte <- function(x, start) {
 }
 
 seconds_per_unit <- function(units = "seconds") {
-  check_scalar(units, .units_POSIXct)
+  check_scalar(units, c("seconds", "minutes", "hours", "days", "months", "years"))
 
   if (units == "seconds") {
     return(1L)

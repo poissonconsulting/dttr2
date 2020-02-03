@@ -53,7 +53,7 @@ dtt_complete.POSIXct <- function(x, from = min(x), to = max(x), units = "seconds
 
   check_scalar(from, Sys.time(), named = NA)
   check_scalar(to, Sys.time(), named = NA)
-  check_scalar(units, .units_POSIXct)
+  check_scalar(units, c("seconds", "minutes", "hours", "days", "months", "years"))
   chk_flag(unique)
   chk_flag(sort)
   chk_unused(...)

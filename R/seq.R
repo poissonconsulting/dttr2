@@ -62,7 +62,7 @@ dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL, ...
 #' @export
 dtt_seq.POSIXct <- function(from, to = from, units = "seconds", length_out = NULL, ...) {
   check_scalar(from, Sys.time(), named = NA)
-  check_scalar(units, .units_POSIXct)
+  check_scalar(units, c("seconds", "minutes", "hours", "days", "months", "years"))
   checkor(chk_null(length_out), check_int(length_out))
   chk_unused(...)
 
