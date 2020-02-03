@@ -23,7 +23,7 @@ dtt_seq <- function(from, to, units, length_out = NULL, ...) {
 #' @export
 dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL, ...) {
   check_scalar(from, Sys.Date(), named = NA)
-  check_scalar(units, .units_Date)
+  check_scalar(units, c("days", "months", "years"))
   checkor(chk_null(length_out), check_int(length_out))
   chk_unused(...)
 
@@ -105,7 +105,7 @@ dtt_seq.POSIXct <- function(from, to = from, units = "seconds", length_out = NUL
 dtt_seq.hms <- function(from, to = from, units = "seconds", length_out = NULL,
                         wrap = TRUE, ...) {
   check_scalar(from, hms::as_hms(0), named = NA)
-  check_scalar(units, .units_hms)
+  check_scalar(units, c("seconds", "minutes", "hours"))
   checkor(chk_null(length_out), check_int(length_out))
   chk_flag(wrap)
   chk_unused(...)

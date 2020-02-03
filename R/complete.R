@@ -25,7 +25,7 @@ dtt_complete.Date <- function(x, from = min(x), to = max(x), units = "days",
   check_vector(x, Sys.Date(), length = TRUE)
   check_scalar(from, Sys.Date(), named = NA)
   check_scalar(to, Sys.Date(), named = NA)
-  check_scalar(units, .units_Date)
+  check_scalar(units, c("days", "months", "years"))
   chk_flag(unique)
   chk_flag(sort)
   chk_unused(...)
@@ -88,7 +88,7 @@ dtt_complete.hms <- function(x, from = min(x), to = max(x), units = "seconds",
 
   check_scalar(from, hms::as_hms(1), named = NA)
   check_scalar(to, hms::as_hms(1), named = NA)
-  check_scalar(units, .units_hms)
+  check_scalar(units, c("seconds", "minutes", "hours"))
   chk_flag(unique)
   chk_flag(sort)
   chk_unused(...)

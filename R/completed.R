@@ -17,7 +17,7 @@ dtt_completed <- function(x, ...) {
 #' @export
 dtt_completed.Date <- function(x, units = "days", unique = TRUE, sorted = TRUE,
                                ...) {
-  check_scalar(units, .units_Date)
+  check_scalar(units, c("days", "months", "years"))
   chk_flag(unique)
   chk_flag(sorted)
   chk_unused(...)
@@ -73,7 +73,7 @@ dtt_completed.POSIXct <- function(x, units = "seconds", unique = TRUE, sorted = 
 #' @export
 dtt_completed.hms <- function(x, units = "seconds", unique = TRUE, sorted = TRUE,
                               ...) {
-  check_scalar(units, .units_hms)
+  check_scalar(units, c("seconds", "minutes", "hours"))
   chk_flag(unique)
   chk_flag(sorted)
   chk_unused(...)
