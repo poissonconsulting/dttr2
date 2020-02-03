@@ -16,6 +16,6 @@ dtt_dayte_time <- function(x, ...) {
 #' @describeIn dtt_dayte_time Dayte Time a POSIXct vector
 #' @export
 dtt_dayte_time.POSIXct <- function(x, start = 1L, ...) {
-  check_unused(...)
+  chk_unused(...)
   daytte(x, start = start)
 }

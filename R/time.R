@@ -21,42 +21,42 @@ dtt_time <- function(x, ...) {
 #' @describeIn dtt_time Coerce integer vector to a floored hms vector
 #' @export
 dtt_time.integer <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_wrap(as_hms(x))
 }
 
 #' @describeIn dtt_time Coerce double vector to a floored hms vector
 #' @export
 dtt_time.double <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_time(as.integer(floor(x)))
 }
 
 #' @describeIn dtt_time Coerce character vector to a floored hms vector
 #' @export
 dtt_time.character <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_time(as_hms(x))
 }
 
 #' @describeIn dtt_time Coerce Date vector to a floored hms vector
 #' @export
 dtt_time.Date <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_time(rep(0L, length(x)))
 }
 
 #' @describeIn dtt_time Coerce hms vector to a floored hms vector
 #' @export
 dtt_time.hms <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_wrap(dtt_floor(x))
 }
 
 #' @describeIn dtt_time Coerce POSIXct vector to a floored hms vector
 #' @export
 dtt_time.POSIXct <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- hms::hms(dtt_second(x), dtt_minute(x), dtt_hour(x))
   dtt_time(x)
 }
@@ -64,7 +64,7 @@ dtt_time.POSIXct <- function(x, ...) {
 #' @describeIn dtt_time Coerce POSIXlt vector to a floored hms vector
 #' @export
 dtt_time.POSIXlt <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- data.frame(seconds = x$sec, minutes = x$min, hours = x$hour)
   do.call("hms", x)
 }

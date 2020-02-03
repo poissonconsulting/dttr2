@@ -31,14 +31,14 @@ dtt_year <- function(x, ...) {
 #' @describeIn dtt_year Get integer vector of year values for a Date vector
 #' @export
 dtt_year.Date <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   as.integer(format(x, "%Y"))
 }
 
 #' @describeIn dtt_year Get integer vector of year values for a POSIXct vector
 #' @export
 dtt_year.POSIXct <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- as.POSIXlt(x, tz = dtt_tz(x))
   as.integer(x$year + 1900L)
 }

@@ -25,7 +25,7 @@ dtt_date_time <- function(x, ...) {
 #' @export
 dtt_date_time.integer <- function(
                                   x, tz = dtt_default_tz(), ...) {
-  check_unused(...)
+  chk_unused(...)
   check_string(tz)
   as.POSIXct(x, tz = tz, origin = as.POSIXct("1970-01-01", tz = "GMT"))
 }
@@ -34,14 +34,14 @@ dtt_date_time.integer <- function(
 #' @export
 dtt_date_time.double <- function(
                                  x, tz = dtt_default_tz(), ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_date_time(as.integer(floor(x)), tz = tz)
 }
 
 #' @describeIn dtt_date_time Coerce character vector to a floored POSIXct vector
 #' @export
 dtt_date_time.character <- function(x, tz = dtt_default_tz(), ...) {
-  check_unused(...)
+  chk_unused(...)
   check_string(tz)
   dtt_floor(as.POSIXct(x, tz = tz))
 }
@@ -49,7 +49,7 @@ dtt_date_time.character <- function(x, tz = dtt_default_tz(), ...) {
 #' @describeIn dtt_date_time Coerce Date vector to a floored POSIXct vector
 #' @export
 dtt_date_time.Date <- function(x, time = hms::as_hms("00:00:00"), tz = dtt_default_tz(), ...) {
-  check_unused(...)
+  chk_unused(...)
   check_string(tz)
   check_vector(time, hms::as_hms("00:00:00"), length = c(1L, 1L, length(x)))
 
@@ -66,7 +66,7 @@ dtt_date_time.Date <- function(x, time = hms::as_hms("00:00:00"), tz = dtt_defau
 #' @describeIn dtt_date_time Coerce POSIXct vector to a floored POSIXct vector
 #' @export
 dtt_date_time.POSIXct <- function(x, tz = dtt_tz(x), ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- dtt_adjust_tz(x, tz = tz)
   dtt_floor(x)
 }
@@ -75,7 +75,7 @@ dtt_date_time.POSIXct <- function(x, tz = dtt_tz(x), ...) {
 #' @export
 dtt_date_time.hms <- function(
                               x, date = dtt_date("1970-01-01"), tz = dtt_default_tz(), ...) {
-  check_unused(...)
+  chk_unused(...)
   check_vector(date, Sys.Date(), length = c(1L, 1L, length(x)))
   check_string(tz)
 

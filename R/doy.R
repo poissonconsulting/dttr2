@@ -14,13 +14,13 @@ dtt_doy <- function(x, ...) {
 
 #' @export
 dtt_doy.Date <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   as.integer(format(x, "%j"))
 }
 
 #' @export
 dtt_doy.POSIXct <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_doy(dtt_date(x))
 }
 

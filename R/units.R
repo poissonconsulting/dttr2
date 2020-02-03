@@ -49,7 +49,7 @@ dtt_units <- function(x, ...) {
 #' @describeIn dtt_units Get time units for a Date vector
 #' @export
 dtt_units.Date <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- x[!is.na(x)]
   if (!length(x)) {
     return("days")
@@ -67,7 +67,7 @@ dtt_units.Date <- function(x, ...) {
 #' @describeIn dtt_units Get time units for a POSIXct vector
 #' @export
 dtt_units.POSIXct <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- x[!is.na(x)]
   if (!length(x)) {
     return("seconds")
@@ -94,7 +94,7 @@ dtt_units.POSIXct <- function(x, ...) {
 #' @describeIn dtt_units Get time units for a hms vector
 #' @export
 dtt_units.hms <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- x[!is.na(x)]
   if (!length(x)) {
     return("seconds")

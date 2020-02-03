@@ -65,7 +65,7 @@ dtt_add_seconds <- function(x, n = 1L, ...) {
 #' @export
 dtt_add_years.default <- function(x, n = 1L, ...) {
   check_vector(n, c(1L, NA_integer_), length = c(1L, 1L, length(x)))
-  check_unused(...)
+  chk_unused(...)
 
   if (!length(x)) {
     return(x)
@@ -85,7 +85,7 @@ dtt_add_years.default <- function(x, n = 1L, ...) {
 #' @export
 dtt_add_months.default <- function(x, n = 1L, ...) {
   check_vector(n, c(1L, NA_integer_), length = c(1L, 1L, length(x)))
-  check_unused(...)
+  chk_unused(...)
 
   if (!length(x)) {
     return(x)
@@ -114,7 +114,7 @@ dtt_add_months.default <- function(x, n = 1L, ...) {
 #' @export
 dtt_add_days.default <- function(x, n = 1L, ...) {
   check_vector(n, c(1L, NA_integer_), length = c(1L, 1L, length(x)))
-  check_unused(...)
+  chk_unused(...)
 
   dtt_add_hours(x, n * 24L)
 }
@@ -122,7 +122,7 @@ dtt_add_days.default <- function(x, n = 1L, ...) {
 #' @export
 dtt_add_days.Date <- function(x, n = 1L, ...) {
   check_vector(n, c(1L, NA_integer_), length = c(1L, 1L, length(x)))
-  check_unused(...)
+  chk_unused(...)
 
   dtt_floor(x) + n
 }
@@ -130,7 +130,7 @@ dtt_add_days.Date <- function(x, n = 1L, ...) {
 #' @export
 dtt_add_hours.default <- function(x, n = 1L, ...) {
   check_vector(n, c(1L, NA_integer_), length = c(1L, 1L, length(x)))
-  check_unused(...)
+  chk_unused(...)
 
   dtt_add_minutes(x, n * 60L)
 }
@@ -138,7 +138,7 @@ dtt_add_hours.default <- function(x, n = 1L, ...) {
 #' @export
 dtt_add_minutes.default <- function(x, n = 1L, ...) {
   check_vector(n, c(1L, NA_integer_), length = c(1L, 1L, length(x)))
-  check_unused(...)
+  chk_unused(...)
 
   dtt_add_seconds(x, n * 60L)
 }
@@ -146,7 +146,7 @@ dtt_add_minutes.default <- function(x, n = 1L, ...) {
 #' @export
 dtt_add_seconds.POSIXct <- function(x, n = 1L, ...) {
   check_vector(n, c(1L, NA_integer_), length = c(1L, 1L, length(x)))
-  check_unused(...)
+  chk_unused(...)
 
   dtt_floor(x) + n
 }
@@ -154,6 +154,6 @@ dtt_add_seconds.POSIXct <- function(x, n = 1L, ...) {
 #' @export
 dtt_add_seconds.hms <- function(x, n = 1L, ...) {
   check_vector(n, c(1L, NA_integer_), length = c(1L, 1L, length(x)))
-  check_unused(...)
+  chk_unused(...)
   dtt_time(unclass(x) + n)
 }

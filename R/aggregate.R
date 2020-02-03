@@ -20,7 +20,7 @@ dtt_aggregate <- function(x, units, ...) {
 #' @describeIn dtt_aggregate Aggregate a Date vector
 #' @export
 dtt_aggregate.Date <- function(x, units = "days", ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- dtt_floor(x, units = units)
   unique(x)
 }
@@ -28,7 +28,7 @@ dtt_aggregate.Date <- function(x, units = "days", ...) {
 #' @describeIn dtt_aggregate Aggregate a POSIXct vector
 #' @export
 dtt_aggregate.POSIXct <- function(x, units = "seconds", ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- dtt_floor(x, units = units)
   unique(x)
 }
@@ -36,7 +36,7 @@ dtt_aggregate.POSIXct <- function(x, units = "seconds", ...) {
 #' @describeIn dtt_aggregate Aggregate a hms vector
 #' @export
 dtt_aggregate.hms <- function(x, units = "seconds", ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- dtt_floor(x, units = units)
   x <- unique(x)
   dtt_time(x)

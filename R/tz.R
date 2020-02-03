@@ -52,7 +52,7 @@ dtt_tz <- function(x, ...) {
 #' @describeIn dtt_tz Get the time zone for a POSIXct vector.
 #' @export
 dtt_tz.POSIXct <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   tz <- attr(x, "tzone")
   if (is.null(tz) || identical(tz, "")) {
     return(Sys.timezone())
@@ -83,7 +83,7 @@ dtt_set_tz <- function(x, tz = dtt_default_tz(), ...) {
 #' @export
 dtt_set_tz.POSIXct <- function(x, tz = dtt_default_tz(), ...) {
   check_string(tz)
-  check_unused(...)
+  chk_unused(...)
   if (dtt_tz(x) == tz) {
     return(x)
   }
@@ -113,7 +113,7 @@ dtt_adjust_tz <- function(x, tz = dtt_default_tz(), ...) {
 #' @export
 dtt_adjust_tz.POSIXct <- function(x, tz = dtt_default_tz(), ...) {
   check_string(tz)
-  check_unused(...)
+  chk_unused(...)
   attr(x, "tzone") <- tz
   x
 }

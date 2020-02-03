@@ -31,14 +31,14 @@ dtt_second <- function(x, ...) {
 #' @describeIn dtt_second Get integer vector of second values for a Date vector
 #' @export
 dtt_second.Date <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   rep(0L, length(x))
 }
 
 #' @describeIn dtt_second Get integer vector of second values for a POSIXct vector
 #' @export
 dtt_second.POSIXct <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- as.POSIXlt(x, tz = dtt_tz(x))
   as.integer(x$sec)
 }
@@ -46,7 +46,7 @@ dtt_second.POSIXct <- function(x, ...) {
 #' @describeIn dtt_second Get integer vector of second values for a time vector
 #' @export
 dtt_second.hms <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- dtt_time(x)
   x <- as.POSIXlt(x)
   as.integer(x$sec)

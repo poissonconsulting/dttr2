@@ -16,13 +16,13 @@ dtt_dayte <- function(x, ...) {
 #' @describeIn dtt_dayte Dayte a Date vector
 #' @export
 dtt_dayte.Date <- function(x, start = 1L, ...) {
-  check_unused(...)
+  chk_unused(...)
   daytte(x, start = start)
 }
 
 #' @describeIn dtt_dayte Dayte a POSIXct vector
 #' @export
 dtt_dayte.POSIXct <- function(x, start = 1L, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_dayte(dtt_date(x), start = start)
 }

@@ -11,6 +11,6 @@ dtt_wrap <- function(x, ...) {
 
 #' @export
 dtt_wrap.hms <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_time(as.POSIXlt(x))
 }

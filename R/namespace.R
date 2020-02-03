@@ -1,3 +1,3 @@
 #' @import checkr hms
-#' @importFrom chk chk_range
+#' @importFrom chk chk_range chk_unused
 NULL

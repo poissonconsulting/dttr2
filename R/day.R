@@ -31,14 +31,14 @@ dtt_day <- function(x, ...) {
 #' @describeIn dtt_day Get integer vector of day values for a Date vector
 #' @export
 dtt_day.Date <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   as.integer(format(x, "%d"))
 }
 
 #' @describeIn dtt_day Get integer vector of day values for a POSIXct vector
 #' @export
 dtt_day.POSIXct <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- as.POSIXlt(x, tz = dtt_tz(x))
   as.integer(x$mday)
 }

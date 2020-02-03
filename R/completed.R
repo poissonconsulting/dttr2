@@ -20,7 +20,7 @@ dtt_completed.Date <- function(x, units = "days", unique = TRUE, sorted = TRUE,
   check_scalar(units, .units_Date)
   check_flag(unique)
   check_flag(sorted)
-  check_unused(...)
+  chk_unused(...)
 
   if (anyNA(x)) {
     return(NA)
@@ -48,7 +48,7 @@ dtt_completed.POSIXct <- function(x, units = "seconds", unique = TRUE, sorted = 
   check_scalar(units, .units_POSIXct)
   check_flag(unique)
   check_flag(sorted)
-  check_unused(...)
+  chk_unused(...)
 
   if (anyNA(x)) {
     return(NA)
@@ -76,7 +76,7 @@ dtt_completed.hms <- function(x, units = "seconds", unique = TRUE, sorted = TRUE
   check_scalar(units, .units_hms)
   check_flag(unique)
   check_flag(sorted)
-  check_unused(...)
+  chk_unused(...)
 
   if (anyNA(x)) {
     return(NA)

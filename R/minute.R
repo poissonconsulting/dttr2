@@ -31,14 +31,14 @@ dtt_minute <- function(x, ...) {
 #' @describeIn dtt_minute Get integer vector of minute values for a Date vector
 #' @export
 dtt_minute.Date <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   rep(0L, length(x))
 }
 
 #' @describeIn dtt_minute Get integer vector of minute values for a POSIXct vector
 #' @export
 dtt_minute.POSIXct <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- as.POSIXlt(x, tz = dtt_tz(x))
   as.integer(x$min)
 }
@@ -46,7 +46,7 @@ dtt_minute.POSIXct <- function(x, ...) {
 #' @describeIn dtt_minute Get integer vector of minute values for a hms vector
 #' @export
 dtt_minute.hms <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- dtt_time(x)
   x <- as.POSIXlt(x)
   as.integer(x$min)

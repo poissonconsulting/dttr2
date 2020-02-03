@@ -45,7 +45,7 @@ min.hms <- function(..., na.rm = FALSE) {
 }
 
 unique.hms <- function(x, incomparables = FALSE, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- dtt_floor(x)
   x[!duplicated(as.integer(x), incomparables = incomparables)]
 }

@@ -23,35 +23,35 @@ dtt_date <- function(x, ...) {
 #' @describeIn dtt_date Coerce integer vector to a floored Date vector
 #' @export
 dtt_date.integer <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   as.Date(x, origin = as.Date("1970-01-01"))
 }
 
 #' @describeIn dtt_date Coerce double vector to a floored Date vector
 #' @export
 dtt_date.double <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_date(as.integer(floor(x)))
 }
 
 #' @describeIn dtt_date Coerce character vector to a floored Date vector
 #' @export
 dtt_date.character <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_date(as.Date(x))
 }
 
 #' @describeIn dtt_date Coerce Date vector to a floored Date vector
 #' @export
 dtt_date.Date <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_floor(x)
 }
 
 #' @describeIn dtt_date Coerce POSIXct vector to a floored Date vector
 #' @export
 dtt_date.POSIXct <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   as.Date(format(x, "%Y-%m-%d"))
 }
 
