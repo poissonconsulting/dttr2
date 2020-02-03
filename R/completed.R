@@ -45,7 +45,8 @@ dtt_completed.Date <- function(x, units = "days", unique = TRUE, sorted = TRUE,
 #' @export
 dtt_completed.POSIXct <- function(x, units = "seconds", unique = TRUE, sorted = TRUE,
                                   ...) {
-  check_scalar(units, c("seconds", "minutes", "hours", "days", "months", "years"))
+  chk_string(units)
+  chk_subset(units, c("seconds", "minutes", "hours", "days", "months", "years"))
   chk_flag(unique)
   chk_flag(sorted)
   chk_unused(...)

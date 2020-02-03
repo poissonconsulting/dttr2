@@ -90,7 +90,8 @@ test_that("seq.POSIXct", {
   expect_error(dtt_seq(as.POSIXct("2001-01-01"), NA_POSIXct_), "to must not include missing values")
   expect_error(
     dtt_seq(as.POSIXct("2001-01-01"), as.POSIXct("2001-01-01"), units = "hour"),
-    "units can only include values 'days', 'hours', 'minutes', 'months', 'seconds' or 'years'"
+    "`units` must match 'days', 'hours', 'minutes', 'months', 'seconds' or 'years', not 'hour'",
+    class = "chk_error"
   )
 
   expect_error(
