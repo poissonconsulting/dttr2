@@ -19,7 +19,7 @@ dtt_study_year <- function(x, start = 1L, full = TRUE) {
     check_vector(start, c(1L, 12L), length = 1L),
     check_vector(start, Sys.Date(), length = 1L)
   )
-  check_flag(full)
+  chk_flag(full)
 
   if (!length(x)) {
     if (!full) {

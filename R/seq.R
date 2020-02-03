@@ -107,7 +107,7 @@ dtt_seq.hms <- function(from, to = from, units = "seconds", length_out = NULL,
   check_scalar(from, hms::as_hms(0), named = NA)
   check_scalar(units, .units_hms)
   checkor(check_null(length_out), check_int(length_out))
-  check_flag(wrap)
+  chk_flag(wrap)
   chk_unused(...)
 
   from <- dtt_floor(from, units = units)

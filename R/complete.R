@@ -26,8 +26,8 @@ dtt_complete.Date <- function(x, from = min(x), to = max(x), units = "days",
   check_scalar(from, Sys.Date(), named = NA)
   check_scalar(to, Sys.Date(), named = NA)
   check_scalar(units, .units_Date)
-  check_flag(unique)
-  check_flag(sort)
+  chk_flag(unique)
+  chk_flag(sort)
   chk_unused(...)
 
   x <- dtt_floor(x, units = units)
@@ -54,8 +54,8 @@ dtt_complete.POSIXct <- function(x, from = min(x), to = max(x), units = "seconds
   check_scalar(from, Sys.time(), named = NA)
   check_scalar(to, Sys.time(), named = NA)
   check_scalar(units, .units_POSIXct)
-  check_flag(unique)
-  check_flag(sort)
+  chk_flag(unique)
+  chk_flag(sort)
   chk_unused(...)
 
   tz <- dtt_tz(x)
@@ -89,8 +89,8 @@ dtt_complete.hms <- function(x, from = min(x), to = max(x), units = "seconds",
   check_scalar(from, hms::as_hms(1), named = NA)
   check_scalar(to, hms::as_hms(1), named = NA)
   check_scalar(units, .units_hms)
-  check_flag(unique)
-  check_flag(sort)
+  chk_flag(unique)
+  chk_flag(sort)
   chk_unused(...)
 
   x <- dtt_floor(x, units = units)
