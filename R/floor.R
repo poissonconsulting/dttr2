@@ -17,7 +17,8 @@ dtt_floor <- function(x, units, ...) {
 #' @describeIn dtt_floor Floor a Date vector
 #' @export
 dtt_floor.Date <- function(x, units = "days", ...) {
-  check_scalar(units, c("days", "months", "years"))
+  chk_string(units)
+  chk_subset(units, c("days", "months", "years"))
   chk_unused(...)
 
   if (!length(x)) {
@@ -77,7 +78,8 @@ dtt_floor.POSIXct <- function(x, units = "seconds", ...) {
 #' @describeIn dtt_floor Floor a hms vector
 #' @export
 dtt_floor.hms <- function(x, units = "seconds", ...) {
-  check_scalar(units, c("seconds", "minutes", "hours"))
+  chk_string(units)
+  chk_subset(units, c("seconds", "minutes", "hours"))
   chk_unused(...)
 
   if (!length(x)) {

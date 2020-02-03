@@ -35,7 +35,8 @@ dtt_season <- function(x, start = c(
     )
   )
 
-  check_names(start, unique = TRUE)
+  chk_named(start)
+  chk_unique(names(start))
 
   if (is.integer(start)) {
     breaks <- dtt_date(paste("1972", start, "01", sep = "-"))
