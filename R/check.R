@@ -15,7 +15,7 @@ check_tz <- function(x, tz = dtt_tz(x),
                      x_name = substitute(x),
                      error = TRUE) {
   x_name <- chk_deparse(x_name)
-  check_string(tz)
+  chk_string(tz)
   chk_flag(error)
 
   if (!identical(tz, dtt_tz(x))) {

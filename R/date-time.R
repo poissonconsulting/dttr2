@@ -26,7 +26,7 @@ dtt_date_time <- function(x, ...) {
 dtt_date_time.integer <- function(
                                   x, tz = dtt_default_tz(), ...) {
   chk_unused(...)
-  check_string(tz)
+  chk_string(tz)
   as.POSIXct(x, tz = tz, origin = as.POSIXct("1970-01-01", tz = "GMT"))
 }
 
@@ -42,7 +42,7 @@ dtt_date_time.double <- function(
 #' @export
 dtt_date_time.character <- function(x, tz = dtt_default_tz(), ...) {
   chk_unused(...)
-  check_string(tz)
+  chk_string(tz)
   dtt_floor(as.POSIXct(x, tz = tz))
 }
 
@@ -50,7 +50,7 @@ dtt_date_time.character <- function(x, tz = dtt_default_tz(), ...) {
 #' @export
 dtt_date_time.Date <- function(x, time = hms::as_hms("00:00:00"), tz = dtt_default_tz(), ...) {
   chk_unused(...)
-  check_string(tz)
+  chk_string(tz)
   check_vector(time, hms::as_hms("00:00:00"), length = c(1L, 1L, length(x)))
 
   if (!length(x)) {
@@ -77,7 +77,7 @@ dtt_date_time.hms <- function(
                               x, date = dtt_date("1970-01-01"), tz = dtt_default_tz(), ...) {
   chk_unused(...)
   check_vector(date, Sys.Date(), length = c(1L, 1L, length(x)))
-  check_string(tz)
+  chk_string(tz)
 
   if (!length(x)) {
     return(dtt_date_time(integer(0), tz = tz))

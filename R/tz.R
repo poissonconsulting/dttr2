@@ -22,7 +22,7 @@ dtt_default_tz <- function() {
 #' @describeIn dtt_default_tz Set Default Time Zone
 #' @export
 dtt_set_default_tz <- function(tz = NULL) {
-  checkor(check_null(tz), check_string(tz))
+  checkor(check_null(tz), chk_string(tz))
   default_tz <- options(dtt.default_tz = tz)$dtt.default_tz
   if (is.null(default_tz)) default_tz <- Sys.timezone()
   invisible(default_tz)
@@ -82,7 +82,7 @@ dtt_set_tz <- function(x, tz = dtt_default_tz(), ...) {
 #' @describeIn dtt_set_tz Set the time zone for a POSIXct vector
 #' @export
 dtt_set_tz.POSIXct <- function(x, tz = dtt_default_tz(), ...) {
-  check_string(tz)
+  chk_string(tz)
   chk_unused(...)
   if (dtt_tz(x) == tz) {
     return(x)
@@ -112,7 +112,7 @@ dtt_adjust_tz <- function(x, tz = dtt_default_tz(), ...) {
 #' @describeIn dtt_adjust_tz Adjust the time zone for a POSIXct vector
 #' @export
 dtt_adjust_tz.POSIXct <- function(x, tz = dtt_default_tz(), ...) {
-  check_string(tz)
+  chk_string(tz)
   chk_unused(...)
   attr(x, "tzone") <- tz
   x
