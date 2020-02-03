@@ -7,7 +7,7 @@ test_that("seq.Date", {
   expect_error(dtt_seq(as.Date("2001-01-01"), NA_Date_), "to must not include missing values")
   expect_error(
     dtt_seq(as.Date("2001-01-01"), as.Date("2001-01-01"), units = "hours"),
-    "units can only include values 'days', 'months' or 'years'"
+    "`units` must match 'days', 'months' or 'years'"
   )
 
   expect_identical(
@@ -178,7 +178,7 @@ test_that("seq.hms", {
   )
   expect_error(
     dtt_seq(hms::as_hms("00:00:00"), hms::as_hms("00:00:00"), units = "days"),
-    "units can only include values 'hours', 'minutes' or 'seconds'"
+    "`units` must match 'hours', 'minutes' or 'seconds'"
   )
 
   expect_error(
