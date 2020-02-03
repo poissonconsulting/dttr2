@@ -24,7 +24,7 @@ dtt_seq <- function(from, to, units, length_out = NULL, ...) {
 dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL, ...) {
   check_scalar(from, Sys.Date(), named = NA)
   check_scalar(units, .units_Date)
-  checkor(check_null(length_out), check_int(length_out))
+  checkor(chk_null(length_out), check_int(length_out))
   chk_unused(...)
 
   from <- dtt_floor(from, units = units)
@@ -63,7 +63,7 @@ dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL, ...
 dtt_seq.POSIXct <- function(from, to = from, units = "seconds", length_out = NULL, ...) {
   check_scalar(from, Sys.time(), named = NA)
   check_scalar(units, .units_POSIXct)
-  checkor(check_null(length_out), check_int(length_out))
+  checkor(chk_null(length_out), check_int(length_out))
   chk_unused(...)
 
   from <- dtt_floor(from, units = units)
@@ -106,7 +106,7 @@ dtt_seq.hms <- function(from, to = from, units = "seconds", length_out = NULL,
                         wrap = TRUE, ...) {
   check_scalar(from, hms::as_hms(0), named = NA)
   check_scalar(units, .units_hms)
-  checkor(check_null(length_out), check_int(length_out))
+  checkor(chk_null(length_out), check_int(length_out))
   chk_flag(wrap)
   chk_unused(...)
 
