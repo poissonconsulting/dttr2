@@ -4,23 +4,20 @@
 * Ubuntu (travis) - oldrelease, release and devel
 * Windows (appveyor) - release
 * Windows (win-builder) - release and devel
-* Fedora (rhub) - devel
-* Windows (rhub) - devel 
 
 ## R CMD check results
 
 0 errors | 0 warnings | 0 note
 
-## Resubmission
+## Existing CRAN Warnings
 
-The following issues were both fixed.
+>  'Documented arguments not in
+\usage' in the r-devel checks.  These are from a recent bug fix
+(PR#16223, see
+<https://bugs.r-project.org/bugzilla/show_bug.cgi?id=16223>): can you
+please fix your man pages as necessary?  (In most cases, remove the
+documentation for argument '...'.)
 
- Found the following (possibly) invalid URLs:
-   URL: https://CRAN.R-project.org/package=dttr3
-     From: README.md
-     Status: 404
-     Message: Not Found
+Done.
 
- Found the following (possibly) invalid file URI:
-   URI: CODE_OF_CONDUCT.md
-     From: README.md
+
