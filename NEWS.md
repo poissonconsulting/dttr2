@@ -1,9 +1,8 @@
 - dttr 0.1.0
 
-- Soft-deprecated `check_tz()`.
-- Added `chk_time()` and `vld_time()` to check and validate that non-missing hms::hms scalar..
-- `dtt_doy_to_date()` now accepts whole numeric (as well as integer)
-- Replaced deprecated `hms::as.hms()` with `hms::as_hms()`
+- Functions now accept whole numerics where previously integers required.
+- Added `chk_time()` and `vld_time()` to check and validate that non-missing `hms::hms` scalar.
+- Soft-deprecated `check_tz()` for `chk::chk_identical(dtt_tz(x), tz)`
 
 # dttr 0.0.1
 

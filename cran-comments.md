@@ -1,13 +1,24 @@
 ## Test environments
 
+release 3.6.2
+
 * OS X (local) - release
-* Ubuntu (travis) - oldrelease, release and devel
+* Ubuntu (travis) - devel, release, oldrel and 3.5 - 3.4
 * Windows (appveyor) - release
-* Windows (win-builder) - release and devel
-* Fedora (rhub) - devel
-* Windows (rhub) - devel 
+* Windows (win-builder) - devel
 
 ## R CMD check results
 
 0 errors | 0 warnings | 0 note
+
+## Existing CRAN Warnings
+
+> Specifically, see the warnings about 'Documented arguments not in
+\usage' in the r-devel checks.
+
+> can you
+please fix your man pages as necessary?  (In most cases, remove the
+documentation for argument '...'.)
+
+Done.
 
