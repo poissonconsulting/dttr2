@@ -1,5 +1,6 @@
-- dttr 0.0.2
+- dttr 0.1.0
 
+- Added `chk_time()` and `vld_time()` to check and validate that non-missing hms::hms scalar..
 - `dtt_doy_to_date()` now accepts whole numeric (as well as integer)
 - Replaced deprecated `hms::as.hms()` with `hms::as_hms()`
 
