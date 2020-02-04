@@ -7,7 +7,7 @@
 #' @param n An integer of the number of units.
 #'
 #' @return The modified date time vector.
-#' @seealso \code{\link{dtt_add_units}()}
+#' @seealso [dtt_add_units()]
 #' @export
 #'
 #' @examples

@@ -13,14 +13,14 @@ vld_time(x)
 A flag indicating whether the condition was met.
 }
 \description{
-Validates that an object is scalar [hms::hms] object
+Validates that an object is scalar \link[hms:hms]{hms::hms} object
 using
-`inherits(x, class) && length(x) == 1L && !anyNA(x)`.
+\code{inherits(x, class) && length(x) == 1L && !anyNA(x)}.
 }
 \examples{
 vld_time(1)
 vld_time(hms::as_hms("10:12:59"))
 }
 \seealso{
-[chk_term()]
+\code{\link[=chk_time]{chk_time()}}
 }

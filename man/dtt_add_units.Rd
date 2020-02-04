@@ -43,5 +43,5 @@ Add time units to a date time vector.
 dtt_add_units(as.Date("1999-12-31"), "days")
 }
 \seealso{
-\code{\link{dtt_subtract_units}()}
+\code{\link[=dtt_subtract_units]{dtt_subtract_units()}}
 }

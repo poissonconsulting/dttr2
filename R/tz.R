@@ -63,14 +63,14 @@ dtt_tz.POSIXct <- function(x, ...) {
 #' Set Time Zone
 #'
 #' Sets the time zone for a date time vector without adjusting the clock time.
-#' Equivalent to \code{lubridate::force_tz()}.
+#' Equivalent to `lubridate::force_tz()`.
 #'
 #' @param x A date time vector.
 #' @param tz A string of the new time zone.
 #' @param ... Unused.
 #'
 #' @return The date time vector with the new time zone.
-#' @seealso \code{\link{dtt_adjust_tz}()}
+#' @seealso [dtt_adjust_tz()]
 #' @export
 #'
 #' @examples
@@ -94,13 +94,13 @@ dtt_set_tz.POSIXct <- function(x, tz = dtt_default_tz(), ...) {
 #'
 #' Adjusts the time zone so that clock (but not the actual) time is altered
 #' for a date time vector.
-#' Equivalent to \code{lubridate::with_tz()}.
+#' Equivalent to `lubridate::with_tz()`.
 #'
 #' @param x A POSIXct vector.
 #' @param tz A string of the time zone.
 #' @param ... Unused
 #' @return The date time vector with the new time zone and time.
-#' @seealso \code{\link{dtt_set_tz}()}
+#' @seealso [dtt_set_tz()]
 #' @export
 #'
 #' @examples

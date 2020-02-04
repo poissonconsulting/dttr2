@@ -12,11 +12,11 @@ chk_time(x, x_name = NULL)
 \item{x_name}{A string of the name of object x or NULL.}
 }
 \value{
-`NULL`, invisibly. Called for the side effect of throwing an error
-  if the condition is not met.
+\code{NULL}, invisibly. Called for the side effect of throwing an error
+if the condition is not met.
 }
 \description{
-Checks if scalar hms object using [vld_time()].
+Checks if scalar hms object using \code{\link[=vld_time]{vld_time()}}.
 }
 \examples{
 chk_time(hms::as_hms("10:00:10"))

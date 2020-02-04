@@ -8,7 +8,7 @@
 #' @param ... Unused.
 #'
 #' @return The modified date time vector.
-#' @seealso \code{\link{dtt_subtract_units}()}
+#' @seealso [dtt_subtract_units()]
 #' @export
 #'
 #' @examples

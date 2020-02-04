@@ -6,7 +6,7 @@
 #'
 #' @inheritParams chk::chk_flag
 #' @return A flag indicating whether the condition was met.
-#' @seealso [chk_term()]
+#' @seealso [chk_time()]
 #' @export
 #' @examples
 #' vld_time(1)

@@ -33,5 +33,5 @@ Equivalent to \code{lubridate::with_tz()}.
 dtt_adjust_tz(as.POSIXct("1970-01-01", tz = "Etc/GMT+8"), tz = "UTC")
 }
 \seealso{
-\code{\link{dtt_set_tz}()}
+\code{\link[=dtt_set_tz]{dtt_set_tz()}}
 }

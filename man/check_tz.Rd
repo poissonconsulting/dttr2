@@ -25,5 +25,5 @@ Checks an object's time zone as returned by \code{dtt_tz()}.
 check_tz(Sys.time(), "UTC", error = FALSE)
 }
 \seealso{
-\code{\link{dtt_tz}}
+\code{\link[=dtt_tz]{dtt_tz()}}
 }

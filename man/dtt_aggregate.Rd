@@ -30,7 +30,7 @@ Aggregates a date/time vector
 }
 \details{
 The possible units values are 'seconds', 'minutes', 'hours', 'days', 'months'
- or 'years'.
+or 'years'.
 }
 \section{Methods (by class)}{
 \itemize{
