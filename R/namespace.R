@@ -1,3 +1,3 @@
-#' @import checkr hms
-#' @importFrom chk chk_range chk_unused chk_flag chk_string chk_null chk_named chk_unique chk_subset chk_date chk_datetime chk_whole_numeric
+#' @import chk hms
+#' @importFrom checkr chk_deparse chk_fail check_int check_scalar check_vector checkor 
 NULL
