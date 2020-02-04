@@ -82,7 +82,7 @@ dtt_seq.POSIXct <- function(from, to = from, units = "seconds", length_out = NUL
     }
   }
   chk_datetime(to)
-  check_tz(to, tz = tz)
+  chk_identical(dtt_tz(to), tz)
   to <- dtt_floor(to, units = units)
   if (from == to) {
     return(from)

@@ -96,7 +96,7 @@ test_that("seq.POSIXct", {
 
   expect_error(
     dtt_seq(as.POSIXct("2001-01-01", tz = "GMT"), as.POSIXct("2001-01-01", tz = "UTC")),
-    "to's time zone must be 'GMT' not [(]'UTC'[)]"
+    class = "chk_error"
   )
 
   expect_identical(

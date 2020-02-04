@@ -60,9 +60,8 @@ dtt_complete.POSIXct <- function(x, from = min(x), to = max(x), units = "seconds
   chk_flag(sort)
   chk_unused(...)
 
-  tz <- dtt_tz(x)
-  check_tz(from, tz = tz)
-  check_tz(to, tz = tz)
+  chk_identical(dtt_tz(from), dtt_tz(x))
+  chk_identical(dtt_tz(to), dtt_tz(x))
 
   x <- dtt_floor(x, units = units)
   from <- dtt_floor(from, units = units)
