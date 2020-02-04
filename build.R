@@ -6,3 +6,4 @@ if(FALSE) {
   pkgdown::build_site()
 }
 devtools::check()
+
