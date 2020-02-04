@@ -52,8 +52,8 @@ dtt_complete.POSIXct <- function(x, from = min(x), to = max(x), units = "seconds
                                  unique = TRUE, sort = TRUE, ...) {
   check_vector(x, Sys.time(), length = TRUE)
 
-  check_scalar(from, Sys.time(), named = NA)
-  check_scalar(to, Sys.time(), named = NA)
+  chk_datetime(from)
+  chk_datetime(to)
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours", "days", "months", "years"))
   chk_flag(unique)

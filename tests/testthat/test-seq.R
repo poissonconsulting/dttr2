@@ -84,10 +84,10 @@ test_that("seq.Date", {
 })
 
 test_that("seq.POSIXct", {
-  expect_error(dtt_seq(NA_POSIXct_[-1], NA_POSIXct_[-1]), "from must have 1 element")
-  expect_error(dtt_seq(NA_POSIXct_, NA_POSIXct_[-1]), "from must not include missing values")
-  expect_error(dtt_seq(as.POSIXct("2001-01-01"), NA_POSIXct_[-1]), "to must have 1 element")
-  expect_error(dtt_seq(as.POSIXct("2001-01-01"), NA_POSIXct_), "to must not include missing values")
+  expect_error(dtt_seq(NA_POSIXct_[-1], NA_POSIXct_[-1]), class = "chk_error")
+  expect_error(dtt_seq(NA_POSIXct_, NA_POSIXct_[-1]), class = "chk_error")
+  expect_error(dtt_seq(as.POSIXct("2001-01-01"), NA_POSIXct_[-1]), class = "chk_error")
+  expect_error(dtt_seq(as.POSIXct("2001-01-01"), NA_POSIXct_), class = "chk_error")
   expect_error(
     dtt_seq(as.POSIXct("2001-01-01"), as.POSIXct("2001-01-01"), units = "hour"),
     "`units` must match 'days', 'hours', 'minutes', 'months', 'seconds' or 'years', not 'hour'",
