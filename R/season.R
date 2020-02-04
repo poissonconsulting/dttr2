@@ -20,20 +20,17 @@ dtt_season <- function(x, start = c(
                          Spring = 3L, Summer = 6L,
                          Autumn = 9L, Winter = 12L
                        )) {
-  checkor(
-    check_vector(x, c(Sys.Date(), NA)),
-    check_vector(x, c(Sys.time(), NA_POSIXct_))
+  chkor(
+    chk_s3_class(x, "Date"),
+    chk_s3_class(x, "POSIXct")
   )
+  
   checkor(
-    check_vector(start, c(1L, 12L),
-      length = TRUE,
-      unique = TRUE
-    ),
-    check_vector(start, Sys.Date(),
-      length = TRUE,
-      unique = TRUE
-    )
+    check_vector(start, c(1L, 12L)),
+    check_vector(start, Sys.Date())
   )
+  chk_not_empty(start)
+  chk_unique(start)
 
   chk_named(start)
   chk_unique(names(start))

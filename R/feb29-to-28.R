@@ -10,9 +10,9 @@
 #' @examples
 #' dtt_feb29_to_28(as.Date("2004-02-29"))
 dtt_feb29_to_28 <- function(x) {
-  checkor(
-    check_vector(x, c(Sys.Date(), NA)),
-    check_vector(x, c(Sys.time(), NA_POSIXct_))
+  chkor(
+    chk_s3_class(x, "Date"),
+    chk_s3_class(x, "POSIXct")
   )
 
   wch <- which(dtt_month(x) == 2L & dtt_day(x) == 29L)

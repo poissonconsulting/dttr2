@@ -71,7 +71,10 @@ dtt_hour.hms <- function(x, ...) {
 #' @describeIn dtt_hour Set hour values for a hms vector
 #' @export
 `dtt_hour<-.hms` <- function(x, value) {
-  check_vector(value, c(0L, 23L), length = c(1L, 1L, length(x)))
+  chk_whole_numeric(value)
+  chk_not_any_na(value)
+  chk_range(value, c(0L, 23L))
+  chk_subset(length(x), c(1L, length(x)))
   if (!length(x)) {
     return(x)
   }

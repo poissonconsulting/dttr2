@@ -10,9 +10,9 @@
 #' dtt_study_year(as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")), start = 4L)
 #' dtt_study_year(as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")), start = 4L, full = FALSE)
 dtt_study_year <- function(x, start = 1L, full = TRUE) {
-  checkor(
-    check_vector(x, Sys.Date()),
-    check_vector(x, Sys.time())
+  chkor(
+    chk_s3_class(x, "Date"),
+    chk_s3_class(x, "POSIXct")
   )
   
   chkor(chk_date(start), chk_whole_number(start))
