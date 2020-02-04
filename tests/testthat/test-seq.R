@@ -169,12 +169,13 @@ test_that("seq.POSIXct", {
 })
 
 test_that("seq.hms", {
-  expect_error(dtt_seq(NA_hms_[-1], NA_hms_[-1]), "from must have 1 element")
-  expect_error(dtt_seq(NA_hms_, NA_hms_[-1]), "from must not include missing values")
-  expect_error(dtt_seq(hms::as_hms("00:00:00"), NA_hms_[-1]), "to must have 1 element")
+  expect_error(dtt_seq(NA_hms_[-1], NA_hms_[-1]), 
+               class = "chk_error")
+  expect_error(dtt_seq(NA_hms_, NA_hms_[-1]), class = "chk_error")
+  expect_error(dtt_seq(hms::as_hms("00:00:00"), NA_hms_[-1]), class = "chk_error")
   expect_error(
     dtt_seq(hms::as_hms("00:00:00"), NA_hms_),
-    "to must not include missing values"
+    class = "chk_error"
   )
   expect_error(
     dtt_seq(hms::as_hms("00:00:00"), hms::as_hms("00:00:00"), units = "days"),

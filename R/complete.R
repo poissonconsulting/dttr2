@@ -88,8 +88,8 @@ dtt_complete.hms <- function(x, from = min(x), to = max(x), units = "seconds",
                              unique = TRUE, sort = TRUE, ...) {
   check_vector(x, hms::as_hms(1), length = TRUE)
 
-  check_scalar(from, hms::as_hms(1), named = NA)
-  check_scalar(to, hms::as_hms(1), named = NA)
+  chk_time(from)
+  chk_time(to)
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours"))
   chk_flag(unique)
