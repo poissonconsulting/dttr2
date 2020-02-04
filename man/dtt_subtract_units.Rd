@@ -30,8 +30,6 @@ dtt_subtract_seconds(x, n = 1L)
 \item{n}{An integer of the number of units.}
 
 \item{units}{A string of the units.}
-
-\item{...}{Unused.}
 }
 \value{
 The modified date time vector.

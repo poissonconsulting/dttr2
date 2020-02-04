@@ -5,7 +5,6 @@
 #' @param x A date time vector.
 #' @param units A string of the units.
 #' @param n An integer of the number of units.
-#' @param ... Unused.
 #'
 #' @return The modified date time vector.
 #' @seealso \code{\link{dtt_add_units}()}
