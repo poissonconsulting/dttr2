@@ -14,13 +14,13 @@ dtt_study_year <- function(x, start = 1L, full = TRUE) {
     check_vector(x, Sys.Date()),
     check_vector(x, Sys.time())
   )
-
-  checkor(
-    check_vector(start, c(1L, 12L), length = 1L),
-    check_vector(start, Sys.Date(), length = 1L)
-  )
+  
+  chkor(chk_date(start), chk_whole_number(start))
+  if(vld_whole_number(start))
+    chk_range(start, c(1L, 12L))
+  
   chk_flag(full)
-
+  
   if (!length(x)) {
     if (!full) {
       return(integer(0))
@@ -32,7 +32,7 @@ dtt_study_year <- function(x, start = 1L, full = TRUE) {
   } else {
     start <- dtt_dayte(start)
   }
-
+  
   year <- dtt_year(x)
   start <- dtt_floor(start)
   if (identical(start, dtt_date("1972-01-01"))) {

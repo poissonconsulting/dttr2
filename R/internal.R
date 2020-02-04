@@ -51,10 +51,9 @@ unique.hms <- function(x, incomparables = FALSE, ...) {
 }
 
 daytte <- function(x, start) {
-  checkor(
-    check_vector(start, c(1L, 12L), length = 1L),
-    check_vector(start, Sys.Date(), length = 1L)
-  )
+  chkor(chk_date(start), chk_whole_number(start))
+  if(vld_whole_number(start))
+    chk_range(start, c(1L, 12L))
 
   if (!length(x)) {
     return(x)
