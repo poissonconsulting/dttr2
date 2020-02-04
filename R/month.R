@@ -46,7 +46,10 @@ dtt_month.POSIXct <- function(x, ...) {
 #' @describeIn dtt_month Set month values for a Date vector
 #' @export
 `dtt_month<-.Date` <- function(x, value) {
-  check_vector(value, c(1L, 12L), length = c(1L, 1L, length(x)))
+  chk_whole_numeric(value)
+  chk_range(value, c(1L, 12L))
+  chk_subset(length(value), c(1L, length(value))) 
+
   if (!length(x)) {
     return(x)
   }
@@ -60,7 +63,10 @@ dtt_month.POSIXct <- function(x, ...) {
 #' @describeIn dtt_month Set month values for a POSIXct vector
 #' @export
 `dtt_month<-.POSIXct` <- function(x, value) {
-  check_vector(value, c(1L, 12L), length = c(1L, 1L, length(x)))
+  chk_whole_numeric(value)
+  chk_range(value, c(1L, 12L))
+  chk_subset(length(value), c(1L, length(value)))
+  
   if (!length(x)) {
     return(x)
   }

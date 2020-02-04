@@ -55,7 +55,10 @@ dtt_second.hms <- function(x, ...) {
 #' @describeIn dtt_second Set second values for a POSIXct vector
 #' @export
 `dtt_second<-.POSIXct` <- function(x, value) {
-  check_vector(value, c(0L, 59L), length = c(1L, 1L, length(x)))
+  chk_whole_numeric(value)
+  chk_range(value, c(0L, 59L))
+  chk_subset(length(value), c(1L, length(value)))
+  
   if (!length(x)) {
     return(x)
   }
@@ -68,7 +71,10 @@ dtt_second.hms <- function(x, ...) {
 #' @describeIn dtt_second Set second values for a hms vector
 #' @export
 `dtt_second<-.hms` <- function(x, value) {
-  check_vector(value, c(0L, 59L), length = c(1L, 1L, length(x)))
+  chk_whole_numeric(value)
+  chk_range(value, c(0L, 59L))
+  chk_subset(length(value), c(1L, length(value)))
+  
   if (!length(x)) {
     return(x)
   }
