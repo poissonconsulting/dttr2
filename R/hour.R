@@ -55,7 +55,10 @@ dtt_hour.hms <- function(x, ...) {
 #' @describeIn dtt_hour Set hour values for a POSIXct vector
 #' @export
 `dtt_hour<-.POSIXct` <- function(x, value) {
-  check_vector(value, c(0L, 23L), length = c(1L, 1L, length(x)))
+  chk_whole_numeric(value)
+  chk_subset(length(value), c(1L, length(x)))
+  chk_not_any_na(value)
+  
   if (!length(x)) {
     return(x)
   }

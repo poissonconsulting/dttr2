@@ -77,9 +77,10 @@ dtt_date_time.POSIXct <- function(x, tz = dtt_tz(x), ...) {
 #' @export
 dtt_date_time.hms <- function(
                               x, date = dtt_date("1970-01-01"), tz = dtt_default_tz(), ...) {
-  chk_unused(...)
-  check_vector(date, Sys.Date(), length = c(1L, 1L, length(x)))
+  chk_s3_class(date, "Date")
+  chk_subset(length(date), c(1L, length(x)))
   chk_string(tz)
+  chk_unused(...)
 
   if (!length(x)) {
     return(dtt_date_time(integer(0), tz = tz))

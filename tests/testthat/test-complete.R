@@ -1,8 +1,8 @@
 context("complete")
 
 test_that("complete.Date", {
-  expect_error(dtt_complete(NA_Date_[-1]), "x must have at least 1 element")
-  expect_error(dtt_complete(NA_Date_), "x must not include missing values")
+  expect_error(dtt_complete(NA_Date_[-1]), class = "chk_error")
+  expect_error(dtt_complete(NA_Date_), class = "chk_error")
   expect_identical(
     dtt_complete(as.Date("2001-01-02")),
     as.Date("2001-01-02")
@@ -45,8 +45,8 @@ test_that("complete.Date", {
 })
 
 test_that("complete.POSIXct", {
-  expect_error(dtt_complete(NA_POSIXct_[-1]), "x must have at least 1 element")
-  expect_error(dtt_complete(NA_POSIXct_), "x must not include missing values")
+  expect_error(dtt_complete(NA_POSIXct_[-1]), class = "chk_error")
+  expect_error(dtt_complete(NA_POSIXct_), class = "chk_error")
   expect_identical(
     dtt_complete(as.POSIXct("2001-01-02", tz = "Etc/GMT+7")),
     as.POSIXct("2001-01-02", tz = "Etc/GMT+7")

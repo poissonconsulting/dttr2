@@ -22,7 +22,7 @@ dtt_complete <- function(x, ...) {
 #' @export
 dtt_complete.Date <- function(x, from = min(x), to = max(x), units = "days",
                               unique = TRUE, sort = TRUE, ...) {
-  check_vector(x, Sys.Date(), length = TRUE)
+  chk_not_empty(x)
   chk_date(from)
   chk_date(to)
   chk_string(units)
@@ -50,8 +50,7 @@ dtt_complete.Date <- function(x, from = min(x), to = max(x), units = "days",
 #' @export
 dtt_complete.POSIXct <- function(x, from = min(x), to = max(x), units = "seconds",
                                  unique = TRUE, sort = TRUE, ...) {
-  check_vector(x, Sys.time(), length = TRUE)
-
+  chk_not_empty(x)
   chk_datetime(from)
   chk_datetime(to)
   chk_string(units)
