@@ -81,10 +81,10 @@ dtt_add_months(date, 24L)
 `dttr2` wraps negative times or times greater than 23:59:59 to the actual clock time.
 
 ```{r}
-time <- hms::as.hms(-3)
+time <- hms::as_hms(-3)
 time
 dtt_time(time)
-dtt_time(hms::as.hms("24:00:00"))
+dtt_time(hms::as_hms("24:00:00"))
 ```
 
 ### Time Zones
