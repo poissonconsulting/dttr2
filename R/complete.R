@@ -23,8 +23,8 @@ dtt_complete <- function(x, ...) {
 dtt_complete.Date <- function(x, from = min(x), to = max(x), units = "days",
                               unique = TRUE, sort = TRUE, ...) {
   check_vector(x, Sys.Date(), length = TRUE)
-  check_scalar(from, Sys.Date(), named = NA)
-  check_scalar(to, Sys.Date(), named = NA)
+  chk_date(from)
+  chk_date(to)
   chk_string(units)
   chk_subset(units, c("days", "months", "years"))
   chk_flag(unique)

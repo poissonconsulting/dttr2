@@ -22,7 +22,7 @@ dtt_seq <- function(from, to, units, length_out = NULL, ...) {
 #' @describeIn dtt_seq Create a Date sequence vector
 #' @export
 dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL, ...) {
-  check_scalar(from, Sys.Date(), named = NA)
+  chk_date(from)
   chk_string(units)
   chk_subset(units, c("days", "months", "years"))
   checkor(chk_null(length_out), check_int(length_out))
@@ -40,7 +40,7 @@ dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL, ...
       to <- dtt_add_units(from, n = length_out - 1L, units = units)
     }
   }
-  check_scalar(to, Sys.Date(), named = NA)
+  chk_date(to)
   to <- dtt_floor(to, units = units)
   if (from == to) {
     return(from)

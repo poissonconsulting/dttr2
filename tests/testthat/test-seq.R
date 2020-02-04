@@ -1,13 +1,13 @@
 context("seq")
 
 test_that("seq.Date", {
-  expect_error(dtt_seq(NA_Date_[-1], NA_Date_[-1]), "from must have 1 element")
-  expect_error(dtt_seq(NA_Date_, NA_Date_[-1]), "from must not include missing values")
-  expect_error(dtt_seq(as.Date("2001-01-01"), NA_Date_[-1]), "to must have 1 element")
-  expect_error(dtt_seq(as.Date("2001-01-01"), NA_Date_), "to must not include missing values")
+  expect_error(dtt_seq(NA_Date_[-1], NA_Date_[-1]), "`from` must be a date", class = "chk_error")
+  expect_error(dtt_seq(NA_Date_, NA_Date_[-1]), "`from` must be a date", class = "chk_error")
+  expect_error(dtt_seq(as.Date("2001-01-01"), NA_Date_[-1]), "`to` must be a date", class = "chk_error")
+  expect_error(dtt_seq(as.Date("2001-01-01"), NA_Date_), "`to` must be a date", class = "chk_error")
   expect_error(
     dtt_seq(as.Date("2001-01-01"), as.Date("2001-01-01"), units = "hours"),
-    "`units` must match 'days', 'months' or 'years'"
+    "`units` must match 'days', 'months' or 'years'", class = "chk_error"
   )
 
   expect_identical(
@@ -178,7 +178,7 @@ test_that("seq.hms", {
   )
   expect_error(
     dtt_seq(hms::as_hms("00:00:00"), hms::as_hms("00:00:00"), units = "days"),
-    "`units` must match 'hours', 'minutes' or 'seconds'"
+    "`units` must match 'hours', 'minutes' or 'seconds'", class = "chk_error"
   )
 
   expect_error(
