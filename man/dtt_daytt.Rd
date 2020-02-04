@@ -10,8 +10,6 @@ dtt_daytt(x, start = 1L)
 \item{x}{A Date or POSIXct vector.}
 
 \item{start}{An integer vector specifying the start month of the year or a Date vector of the start dayte.}
-
-\item{...}{Unused.}
 }
 \value{
 A Date or POSIXct vector with the year for February 29th as 1972.
