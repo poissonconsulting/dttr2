@@ -18,13 +18,11 @@ dtt_date_time(x, ...)
 
 \method{dtt_date_time}{character}(x, tz = dtt_default_tz(), ...)
 
-\method{dtt_date_time}{Date}(x, time = hms::as.hms("00:00:00"),
-  tz = dtt_default_tz(), ...)
+\method{dtt_date_time}{Date}(x, time = hms::as.hms("00:00:00"), tz = dtt_default_tz(), ...)
 
 \method{dtt_date_time}{POSIXct}(x, tz = dtt_tz(x), ...)
 
-\method{dtt_date_time}{hms}(x, date = dtt_date("1970-01-01"),
-  tz = dtt_default_tz(), ...)
+\method{dtt_date_time}{hms}(x, date = dtt_date("1970-01-01"), tz = dtt_default_tz(), ...)
 }
 \arguments{
 \item{x}{A vector.}

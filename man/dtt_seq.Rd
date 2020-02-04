@@ -9,14 +9,18 @@
 \usage{
 dtt_seq(from, to, units, length_out = NULL, ...)
 
-\method{dtt_seq}{Date}(from, to = from, units = "days",
-  length_out = NULL, ...)
+\method{dtt_seq}{Date}(from, to = from, units = "days", length_out = NULL, ...)
 
-\method{dtt_seq}{POSIXct}(from, to = from, units = "seconds",
-  length_out = NULL, ...)
+\method{dtt_seq}{POSIXct}(from, to = from, units = "seconds", length_out = NULL, ...)
 
-\method{dtt_seq}{hms}(from, to = from, units = "seconds",
-  length_out = NULL, wrap = TRUE, ...)
+\method{dtt_seq}{hms}(
+  from,
+  to = from,
+  units = "seconds",
+  length_out = NULL,
+  wrap = TRUE,
+  ...
+)
 }
 \arguments{
 \item{from}{A date/time scalar of the start.}
