@@ -55,7 +55,10 @@ dtt_minute.hms <- function(x, ...) {
 #' @describeIn dtt_minute Set minute values for a POSIXct vector
 #' @export
 `dtt_minute<-.POSIXct` <- function(x, value) {
-  check_vector(value, c(0L, 59L), length = c(1L, 1L, length(x)))
+  chk_whole_numeric(value)
+  chk_range(value, c(0L, 59L))
+  chk_subset(length(value), c(1L, length(value)))
+  
   if (!length(x)) {
     return(x)
   }
@@ -68,7 +71,10 @@ dtt_minute.hms <- function(x, ...) {
 #' @describeIn dtt_minute Set minute values for a hms vector
 #' @export
 `dtt_minute<-.hms` <- function(x, value) {
-  check_vector(value, c(0L, 59L), length = c(1L, 1L, length(x)))
+  chk_whole_numeric(value)
+  chk_range(value, c(0L, 59L))
+  chk_subset(length(value), c(1L, length(value)))
+  
   if (!length(x)) {
     return(x)
   }

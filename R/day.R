@@ -46,7 +46,10 @@ dtt_day.POSIXct <- function(x, ...) {
 #' @describeIn dtt_day Set day values for a Date vector
 #' @export
 `dtt_day<-.Date` <- function(x, value) {
-  check_vector(value, c(1L, 31L), length = c(1L, 1L, length(x)))
+  chk_whole_numeric(value)
+  chk_range(value, c(0L, 31L))
+  chk_subset(length(value), c(1L, length(value)))
+  
   if (!length(x)) {
     return(x)
   }
@@ -60,7 +63,10 @@ dtt_day.POSIXct <- function(x, ...) {
 #' @describeIn dtt_day Set day values for a POSIXct vector
 #' @export
 `dtt_day<-.POSIXct` <- function(x, value) {
-  check_vector(value, c(1L, 31L), length = c(1L, 1L, length(x)))
+  chk_whole_numeric(value)
+  chk_range(value, c(0L, 31L))
+  chk_subset(length(value), c(1L, length(value)))
+  
   if (!length(x)) {
     return(x)
   }
