@@ -3,11 +3,15 @@
 release 3.6.2
 
 * OS X (local) - release
-* Ubuntu (travis) - devel, release, oldrel and 3.5 - 3.4
+
+* Ubuntu (travis) - 3.3 to devel
+
 * Windows (appveyor) - release
-* Windows (win-builder) - devel
+* Windows (win-builder) - release to devel
 
 ## R CMD check results
+
+0 errors | 0 warnings | 0 notes
 
 0 errors | 0 warnings | 0 note
 
