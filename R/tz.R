@@ -22,7 +22,7 @@ dtt_default_tz <- function() {
 #' @describeIn dtt_default_tz Set Default Time Zone
 #' @export
 dtt_set_default_tz <- function(tz = NULL) {
-  checkor(chk_null(tz), chk_string(tz))
+  if(!is.null(tz)) chk_string(tz)
   default_tz <- options(dtt.default_tz = tz)$dtt.default_tz
   if (is.null(default_tz)) default_tz <- Sys.timezone()
   invisible(default_tz)
