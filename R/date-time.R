@@ -51,7 +51,9 @@ dtt_date_time.character <- function(x, tz = dtt_default_tz(), ...) {
 dtt_date_time.Date <- function(x, time = hms::as_hms("00:00:00"), tz = dtt_default_tz(), ...) {
   chk_unused(...)
   chk_string(tz)
-  check_vector(time, hms::as_hms("00:00:00"), length = c(1L, 1L, length(x)))
+  chk_s3_class(time, "hms")
+  chk_not_any_na(time)
+  chk_subset(length(time), c(1L, length(x)))
 
   if (!length(x)) {
     return(dtt_date_time(integer(0), tz = tz))

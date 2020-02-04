@@ -114,8 +114,8 @@ test_that("complete.POSIXct", {
 })
 
 test_that("complete.hms", {
-  expect_error(dtt_complete(NA_hms_[-1]), "x must have at least 1 element")
-  expect_error(dtt_complete(NA_hms_), "x must not include missing values")
+  expect_error(dtt_complete(NA_hms_[-1]), class = "chk_error")
+  expect_error(dtt_complete(NA_hms_), class = "chk_error")
 
   expect_identical(
     dtt_complete(hms::as_hms(c("00:00:00", "00:00:00"))),

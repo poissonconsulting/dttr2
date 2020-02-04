@@ -86,7 +86,9 @@ dtt_complete.POSIXct <- function(x, from = min(x), to = max(x), units = "seconds
 #' @export
 dtt_complete.hms <- function(x, from = min(x), to = max(x), units = "seconds",
                              unique = TRUE, sort = TRUE, ...) {
-  check_vector(x, hms::as_hms(1), length = TRUE)
+  chk_s3_class(x, "hms")
+  chk_not_any_na(x)
+  chk_not_empty(x)
 
   chk_time(from)
   chk_time(to)
