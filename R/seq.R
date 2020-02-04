@@ -25,7 +25,7 @@ dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL, ...
   chk_date(from)
   chk_string(units)
   chk_subset(units, c("days", "months", "years"))
-  checkor(chk_null(length_out), check_int(length_out))
+  if(!is.null(length_out)) chk_whole_number(length_out)
   chk_unused(...)
 
   from <- dtt_floor(from, units = units)
@@ -65,7 +65,7 @@ dtt_seq.POSIXct <- function(from, to = from, units = "seconds", length_out = NUL
   chk_datetime(from)
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours", "days", "months", "years"))
-  checkor(chk_null(length_out), check_int(length_out))
+  if(!is.null(length_out)) chk_whole_number(length_out)
   chk_unused(...)
 
   from <- dtt_floor(from, units = units)
@@ -109,7 +109,7 @@ dtt_seq.hms <- function(from, to = from, units = "seconds", length_out = NULL,
   chk_time(from)
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours"))
-  checkor(chk_null(length_out), check_int(length_out))
+  if(!is.null(length_out)) chk_whole_number(length_out)
   chk_flag(wrap)
   chk_unused(...)
 
