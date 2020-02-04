@@ -22,7 +22,7 @@
 <![endif]-->
 </head>
 <body>
-    <div class="container template-article">
+    <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -34,7 +34,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">dttr2</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
       </span>
     </div>
 
@@ -71,20 +71,15 @@
       
 
       </header><div class="row">
-  <div class="col-md-9 contents">
-    
+  <div class="contents col-md-9">
 
-    
-    
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-<!-- badges: start -->
 
 <div id="dttr2" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#dttr2" class="anchor"></a>dttr2</h1></div>
 <p><code>dttr2</code> (Dates, Times and dateTimes in R) is a light-weight R package to perform simple manipulations on date (Date), datetime (POSIXct) and time (hms) vectors (collectively referred to as date/times).</p>
 <p>Key design principles include</p>
-<ol style="list-style-type: decimal">
+<ol>
 <li>use existing classes (Date, POSIXct, hms)</li>
 <li>date/times are discrete (floor when encountered)</li>
 <li>times are times (wrap when encountered)</li>
@@ -95,14 +90,14 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>To install the latest development version from <a href="https://github.com/poissonconsulting/dttr2">GitHub</a></p>
-<pre><code>if(!"remotes" %in% installed.packages()[,1]) 
-  install.packages("remotes")
-remotes::install_github("poissonconsulting/dttr2")</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="cf">if</span>(<span class="op">!</span><span class="st">"remotes"</span> <span class="op">%in%</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span>()[,<span class="dv">1</span>]) </span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"remotes"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>remotes<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/remotes/man/install_github.html">install_github</a></span>(<span class="st">"poissonconsulting/dttr2"</span>)</span></code></pre></div>
 <p>To install the latest development version from the Poisson drat <a href="https://github.com/poissonconsulting/drat">repository</a></p>
-<pre><code>if(!"drat" %in% installed.packages()[,1]) 
-  install.packages("drat")
-drat::addRepo("poissonconsulting")
-install.packages("dttr2")</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="cf">if</span>(<span class="op">!</span><span class="st">"drat"</span> <span class="op">%in%</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span>()[,<span class="dv">1</span>]) </span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"drat"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>drat<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/drat/man/addRepo.html">addRepo</a></span>(<span class="st">"poissonconsulting"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"dttr2"</span>)</span></code></pre></div>
 </div>
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
@@ -111,73 +106,75 @@ install.packages("dttr2")</code></pre>
 <h3 class="hasAnchor">
 <a href="#time-units" class="anchor"></a>Time Units</h3>
 <p><code>dttr2</code> floors any date/time objects it encounters to the nearest time unit (by default days for Date and seconds for POSIXct and hms).</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dttr2)</a>
-<a class="sourceLine" id="cb3-2" title="2">date &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="fl">1.75</span>, <span class="dt">origin =</span> <span class="st">"1970-01-01"</span>)</a>
-<a class="sourceLine" id="cb3-3" title="3">date</a>
-<a class="sourceLine" id="cb3-4" title="4"><span class="co">#&gt; [1] "1970-01-02"</span></a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="kw"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(date)</a>
-<a class="sourceLine" id="cb3-6" title="6"><span class="co">#&gt; [1] 1.75</span></a>
-<a class="sourceLine" id="cb3-7" title="7"></a>
-<a class="sourceLine" id="cb3-8" title="8">date &lt;-<span class="st"> </span><span class="kw"><a href="reference/dtt_date.html">dtt_date</a></span>(date)</a>
-<a class="sourceLine" id="cb3-9" title="9">date</a>
-<a class="sourceLine" id="cb3-10" title="10"><span class="co">#&gt; [1] "1970-01-02"</span></a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="kw"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(date)</a>
-<a class="sourceLine" id="cb3-12" title="12"><span class="co">#&gt; [1] 1</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dttr2)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>date &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="fl">1.75</span>, <span class="dt">origin =</span> <span class="st">"1970-01-01"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a>date</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co">#&gt; [1] "1970-01-02"</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="kw"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(date)</span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co">#&gt; [1] 1.75</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a>date &lt;-<span class="st"> </span><span class="kw"><a href="reference/dtt_date.html">dtt_date</a></span>(date)</span>
+<span id="cb3-9"><a href="#cb3-9"></a>date</span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="co">#&gt; [1] "1970-01-02"</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="kw"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(date)</span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="co">#&gt; [1] 1</span></span></code></pre></div>
 <p>Similarly, the time unit accessor (<code><a href="reference/dtt_second.html">dtt_second()</a></code>, <code><a href="reference/dtt_minute.html">dtt_minute()</a></code> etc) and settor functions as well as the functions to add (ie <code><a href="reference/dtt_add_units.html">dtt_add_seconds()</a></code>) and subtract time units return or require integers.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw"><a href="reference/dtt_day.html">dtt_day</a></span>(date)</a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="co">#&gt; [1] 2</span></a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="kw"><a href="reference/dtt_add_units.html">dtt_add_days</a></span>(date, 2L)</a>
-<a class="sourceLine" id="cb4-4" title="4"><span class="co">#&gt; [1] "1970-01-04"</span></a>
-<a class="sourceLine" id="cb4-5" title="5"><span class="kw"><a href="reference/dtt_add_units.html">dtt_add_months</a></span>(date, 24L)</a>
-<a class="sourceLine" id="cb4-6" title="6"><span class="co">#&gt; [1] "1972-01-02"</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw"><a href="reference/dtt_day.html">dtt_day</a></span>(date)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co">#&gt; [1] 2</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw"><a href="reference/dtt_add_units.html">dtt_add_days</a></span>(date, 2L)</span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">#&gt; [1] "1970-01-04"</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="kw"><a href="reference/dtt_add_units.html">dtt_add_months</a></span>(date, 24L)</span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">#&gt; [1] "1972-01-02"</span></span></code></pre></div>
 </div>
 <div id="times" class="section level3">
 <h3 class="hasAnchor">
 <a href="#times" class="anchor"></a>Times</h3>
 <p><code>dttr2</code> wraps negative times or times greater than 23:59:59 to the actual clock time.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">time &lt;-<span class="st"> </span>hms<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/hms/man/hms.html">as.hms</a></span>(<span class="op">-</span><span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb5-2" title="2">time</a>
-<a class="sourceLine" id="cb5-3" title="3"><span class="co">#&gt; -00:00:03</span></a>
-<a class="sourceLine" id="cb5-4" title="4"><span class="kw"><a href="reference/dtt_time.html">dtt_time</a></span>(time)</a>
-<a class="sourceLine" id="cb5-5" title="5"><span class="co">#&gt; 23:59:57</span></a>
-<a class="sourceLine" id="cb5-6" title="6"><span class="kw"><a href="reference/dtt_time.html">dtt_time</a></span>(hms<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/hms/man/hms.html">as.hms</a></span>(<span class="st">"24:00:00"</span>))</a>
-<a class="sourceLine" id="cb5-7" title="7"><span class="co">#&gt; 00:00:00</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>time &lt;-<span class="st"> </span>hms<span class="op">::</span><span class="kw"><a href="https://hms.tidyverse.org/reference/Deprecated.html">as.hms</a></span>(<span class="op">-</span><span class="dv">3</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="co">#&gt; Warning: as.hms() is deprecated, please use as_hms().</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co">#&gt; This warning is displayed once per session.</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>time</span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co">#&gt; -00:00:03</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="kw"><a href="reference/dtt_time.html">dtt_time</a></span>(time)</span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co">#&gt; 23:59:57</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="kw"><a href="reference/dtt_time.html">dtt_time</a></span>(hms<span class="op">::</span><span class="kw"><a href="https://hms.tidyverse.org/reference/Deprecated.html">as.hms</a></span>(<span class="st">"24:00:00"</span>))</span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="co">#&gt; 00:00:00</span></span></code></pre></div>
 </div>
 <div id="time-zones" class="section level3">
 <h3 class="hasAnchor">
 <a href="#time-zones" class="anchor"></a>Time Zones</h3>
 <p>The user can override the default time zone (UTC) when handling POSIXct vectors using <code><a href="reference/dtt_default_tz.html">dtt_set_default_tz()</a></code>.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw"><a href="reference/dtt_default_tz.html">dtt_default_tz</a></span>()</a>
-<a class="sourceLine" id="cb6-2" title="2"><span class="co">#&gt; [1] "UTC"</span></a>
-<a class="sourceLine" id="cb6-3" title="3">date_time &lt;-<span class="st"> </span><span class="kw"><a href="reference/dtt_date_time.html">dtt_date_time</a></span>(<span class="st">"1970-01-01 03:00:00"</span>)</a>
-<a class="sourceLine" id="cb6-4" title="4"><span class="kw"><a href="reference/dtt_default_tz.html">dtt_set_default_tz</a></span>(<span class="st">"Etc/GMT+10"</span>)</a>
-<a class="sourceLine" id="cb6-5" title="5"><span class="kw"><a href="reference/dtt_default_tz.html">dtt_default_tz</a></span>()</a>
-<a class="sourceLine" id="cb6-6" title="6"><span class="co">#&gt; [1] "Etc/GMT+10"</span></a>
-<a class="sourceLine" id="cb6-7" title="7">date_time</a>
-<a class="sourceLine" id="cb6-8" title="8"><span class="co">#&gt; [1] "1970-01-01 03:00:00 UTC"</span></a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw"><a href="reference/dtt_default_tz.html">dtt_default_tz</a></span>()</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="co">#&gt; [1] "UTC"</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>date_time &lt;-<span class="st"> </span><span class="kw"><a href="reference/dtt_date_time.html">dtt_date_time</a></span>(<span class="st">"1970-01-01 03:00:00"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="kw"><a href="reference/dtt_default_tz.html">dtt_set_default_tz</a></span>(<span class="st">"Etc/GMT+10"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="kw"><a href="reference/dtt_default_tz.html">dtt_default_tz</a></span>()</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co">#&gt; [1] "Etc/GMT+10"</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>date_time</span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="co">#&gt; [1] "1970-01-01 03:00:00 UTC"</span></span></code></pre></div>
 <p>They can assign a new time zone to a POSIXct object whilst leaving the clock time unchanged using <code><a href="reference/dtt_set_tz.html">dtt_set_tz()</a></code> or adjust the time zone so that clock (but not the actual) time is altered using <code><a href="reference/dtt_adjust_tz.html">dtt_adjust_tz()</a></code></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">date_time</a>
-<a class="sourceLine" id="cb7-2" title="2"><span class="co">#&gt; [1] "1970-01-01 03:00:00 UTC"</span></a>
-<a class="sourceLine" id="cb7-3" title="3"><span class="kw"><a href="reference/dtt_set_tz.html">dtt_set_tz</a></span>(date_time)</a>
-<a class="sourceLine" id="cb7-4" title="4"><span class="co">#&gt; [1] "1970-01-01 03:00:00 -10"</span></a>
-<a class="sourceLine" id="cb7-5" title="5"><span class="kw"><a href="reference/dtt_adjust_tz.html">dtt_adjust_tz</a></span>(date_time)</a>
-<a class="sourceLine" id="cb7-6" title="6"><span class="co">#&gt; [1] "1969-12-31 17:00:00 -10"</span></a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>date_time</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="co">#&gt; [1] "1970-01-01 03:00:00 UTC"</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="kw"><a href="reference/dtt_set_tz.html">dtt_set_tz</a></span>(date_time)</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co">#&gt; [1] "1970-01-01 03:00:00 -10"</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="kw"><a href="reference/dtt_adjust_tz.html">dtt_adjust_tz</a></span>(date_time)</span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="co">#&gt; [1] "1969-12-31 17:00:00 -10"</span></span></code></pre></div>
 </div>
 <div id="combining-dates-and-times" class="section level3">
 <h3 class="hasAnchor">
 <a href="#combining-dates-and-times" class="anchor"></a>Combining Dates and Times</h3>
 <p><code>dttr2</code> makes it easy to decompose POSIXct vectors into Date and hms vectors and then recombine them again.</p>
 <p>As neither dates nor times have associated time zones unless the user passes a value they are assigned the default time zone.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">date_time</a>
-<a class="sourceLine" id="cb8-2" title="2"><span class="co">#&gt; [1] "1970-01-01 03:00:00 UTC"</span></a>
-<a class="sourceLine" id="cb8-3" title="3">date &lt;-<span class="st"> </span><span class="kw"><a href="reference/dtt_date.html">dtt_date</a></span>(date_time)</a>
-<a class="sourceLine" id="cb8-4" title="4">date</a>
-<a class="sourceLine" id="cb8-5" title="5"><span class="co">#&gt; [1] "1970-01-01"</span></a>
-<a class="sourceLine" id="cb8-6" title="6">time &lt;-<span class="st"> </span><span class="kw"><a href="reference/dtt_time.html">dtt_time</a></span>(date_time)</a>
-<a class="sourceLine" id="cb8-7" title="7">time</a>
-<a class="sourceLine" id="cb8-8" title="8"><span class="co">#&gt; 03:00:00</span></a>
-<a class="sourceLine" id="cb8-9" title="9"><span class="kw"><a href="reference/dtt_date_time.html">dtt_date_time</a></span>(date, time)</a>
-<a class="sourceLine" id="cb8-10" title="10"><span class="co">#&gt; [1] "1970-01-01 03:00:00 -10"</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>date_time</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="co">#&gt; [1] "1970-01-01 03:00:00 UTC"</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>date &lt;-<span class="st"> </span><span class="kw"><a href="reference/dtt_date.html">dtt_date</a></span>(date_time)</span>
+<span id="cb8-4"><a href="#cb8-4"></a>date</span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="co">#&gt; [1] "1970-01-01"</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>time &lt;-<span class="st"> </span><span class="kw"><a href="reference/dtt_time.html">dtt_time</a></span>(date_time)</span>
+<span id="cb8-7"><a href="#cb8-7"></a>time</span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="co">#&gt; 03:00:00</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="kw"><a href="reference/dtt_date_time.html">dtt_date_time</a></span>(date, time)</span>
+<span id="cb8-10"><a href="#cb8-10"></a><span class="co">#&gt; [1] "1970-01-01 03:00:00 -10"</span></span></code></pre></div>
 </div>
 </div>
 <div id="inspiration" class="section level2">
@@ -193,12 +190,15 @@ install.packages("dttr2")</code></pre>
 <p>Please note that this project is released with a <a href="https://poissonconsulting.github.io/dttr2/CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=dttr2">https://​cloud.r-project.org/​package=dttr2</a>
+</li>
 <li>Browse source code at <br><a href="https://github.com/poissonconsulting/dttr">https://​github.com/​poissonconsulting/​dttr</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/poissonconsulting/dttr/issues">https://​github.com/​poissonconsulting/​dttr/​issues</a>
@@ -225,7 +225,7 @@ install.packages("dttr2")</code></pre>
 </ul>
 </div>
 
-      <div class="dev-status">
+  <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></li>
@@ -237,9 +237,7 @@ install.packages("dttr2")</code></pre>
 </ul>
 </div>
 </div>
-
 </div>
-
 
 
       <footer><div class="copyright">
@@ -247,7 +245,7 @@ install.packages("dttr2")</code></pre>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>

@@ -88,6 +88,8 @@ actual clock time.
 
 ``` r
 time <- hms::as.hms(-3)
+#> Warning: as.hms() is deprecated, please use as_hms().
+#> This warning is displayed once per session.
 time
 #> -00:00:03
 dtt_time(time)
