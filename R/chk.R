@@ -6,7 +6,7 @@
 #' @return `NULL`, invisibly. Called for the side effect of throwing an error
 #'   if the condition is not met.
 #' @export
-#' @examples 
+#' @examples
 #' chk_time(hms::as_hms("10:00:10"))
 #' try(chk_time(1))
 chk_time <- function(x, x_name = NULL) {

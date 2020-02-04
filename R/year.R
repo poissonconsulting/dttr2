@@ -49,7 +49,7 @@ dtt_year.POSIXct <- function(x, ...) {
   chk_whole_numeric(value)
   chk_range(value, c(0L, 2999L))
   chk_subset(length(value), c(1L, length(value)))
-  
+
   if (!length(x)) {
     return(x)
   }

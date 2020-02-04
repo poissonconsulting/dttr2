@@ -25,6 +25,6 @@ test_that("doy_to_date", {
   expect_identical(dtt_doy_to_date(1:2, 2002:2001), as.Date(c("2002-01-01", "2001-01-02")))
   expect_identical(dtt_doy_to_date(1:2, 2002:2001), as.Date(c("2002-01-01", "2001-01-02")))
   expect_identical(dtt_doy_to_date(c(NA, 2), 2002:2001), as.Date(c(NA, "2001-01-02")))
-  
+
   expect_error(dtt_doy_to_date(0.33, 2000), "^`x` must be a whole numeric vector [(]integer vector or double equivalent[)][.]$", class = "chk_error")
 })

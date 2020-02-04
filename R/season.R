@@ -24,12 +24,12 @@ dtt_season <- function(x, start = c(
     chk_s3_class(x, "Date"),
     chk_s3_class(x, "POSIXct")
   )
-  
+
   chkor(
     chk_whole_numeric(start),
     chk_s3_class(start, "Date")
   )
-  if(is.numeric(start)) chk_range(start, c(1L, 12L))
+  if (is.numeric(start)) chk_range(start, c(1L, 12L))
   chk_not_any_na(start)
   chk_not_empty(start)
   chk_unique(start)

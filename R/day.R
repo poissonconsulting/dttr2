@@ -49,7 +49,7 @@ dtt_day.POSIXct <- function(x, ...) {
   chk_whole_numeric(value)
   chk_range(value, c(0L, 31L))
   chk_subset(length(value), c(1L, length(value)))
-  
+
   if (!length(x)) {
     return(x)
   }
@@ -66,7 +66,7 @@ dtt_day.POSIXct <- function(x, ...) {
   chk_whole_numeric(value)
   chk_range(value, c(0L, 31L))
   chk_subset(length(value), c(1L, length(value)))
-  
+
   if (!length(x)) {
     return(x)
   }

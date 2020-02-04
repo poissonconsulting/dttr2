@@ -7,7 +7,8 @@ test_that("seq.Date", {
   expect_error(dtt_seq(as.Date("2001-01-01"), NA_Date_), "`to` must be a date", class = "chk_error")
   expect_error(
     dtt_seq(as.Date("2001-01-01"), as.Date("2001-01-01"), units = "hours"),
-    "`units` must match 'days', 'months' or 'years'", class = "chk_error"
+    "`units` must match 'days', 'months' or 'years'",
+    class = "chk_error"
   )
 
   expect_identical(
@@ -169,8 +170,9 @@ test_that("seq.POSIXct", {
 })
 
 test_that("seq.hms", {
-  expect_error(dtt_seq(NA_hms_[-1], NA_hms_[-1]), 
-               class = "chk_error")
+  expect_error(dtt_seq(NA_hms_[-1], NA_hms_[-1]),
+    class = "chk_error"
+  )
   expect_error(dtt_seq(NA_hms_, NA_hms_[-1]), class = "chk_error")
   expect_error(dtt_seq(hms::as_hms("00:00:00"), NA_hms_[-1]), class = "chk_error")
   expect_error(
@@ -179,7 +181,8 @@ test_that("seq.hms", {
   )
   expect_error(
     dtt_seq(hms::as_hms("00:00:00"), hms::as_hms("00:00:00"), units = "days"),
-    "`units` must match 'hours', 'minutes' or 'seconds'", class = "chk_error"
+    "`units` must match 'hours', 'minutes' or 'seconds'",
+    class = "chk_error"
   )
 
   expect_error(

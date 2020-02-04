@@ -5,5 +5,5 @@ test_that("vld_time", {
   expect_false(vld_time(1))
   expect_false(vld_time(hms::hms(1)[-1]))
   expect_false(vld_time(hms::hms(NA)))
-  expect_false(vld_time(hms::hms(c(1,1))))
+  expect_false(vld_time(hms::hms(c(1, 1))))
 })
