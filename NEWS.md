@@ -1,6 +1,5 @@
 - dttr 0.1.0
 
-- Added `numericise()` for `hms::hms` objects.
 - Functions now accept whole numerics where previously integers required.
 - Added `chk_time()` and `vld_time()` to check and validate that non-missing `hms::hms` scalar.
 - Soft-deprecated `check_tz()` for `chk::chk_identical(dtt_tz(x), tz)`

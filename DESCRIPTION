@@ -17,14 +17,11 @@ Depends:
 Imports: 
     chk,
     hms,
-    universals,
     lifecycle
 Suggests: 
     testthat,
     covr,
     rlang
-Remotes:
-    poissonconsulting/universals
 RdMacros: 
     lifecycle
 Encoding: UTF-8
