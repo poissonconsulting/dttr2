@@ -1,2 +1,2 @@
-#' @import chk hms
+#' @import chk hms universals
 NULL
