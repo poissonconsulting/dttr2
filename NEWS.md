@@ -1,4 +1,8 @@
-- dttr 0.1.0
+# dttr2 0.1.0.9000
+
+- Internal changes only.
+
+# dttr 0.1.0
 
 - Functions now accept whole numerics where previously integers required.
 - Added `chk_time()` and `vld_time()` to check and validate that non-missing `hms::hms` scalar.
