@@ -1,3 +1,8 @@
+# dttr2 0.1.0.9001
+
+- Added dtt_wday() to get weekday as a character vector.
+
+
 # dttr2 0.1.0.9000
 
 - Internal changes only.
