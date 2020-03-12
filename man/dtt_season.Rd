@@ -13,10 +13,10 @@ dtt_season(x, start = c(Spring = 3L, Summer = 6L, Autumn = 9L, Winter = 12L))
 or a uniquely named Date vector of the first date of each season.}
 }
 \value{
-An ordered factor of the seasons.
+A factor of the seasons.
 }
 \description{
-Returns an ordered factor of the user specified seasons.
+Returns a factor of the user specified seasons.
 }
 \details{
 If the first month of the first season isn't January (1L), then

@@ -1,6 +1,6 @@
 #' Season
 #'
-#' Returns an ordered factor of the user specified seasons.
+#' Returns a factor of the user specified seasons.
 #'
 #' If the first month of the first season isn't January (1L), then
 #' the last season is considered to wrap into the following year.
@@ -9,7 +9,7 @@
 #' @param start A uniquely named integer vector of the first month of each season
 #' or a uniquely named Date vector of the first date of each season.
 #'
-#' @return An ordered factor of the seasons.
+#' @return A factor of the seasons.
 #' @export
 #' @examples
 #' dates <- as.Date(c("2001-01-01", "2001-02-28", "2012-09-01", "2012-12-01"))
@@ -64,7 +64,7 @@ dtt_season <- function(x, start = c(
   breaks <- c(start, dtt_date("1973-12-31"))
 
   x <- dtt_dayte(x)
-  x <- cut(x, breaks = breaks, include.lowest = TRUE, ordered_result = TRUE)
+  x <- cut(x, breaks = breaks, include.lowest = TRUE)
 
   levels(x) <- names(start)
   if (!is_length) x <- x[-1]
