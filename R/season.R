@@ -8,6 +8,7 @@
 #' @param x A Date or POSIXct vector
 #' @param start A uniquely named integer vector of the first month of each season
 #' or a uniquely named Date vector of the first date of each season.
+#' @param first A string of the name of first season or NULL in which case the first season is that which includes Jan 1st.
 #'
 #' @return A factor of the seasons.
 #' @export
@@ -17,14 +18,14 @@
 #' dtt_season(dates, start = c(Monsoon = 2L, `Dry Period` = 6L))
 #' dtt_season(dates, start = c(First = dtt_date("2000-01-01"), Second = dtt_date("2000-06-01")))
 dtt_season <- function(x, start = c(
-                         Spring = 3L, Summer = 6L,
-                         Autumn = 9L, Winter = 12L
-                       )) {
+  Spring = 3L, Summer = 6L,
+  Autumn = 9L, Winter = 12L
+), first = NULL) {
   chkor(
     chk_s3_class(x, "Date"),
     chk_s3_class(x, "POSIXct")
   )
-
+  
   chkor(
     chk_whole_numeric(start),
     chk_s3_class(start, "Date")
@@ -33,10 +34,14 @@ dtt_season <- function(x, start = c(
   chk_not_any_na(start)
   chk_not_empty(start)
   chk_unique(start)
-
+  
   chk_named(start)
   chk_unique(names(start))
-
+  if(!is.null(first)) {
+    chk_string(first)
+    chk_subset(first, names(start))
+  }
+  
   if (is.integer(start)) {
     breaks <- dtt_date(paste("1972", start, "01", sep = "-"))
     names(breaks) <- names(start)
@@ -46,27 +51,35 @@ dtt_season <- function(x, start = c(
     start <- dtt_dayte(start)
     names(start) <- names
   }
-
+  
   start <- dtt_floor(start)
   start <- sort(start)
-
-  if (anyDuplicated(unname(start))) err("The values in start must be unique.")
+  
+  chk_unique(start)
 
   is_length <- length(x)
   if (!is_length) x <- as.Date("2000-01-01")
-
+  
   if (start[1] != dtt_date(c("1972-01-01"))) {
-    first <- dtt_date("1972-01-01")
-    names(first) <- names(start)[length(start)]
-    start <- c(first, start)
+    first2 <- dtt_date("1972-01-01")
+    names(first2) <- names(start)[length(start)]
+    start <- c(first2, start)
   }
-
+  
   breaks <- c(start, dtt_date("1973-12-31"))
-
+  
   x <- dtt_dayte(x)
   x <- cut(x, breaks = breaks, include.lowest = TRUE)
-
-  levels(x) <- names(start)
+  
+  names <- names(start)
+  if(!is.null(first)) {
+    first <- which(names == first)
+    if(first != 1L) {
+      names <- c(names[first:length(names)], names[1:(first - 1)])
+    }
+  }
+  levels(x) <- names
+  
   if (!is_length) x <- x[-1]
   x
 }
