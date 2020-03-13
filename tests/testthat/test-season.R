@@ -111,5 +111,5 @@ test_that("season order", {
   
   expect_identical(dtt_season(as.Date(paste("2000", c(1,4,8,12), "01", sep = "-")),
              start = c(Summer = 6L, Winter = 11L), first = "Summer"),
-  structure(c(1L, 1L, 2L, 2L), .Label = c("Summer", "Winter"), class = "factor"))
+  structure(c(2L, 2L, 1L, 2L), .Label = c("Summer", "Winter"), class = "factor"))
 })

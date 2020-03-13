@@ -70,15 +70,17 @@ dtt_season <- function(x, start = c(
   
   x <- dtt_dayte(x)
   x <- cut(x, breaks = breaks, include.lowest = TRUE)
-  
-  names <- names(start)
-  if(!is.null(first)) {
-    first <- which(names == first)
+ 
+  levels(x) <- names(start)
+   if(!is.null(first)) {
+    first <- which(levels(x) == first)
     if(first != 1L) {
-      names <- c(names[first:length(names)], names[1:(first - 1)])
+      values <- as.character(x)
+      levels <- levels(x)
+      levels <- c(levels[first:length(levels)], levels[1:(first - 1)])
+      x <- factor(values, levels = levels)
     }
   }
-  levels(x) <- names
   
   if (!is_length) x <- x[-1]
   x
