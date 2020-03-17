@@ -4,19 +4,23 @@
 \alias{dtt_diff}
 \title{Time Difference}
 \usage{
-dtt_diff(x, y, units = "secs")
+dtt_diff(x, y, units = "secs", as_difftime = FALSE)
 }
 \arguments{
-\item{x}{An object that can be coerced to a POSIXct using date_time.}
+\item{x}{An object that can be coerced to a POSIXct using dtt_date_time().}
 
-\item{y}{An object that can be coerced to a POSIXct using date_time.}
+\item{y}{An object that can be coerced to a POSIXct using dtt_date_time().}
 
 \item{units}{A string of the units. The possible values are
 "secs", "minutes", "hours", "days" or "weeks".}
+
+\item{as_difftime}{A flag specifying whether to return a difftime vector.}
 }
 \value{
 A numeric vector of the time difference.
 }
 \description{
 Gets the time difference in secs, minutes, hours, days or weeks.
+Uses difftime() but floors x and y first after coercing to POSIXct
+and adjusts the timezone of y to match that of x.
 }
