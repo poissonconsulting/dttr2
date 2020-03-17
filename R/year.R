@@ -48,7 +48,7 @@ dtt_year.POSIXct <- function(x, ...) {
 `dtt_year<-.Date` <- function(x, value) {
   chk_whole_numeric(value)
   chk_range(value, c(0L, 2999L))
-  chk_subset(length(value), c(1L, length(value)))
+  chk_subset(length(value), c(1L, length(x)))
 
   if (!length(x)) {
     return(x)
@@ -65,7 +65,7 @@ dtt_year.POSIXct <- function(x, ...) {
 `dtt_year<-.POSIXct` <- function(x, value) {
   chk_whole_numeric(value)
   chk_range(value, c(0L, 2999L))
-  chk_subset(length(value), c(1L, length(value)))
+  chk_subset(length(value), c(1L, length(x)))
 
   if (!length(x)) {
     return(x)

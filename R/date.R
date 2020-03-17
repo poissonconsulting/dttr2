@@ -3,6 +3,7 @@
 #' Coerces vectors to floored Date vectors.
 #'
 #' @param x A vector.
+#' @param value A date vector.
 #' @param ... Unused.
 #'
 #' @return A floored Date vector.
@@ -18,6 +19,12 @@
 #' dtt_date(hms::as_hms("24:00:00"))
 dtt_date <- function(x, ...) {
   UseMethod("dtt_date")
+}
+
+#' @rdname dtt_date
+#' @export
+`dtt_date<-` <- function(x, value) {
+  UseMethod("dtt_date<-")
 }
 
 #' @describeIn dtt_date Coerce integer vector to a floored Date vector
@@ -62,4 +69,36 @@ dtt_date.hms <- function(x, ...) {
   attributes(x) <- NULL
   x <- as.Date("1970-01-01") + unclass(x) / dtt_units_per_unit()
   dtt_floor(x)
+}
+
+#' @describeIn dtt_date Set date values for a Date vector
+#' @export
+`dtt_date<-.Date` <- function(x, value) {
+  chk_s3_class(value, "Date")
+  chk_subset(length(value), c(1L, length(x)))
+
+  if (!length(x)) {
+    return(x)
+  }
+  value <- dtt_date(value)
+  if(identical(length(value), 1L))
+    return(rep(value, length(x)))
+  return(value)
+}
+
+#' @describeIn dtt_date Set date values for a POSIXct vector
+#' @export
+`dtt_date<-.POSIXct` <- function(x, value) {
+  chk_s3_class(value, "Date")
+  chk_subset(length(value), c(1L, length(x)))
+
+  if (!length(x)) {
+    return(x)
+  }
+  tz <- dtt_tz(x)
+  x <- as.POSIXlt(x, tz = tz)
+  x$year <- dtt_year(value) - 1900L
+  x$mon <- dtt_month(value) - 1L
+  x$mday <- dtt_day(value)
+  as.POSIXct(format(x), tz = tz)
 }

@@ -39,3 +39,17 @@ dtt_set_year <- function(x, value) {
   dtt_year(x) <- value
   x
 }
+
+#' @rdname dtt_date
+#' @export
+dtt_set_date <- function(x, value) {
+  dtt_date(x) <- value
+  x
+}
+
+#' @rdname dtt_time
+#' @export
+dtt_set_time <- function(x, value) {
+  dtt_time(x) <- value
+  x
+}

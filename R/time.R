@@ -3,6 +3,7 @@
 #' Coerces vectors to floored (and wrapped) hms vectors.
 #'
 #' @param x A vector.
+#' @param value A time vector.
 #' @param ... Unused.
 #'
 #' @return A floored hms vector.
@@ -16,6 +17,12 @@
 #' dtt_time(as.POSIXct("2001-01-01 02:30:40", tz = "Etc/GMT-8"))
 dtt_time <- function(x, ...) {
   UseMethod("dtt_time")
+}
+
+#' @rdname dtt_time
+#' @export
+`dtt_time<-` <- function(x, value) {
+  UseMethod("dtt_time<-")
 }
 
 #' @describeIn dtt_time Coerce integer vector to a floored hms vector
@@ -67,4 +74,30 @@ dtt_time.POSIXlt <- function(x, ...) {
   chk_unused(...)
   x <- data.frame(seconds = x$sec, minutes = x$min, hours = x$hour)
   do.call("hms", x)
+}
+
+#' @describeIn dtt_date Set time values for a Date vector
+#' @export
+`dtt_time<-.Date` <- function(x, value) {
+  x <- dtt_date_time(x)
+  dtt_time(x) <- value
+  x
+}
+
+#' @describeIn dtt_date Set date values for a POSIXct vector
+#' @export
+`dtt_time<-.POSIXct` <- function(x, value) {
+  chk_s3_class(value, "hms")
+  chk_subset(length(value), c(1L, length(x)))
+
+  if (!length(x)) {
+    return(x)
+  }
+  value <- dtt_time(value)
+  tz <- dtt_tz(x)
+  x <- as.POSIXlt(x, tz = tz)
+  x$hour <- dtt_hour(value)
+  x$min <- dtt_minute(value)
+  x$sec <- dtt_second(value)
+  as.POSIXct(format(x), tz = tz)
 }
