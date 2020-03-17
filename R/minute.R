@@ -57,7 +57,7 @@ dtt_minute.hms <- function(x, ...) {
 `dtt_minute<-.POSIXct` <- function(x, value) {
   chk_whole_numeric(value)
   chk_range(value, c(0L, 59L))
-  chk_subset(length(value), c(1L, length(value)))
+  chk_subset(length(value), c(1L, length(x)))
 
   if (!length(x)) {
     return(x)
@@ -73,7 +73,7 @@ dtt_minute.hms <- function(x, ...) {
 `dtt_minute<-.hms` <- function(x, value) {
   chk_whole_numeric(value)
   chk_range(value, c(0L, 59L))
-  chk_subset(length(value), c(1L, length(value)))
+  chk_subset(length(value), c(1L, length(x)))
 
   if (!length(x)) {
     return(x)
