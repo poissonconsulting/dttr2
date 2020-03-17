@@ -11,6 +11,9 @@
 #' @param as_difftime A flag specifying whether to return a difftime vector.
 #' @return A numeric vector of the time difference.
 #' @export
+#' @examples 
+#' dtt_diff(as.Date(c("2001-01-02", "2000-12-31")), as.Date("2001-01-01"), "hours")
+#' dtt_diff(as.Date("2001-01-02"), as.Date("2001-01-01"), "weeks")
 dtt_diff <- function(x, y, units = "secs", as_difftime = FALSE) {
   chk_string(units)
   chk_subset(units, c("secs", "mins", "hours", "days", "weeks"))
