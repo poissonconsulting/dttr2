@@ -4,7 +4,9 @@
 \name{NA_Date_}
 \alias{NA_Date_}
 \title{Missing Date}
-\format{An object of class \code{Date} of length 1.}
+\format{
+An object of class \code{Date} of length 1.
+}
 \usage{
 NA_Date_
 }

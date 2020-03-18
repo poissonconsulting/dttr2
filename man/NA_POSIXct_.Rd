@@ -4,7 +4,9 @@
 \name{NA_POSIXct_}
 \alias{NA_POSIXct_}
 \title{Missing POSIXct}
-\format{An object of class \code{POSIXct} (inherits from \code{POSIXt}) of length 1.}
+\format{
+An object of class \code{POSIXct} (inherits from \code{POSIXt}) of length 1.
+}
 \usage{
 NA_POSIXct_
 }
