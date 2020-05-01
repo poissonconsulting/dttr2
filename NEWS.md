@@ -1,22 +1,12 @@
-# dttr2 0.1.1
+# dttr2 0.2.0
 
 - Bug fix for c.Date which in development version coerces all arguments to Date.
-- Added date_add_time().
-- Added dtt_diff().
-- Add difftime() to get numeric vector.
-- Added set_date() and set_time().
-- Add first argument to dtt_season() to allow setting of first season in year.
-- dtt_season() now returns factor as opposed to ordered factor.
-
-
-# dttr2 0.1.0.9001
-
-- Added dtt_wday() to get weekday as a character vector.
-
-
-# dttr2 0.1.0.9000
-
-- Internal changes only.
+- Added `dtt_date_add_time()` to add times to Dates vectors.
+- Added `dtt_diff()` to get time differences.
+- Added `dtt_set_date()` and `dtt_set_time()` to set dates and times.
+- Add `first = NULL` argument to `dtt_season()` to allow setting of first season in year.
+- `dtt_season()` now returns factor as opposed to ordered factor.
+- Added `dtt_wday()` to get weekday as a character vector.
 
 # dttr2 0.1.0
 
