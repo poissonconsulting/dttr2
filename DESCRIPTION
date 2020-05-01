@@ -22,10 +22,9 @@ Suggests:
     testthat,
     covr,
     rlang
-RdMacros: 
-    lifecycle
 Encoding: UTF-8
 Language: en-US
 LazyData: true
+RdMacros: lifecycle
 RoxygenNote: 7.1.0
 Roxygen: list(markdown = TRUE)
