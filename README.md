@@ -41,6 +41,7 @@ To install the latest release version from
 To install the latest development version from
 [GitHub](https://github.com/poissonconsulting/dttr2)
 
+    # install.packages("remotes")
     remotes::install_github("poissonconsulting/dttr2")
 
 ## Introduction
