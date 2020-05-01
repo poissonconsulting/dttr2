@@ -14,3 +14,4 @@
 ^\.covrignore$
 ^CRAN-RELEASE$
 ^\.github$
+^revdep$
