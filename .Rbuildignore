@@ -9,7 +9,8 @@
 ^README\.Rmd$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^build\.R$
+^scripts$
 ^cran-comments\.md$
 ^\.covrignore$
 ^CRAN-RELEASE$
+^\.github$
