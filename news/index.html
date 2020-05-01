@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">dttr2</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -114,20 +114,19 @@
       <small>Source: <a href='https://github.com/poissonconsulting/dttr2/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="dttr2-0109001" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0.9001">
-<a href="#dttr2-0109001" class="anchor"></a>dttr2 0.1.0.9001<small> Unreleased </small>
+    <div id="dttr2-020" class="section level1">
+<h1 class="page-header" data-toc-text="0.2.0">
+<a href="#dttr2-020" class="anchor"></a>dttr2 0.2.0<small> Unreleased </small>
 </h1>
 <ul>
-<li>Added dtt_wday() to get weekday as a character vector.</li>
-</ul>
-</div>
-    <div id="dttr2-0109000" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0.9000">
-<a href="#dttr2-0109000" class="anchor"></a>dttr2 0.1.0.9000<small> Unreleased </small>
-</h1>
-<ul>
-<li>Internal changes only.</li>
+<li>Bug fix for c.Date which in development version coerces all arguments to Date.</li>
+<li>Added <code><a href="../reference/dtt_date_add_time.html">dtt_date_add_time()</a></code> to add times to Dates vectors.</li>
+<li>Added <code><a href="../reference/dtt_diff.html">dtt_diff()</a></code> to get time differences.</li>
+<li>Added <code><a href="../reference/dtt_date.html">dtt_set_date()</a></code> and <code><a href="../reference/dtt_time.html">dtt_set_time()</a></code> to set dates and times.</li>
+<li>Add <code>first = NULL</code> argument to <code><a href="../reference/dtt_season.html">dtt_season()</a></code> to allow setting of first season in year.</li>
+<li>
+<code><a href="../reference/dtt_season.html">dtt_season()</a></code> now returns factor as opposed to ordered factor.</li>
+<li>Added <code><a href="../reference/dtt_wday.html">dtt_wday()</a></code> to get weekday as a character vector.</li>
 </ul>
 </div>
     <div id="dttr2-010" class="section level1">
