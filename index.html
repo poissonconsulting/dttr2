@@ -73,7 +73,14 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-
+<hr>
+<div id="output-github_document" class="section level2">
+<h2 class="hasAnchor">
+<a href="#output-github_document" class="anchor"></a>output: github_document</h2>
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
+<p><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a> <a href="https://github.com/poissonconsulting/dttr2/actions"><img src="https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://codecov.io/github/poissonconsulting/dttr2?branch=master"><img src="https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg" alt="Coverage status"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a> <a href="https://CRAN.R-project.org/package=dttr2"><img src="https://tinyverse.netlify.com/badge/dttr2" alt="Tinyverse status"></a> <a href="https://cran.r-project.org/package=dttr2"><img src="https://www.r-pkg.org/badges/version/dttr2" alt="CRAN status"></a> <a href="http://cranlogs.r-pkg.org/badges/dttr2">!CRAN downloads</a> <a href="https://codecov.io/gh/poissonconsulting/dttr2?branch=master"><img src="https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg" alt="Codecov test coverage"></a> <!-- badges: end --></p>
+</div>
 <div id="dttr2" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#dttr2" class="anchor"></a>dttr2</h1></div>
@@ -90,10 +97,10 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>To install the latest release version from <a href="https://cran.r-project.org/package=dttr2">CRAN</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">"dttr2"</span>)</span></code></pre></div>
+<pre><code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("dttr2")</a></code></pre>
 <p>To install the latest development version from <a href="https://github.com/poissonconsulting/dttr2">GitHub</a></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># install.packages("remotes")</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"poissonconsulting/dttr2"</span>)</span></code></pre></div>
+<pre><code><a href="https://remotes.r-lib.org/reference/install_github.html"># install.packages("remotes")
+remotes::install_github("poissonconsulting/dttr2")</a></code></pre>
 </div>
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
@@ -103,6 +110,7 @@
 <a href="#time-units" class="anchor"></a>Time Units</h3>
 <p><code>dttr2</code> floors any date/time objects it encounters to the nearest time unit (by default days for Date and seconds for POSIXct and hms).</p>
 <div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dttr2</span>)
+<span class="co">#&gt; Error in library(dttr2): there is no package called 'dttr2'</span>
 <span class="no">date</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="fl">1.75</span>, <span class="kw">origin</span> <span class="kw">=</span> <span class="st">"1970-01-01"</span>)
 <span class="no">date</span>
 <span class="co">#&gt; [1] "1970-01-02"</span>
@@ -110,17 +118,18 @@
 <span class="co">#&gt; [1] 1.75</span>
 
 <span class="no">date</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/dtt_date.html">dtt_date</a></span>(<span class="no">date</span>)
+<span class="co">#&gt; Error in dtt_date(date): could not find function "dtt_date"</span>
 <span class="no">date</span>
 <span class="co">#&gt; [1] "1970-01-02"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(<span class="no">date</span>)
-<span class="co">#&gt; [1] 1</span></pre></div>
+<span class="co">#&gt; [1] 1.75</span></pre></div>
 <p>Similarly, the time unit accessor (<code><a href="reference/dtt_second.html">dtt_second()</a></code>, <code><a href="reference/dtt_minute.html">dtt_minute()</a></code> etc) and settor functions as well as the functions to add (ie <code><a href="reference/dtt_add_units.html">dtt_add_seconds()</a></code>) and subtract time units return or require integers.</p>
 <div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="reference/dtt_day.html">dtt_day</a></span>(<span class="no">date</span>)
-<span class="co">#&gt; [1] 2</span>
+<span class="co">#&gt; Error in dtt_day(date): could not find function "dtt_day"</span>
 <span class="fu"><a href="reference/dtt_add_units.html">dtt_add_days</a></span>(<span class="no">date</span>, <span class="fl">2L</span>)
-<span class="co">#&gt; [1] "1970-01-04"</span>
+<span class="co">#&gt; Error in dtt_add_days(date, 2L): could not find function "dtt_add_days"</span>
 <span class="fu"><a href="reference/dtt_add_units.html">dtt_add_months</a></span>(<span class="no">date</span>, <span class="fl">24L</span>)
-<span class="co">#&gt; [1] "1972-01-02"</span></pre></div>
+<span class="co">#&gt; Error in dtt_add_months(date, 24L): could not find function "dtt_add_months"</span></pre></div>
 </div>
 <div id="times" class="section level3">
 <h3 class="hasAnchor">
@@ -132,29 +141,31 @@
 <span class="no">time</span>
 <span class="co">#&gt; -00:00:03</span>
 <span class="fu"><a href="reference/dtt_time.html">dtt_time</a></span>(<span class="no">time</span>)
-<span class="co">#&gt; 23:59:57</span>
+<span class="co">#&gt; Error in dtt_time(time): could not find function "dtt_time"</span>
 <span class="fu"><a href="reference/dtt_time.html">dtt_time</a></span>(<span class="kw pkg">hms</span><span class="kw ns">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/Deprecated.html">as.hms</a></span>(<span class="st">"24:00:00"</span>))
-<span class="co">#&gt; 00:00:00</span></pre></div>
+<span class="co">#&gt; Error in dtt_time(hms::as.hms("24:00:00")): could not find function "dtt_time"</span></pre></div>
 </div>
 <div id="time-zones" class="section level3">
 <h3 class="hasAnchor">
 <a href="#time-zones" class="anchor"></a>Time Zones</h3>
 <p>The user can override the default time zone (UTC) when handling POSIXct vectors using <code><a href="reference/dtt_default_tz.html">dtt_set_default_tz()</a></code>.</p>
 <div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="reference/dtt_default_tz.html">dtt_default_tz</a></span>()
-<span class="co">#&gt; [1] "UTC"</span>
+<span class="co">#&gt; Error in dtt_default_tz(): could not find function "dtt_default_tz"</span>
 <span class="no">date_time</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/dtt_date_time.html">dtt_date_time</a></span>(<span class="st">"1970-01-01 03:00:00"</span>)
+<span class="co">#&gt; Error in dtt_date_time("1970-01-01 03:00:00"): could not find function "dtt_date_time"</span>
 <span class="fu"><a href="reference/dtt_default_tz.html">dtt_set_default_tz</a></span>(<span class="st">"Etc/GMT+10"</span>)
+<span class="co">#&gt; Error in dtt_set_default_tz("Etc/GMT+10"): could not find function "dtt_set_default_tz"</span>
 <span class="fu"><a href="reference/dtt_default_tz.html">dtt_default_tz</a></span>()
-<span class="co">#&gt; [1] "Etc/GMT+10"</span>
+<span class="co">#&gt; Error in dtt_default_tz(): could not find function "dtt_default_tz"</span>
 <span class="no">date_time</span>
-<span class="co">#&gt; [1] "1970-01-01 03:00:00 UTC"</span></pre></div>
+<span class="co">#&gt; Error in eval(expr, envir, enclos): object 'date_time' not found</span></pre></div>
 <p>They can assign a new time zone to a POSIXct object whilst leaving the clock time unchanged using <code><a href="reference/dtt_set_tz.html">dtt_set_tz()</a></code> or adjust the time zone so that clock (but not the actual) time is altered using <code><a href="reference/dtt_adjust_tz.html">dtt_adjust_tz()</a></code></p>
 <div class="sourceCode" id="cb7"><pre class="r"><span class="no">date_time</span>
-<span class="co">#&gt; [1] "1970-01-01 03:00:00 UTC"</span>
+<span class="co">#&gt; Error in eval(expr, envir, enclos): object 'date_time' not found</span>
 <span class="fu"><a href="reference/dtt_set_tz.html">dtt_set_tz</a></span>(<span class="no">date_time</span>)
-<span class="co">#&gt; [1] "1970-01-01 03:00:00 -10"</span>
+<span class="co">#&gt; Error in dtt_set_tz(date_time): could not find function "dtt_set_tz"</span>
 <span class="fu"><a href="reference/dtt_adjust_tz.html">dtt_adjust_tz</a></span>(<span class="no">date_time</span>)
-<span class="co">#&gt; [1] "1969-12-31 17:00:00 -10"</span></pre></div>
+<span class="co">#&gt; Error in dtt_adjust_tz(date_time): could not find function "dtt_adjust_tz"</span></pre></div>
 </div>
 <div id="combining-dates-and-times" class="section level3">
 <h3 class="hasAnchor">
@@ -162,15 +173,17 @@
 <p><code>dttr2</code> makes it easy to decompose POSIXct vectors into Date and hms vectors and then recombine them again.</p>
 <p>As neither dates nor times have associated time zones unless the user passes a value they are assigned the default time zone.</p>
 <div class="sourceCode" id="cb8"><pre class="r"><span class="no">date_time</span>
-<span class="co">#&gt; [1] "1970-01-01 03:00:00 UTC"</span>
+<span class="co">#&gt; Error in eval(expr, envir, enclos): object 'date_time' not found</span>
 <span class="no">date</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/dtt_date.html">dtt_date</a></span>(<span class="no">date_time</span>)
+<span class="co">#&gt; Error in dtt_date(date_time): could not find function "dtt_date"</span>
 <span class="no">date</span>
-<span class="co">#&gt; [1] "1970-01-01"</span>
+<span class="co">#&gt; [1] "1970-01-02"</span>
 <span class="no">time</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/dtt_time.html">dtt_time</a></span>(<span class="no">date_time</span>)
+<span class="co">#&gt; Error in dtt_time(date_time): could not find function "dtt_time"</span>
 <span class="no">time</span>
-<span class="co">#&gt; 03:00:00</span>
+<span class="co">#&gt; -00:00:03</span>
 <span class="fu"><a href="reference/dtt_date_time.html">dtt_date_time</a></span>(<span class="no">date</span>, <span class="no">time</span>)
-<span class="co">#&gt; [1] "1970-01-01 03:00:00 -10"</span></pre></div>
+<span class="co">#&gt; Error in dtt_date_time(date, time): could not find function "dtt_date_time"</span></pre></div>
 </div>
 </div>
 <div id="inspiration" class="section level2">
@@ -222,18 +235,7 @@
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
-<ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></li>
-<li><a href="https://github.com/poissonconsulting/dttr2/actions"><img src="https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://codecov.io/github/poissonconsulting/dttr2?branch=master"><img src="https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
-<li><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a></li>
-<li><a href="https://CRAN.R-project.org/package=dttr2"><img src="https://tinyverse.netlify.com/badge/dttr2" alt="Tinyverse status"></a></li>
-<li><a href="https://cran.r-project.org/package=dttr2"><img src="https://www.r-pkg.org/badges/version/dttr2" alt="CRAN status"></a></li>
-</ul>
-</div>
-</div>
+  </div>
 </div>
 
 
