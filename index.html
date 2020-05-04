@@ -79,7 +79,7 @@
 <a href="#output-github_document" class="anchor"></a>output: github_document</h2>
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
-<p><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a> <a href="https://github.com/poissonconsulting/dttr2/actions"><img src="https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://codecov.io/github/poissonconsulting/dttr2?branch=master"><img src="https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg" alt="Coverage status"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a> <a href="https://CRAN.R-project.org/package=dttr2"><img src="https://tinyverse.netlify.com/badge/dttr2" alt="Tinyverse status"></a> <a href="https://cran.r-project.org/package=dttr2"><img src="https://www.r-pkg.org/badges/version/dttr2" alt="CRAN status"></a> <a href="https://codecov.io/gh/poissonconsulting/dttr2?branch=master"><img src="https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg" alt="Codecov test coverage"></a> <a href="http://cranlogs.r-pkg.org/badges/dttr2">!CRAN downloads</a> <!-- badges: end --></p>
+
 </div>
 <div id="dttr2" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
@@ -136,8 +136,6 @@ remotes::install_github("poissonconsulting/dttr2")</a></code></pre>
 <a href="#times" class="anchor"></a>Times</h3>
 <p><code>dttr2</code> wraps negative times or times greater than 23:59:59 to the actual clock time.</p>
 <div class="sourceCode" id="cb5"><pre class="r"><span class="no">time</span> <span class="kw">&lt;-</span> <span class="kw pkg">hms</span><span class="kw ns">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/Deprecated.html">as.hms</a></span>(-<span class="fl">3</span>)
-<span class="co">#&gt; Warning: as.hms() is deprecated, please use as_hms().</span>
-<span class="co">#&gt; This warning is displayed once per session.</span>
 <span class="no">time</span>
 <span class="co">#&gt; -00:00:03</span>
 <span class="fu"><a href="reference/dtt_time.html">dtt_time</a></span>(<span class="no">time</span>)
@@ -235,7 +233,19 @@ remotes::install_github("poissonconsulting/dttr2")</a></code></pre>
 </ul>
 </div>
 
-  </div>
+  <div class="dev-status">
+<h2>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></li>
+<li><a href="https://github.com/poissonconsulting/dttr2/actions"><img src="https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://codecov.io/github/poissonconsulting/dttr2?branch=master"><img src="https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
+<li><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a></li>
+<li><a href="https://CRAN.R-project.org/package=dttr2"><img src="https://tinyverse.netlify.com/badge/dttr2" alt="Tinyverse status"></a></li>
+<li><a href="https://cran.r-project.org/package=dttr2"><img src="https://www.r-pkg.org/badges/version/dttr2" alt="CRAN status"></a></li>
+<li><a href="https://codecov.io/gh/poissonconsulting/dttr2?branch=master"><img src="https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+</ul>
+</div>
+</div>
 </div>
 
 
