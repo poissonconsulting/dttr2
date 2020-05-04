@@ -13,8 +13,8 @@ output: github_document
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Tinyverse status](https://tinyverse.netlify.com/badge/dttr2)](https://CRAN.R-project.org/package=dttr2)
 [![CRAN status](https://www.r-pkg.org/badges/version/dttr2)](https://cran.r-project.org/package=dttr2)
-[!CRAN downloads](http://cranlogs.r-pkg.org/badges/dttr2)
 [![Codecov test coverage](https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/dttr2?branch=master)
+[!CRAN downloads](http://cranlogs.r-pkg.org/badges/dttr2)
 <!-- badges: end -->
 
 # dttr2
