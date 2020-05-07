@@ -6,8 +6,8 @@
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![R build
 status](https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/dttr2/actions)
-[![Coverage
-status](https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg)](https://codecov.io/github/poissonconsulting/dttr2?branch=master)
+[![Codecov test
+coverage](https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/dttr2?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Tinyverse
