@@ -1,10 +1,14 @@
 Package: dttr2
 Title: Manipulate Dates, DateTimes and Times
 Version: 0.2.0.9000
-Authors@R: c(
-    person("Joe", "Thorley", , "joe@poissonconsulting.ca", c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592")),
-    person("Poisson Consulting", role = c("cph", "fnd"))
-    )
+Authors@R: 
+    c(person(given = "Joe",
+             family = "Thorley",
+             role = c("aut", "cre"),
+             email = "joe@poissonconsulting.ca",
+             comment = c(ORCID = "0000-0002-7683-4592")),
+      person(given = "Poisson Consulting",
+             role = c("cph", "fnd")))
 Description: Manipulates date ('Date'), datetime ('POSIXct') and
     time ('hms') vectors.  Date/times are considered discrete and are
     floored whenever encountered.  Times are wrapped and time zones are
@@ -19,12 +23,13 @@ Imports:
     hms,
     lifecycle
 Suggests: 
-    testthat,
     covr,
-    rlang
+    rlang,
+    testthat
+RdMacros: 
+    lifecycle
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RdMacros: lifecycle
-RoxygenNote: 7.1.0
 Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
