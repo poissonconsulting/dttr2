@@ -2,10 +2,13 @@
 % Please edit documentation in R/dayte-time.R
 \name{dtt_dayte_time}
 \alias{dtt_dayte_time}
+\alias{dtt_dayte_time.Date}
 \alias{dtt_dayte_time.POSIXct}
 \title{Dayte Time}
 \usage{
 dtt_dayte_time(x, ...)
+
+\method{dtt_dayte_time}{Date}(x, start = 1L, tz = dtt_default_tz(), ...)
 
 \method{dtt_dayte_time}{POSIXct}(x, start = 1L, ...)
 }
@@ -15,17 +18,21 @@ dtt_dayte_time(x, ...)
 \item{...}{Unused.}
 
 \item{start}{An integer scalar of the starting month or a Date scalar of the starting date.}
+
+\item{tz}{A string of the time zone.}
 }
 \value{
 A Date vector with the year set to year.
 
-A Date vector of the daytes.
+A POSIXct vector of the dayte times.
 }
 \description{
 Dayte Time
 }
 \section{Methods (by class)}{
 \itemize{
+\item \code{Date}: Dayte Time a Date vector
+
 \item \code{POSIXct}: Dayte Time a POSIXct vector
 }}
 

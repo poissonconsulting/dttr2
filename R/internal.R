@@ -68,7 +68,7 @@ daytte <- function(x, start) {
     dtt_year(start) <- 1972L
   }
 
-  if (all(start == as.Date("1972-01-01"))) {
+  if (all(dtt_date(start) == as.Date("1972-01-01"))) {
     return(x)
   }
 
