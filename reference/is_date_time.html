@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Day of the Year — dtt_doy • dttr2</title>
+<title>Is Date/Time — is_date_time • dttr2</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Day of the Year — dtt_doy" />
-<meta property="og:description" content="Day of the Year" />
+<meta property="og:title" content="Is Date/Time — is_date_time" />
+<meta property="og:description" content="Tests whether an object is a Date, POSIXct, or hms vector." />
 
 
 
@@ -111,36 +111,40 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Day of the Year</h1>
-    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/doy.R'><code>R/doy.R</code></a></small>
-    <div class="hidden name"><code>dtt_doy.Rd</code></div>
+    <h1>Is Date/Time</h1>
+    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/is.R'><code>R/is.R</code></a></small>
+    <div class="hidden name"><code>is_date_time.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Day of the Year</p>
+    <p>Tests whether an object is a Date, POSIXct, or hms vector.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dtt_doy</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>is.POSIXct</span>(<span class='no'>x</span>)
+
+<span class='fu'>is_date_time</span>(<span class='no'>x</span>)
+
+<span class='fu'>is.Date</span>(<span class='no'>x</span>)
+
+<span class='fu'>is_date</span>(<span class='no'>x</span>)
+
+<span class='fu'>is.hms</span>(<span class='no'>x</span>)
+
+<span class='fu'>is_time</span>(<span class='no'>x</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>A Date or POSIXct vector.</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>Unused.</p></td>
+      <td><p>An object</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A integer vector between 1 and 366 of the day of the year.</p>
+    <p>A flag indicating whether x inherits from Date, POSIXct or hms.</p>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>dtt_doy</span>(<span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>())</div><div class='output co'>#&gt; [1] 150</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
