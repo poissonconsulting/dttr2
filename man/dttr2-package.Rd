@@ -4,14 +4,14 @@
 \name{dttr2-package}
 \alias{dttr2}
 \alias{dttr2-package}
-\title{dttr2: Manipulate Dates, DateTimes and Times}
+\title{dttr2: Manipulate Date, POSIXct and hms Vectors}
 \description{
-Manipulates date ('Date'), datetime ('POSIXct') and
+Manipulates date ('Date'), date time ('POSIXct') and
     time ('hms') vectors.  Date/times are considered discrete and are
     floored whenever encountered.  Times are wrapped and time zones are
     maintained unless explicitly altered by the user.
 
-Manipulates date ('Date'), datetime ('POSIXct') and
+Manipulates date ('Date'), date time ('POSIXct') and
     time ('hms') vectors.  Date/times are considered discrete and are
     floored whenever encountered.  Times are wrapped and time zones are
     maintained unless explicitly altered by the user.
