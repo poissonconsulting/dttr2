@@ -51,8 +51,8 @@ dtt_complete.Date <- function(x, from = min(x), to = max(x), units = "days",
 dtt_complete.POSIXct <- function(x, from = min(x), to = max(x), units = "seconds",
                                  unique = TRUE, sort = TRUE, ...) {
   chk_not_empty(x)
-  chk_datetime(from)
-  chk_datetime(to)
+  chk_date_time(from)
+  chk_date_time(to)
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours", "days", "months", "years"))
   chk_flag(unique)

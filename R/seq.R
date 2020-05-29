@@ -62,7 +62,7 @@ dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL, ...
 #' @describeIn dtt_seq Create a POSIXct sequence vector
 #' @export
 dtt_seq.POSIXct <- function(from, to = from, units = "seconds", length_out = NULL, ...) {
-  chk_datetime(from)
+  chk_date_time(from)
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours", "days", "months", "years"))
   if (!is.null(length_out)) chk_whole_number(length_out)
@@ -81,7 +81,7 @@ dtt_seq.POSIXct <- function(from, to = from, units = "seconds", length_out = NUL
       to <- dtt_add_units(from, n = length_out - 1L, units = units)
     }
   }
-  chk_datetime(to)
+  chk_date_time(to)
   chk_identical(dtt_tz(to), tz)
   to <- dtt_floor(to, units = units)
   if (from == to) {
