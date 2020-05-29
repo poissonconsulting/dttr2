@@ -122,6 +122,9 @@
 
     <pre class="usage"><span class='fu'>dtt_dayte_time</span>(<span class='no'>x</span>, <span class='no'>...</span>)
 
+<span class='co'># S3 method for Date</span>
+<span class='fu'>dtt_dayte_time</span>(<span class='no'>x</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>tz</span> <span class='kw'>=</span> <span class='fu'><a href='dtt_default_tz.html'>dtt_default_tz</a></span>(), <span class='no'>...</span>)
+
 <span class='co'># S3 method for POSIXct</span>
 <span class='fu'>dtt_dayte_time</span>(<span class='no'>x</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='no'>...</span>)</pre>
 
@@ -140,16 +143,21 @@
       <th>start</th>
       <td><p>An integer scalar of the starting month or a Date scalar of the starting date.</p></td>
     </tr>
+    <tr>
+      <th>tz</th>
+      <td><p>A string of the time zone.</p></td>
+    </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A Date vector with the year set to year.</p>
-<p>A Date vector of the daytes.</p>
+<p>A POSIXct vector of the dayte times.</p>
     <h2 class="hasAnchor" id="methods-by-class-"><a class="anchor" href="#methods-by-class-"></a>Methods (by class)</h2>
 
     
 <ul>
+<li><p><code>Date</code>: Dayte Time a Date vector</p></li>
 <li><p><code>POSIXct</code>: Dayte Time a POSIXct vector</p></li>
 </ul>
 
