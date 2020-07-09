@@ -120,10 +120,10 @@
     <p>Returns a factor of the user specified seasons.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dtt_season</span>(
-  <span class='no'>x</span>,
-  <span class='kw'>start</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='kw'>Spring</span> <span class='kw'>=</span> <span class='fl'>3L</span>, <span class='kw'>Summer</span> <span class='kw'>=</span> <span class='fl'>6L</span>, <span class='kw'>Autumn</span> <span class='kw'>=</span> <span class='fl'>9L</span>, <span class='kw'>Winter</span> <span class='kw'>=</span> <span class='fl'>12L</span>),
-  <span class='kw'>first</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_season.html'>dtt_season</a></span>(
+  <span class='kw'>x</span>,
+  start = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(Spring = <span class='fl'>3L</span>, Summer = <span class='fl'>6L</span>, Autumn = <span class='fl'>9L</span>, Winter = <span class='fl'>12L</span>),
+  first = <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -153,10 +153,10 @@ or a uniquely named Date vector of the first date of each season.</p></td>
 the last season is considered to wrap into the following year.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>dates</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2001-01-01"</span>, <span class='st'>"2001-02-28"</span>, <span class='st'>"2012-09-01"</span>, <span class='st'>"2012-12-01"</span>))
-<span class='fu'>dtt_season</span>(<span class='no'>dates</span>)</div><div class='output co'>#&gt; [1] Winter Winter Autumn Winter
-#&gt; Levels: Winter Spring Summer Autumn</div><div class='input'><span class='fu'>dtt_season</span>(<span class='no'>dates</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='kw'>Monsoon</span> <span class='kw'>=</span> <span class='fl'>2L</span>, <span class='kw'>`Dry Period`</span> <span class='kw'>=</span> <span class='fl'>6L</span>))</div><div class='output co'>#&gt; [1] Dry Period Monsoon    Dry Period Dry Period
-#&gt; Levels: Dry Period Monsoon</div><div class='input'><span class='fu'>dtt_season</span>(<span class='no'>dates</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='kw'>First</span> <span class='kw'>=</span> <span class='fu'><a href='dtt_date.html'>dtt_date</a></span>(<span class='st'>"2000-01-01"</span>), <span class='kw'>Second</span> <span class='kw'>=</span> <span class='fu'><a href='dtt_date.html'>dtt_date</a></span>(<span class='st'>"2000-06-01"</span>)))</div><div class='output co'>#&gt; [1] First  First  Second Second
+    <pre class="examples"><div class='input'><span class='kw'>dates</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2001-01-01"</span>, <span class='st'>"2001-02-28"</span>, <span class='st'>"2012-09-01"</span>, <span class='st'>"2012-12-01"</span>))
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_season.html'>dtt_season</a></span>(<span class='kw'>dates</span>)</div><div class='output co'>#&gt; [1] Winter Winter Autumn Winter
+#&gt; Levels: Winter Spring Summer Autumn</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_season.html'>dtt_season</a></span>(<span class='kw'>dates</span>, start = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(Monsoon = <span class='fl'>2L</span>, `Dry Period` = <span class='fl'>6L</span>))</div><div class='output co'>#&gt; [1] Dry Period Monsoon    Dry Period Dry Period
+#&gt; Levels: Dry Period Monsoon</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_season.html'>dtt_season</a></span>(<span class='kw'>dates</span>, start = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(First = <span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_date.html'>dtt_date</a></span>(<span class='st'>"2000-01-01"</span>), Second = <span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_date.html'>dtt_date</a></span>(<span class='st'>"2000-06-01"</span>)))</div><div class='output co'>#&gt; [1] First  First  Second Second
 #&gt; Levels: First Second</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

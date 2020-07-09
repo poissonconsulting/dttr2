@@ -117,10 +117,10 @@
     </div>
 
     <div class="ref-description">
-    <p>Checks an object's time zone as returned by <code><a href='dtt_tz.html'>dtt_tz()</a></code>.</p>
+    <p>Checks an object's time zone as returned by <code><a href='https://rdrr.io/pkg/dttr2/man/dtt_tz.html'>dtt_tz()</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>check_tz</span>(<span class='no'>x</span>, <span class='kw'>tz</span> <span class='kw'>=</span> <span class='fu'><a href='dtt_tz.html'>dtt_tz</a></span>(<span class='no'>x</span>), <span class='kw'>x_name</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/substitute.html'>substitute</a></span>(<span class='no'>x</span>), <span class='kw'>error</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/check_tz.html'>check_tz</a></span>(<span class='kw'>x</span>, tz = <span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_tz.html'>dtt_tz</a></span>(<span class='kw'>x</span>), x_name = <span class='fu'><a href='https://rdrr.io/r/base/substitute.html'>substitute</a></span>(<span class='kw'>x</span>), error = <span class='fl'>TRUE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -148,10 +148,10 @@
     <p>An invisible copy of x (if it doesn't throw an error).</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='dtt_tz.html'>dtt_tz()</a></code></p></div>
+    <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/dttr2/man/dtt_tz.html'>dtt_tz()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>check_tz</span>(<span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.time</a></span>(), <span class='st'>"UTC"</span>, <span class='kw'>error</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: `check_tz()` is deprecated as of dttr2 0.1.0.</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/check_tz.html'>check_tz</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.time</a></span>(), <span class='st'>"UTC"</span>, error = <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: `check_tz()` is deprecated as of dttr2 0.1.0.</span>
 #&gt; <span class='warning'>Replace with `chk::chk_identical(dtt_tz(x), tz)`. To check whether a valid time zone use `chk::chk_tz(x)`.</span>
 #&gt; <span class='warning'><span style='color: #555555;'>This warning is displayed once every 8 hours.</span><span></span>
 #&gt; <span class='warning'></span><span style='color: #555555;'>Call `lifecycle::last_warnings()` to see where this warning was generated.</span><span></span></div></span></pre>

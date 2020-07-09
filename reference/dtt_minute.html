@@ -120,30 +120,30 @@
     <p>Gets and sets minute values for date/time vectors.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dtt_minutes</span>(<span class='no'>x</span>, <span class='no'>...</span>)
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minutes</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
 
-<span class='fu'>dtt_minutes</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='no'>value</span>
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minutes</a></span>(<span class='kw'>x</span>) <span class='op'>&lt;-</span> <span class='kw'>value</span>
 
-<span class='fu'>dtt_minute</span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minute</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
 
-<span class='fu'>dtt_minute</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='no'>value</span>
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minute</a></span>(<span class='kw'>x</span>) <span class='op'>&lt;-</span> <span class='kw'>value</span>
 
 <span class='co'># S3 method for Date</span>
-<span class='fu'>dtt_minute</span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minute</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
 
 <span class='co'># S3 method for POSIXct</span>
-<span class='fu'>dtt_minute</span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minute</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
 
 <span class='co'># S3 method for hms</span>
-<span class='fu'>dtt_minute</span>(<span class='no'>x</span>, <span class='no'>...</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minute</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
 
 <span class='co'># S3 method for POSIXct</span>
-<span class='fu'>dtt_minute</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='no'>value</span>
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minute</a></span>(<span class='kw'>x</span>) <span class='op'>&lt;-</span> <span class='kw'>value</span>
 
 <span class='co'># S3 method for hms</span>
-<span class='fu'>dtt_minute</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='no'>value</span>
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minute</a></span>(<span class='kw'>x</span>) <span class='op'>&lt;-</span> <span class='kw'>value</span>
 
-<span class='fu'>dtt_set_minute</span>(<span class='no'>x</span>, <span class='no'>value</span>)</pre>
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_set_minute</a></span>(<span class='kw'>x</span>, <span class='kw'>value</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -177,12 +177,12 @@
 </ul>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.POSIXlt.html'>as.POSIXct</a></span>(<span class='st'>"1990-01-02 23:40:51"</span>)
-<span class='fu'>dtt_minute</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt; [1] 40</div><div class='input'><span class='fu'>dtt_minute</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='fl'>27L</span>
-<span class='no'>x</span></div><div class='output co'>#&gt; [1] "1990-01-02 23:27:51 UTC"</div><div class='input'>
-<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>hms</span><span class='kw ns'>::</span><span class='fu'><a href='https://hms.tidyverse.org/reference/hms.html'>as_hms</a></span>(<span class='st'>"23:40:51"</span>)
-<span class='fu'>dtt_minute</span>(<span class='no'>x</span>)</div><div class='output co'>#&gt; [1] 40</div><div class='input'><span class='fu'>dtt_minute</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='fl'>27L</span>
-<span class='no'>x</span></div><div class='output co'>#&gt; 23:27:51</div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.POSIXlt.html'>as.POSIXct</a></span>(<span class='st'>"1990-01-02 23:40:51"</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minute</a></span>(<span class='kw'>x</span>)</div><div class='output co'>#&gt; [1] 40</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minute</a></span>(<span class='kw'>x</span>) <span class='op'>&lt;-</span> <span class='fl'>27L</span>
+<span class='kw'>x</span></div><div class='output co'>#&gt; [1] "1990-01-02 23:27:51 UTC"</div><div class='input'>
+<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='kw'>hms</span>::<span class='fu'><a href='https://hms.tidyverse.org/reference/hms.html'>as_hms</a></span>(<span class='st'>"23:40:51"</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minute</a></span>(<span class='kw'>x</span>)</div><div class='output co'>#&gt; [1] 40</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_minute.html'>dtt_minute</a></span>(<span class='kw'>x</span>) <span class='op'>&lt;-</span> <span class='fl'>27L</span>
+<span class='kw'>x</span></div><div class='output co'>#&gt; 23:27:51</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

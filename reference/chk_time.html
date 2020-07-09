@@ -117,10 +117,10 @@
     </div>
 
     <div class="ref-description">
-    <p>Checks if scalar hms object using <code><a href='vld_time.html'>vld_time()</a></code>.</p>
+    <p>Checks if scalar hms object using <code><a href='https://rdrr.io/pkg/dttr2/man/vld_time.html'>vld_time()</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>chk_time</span>(<span class='no'>x</span>, <span class='kw'>x_name</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/chk_time.html'>chk_time</a></span>(<span class='kw'>x</span>, x_name = <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -141,8 +141,8 @@
 if the condition is not met.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>chk_time</span>(<span class='kw pkg'>hms</span><span class='kw ns'>::</span><span class='fu'><a href='https://hms.tidyverse.org/reference/hms.html'>as_hms</a></span>(<span class='st'>"10:00:10"</span>))
-<span class='fu'><a href='https://rdrr.io/r/base/try.html'>try</a></span>(<span class='fu'>chk_time</span>(<span class='fl'>1</span>))</div><div class='output co'>#&gt; Error : `1` must be a time (non-missing hms::hms scalar).</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/chk_time.html'>chk_time</a></span>(<span class='kw'>hms</span>::<span class='fu'><a href='https://hms.tidyverse.org/reference/hms.html'>as_hms</a></span>(<span class='st'>"10:00:10"</span>))
+<span class='fu'><a href='https://rdrr.io/r/base/try.html'>try</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/chk_time.html'>chk_time</a></span>(<span class='fl'>1</span>))</div><div class='output co'>#&gt; Error : `1` must be a time (non-missing hms::hms scalar).</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -120,7 +120,7 @@
     <p>Adds times to Dates vector and sets timezone in a single function.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dtt_date_add_time</span>(<span class='no'>x</span>, <span class='no'>time</span>, <span class='kw'>tz</span> <span class='kw'>=</span> <span class='fu'><a href='dtt_default_tz.html'>dtt_default_tz</a></span>())</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_date_add_time.html'>dtt_date_add_time</a></span>(<span class='kw'>x</span>, <span class='kw'>time</span>, tz = <span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_default_tz.html'>dtt_default_tz</a></span>())</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -144,7 +144,7 @@
     <p>A POSIXct vector.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>dtt_date_add_time</span>(<span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span>(<span class='st'>"2001-03-05"</span>), <span class='kw pkg'>hms</span><span class='kw ns'>::</span><span class='fu'><a href='https://hms.tidyverse.org/reference/hms.html'>as_hms</a></span>(<span class='st'>"06:07:08"</span>), <span class='kw'>tz</span> <span class='kw'>=</span> <span class='st'>"Etc/GMT+9"</span>)</div><div class='output co'>#&gt; [1] "2001-03-05 06:07:08 -09"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_date_add_time.html'>dtt_date_add_time</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span>(<span class='st'>"2001-03-05"</span>), <span class='kw'>hms</span>::<span class='fu'><a href='https://hms.tidyverse.org/reference/hms.html'>as_hms</a></span>(<span class='st'>"06:07:08"</span>), tz = <span class='st'>"Etc/GMT+9"</span>)</div><div class='output co'>#&gt; [1] "2001-03-05 06:07:08 -09"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
