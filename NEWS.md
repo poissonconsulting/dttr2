@@ -1,17 +1,15 @@
 # dttr2 0.3.0
 
-- Added dtt_dayte_time().
-- Added is_date(), is_date_time() and is_time().
-
-
-# dttr2 0.2.0.9001
-
-- Add dtt_sys_date(), dtt_sys_date_time() and dtt_sys_date() to get sys date, date time and time in default timezone.
-
-
-# dttr2 0.2.0.9000
-
-- Internal changes only.
+Added test functions
+  - `is_date()`
+  - `is_date_time()`
+  - `is_time()`
+Added get functions for default time zone.
+  - `dtt_sys_date()`
+  - `dtt_sys_date_time()`
+  - `dtt_sys_time()`
+- Added to get POSIXct object with year set to 1972.
+  - `dtt_dayte_time()`.
 
 # dttr2 0.2.0
 
