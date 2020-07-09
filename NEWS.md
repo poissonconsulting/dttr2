@@ -1,3 +1,9 @@
+# dttr2 0.3.0
+
+- Added dtt_dayte_time().
+- Added is_date(), is_date_time() and is_time().
+
+
 # dttr2 0.2.0.9001
 
 - Add dtt_sys_date(), dtt_sys_date_time() and dtt_sys_date() to get sys date, date time and time in default timezone.
