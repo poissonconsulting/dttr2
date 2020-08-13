@@ -120,13 +120,13 @@
     <p>Dayte Time</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_dayte_time.html'>dtt_dayte_time</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
+    <pre class="usage"><span class='fu'>dtt_dayte_time</span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
 
 <span class='co'># S3 method for Date</span>
-<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_dayte_time.html'>dtt_dayte_time</a></span>(<span class='kw'>x</span>, start = <span class='fl'>1L</span>, tz = <span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_default_tz.html'>dtt_default_tz</a></span>(), <span class='kw'>...</span>)
+<span class='fu'>dtt_dayte_time</span>(<span class='kw'>x</span>, start = <span class='fl'>1L</span>, tz = <span class='fu'><a href='dtt_sys_tz.html'>dtt_default_tz</a></span>(), <span class='kw'>...</span>)
 
 <span class='co'># S3 method for POSIXct</span>
-<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_dayte_time.html'>dtt_dayte_time</a></span>(<span class='kw'>x</span>, start = <span class='fl'>1L</span>, <span class='kw'>...</span>)</pre>
+<span class='fu'>dtt_dayte_time</span>(<span class='kw'>x</span>, start = <span class='fl'>1L</span>, <span class='kw'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -162,7 +162,7 @@
 </ul>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_dayte_time.html'>dtt_dayte_time</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/as.POSIXlt.html'>as.POSIXct</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2001-01-01 12:13:14"</span>, <span class='st'>"2015-12-13"</span>), tz = <span class='st'>"Etc/GMT+10"</span>))</div><div class='output co'>#&gt; [1] "1972-01-01 -10" "1972-12-13 -10"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>dtt_dayte_time</span>(<span class='fu'><a href='https://rdrr.io/r/base/as.POSIXlt.html'>as.POSIXct</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2001-01-01 12:13:14"</span>, <span class='st'>"2015-12-13"</span>), tz = <span class='st'>"Etc/GMT+10"</span>))</div><div class='output co'>#&gt; [1] "1972-01-01 -10" "1972-12-13 -10"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

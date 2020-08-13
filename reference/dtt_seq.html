@@ -124,16 +124,16 @@ from and to are first floored and then a sequence is created by units.
 If length_out is defined then that number of units are added to from.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_seq.html'>dtt_seq</a></span>(<span class='kw'>from</span>, <span class='kw'>to</span>, <span class='kw'>units</span>, length_out = <span class='kw'>NULL</span>, <span class='kw'>...</span>)
+    <pre class="usage"><span class='fu'>dtt_seq</span>(<span class='kw'>from</span>, <span class='kw'>to</span>, <span class='kw'>units</span>, length_out = <span class='kw'>NULL</span>, <span class='kw'>...</span>)
 
 <span class='co'># S3 method for Date</span>
-<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_seq.html'>dtt_seq</a></span>(<span class='kw'>from</span>, to = <span class='kw'>from</span>, units = <span class='st'>"days"</span>, length_out = <span class='kw'>NULL</span>, <span class='kw'>...</span>)
+<span class='fu'>dtt_seq</span>(<span class='kw'>from</span>, to = <span class='kw'>from</span>, units = <span class='st'>"days"</span>, length_out = <span class='kw'>NULL</span>, <span class='kw'>...</span>)
 
 <span class='co'># S3 method for POSIXct</span>
-<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_seq.html'>dtt_seq</a></span>(<span class='kw'>from</span>, to = <span class='kw'>from</span>, units = <span class='st'>"seconds"</span>, length_out = <span class='kw'>NULL</span>, <span class='kw'>...</span>)
+<span class='fu'>dtt_seq</span>(<span class='kw'>from</span>, to = <span class='kw'>from</span>, units = <span class='st'>"seconds"</span>, length_out = <span class='kw'>NULL</span>, <span class='kw'>...</span>)
 
 <span class='co'># S3 method for hms</span>
-<span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_seq.html'>dtt_seq</a></span>(
+<span class='fu'>dtt_seq</span>(
   <span class='kw'>from</span>,
   to = <span class='kw'>from</span>,
   units = <span class='st'>"seconds"</span>,
@@ -184,7 +184,7 @@ If length_out is defined then that number of units are added to from.</p>
 </ul>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/dttr2/man/dtt_seq.html'>dtt_seq</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span>(<span class='st'>"2001-01-01"</span>), <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span>(<span class='st'>"2001-01-05"</span>))</div><div class='output co'>#&gt; [1] "2001-01-01" "2001-01-02" "2001-01-03" "2001-01-04" "2001-01-05"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>dtt_seq</span>(<span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span>(<span class='st'>"2001-01-01"</span>), <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span>(<span class='st'>"2001-01-05"</span>))</div><div class='output co'>#&gt; [1] "2001-01-01" "2001-01-02" "2001-01-03" "2001-01-04" "2001-01-05"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
