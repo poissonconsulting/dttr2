@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get and Set Day Values — dtt_day • dttr2</title>
+<title>Get and Set Day Values — dtt_day_decimal.Date • dttr2</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,7 @@
 
 
 
-<meta property="og:title" content="Get and Set Day Values — dtt_day" />
+<meta property="og:title" content="Get and Set Day Values — dtt_day_decimal.Date" />
 <meta property="og:description" content="Gets and sets day values for date/time vectors." />
 
 
@@ -108,7 +108,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get and Set Day Values</h1>
-    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/day.R'><code>R/day.R</code></a>, <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/deprecated.R'><code>R/deprecated.R</code></a>, <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/set.R'><code>R/set.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/day-decimal.R'><code>R/day-decimal.R</code></a>, <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/day.R'><code>R/day.R</code></a>, <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/deprecated.R'><code>R/deprecated.R</code></a>, and 1 more</small>
     <div class="hidden name"><code>dtt_day.Rd</code></div>
     </div>
 
@@ -116,7 +116,13 @@
     <p>Gets and sets day values for date/time vectors.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dtt_day</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
+    <pre class="usage"><span class='co'># S3 method for Date</span>
+<span class='fu'><a href='dtt_day_decimal.html'>dtt_day_decimal</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
+
+<span class='co'># S3 method for POSIXct</span>
+<span class='fu'><a href='dtt_day_decimal.html'>dtt_day_decimal</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
+
+<span class='fu'>dtt_day</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='fu'>dtt_day</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>value</span>
 
@@ -162,6 +168,8 @@
 
     
 <ul>
+<li><p><code>Date</code>: Get numeric vector of decimal year values for a Date vector</p></li>
+<li><p><code>POSIXct</code>: Get numeric vector of decimal year values for a POSIXct vector</p></li>
 <li><p><code>Date</code>: Get integer vector of day values for a Date vector</p></li>
 <li><p><code>POSIXct</code>: Get integer vector of day values for a POSIXct vector</p></li>
 <li><p><code>Date</code>: Set day values for a Date vector</p></li>

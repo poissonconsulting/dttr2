@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get Decimal Year Values — dtt_year_decimal • dttr2</title>
+<title>Day of the Year Decimal — dtt_doy_decimal • dttr2</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Get Decimal Year Values — dtt_year_decimal" />
-<meta property="og:description" content="Gets decimal year values for date/time vectors." />
+<meta property="og:title" content="Day of the Year Decimal — dtt_doy_decimal" />
+<meta property="og:description" content="Day of the Year Decimal" />
 
 
 
@@ -107,23 +107,23 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get Decimal Year Values</h1>
-    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/year-decimal.R'><code>R/year-decimal.R</code></a></small>
-    <div class="hidden name"><code>dtt_year_decimal.Rd</code></div>
+    <h1>Day of the Year Decimal</h1>
+    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/doy-decimal.R'><code>R/doy-decimal.R</code></a></small>
+    <div class="hidden name"><code>dtt_doy_decimal.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Gets decimal year values for date/time vectors.</p>
+    <p>Day of the Year Decimal</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dtt_year_decimal</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>dtt_doy_decimal</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>A date/time vector.</p></td>
+      <td><p>A Date or POSIXct vector.</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -133,13 +133,11 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A numeric vector.</p>
+    <p>A numeric vector between 0 and 366 of the day of the year.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='st'>"1990-01-02"</span><span class='op'>)</span>
-<span class='fu'>dtt_year_decimal</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] 1990.003</div><div class='input'>
-</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>dtt_doy_decimal</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 16</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

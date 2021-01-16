@@ -108,7 +108,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get and Set Month Values</h1>
-    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/deprecated.R'><code>R/deprecated.R</code></a>, <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/month.R'><code>R/month.R</code></a>, <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/set.R'><code>R/set.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/deprecated.R'><code>R/deprecated.R</code></a>, <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/month-decimal.R'><code>R/month-decimal.R</code></a>, <a href='https://github.com/poissonconsulting/dttr2/blob/master/R/month.R'><code>R/month.R</code></a>, and 1 more</small>
     <div class="hidden name"><code>dtt_month.Rd</code></div>
     </div>
 
@@ -119,6 +119,12 @@
     <pre class="usage"><span class='fu'>dtt_months</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='fu'>dtt_months</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>value</span>
+
+<span class='co'># S3 method for Date</span>
+<span class='fu'><a href='dtt_month_decimal.html'>dtt_month_decimal</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
+
+<span class='co'># S3 method for POSIXct</span>
+<span class='fu'><a href='dtt_month_decimal.html'>dtt_month_decimal</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='fu'>dtt_month</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
 
@@ -162,6 +168,8 @@
 
     
 <ul>
+<li><p><code>Date</code>: Get numeric vector of decimal year values for a Date vector</p></li>
+<li><p><code>POSIXct</code>: Get numeric vector of decimal year values for a POSIXct vector</p></li>
 <li><p><code>Date</code>: Get integer vector of month values for a Date vector</p></li>
 <li><p><code>POSIXct</code>: Get integer vector of month values for a POSIXct vector</p></li>
 <li><p><code>Date</code>: Set month values for a Date vector</p></li>
