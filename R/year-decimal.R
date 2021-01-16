@@ -22,7 +22,7 @@ dtt_year_decimal.Date <- function(x, ...) {
   year <- dtt_year(x)
   doy <- dtt_doy(x) - 0.5
   
-  year + doy / dtt_days_of_year(x)
+  year + doy / dtt_days_in_year(x)
 }
 
 #' @describeIn dtt_year Get numeric vector of decimal year values for a POSIXct vector
