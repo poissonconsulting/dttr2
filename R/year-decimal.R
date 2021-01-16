@@ -18,16 +18,11 @@ dtt_year_decimal <- function(x, ...) {
 #' @describeIn dtt_year Get numeric vector of decimal year values for a Date vector
 #' @export
 dtt_year_decimal.Date <- function(x, ...) {
-  chk_unused(...)
-  year <- dtt_year(x)
-  doy <- dtt_doy(x) - 0.5
-  
-  year + doy / dtt_days_in_year(x)
+  dtt_year(x) + (dtt_doy(x) - 1) / dtt_days_in_year(x)
 }
 
 #' @describeIn dtt_year Get numeric vector of decimal year values for a POSIXct vector
 #' @export
 dtt_year_decimal.POSIXct <- function(x, ...) {
-  chk_unused(...)
-  .NotYetImplemented()
+  dtt_year(x) + (dtt_doy_decimal(x) - 1) / dtt_days_in_year(x)
 }

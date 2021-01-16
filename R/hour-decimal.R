@@ -26,16 +26,11 @@ dtt_hour_decimal.Date <- function(x, ...) {
 #' @describeIn dtt_hour_decimal Get numeric vector of decimal hour values for a POSIXct vector
 #' @export
 dtt_hour_decimal.POSIXct <- function(x, ...) {
-  chk_unused(...)
-  x <- as.POSIXlt(x, tz = dtt_tz(x))
-  as.integer(x$hour) + as.integer(x$min) / 60
+  dtt_hour(x) + dtt_minute_decimal(x) / 60
 }
 
 #' @describeIn dtt_hour_decimal Get numeric vector of decimal hour values for a hms vector
 #' @export
 dtt_hour_decimal.hms <- function(x, ...) {
-  chk_unused(...)
-  x <- dtt_time(x)
-  x <- as.POSIXlt(x)
-  as.integer(x$hour) + as.integer(x$min) / 60
+  dtt_hour(x) + dtt_minute_decimal(x) / 60
 }
