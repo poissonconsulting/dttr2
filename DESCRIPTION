@@ -1,6 +1,6 @@
 Package: dttr2
 Title: Manipulate Date, POSIXct and hms Vectors
-Version: 0.3.0.9000
+Version: 0.3.0.9001
 Authors@R: 
     c(person(given = "Joe",
              family = "Thorley",

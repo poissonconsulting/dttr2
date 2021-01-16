@@ -1,3 +1,15 @@
+# dttr2 0.3.0.9001
+
+- Added `dtt_month_decimal()`, `dtt_day_decimal()`, `dtt_doy_decimal()`, `dtt_minute_decimal()`.
+- `dtt_hour_decimal()` now takes into account seconds.
+- `dtt_year_decimal()` now same as `dtt_year()` for first day.
+- Renamed `days_of_year()` to `days_in_year()`.
+- Added `dtt_days_in_month()`.
+- Added `dtt_days_of_year()`.
+- Added `dtt_hour_decimal()`.
+- Added `dtt_leap_year()` and `dtt_year_decimal.Date()`.
+
+
 # dttr2 0.3.0.9000
 
 - Same as previous version.
