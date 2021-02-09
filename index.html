@@ -73,7 +73,7 @@
 <a href="#dttr2" class="anchor"></a>dttr2</h1></div>
 <p><code>dttr2</code> (Dates, Times and dateTimes in R) is an R package to perform simple manipulations on date (Date), datetime (POSIXct) and time (hms) vectors (collectively referred to as date/times).</p>
 <p>Key design principles include</p>
-<ol>
+<ol style="list-style-type: decimal">
 <li>use existing classes (Date, POSIXct, hms)</li>
 <li>date/times are discrete (floor when encountered)</li>
 <li>times are times (wrap when encountered)</li>
@@ -124,8 +124,10 @@
 <p><code>dttr2</code> wraps negative times or times greater than 23:59:59 to the actual clock time.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">time</span> <span class="op">&lt;-</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/Deprecated.html">as.hms</a></span><span class="op">(</span><span class="op">-</span><span class="fl">3</span><span class="op">)</span>
-<span class="co">#&gt; Warning: as.hms() is deprecated, please use as_hms().</span>
-<span class="co">#&gt; This warning is displayed once per session.</span>
+<span class="co">#&gt; Warning: `as.hms()` is deprecated as of hms 0.5.0.</span>
+<span class="co">#&gt; Please use `as_hms()` instead.</span>
+<span class="co">#&gt; This warning is displayed once every 8 hours.</span>
+<span class="co">#&gt; Call `lifecycle::last_warnings()` to see where this warning was generated.</span>
 <span class="va">time</span>
 <span class="co">#&gt; -00:00:03</span>
 <span class="fu"><a href="reference/dtt_set_time.html">dtt_time</a></span><span class="op">(</span><span class="va">time</span><span class="op">)</span>
@@ -230,7 +232,7 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#stable"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
 <li><a href="https://github.com/poissonconsulting/dttr2/actions"><img src="https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 <li><a href="https://codecov.io/gh/poissonconsulting/dttr2?branch=master"><img src="https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a></li>
