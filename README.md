@@ -1,9 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 <!-- badges: start -->
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R build
 status](https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/dttr2/actions)
 [![Codecov test
@@ -86,8 +86,10 @@ actual clock time.
 
 ``` r
 time <- hms::as.hms(-3)
-#> Warning: as.hms() is deprecated, please use as_hms().
-#> This warning is displayed once per session.
+#> Warning: `as.hms()` is deprecated as of hms 0.5.0.
+#> Please use `as_hms()` instead.
+#> This warning is displayed once every 8 hours.
+#> Call `lifecycle::last_warnings()` to see where this warning was generated.
 time
 #> -00:00:03
 dtt_time(time)
