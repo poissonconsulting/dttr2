@@ -1,5 +1,3 @@
-context("study-year")
-
 test_that("dtt_study_year.Date", {
   expect_identical(dtt_study_year(as.Date("2001-01-01")[-1]), character(0))
   expect_identical(dtt_study_year(as.Date("2001-01-01")[-1], full = FALSE), integer(0))

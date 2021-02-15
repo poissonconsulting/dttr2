@@ -1,5 +1,3 @@
-context("date-time")
-
 test_that("date_time.integer", {
   expect_identical(dtt_date_time(integer(0)), as.POSIXct("1970-01-01", tz = "UTC")[-1])
   expect_identical(dtt_date_time(NA_integer_), NA_POSIXct_)

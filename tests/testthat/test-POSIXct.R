@@ -1,5 +1,3 @@
-context("POSIXct")
-
 test_that("POSIXct", {
   expect_identical(as.double(as.POSIXct(0, origin = as.POSIXct("1970-01-01", tz = "GMT"))), 0)
   expect_identical(as.double(as.POSIXct(0.1, origin = as.POSIXct("1970-01-01", tz = "GMT"))), 0.1)

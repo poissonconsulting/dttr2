@@ -1,5 +1,3 @@
-context("time")
-
 test_that("time.integer", {
   expect_identical(dtt_time(integer(0)), hms::as_hms(1)[-1])
   expect_identical(dtt_time(NA_integer_), NA_hms_)

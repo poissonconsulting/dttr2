@@ -1,5 +1,3 @@
-context("year")
-
 test_that("dtt_year.Date", {
   expect_identical(dtt_year(as.Date("2001-01-01")[-1]), integer(0))
   expect_identical(dtt_year(as.Date("2001-01-01")), 2001L)

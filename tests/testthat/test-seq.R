@@ -1,5 +1,3 @@
-context("seq")
-
 test_that("seq.Date", {
   expect_error(dtt_seq(NA_Date_[-1], NA_Date_[-1]), "`from` must be a date", class = "chk_error")
   expect_error(dtt_seq(NA_Date_, NA_Date_[-1]), "`from` must be a date", class = "chk_error")

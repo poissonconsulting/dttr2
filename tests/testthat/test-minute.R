@@ -1,5 +1,3 @@
-context("minute")
-
 test_that("dtt_minute.Date", {
   expect_identical(dtt_minute(as.Date("2001-01-01")[-1]), integer(0))
   expect_identical(dtt_minute(as.Date("2001-01-01")), 0L)

@@ -1,5 +1,3 @@
-context("doy")
-
 test_that("doy.Date", {
   expect_identical(dtt_doy(NA_Date_[-1]), integer(0))
   expect_identical(dtt_doy(NA_Date_), NA_integer_)

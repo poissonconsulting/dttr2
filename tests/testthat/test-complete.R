@@ -1,5 +1,3 @@
-context("complete")
-
 test_that("complete.Date", {
   expect_error(dtt_complete(NA_Date_[-1]), class = "chk_error")
   expect_error(dtt_complete(NA_Date_), class = "chk_error")

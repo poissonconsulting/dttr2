@@ -1,5 +1,3 @@
-context("doy_decimal")
-
 test_that("doy_decimal.Date", {
   expect_identical(dtt_doy_decimal(NA_Date_[-1]), numeric(0))
   expect_identical(dtt_doy_decimal(NA_Date_), NA_real_)

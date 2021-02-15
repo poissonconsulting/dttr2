@@ -1,5 +1,3 @@
-context("date")
-
 test_that("date.integer", {
   expect_identical(dtt_date(integer(0)), Sys.Date()[-1])
   expect_identical(dtt_date(NA_integer_), NA_Date_)

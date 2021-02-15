@@ -1,5 +1,3 @@
-context("is")
-
 test_that("is false", {
   expect_false(is.POSIXct(1))
   expect_false(is.Date(1))
