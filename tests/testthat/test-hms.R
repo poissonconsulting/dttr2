@@ -1,5 +1,3 @@
-context("hms")
-
 test_that("POSIXct", {
   expect_identical(as.double(hms::as_hms(0)), 0)
   expect_identical(as.double(hms::as_hms(0.1)), 0.1)

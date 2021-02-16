@@ -1,5 +1,3 @@
-context("hour")
-
 test_that("dtt_hour.Date", {
   expect_identical(dtt_hour(as.Date("2001-01-01")[-1]), integer(0))
   expect_identical(dtt_hour(as.Date("2001-01-01")), 0L)

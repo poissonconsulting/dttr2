@@ -1,5 +1,3 @@
-context("subtract")
-
 test_that("subtract_years.Date", {
   expect_identical(dtt_subtract_years(NA_Date_[-1]), NA_Date_[-1])
   expect_identical(dtt_subtract_years(NA_Date_), NA_Date_)

@@ -1,5 +1,3 @@
-context("dayte")
-
 test_that("dayte.Date", {
   expect_identical(dtt_dayte(NA_Date_[-1]), NA_Date_[-1])
   expect_identical(dtt_dayte(NA_Date_), NA_Date_)

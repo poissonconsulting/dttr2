@@ -1,5 +1,3 @@
-context("feb29-to-28")
-
 test_that("feb29_to_28.Date", {
   expect_identical(
     dtt_feb29_to_28(as.Date("2004-02-29")),

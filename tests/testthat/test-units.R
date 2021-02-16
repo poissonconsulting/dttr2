@@ -1,5 +1,3 @@
-context("units")
-
 test_that("units.Date", {
   expect_identical(dtt_units(NA_Date_), "days")
   expect_identical(dtt_units(NA_Date_[-1]), "days")

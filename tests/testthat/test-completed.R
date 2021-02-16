@@ -1,5 +1,3 @@
-context("completed")
-
 test_that("completed.Date", {
   expect_identical(dtt_completed(NA_Date_), NA)
   expect_true(dtt_completed(NA_Date_[-1]))

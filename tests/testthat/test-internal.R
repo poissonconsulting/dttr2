@@ -1,5 +1,3 @@
-context("internal")
-
 test_that("set_class", {
   expect_is(set_class(1, "thingy"), "thingy")
 })

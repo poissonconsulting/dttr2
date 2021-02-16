@@ -1,5 +1,3 @@
-context("floor")
-
 test_that("floor.Date", {
   expect_identical(dtt_floor(NA_Date_[-1]), NA_Date_[-1])
   expect_identical(dtt_floor(NA_Date_), NA_Date_)

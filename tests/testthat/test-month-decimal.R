@@ -1,5 +1,3 @@
-context("month_decimal")
-
 test_that("dtt_month_decimal.Date", {
   expect_identical(dtt_month_decimal(as.Date("2001-01-01")[-1]), numeric(0))
   expect_identical(dtt_month_decimal(as.Date("2001-01-01")), 1)

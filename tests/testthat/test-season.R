@@ -1,5 +1,3 @@
-context("season")
-
 test_that("dtt_season.Date", {
   dates <- as.Date(c(
     "2001-01-01", "2011-05-30", "2001-02-28", "2011-03-01", "2013-06-01",

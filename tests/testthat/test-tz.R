@@ -1,5 +1,3 @@
-context("tz")
-
 test_that("default_tz", {
   dtt_reset_default_tz()
   expect_identical(dtt_default_tz(), Sys.timezone())

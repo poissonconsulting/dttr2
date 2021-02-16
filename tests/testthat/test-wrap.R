@@ -1,5 +1,3 @@
-context("wrap")
-
 test_that("wrap.hms", {
   expect_identical(dtt_wrap(NA_hms_[-1]), NA_hms_[-1])
   expect_identical(dtt_wrap(NA_hms_), NA_hms_)
