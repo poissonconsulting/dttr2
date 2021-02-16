@@ -27,12 +27,12 @@ dtt_seq(from, to, units, length_out = NULL, ...)
 
 \item{to}{A date/time scalar of the end.}
 
-\item{units}{A string of the time units. The possible values are
-"secs", "minutes", "hours", "days" or "weeks".}
+\item{units}{A string of the time units. The possible values are "secs",
+"minutes", "hours", "days" or "weeks".}
 
 \item{length_out}{An integer of the number of units from from.}
 
-\item{...}{Unused}
+\item{...}{Unused.}
 
 \item{wrap}{A flag specifying whether to wrap hms vectors from 23:59:59 to 00:00:00}
 }

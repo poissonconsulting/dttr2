@@ -4,8 +4,53 @@
 \alias{params}
 \title{Parameters for dttr2 functions}
 \arguments{
-\item{units}{A string of the time units. The possible values are
-"secs", "minutes", "hours", "days" or "weeks".}
+\item{x}{A date/time vector.}
+
+\item{...}{Unused.}
+
+\item{units}{A string of the time units. The possible values are "secs",
+"minutes", "hours", "days" or "weeks".}
+
+\item{unit}{A string of the time unit.}
+
+\item{tz}{A string of the time zone.}
+
+\item{n}{An integer of the number of units.}
+
+\item{from}{A date/time scalar of the start.}
+
+\item{to}{A date/time scalar of the end.}
+
+\item{start}{An integer scalar of the starting month or a Date scalar of the starting date.}
+
+\item{time}{A hms vector of the time.}
+
+\item{date}{A Date vector of the date.}
+
+\item{length_out}{An integer of the number of units from from.}
+
+\item{wrap}{A flag specifying whether to wrap hms vectors from 23:59:59 to 00:00:00}
+
+\item{abbr}{A flag specifying whether to abbreviate the week days.}
+
+\item{as_difftime}{A flag specifying whether to return a difftime vector.}
+
+\item{first}{A string of the name of first season or NULL in which case the first
+season is that which includes Jan 1st.}
+
+\item{y}{An object that can be coerced to a POSIXct using dtt_date_time().}
+
+\item{full}{A flag specifying whether to return a character vector of the
+study years (or an integer vector of the first year)}
+
+\item{sort}{A flag specifying whether to sort the vector.}
+
+\item{sorted}{A flag indicating whether the values must be sorted.}
+
+\item{x_name}{A string of the name of the object.}
+
+\item{error}{A flag indicating whether to throw an informative error or
+immediately generate an informative message if the check fails.}
 }
 \description{
 Descriptions of the parameters for the dttr2 functions.

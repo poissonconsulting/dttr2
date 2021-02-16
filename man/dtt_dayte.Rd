@@ -13,7 +13,7 @@ dtt_dayte(x, ...)
 \method{dtt_dayte}{POSIXct}(x, start = 1L, ...)
 }
 \arguments{
-\item{x}{A date time vector.}
+\item{x}{A date/time vector.}
 
 \item{...}{Unused.}
 

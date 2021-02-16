@@ -1,9 +1,8 @@
 #' Dayte
-#'
-#' @param x A date time vector.
-#' @param start An integer scalar of the starting month or a Date scalar of the starting date.
+#' 
+#' @inheritParams params
+#' 
 #' @return A Date vector with the year set to year.
-#' @param ... Unused.
 #' @return A Date vector of the daytes.
 #' @export
 #'

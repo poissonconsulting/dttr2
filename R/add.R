@@ -3,9 +3,6 @@
 #' Add time units to a date time vector.
 #'
 #' @inheritParams params
-#' @param x A date time vector.
-#' @param n An integer of the number of units.
-#' @param ... Unused.
 #'
 #' @return The modified date time vector.
 #' @seealso [dtt_subtract_units()]

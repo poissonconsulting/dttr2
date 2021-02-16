@@ -6,8 +6,7 @@
 #'
 #' @inheritParams params
 #' @param x An object that can be coerced to a POSIXct using dtt_date_time().
-#' @param y An object that can be coerced to a POSIXct using dtt_date_time().
-#' @param as_difftime A flag specifying whether to return a difftime vector.
+#' 
 #' @return A numeric vector of the time difference.
 #' @export
 #' @examples 

@@ -14,7 +14,7 @@ dtt_adjust_tz(x, tz = dtt_default_tz(), ...)
 
 \item{tz}{A string of the time zone.}
 
-\item{...}{Unused}
+\item{...}{Unused.}
 }
 \value{
 The date time vector with the new time zone and time.

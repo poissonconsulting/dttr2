@@ -1,8 +1,9 @@
 #' Study Year
 #'
+#' @inheritParams params
 #' @param x A Date or POSIXct vector.
 #' @param start An integer vector of the starting month or a Date vector of the starting date.
-#' @param full A flag specifying whether to return a character vector of the study years (or an integer vector of the first year)
+#' 
 #' @return A character vector of the study year or an integer vector of the first year.
 #' @export
 #'

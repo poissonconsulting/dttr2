@@ -1,7 +1,7 @@
 #' Day of the Year Decimal
-#'
+#' 
+#' @inheritParams params
 #' @param x A Date or POSIXct vector.
-#' @param ... Unused.
 #'
 #' @return A numeric vector between 0 and 366 of the day of the year.
 #' @export

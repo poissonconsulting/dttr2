@@ -1,7 +1,9 @@
 #' Leap Year
 #'
 #' Tests whether each year is a leap year.
-#' @param x A date/time vector.
+#' 
+#' @inheritParams params
+#' 
 #' @return A logical vector indicating whether each year is a leap year.
 #' @export
 #'

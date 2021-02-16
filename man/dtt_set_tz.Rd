@@ -10,7 +10,7 @@ dtt_set_tz(x, tz = dtt_default_tz(), ...)
 \method{dtt_set_tz}{POSIXct}(x, tz = dtt_default_tz(), ...)
 }
 \arguments{
-\item{x}{A date time vector.}
+\item{x}{A date/time vector.}
 
 \item{tz}{A string of the new time zone.}
 

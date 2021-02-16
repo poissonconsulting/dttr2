@@ -1,12 +1,9 @@
 #' Date Time
 #'
 #' Coerces vectors to floored POSIXct vectors.
-#'
+#' 
+#' @inheritParams params
 #' @param x A vector.
-#' @param time A hms vector of the time.
-#' @param date A Date vector of the date.
-#' @param tz A string of the time zone.
-#' @param ... Unused.
 #'
 #' @return A floored POSIXct vector.
 #' @export
