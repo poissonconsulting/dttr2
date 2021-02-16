@@ -27,7 +27,8 @@ dtt_seq(from, to, units, length_out = NULL, ...)
 
 \item{to}{A date/time scalar of the end.}
 
-\item{units}{A string of the time units.}
+\item{units}{A string of the time units. The possible values are
+"secs", "minutes", "hours", "days" or "weeks".}
 
 \item{length_out}{An integer of the number of units from from.}
 

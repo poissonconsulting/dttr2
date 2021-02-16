@@ -1,6 +1,6 @@
 #' Units per Unit
 #'
-#' @param units A string of the time units.
+#' @inheritParams params
 #' @param unit A string of the time unit.
 #'
 #' @return A number of the units per unit

@@ -20,7 +20,8 @@ dtt_completed(x, ...)
 
 \item{...}{Unused.}
 
-\item{units}{A string of the units.}
+\item{units}{A string of the time units. The possible values are
+"secs", "minutes", "hours", "days" or "weeks".}
 
 \item{unique}{A flag indicating whether the values must be unique.}
 

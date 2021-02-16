@@ -29,7 +29,8 @@ dtt_subtract_seconds(x, n = 1L)
 
 \item{n}{An integer of the number of units.}
 
-\item{units}{A string of the units.}
+\item{units}{A string of the time units. The possible values are
+"secs", "minutes", "hours", "days" or "weeks".}
 }
 \value{
 The modified date time vector.

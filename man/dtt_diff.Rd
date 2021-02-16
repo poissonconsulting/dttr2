@@ -11,7 +11,7 @@ dtt_diff(x, y, units = "secs", as_difftime = FALSE)
 
 \item{y}{An object that can be coerced to a POSIXct using dtt_date_time().}
 
-\item{units}{A string of the units. The possible values are
+\item{units}{A string of the time units. The possible values are
 "secs", "minutes", "hours", "days" or "weeks".}
 
 \item{as_difftime}{A flag specifying whether to return a difftime vector.}

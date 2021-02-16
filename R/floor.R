@@ -2,8 +2,8 @@
 #'
 #' Floors a date/time vector
 #'
+#' @inheritParams params
 #' @param x A date/time vector.
-#' @param units A string of the units to floor by.
 #' @param ... Unused.
 #' @return The floored date/time vector.
 #' @export

@@ -2,8 +2,8 @@
 #'
 #' Add time units to a date time vector.
 #'
+#' @inheritParams params
 #' @param x A date time vector.
-#' @param units A string of the units.
 #' @param n An integer of the number of units.
 #' @param ... Unused.
 #'

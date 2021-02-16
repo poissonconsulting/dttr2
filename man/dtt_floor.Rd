@@ -18,7 +18,8 @@ dtt_floor(x, units, ...)
 \arguments{
 \item{x}{A date/time vector.}
 
-\item{units}{A string of the units to floor by.}
+\item{units}{A string of the time units. The possible values are
+"secs", "minutes", "hours", "days" or "weeks".}
 
 \item{...}{Unused.}
 }

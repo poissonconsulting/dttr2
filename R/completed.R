@@ -2,10 +2,10 @@
 #'
 #' Tests whether a date time is complete.
 #'
+#' @inheritParams params
 #' @param x A date time vector
 #' @param sorted A flag indicating whether the values must be sorted.
 #' @param unique A flag indicating whether the values must be unique.
-#' @param units A string of the units.
 #' @param ... Unused.
 #' @return A flag indicating whether complete.
 #' @export

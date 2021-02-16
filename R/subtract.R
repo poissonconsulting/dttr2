@@ -2,8 +2,8 @@
 #'
 #' Subtract time units from a date time vector.
 #'
+#' @inheritParams params
 #' @param x A date time vector.
-#' @param units A string of the units.
 #' @param n An integer of the number of units.
 #'
 #' @return The modified date time vector.

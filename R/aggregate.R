@@ -5,8 +5,8 @@
 #' The possible units values are 'seconds', 'minutes', 'hours', 'days', 'months'
 #'  or 'years'.
 #'
+#' @inheritParams params
 #' @param x A date/time vector.
-#' @param units A string of the units to aggregate by.
 #' @param ... Unused.
 #' @return The floored date/time vector.
 #' @export

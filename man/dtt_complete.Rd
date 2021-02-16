@@ -48,7 +48,8 @@ dtt_complete(x, ...)
 
 \item{to}{A date/time vector of the end.}
 
-\item{units}{A string of the time units.}
+\item{units}{A string of the time units. The possible values are
+"secs", "minutes", "hours", "days" or "weeks".}
 
 \item{unique}{A flag specifying whether to only return unique values.}
 

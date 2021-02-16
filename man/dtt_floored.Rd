@@ -20,7 +20,8 @@ dtt_floored(x, ...)
 
 \item{...}{Unused.}
 
-\item{units}{A string of the time units to floor by.}
+\item{units}{A string of the time units. The possible values are
+"secs", "minutes", "hours", "days" or "weeks".}
 }
 \value{
 A flag indicating whether floored.
