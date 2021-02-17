@@ -1,9 +1,9 @@
 #' Get Decimal Day Values
 #'
 #' Gets decimal day values for date/time vectors.
-#'
-#' @param x A date/time vector.
-#' @param ... Unused.
+#' 
+#' @inheritParams params
+#' 
 #' @return A numeric vector.
 #' @export
 #'

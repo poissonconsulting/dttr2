@@ -3,12 +3,8 @@
 #' Completes date/time vector.
 #'
 #' @inheritParams params
-#' @param x A date/time vector.
-#' @param from A date/time scalar of the start.
-#' @param to A date/time vector of the end.
 #' @param unique A flag specifying whether to only return unique values.
-#' @param sort A flag specifying whether to sort the vector.
-#' @param ... Unused.
+#' 
 #' @return The completed date/time vector.
 #' @export
 #'

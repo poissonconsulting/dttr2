@@ -2,10 +2,10 @@
 #'
 #' Coerces vectors to floored (and wrapped) hms vectors.
 #'
+#' @inheritParams params
 #' @param x A vector.
 #' @param value A time vector.
-#' @param ... Unused.
-#'
+#' 
 #' @return A floored hms vector.
 #' @export
 #' @examples

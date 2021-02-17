@@ -1,6 +1,6 @@
 #' Get, Set or Reset Default Time Zone
 #'
-#' @param tz A string of the time zone.
+#' @inheritParams params
 #'
 #' @return A string of the current or old time zone.
 #' @export
@@ -37,9 +37,9 @@ dtt_reset_default_tz <- function() {
 #' Get, Set or Adjust Time Zone
 #'
 #' Gets, sets or  the time zone for a date time vector.
-#' @param x A date time vector.
-#' @param ... Unused.
 #'
+#' @inheritParams params
+#' 
 #' @return A string of the time zone.
 #' @export
 #'
@@ -64,11 +64,10 @@ dtt_tz.POSIXct <- function(x, ...) {
 #'
 #' Sets the time zone for a date time vector without adjusting the clock time.
 #' Equivalent to `lubridate::force_tz()`.
-#'
-#' @param x A date time vector.
+#' 
+#' @inheritParams params
 #' @param tz A string of the new time zone.
-#' @param ... Unused.
-#'
+#' 
 #' @return The date time vector with the new time zone.
 #' @seealso [dtt_adjust_tz()]
 #' @export
@@ -96,9 +95,9 @@ dtt_set_tz.POSIXct <- function(x, tz = dtt_default_tz(), ...) {
 #' for a date time vector.
 #' Equivalent to `lubridate::with_tz()`.
 #'
+#' @inheritParams params
 #' @param x A POSIXct vector.
-#' @param tz A string of the time zone.
-#' @param ... Unused
+#' 
 #' @return The date time vector with the new time zone and time.
 #' @seealso [dtt_set_tz()]
 #' @export

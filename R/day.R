@@ -1,10 +1,10 @@
 #' Get and Set Day Values
 #'
 #' Gets and sets day values for date/time vectors.
-#'
-#' @param x A date/time vector.
+#' 
+#' @inheritParams params
 #' @param value A integer vector of the day value(s).
-#' @param ... Unused.
+#' 
 #' @return An integer vector (or the modified date/time vector).
 #' @export
 #'

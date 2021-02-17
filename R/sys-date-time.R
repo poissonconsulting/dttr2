@@ -1,6 +1,7 @@
 #' Get System Date Time
 #'
-#' @param tz A string of the time zone.
+#' @inheritParams params
+#' 
 #' @return A floored POSIXct scalar.
 #' @export
 #'

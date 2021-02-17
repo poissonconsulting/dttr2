@@ -25,10 +25,10 @@ dtt_add_minutes(x, n = 1L, ...)
 dtt_add_seconds(x, n = 1L, ...)
 }
 \arguments{
-\item{x}{A date time vector.}
+\item{x}{A date/time vector.}
 
-\item{units}{A string of the time units. The possible values are
-"secs", "minutes", "hours", "days" or "weeks".}
+\item{units}{A string of the time units. The possible values are "secs",
+"minutes", "hours", "days" or "weeks".}
 
 \item{n}{An integer of the number of units.}
 

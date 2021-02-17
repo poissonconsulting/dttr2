@@ -4,12 +4,12 @@
 #'
 #' If the first month of the first season isn't January (1L), then
 #' the last season is considered to wrap into the following year.
-#'
+#' 
+#' @inheritParams params
 #' @param x A Date or POSIXct vector
 #' @param start A uniquely named integer vector of the first month of each season
 #' or a uniquely named Date vector of the first date of each season.
-#' @param first A string of the name of first season or NULL in which case the first season is that which includes Jan 1st.
-#'
+#' 
 #' @return A factor of the seasons.
 #' @export
 #' @examples

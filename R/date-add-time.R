@@ -1,9 +1,10 @@
 #' Date Add Time
 #' 
 #' Adds times to Dates vector and sets timezone in a single function.
+#' 
+#' @inheritParams params
 #' @param x A Date vector.
-#' @param time A hms vector.
-#' @param tz A string of the timezone.
+#' 
 #' @return A POSIXct vector.
 #' @export
 #' @examples 

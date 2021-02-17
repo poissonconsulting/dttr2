@@ -46,10 +46,10 @@ dtt_complete(x, ...)
 
 \item{from}{A date/time scalar of the start.}
 
-\item{to}{A date/time vector of the end.}
+\item{to}{A date/time scalar of the end.}
 
-\item{units}{A string of the time units. The possible values are
-"secs", "minutes", "hours", "days" or "weeks".}
+\item{units}{A string of the time units. The possible values are "secs",
+"minutes", "hours", "days" or "weeks".}
 
 \item{unique}{A flag specifying whether to only return unique values.}
 

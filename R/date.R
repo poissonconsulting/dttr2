@@ -2,9 +2,9 @@
 #'
 #' Coerces vectors to floored Date vectors.
 #'
+#' @inheritParams params
 #' @param x A vector.
 #' @param value A date vector.
-#' @param ... Unused.
 #'
 #' @return A floored Date vector.
 #' @export

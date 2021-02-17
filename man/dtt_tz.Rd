@@ -10,7 +10,7 @@ dtt_tz(x, ...)
 \method{dtt_tz}{POSIXct}(x, ...)
 }
 \arguments{
-\item{x}{A date time vector.}
+\item{x}{A date/time vector.}
 
 \item{...}{Unused.}
 }

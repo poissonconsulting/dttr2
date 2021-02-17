@@ -16,7 +16,8 @@ dtt_season(
 \item{start}{A uniquely named integer vector of the first month of each season
 or a uniquely named Date vector of the first date of each season.}
 
-\item{first}{A string of the name of first season or NULL in which case the first season is that which includes Jan 1st.}
+\item{first}{A string of the name of first season or NULL in which case the first
+season is that which includes Jan 1st.}
 }
 \value{
 A factor of the seasons.

@@ -9,9 +9,9 @@ dtt_date_add_time(x, time, tz = dtt_default_tz())
 \arguments{
 \item{x}{A Date vector.}
 
-\item{time}{A hms vector.}
+\item{time}{A hms vector of the time.}
 
-\item{tz}{A string of the timezone.}
+\item{tz}{A string of the time zone.}
 }
 \value{
 A POSIXct vector.

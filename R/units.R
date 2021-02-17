@@ -1,7 +1,6 @@
 #' Units per Unit
 #'
 #' @inheritParams params
-#' @param unit A string of the time unit.
 #'
 #' @return A number of the units per unit
 #' @export
@@ -27,14 +26,14 @@ dtt_adjust_units <- function(x, from = "seconds", to = "seconds") {
   chk_whole_numeric(x)
   x * dtt_units_per_unit(to, from)
 }
-
 #' Get Units
 #'
 #' Gets the smallest units for a date time vector.
 #' The possible values are 'seconds', 'minutes', 'hours', 'days', 'months' or 'years'.
-#'
+#' 
+#' @inheritParams params
 #' @param x A Date, POSIXct or hms vector.
-#' @param ... Unused.
+#' 
 #' @return A string indicating the date time units.
 #' @export
 #'
