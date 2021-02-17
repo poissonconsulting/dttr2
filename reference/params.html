@@ -127,9 +127,96 @@
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
+      <th>x</th>
+      <td><p>A date/time vector.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Unused.</p></td>
+    </tr>
+    <tr>
       <th>units</th>
-      <td><p>A string of the time units. The possible values are
-"secs", "minutes", "hours", "days" or "weeks".</p></td>
+      <td><p>A string of the time units. The possible values are "secs",
+"minutes", "hours", "days" or "weeks".</p></td>
+    </tr>
+    <tr>
+      <th>unit</th>
+      <td><p>A string of the time unit.</p></td>
+    </tr>
+    <tr>
+      <th>tz</th>
+      <td><p>A string of the time zone.</p></td>
+    </tr>
+    <tr>
+      <th>n</th>
+      <td><p>An integer of the number of units.</p></td>
+    </tr>
+    <tr>
+      <th>from</th>
+      <td><p>A date/time scalar of the start.</p></td>
+    </tr>
+    <tr>
+      <th>to</th>
+      <td><p>A date/time scalar of the end.</p></td>
+    </tr>
+    <tr>
+      <th>start</th>
+      <td><p>An integer scalar of the starting month or a Date scalar of the starting date.</p></td>
+    </tr>
+    <tr>
+      <th>time</th>
+      <td><p>A hms vector of the time.</p></td>
+    </tr>
+    <tr>
+      <th>date</th>
+      <td><p>A Date vector of the date.</p></td>
+    </tr>
+    <tr>
+      <th>length_out</th>
+      <td><p>An integer of the number of units from from.</p></td>
+    </tr>
+    <tr>
+      <th>wrap</th>
+      <td><p>A flag specifying whether to wrap hms vectors from 23:59:59 to 00:00:00</p></td>
+    </tr>
+    <tr>
+      <th>abbr</th>
+      <td><p>A flag specifying whether to abbreviate the week days.</p></td>
+    </tr>
+    <tr>
+      <th>as_difftime</th>
+      <td><p>A flag specifying whether to return a difftime vector.</p></td>
+    </tr>
+    <tr>
+      <th>first</th>
+      <td><p>A string of the name of first season or NULL in which case the first
+season is that which includes Jan 1st.</p></td>
+    </tr>
+    <tr>
+      <th>y</th>
+      <td><p>An object that can be coerced to a POSIXct using dtt_date_time().</p></td>
+    </tr>
+    <tr>
+      <th>full</th>
+      <td><p>A flag specifying whether to return a character vector of the
+study years (or an integer vector of the first year)</p></td>
+    </tr>
+    <tr>
+      <th>sort</th>
+      <td><p>A flag specifying whether to sort the vector.</p></td>
+    </tr>
+    <tr>
+      <th>sorted</th>
+      <td><p>A flag indicating whether the values must be sorted.</p></td>
+    </tr>
+    <tr>
+      <th>x_name</th>
+      <td><p>A string of the name of the object.</p></td>
+    </tr>
+    <tr>
+      <th>error</th>
+      <td><p>A flag indicating whether to throw an informative error or
+immediately generate an informative message if the check fails.</p></td>
     </tr>
     </table>
 
