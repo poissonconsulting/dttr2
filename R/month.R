@@ -6,6 +6,8 @@
 #' @param value A integer vector of the month value(s).
 #' 
 #' @return An integer vector (or the modified date/time vector).
+#' @family set date
+#' @seealso [dtt_month_decimal()]
 #' @export
 #'
 #' @examples

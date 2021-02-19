@@ -21,3 +21,9 @@ Units per Unit
 \examples{
 dtt_units_per_unit("hours")
 }
+\seealso{
+Other units: 
+\code{\link{dtt_adjust_units}()},
+\code{\link{dtt_units}()}
+}
+\concept{units}

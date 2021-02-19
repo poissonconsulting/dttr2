@@ -15,3 +15,9 @@ A flag indicating whether R is a Date vector.
 \description{
 Is Date
 }
+\seealso{
+Other is: 
+\code{\link{dtt_is_date_time}()},
+\code{\link{is_date_time}()}
+}
+\concept{is}

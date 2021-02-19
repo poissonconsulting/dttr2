@@ -41,3 +41,14 @@ dtt_minute_decimal(x)
 x <- hms::as_hms("23:40:51")
 dtt_minute_decimal(x)
 }
+\seealso{
+\code{\link[=dtt_minute]{dtt_minute()}}
+
+Other decimal: 
+\code{\link{dtt_day_decimal}()},
+\code{\link{dtt_doy_decimal}()},
+\code{\link{dtt_hour_decimal}()},
+\code{\link{dtt_month_decimal}()},
+\code{\link{dtt_year_decimal}()}
+}
+\concept{decimal}

@@ -2,6 +2,7 @@
 #'
 #' @param x A Date or POSIXct vector.
 #' @return A integer vector of 28 to 31 indicating the days in the month.
+#' @family days
 #' @export
 #'
 #' @examples

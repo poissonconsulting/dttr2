@@ -4,6 +4,8 @@
 #' @param x A Date or POSIXct vector.
 #'
 #' @return A numeric vector between 0 and 366 of the day of the year.
+#' @family decimal
+#' @seealso [dtt_doy()]
 #' @export
 #'
 #' @examples

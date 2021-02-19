@@ -1,4 +1,4 @@
-#' Date
+#' Floor Date 
 #'
 #' Coerces vectors to floored Date vectors.
 #'
@@ -7,6 +7,7 @@
 #' @param value A date vector.
 #'
 #' @return A floored Date vector.
+#' @family floor
 #' @export
 #'
 #' @examples

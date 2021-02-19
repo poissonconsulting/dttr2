@@ -1,4 +1,4 @@
-#' Aggregates
+#' Aggregate Date/Time
 #'
 #' Aggregates a date/time vector
 #'

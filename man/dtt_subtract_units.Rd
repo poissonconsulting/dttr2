@@ -8,7 +8,7 @@
 \alias{dtt_subtract_hours}
 \alias{dtt_subtract_minutes}
 \alias{dtt_subtract_seconds}
-\title{Subtract Units}
+\title{Subtract Time Units}
 \usage{
 dtt_subtract_units(x, n = 1L, units = dtt_units(x))
 
@@ -44,3 +44,4 @@ dtt_subtract_units(as.Date("1999-12-31"), 2L, "days")
 \seealso{
 \code{\link[=dtt_add_units]{dtt_add_units()}}
 }
+\concept{subtract}

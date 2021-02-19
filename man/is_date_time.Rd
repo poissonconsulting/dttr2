@@ -30,3 +30,9 @@ A flag indicating whether x inherits from Date, POSIXct or hms.
 \description{
 Tests whether an object is a Date, POSIXct, or hms vector.
 }
+\seealso{
+Other is: 
+\code{\link{dtt_is_date_time}()},
+\code{\link{dtt_is_date}()}
+}
+\concept{is}

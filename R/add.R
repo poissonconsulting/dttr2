@@ -1,4 +1,4 @@
-#' Add Units
+#' Add Time Units
 #'
 #' Add time units to a date time vector.
 #'
@@ -6,6 +6,7 @@
 #'
 #' @return The modified date time vector.
 #' @seealso [dtt_subtract_units()]
+#' @family add
 #' @export
 #'
 #' @examples

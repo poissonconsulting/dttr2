@@ -5,7 +5,7 @@
 \alias{dtt_floor.Date}
 \alias{dtt_floor.POSIXct}
 \alias{dtt_floor.hms}
-\title{Floor}
+\title{Floor Date/Time}
 \usage{
 dtt_floor(x, units, ...)
 
@@ -41,3 +41,11 @@ Floors a date/time vector
 \examples{
 dtt_floor(hms::as_hms("23:59:59"), "hours")
 }
+\seealso{
+Other floor: 
+\code{\link{dtt_date_time}()},
+\code{\link{dtt_date}()},
+\code{\link{dtt_floored}()},
+\code{\link{dtt_set_time}()}
+}
+\concept{floor}

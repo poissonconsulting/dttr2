@@ -20,3 +20,14 @@ Day of the Year Decimal
 \examples{
 dtt_doy_decimal(Sys.Date())
 }
+\seealso{
+\code{\link[=dtt_doy]{dtt_doy()}}
+
+Other decimal: 
+\code{\link{dtt_day_decimal}()},
+\code{\link{dtt_hour_decimal}()},
+\code{\link{dtt_minute_decimal}()},
+\code{\link{dtt_month_decimal}()},
+\code{\link{dtt_year_decimal}()}
+}
+\concept{decimal}

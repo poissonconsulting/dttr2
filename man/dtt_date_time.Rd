@@ -8,7 +8,7 @@
 \alias{dtt_date_time.Date}
 \alias{dtt_date_time.POSIXct}
 \alias{dtt_date_time.hms}
-\title{Date Time}
+\title{Floor Date/Time}
 \usage{
 dtt_date_time(x, ...)
 
@@ -63,3 +63,11 @@ dtt_date_time(1, tz = "Etc/GMT+8")
 dtt_date_time(as.Date("2000-01-02"))
 dtt_date_time(as.Date("2000-01-02"), time = hms::as_hms("04:05:06"))
 }
+\seealso{
+Other floor: 
+\code{\link{dtt_date}()},
+\code{\link{dtt_floored}()},
+\code{\link{dtt_floor}()},
+\code{\link{dtt_set_time}()}
+}
+\concept{floor}

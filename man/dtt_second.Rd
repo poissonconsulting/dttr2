@@ -70,3 +70,9 @@ dtt_second(x)
 dtt_second(x) <- 27L
 x
 }
+\seealso{
+Other set time: 
+\code{\link{dtt_hours}()},
+\code{\link{dtt_minutes}()}
+}
+\concept{set time}

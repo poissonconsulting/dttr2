@@ -5,7 +5,7 @@
 \alias{dtt_aggregate.Date}
 \alias{dtt_aggregate.POSIXct}
 \alias{dtt_aggregate.hms}
-\title{Aggregates}
+\title{Aggregate Date/Time}
 \usage{
 dtt_aggregate(x, units, ...)
 

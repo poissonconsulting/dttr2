@@ -22,3 +22,13 @@ Adjust Units
 \examples{
 dtt_adjust_units(60, to = "minutes")
 }
+\seealso{
+\code{\link[=dtt_add_units]{dtt_add_units()}}
+
+\code{\link[=dtt_subtract_units]{dtt_subtract_units()}}
+
+Other units: 
+\code{\link{dtt_units_per_unit}()},
+\code{\link{dtt_units}()}
+}
+\concept{units}

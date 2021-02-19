@@ -27,4 +27,8 @@ check_tz(Sys.time(), "UTC", error = FALSE)
 }
 \seealso{
 \code{\link[=dtt_tz]{dtt_tz()}}
+
+Other check: 
+\code{\link{chk_time}()}
 }
+\concept{check}
