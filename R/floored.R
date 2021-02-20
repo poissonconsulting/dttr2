@@ -1,4 +1,4 @@
-#' Floored
+#' Test Floored
 #'
 #' Test whether a date time vector is floored.
 #' 
@@ -6,6 +6,7 @@
 #' @param x A Date, POSIXct or hms vector.
 #' 
 #' @return A flag indicating whether floored.
+#' @family floor
 #' @export
 #'
 #' @examples

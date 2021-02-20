@@ -34,4 +34,10 @@ dtt_adjust_tz(as.POSIXct("1970-01-01", tz = "Etc/GMT+8"), tz = "UTC")
 }
 \seealso{
 \code{\link[=dtt_set_tz]{dtt_set_tz()}}
+
+Other tz: 
+\code{\link{dtt_set_tz}()},
+\code{\link{dtt_sys_tz}()},
+\code{\link{dtt_tz}()}
 }
+\concept{tz}

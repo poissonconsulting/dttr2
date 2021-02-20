@@ -6,6 +6,8 @@
 #' @param value A integer vector of the year value(s).
 #' 
 #' @return An integer vector (or the modified date/time vector).
+#' @family set date
+#' @seealso [dtt_year_decimal()]
 #' @export
 #'
 #' @examples

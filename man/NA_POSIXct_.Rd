@@ -13,4 +13,5 @@ NA_POSIXct_
 \description{
 A missing POSIXct object
 }
+\concept{NA}
 \keyword{datasets}

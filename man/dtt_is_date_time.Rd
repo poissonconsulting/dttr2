@@ -15,3 +15,9 @@ A flag indicating whether R is a POSIXct vector.
 \description{
 Is Date Time
 }
+\seealso{
+Other is: 
+\code{\link{dtt_is_date}()},
+\code{\link{is_date_time}()}
+}
+\concept{is}

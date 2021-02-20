@@ -28,3 +28,10 @@ Gets, sets or  the time zone for a date time vector.
 \examples{
 dtt_tz(as.POSIXct("1970-01-01", tz = "Etc/GMT+8"))
 }
+\seealso{
+Other tz: 
+\code{\link{dtt_adjust_tz}()},
+\code{\link{dtt_set_tz}()},
+\code{\link{dtt_sys_tz}()}
+}
+\concept{tz}

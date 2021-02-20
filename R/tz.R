@@ -3,6 +3,7 @@
 #' @inheritParams params
 #'
 #' @return A string of the current or old time zone.
+#' @family tz
 #' @export
 #'
 #' @examples
@@ -41,6 +42,7 @@ dtt_reset_default_tz <- function() {
 #' @inheritParams params
 #' 
 #' @return A string of the time zone.
+#' @family tz
 #' @export
 #'
 #' @examples
@@ -69,6 +71,7 @@ dtt_tz.POSIXct <- function(x, ...) {
 #' @param tz A string of the new time zone.
 #' 
 #' @return The date time vector with the new time zone.
+#' @family tz
 #' @seealso [dtt_adjust_tz()]
 #' @export
 #'
@@ -99,6 +102,7 @@ dtt_set_tz.POSIXct <- function(x, tz = dtt_default_tz(), ...) {
 #' @param x A POSIXct vector.
 #' 
 #' @return The date time vector with the new time zone and time.
+#' @family tz
 #' @seealso [dtt_set_tz()]
 #' @export
 #'

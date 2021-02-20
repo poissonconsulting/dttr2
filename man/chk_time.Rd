@@ -22,3 +22,8 @@ Checks if scalar hms object using \code{\link[=vld_time]{vld_time()}}.
 chk_time(hms::as_hms("10:00:10"))
 try(chk_time(1))
 }
+\seealso{
+Other check: 
+\code{\link{check_tz}()}
+}
+\concept{check}

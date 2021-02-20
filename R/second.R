@@ -6,6 +6,7 @@
 #' @param value A integer vector of the second value(s).
 #' 
 #' @return An integer vector (or the modified date/time vector).
+#' @family set time
 #' @export
 #'
 #' @examples

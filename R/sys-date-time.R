@@ -3,6 +3,7 @@
 #' @inheritParams params
 #' 
 #' @return A floored POSIXct scalar.
+#' @family sys
 #' @export
 #'
 #' @examples

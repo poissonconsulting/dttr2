@@ -1,11 +1,12 @@
-#' Date Time
+#' Floor Date/Time
 #'
 #' Coerces vectors to floored POSIXct vectors.
 #' 
 #' @inheritParams params
 #' @param x A vector.
-#'
 #' @return A floored POSIXct vector.
+#' 
+#' @family floor
 #' @export
 #'
 #' @examples

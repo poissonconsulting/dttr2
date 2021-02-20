@@ -5,6 +5,8 @@
 #' @inheritParams params
 #' 
 #' @return A numeric vector.
+#' @family decimal
+#' @seealso [dtt_hour()]
 #' @export
 #'
 #' @examples

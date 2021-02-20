@@ -4,6 +4,7 @@
 #'
 #' @return A Date vector with the year set to year.
 #' @return A POSIXct vector of the dayte times.
+#' @family dayte
 #' @export
 #'
 #' @examples

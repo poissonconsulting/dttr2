@@ -4,6 +4,7 @@
 #'
 #' @param x An object
 #' @return A flag indicating whether x inherits from Date, POSIXct or hms.
+#' @family is
 #' @name is_date_time
 NULL
 

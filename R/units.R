@@ -3,6 +3,7 @@
 #' @inheritParams params
 #'
 #' @return A number of the units per unit
+#' @family units
 #' @export
 #'
 #' @examples
@@ -16,8 +17,11 @@ dtt_units_per_unit <- function(units = "seconds", unit = "days") {
 #' @param x An integer or numeric vector
 #' @param from A string of the original units.
 #' @param to A string of the new units.
-#'
+
 #' @return A numeric vector.
+#' @seealso [dtt_add_units()]
+#' @seealso [dtt_subtract_units()]
+#' @family units
 #' @export
 #'
 #' @examples
@@ -35,6 +39,7 @@ dtt_adjust_units <- function(x, from = "seconds", to = "seconds") {
 #' @param x A Date, POSIXct or hms vector.
 #' 
 #' @return A string indicating the date time units.
+#' @family units
 #' @export
 #'
 #' @examples

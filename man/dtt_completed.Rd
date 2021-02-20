@@ -42,3 +42,8 @@ Tests whether a date time is complete.
 \item \code{hms}: Test if POSIXct vector is complete
 }}
 
+\seealso{
+Other complete: 
+\code{\link{dtt_complete}()}
+}
+\concept{complete}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/feb29-to-28.R
 \name{dtt_feb29_to_28}
 \alias{dtt_feb29_to_28}
-\title{Feb 29 to Feb 28}
+\title{Convert Feb 29 to Feb 28}
 \usage{
 dtt_feb29_to_28(x)
 }
@@ -18,3 +18,8 @@ Converts Feb 29 to Feb 28th
 \examples{
 dtt_feb29_to_28(as.Date("2004-02-29"))
 }
+\seealso{
+Other leap year: 
+\code{\link{dtt_leap_year}()}
+}
+\concept{leap year}

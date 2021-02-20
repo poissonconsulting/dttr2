@@ -3,6 +3,7 @@
 #' @inheritParams params
 #' 
 #' @return A floored hms scalar.
+#' @family sys
 #' @export
 #'
 #' @examples
