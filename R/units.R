@@ -24,7 +24,7 @@ dtt_units_per_unit <- function(units = "seconds", unit = "days") {
 #' @examples
 #' dtt_adjust_units(60, to = "minutes")
 dtt_adjust_units <- function(x, from = "seconds", to = "seconds") {
-  chk_whole_numeric(x)
+  chk_numeric(x)
   x * dtt_units_per_unit(to, from)
 }
 

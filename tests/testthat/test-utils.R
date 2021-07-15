@@ -9,6 +9,9 @@ test_that("adjust_units", {
   expect_identical(dtt_adjust_units(1), 1)
   expect_identical(dtt_adjust_units(1, "minutes"), 60)
   expect_identical(dtt_adjust_units(1, to = "minutes"), 1 / 60)
+  expect_identical(dtt_adjust_units(1L, to = "minutes"), 1 / 60)
+  expect_identical(dtt_adjust_units(1.12, "minutes"), 67.2)
+  expect_identical(dtt_adjust_units(c(1, 1.12), "minutes"), c(60, 67.2))
 })
 
 test_that("NA", {
