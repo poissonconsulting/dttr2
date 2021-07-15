@@ -122,7 +122,7 @@
     <p>Gets and sets second values for date/time vectors.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dtt_seconds</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
+    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>dtt_seconds</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='fu'>dtt_seconds</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>value</span>
 
@@ -145,7 +145,7 @@
 <span class='co'># S3 method for hms</span>
 <span class='fu'>dtt_second</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>value</span>
 
-<span class='fu'>dtt_set_second</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>value</span><span class='op'>)</span></pre>
+<span class='fu'>dtt_set_second</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>value</span><span class='op'>)</span></code></pre></div>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -180,20 +180,24 @@
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other set time: 
-<code><a href='dtt_hours.html'>dtt_hours</a>()</code>,
-<code><a href='dtt_minutes.html'>dtt_minutes</a>()</code></p></div>
+<code><a href='dtt_hour.html'>dtt_hours</a>()</code>,
+<code><a href='dtt_minute.html'>dtt_minutes</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.POSIXlt.html'>as.POSIXct</a></span><span class='op'>(</span><span class='st'>"1990-01-02 23:40:51"</span><span class='op'>)</span>
-<span class='fu'>dtt_second</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] 51</div><div class='input'><span class='fu'>dtt_second</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fl'>27L</span>
-<span class='va'>x</span>
-</div><div class='output co'>#&gt; [1] "1990-01-02 23:40:27 UTC"</div><div class='input'>
-<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'>hms</span><span class='fu'>::</span><span class='fu'><a href='https://hms.tidyverse.org/reference/hms.html'>as_hms</a></span><span class='op'>(</span><span class='st'>"23:40:51"</span><span class='op'>)</span>
-<span class='fu'>dtt_second</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] 51</div><div class='input'><span class='fu'>dtt_second</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fl'>27L</span>
-<span class='va'>x</span>
-</div><div class='output co'>#&gt; 23:40:27</div></pre>
+    <div class="ref-examples sourceCode"><pre class='sourceCode r'><code><span class='r-in'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.POSIXlt.html'>as.POSIXct</a></span><span class='op'>(</span><span class='st'>"1990-01-02 23:40:51"</span><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'>dtt_second</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51</span>
+<span class='r-in'><span class='fu'>dtt_second</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fl'>27L</span></span>
+<span class='r-in'><span class='va'>x</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "1990-01-02 23:40:27 UTC"</span>
+<span class='r-in'></span>
+<span class='r-in'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'>hms</span><span class='fu'>::</span><span class='fu'><a href='https://hms.tidyverse.org/reference/hms.html'>as_hms</a></span><span class='op'>(</span><span class='st'>"23:40:51"</span><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'>dtt_second</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51</span>
+<span class='r-in'><span class='fu'>dtt_second</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fl'>27L</span></span>
+<span class='r-in'><span class='va'>x</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 23:40:27</span>
+</code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -209,7 +213,7 @@
 </div>
 
 <div class="pkgdown">
-  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9000.</p></p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
 </div>
 
       </footer>
