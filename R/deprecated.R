@@ -31,6 +31,7 @@ dtt_minutes <- function(x, ...) {
 #' @param x An R object.
 #'
 #' @return A flag indicating whether R is a POSIXct vector.
+#' @family is
 #' @export
 dtt_is_date_time <- function(x) {
   .Deprecated("is.POSIXct")
@@ -42,6 +43,7 @@ dtt_is_date_time <- function(x) {
 #' @param x An R object.
 #'
 #' @return A flag indicating whether R is a Date vector.
+#' @family is
 #' @export
 dtt_is_date <- function(x) {
   .Deprecated("is.Date")
@@ -128,8 +130,9 @@ dtt_years <- function(x, ...) {
 #' Dayte Time
 #'
 #' @param x A Date or POSIXct vector.
-#' @param start An integer vector specifying the start month of the year or a Date vector of the start dayte.
+#' @param start An integer vector of the starting month or a Date vector of the starting date.
 #' @return A Date or POSIXct vector with the year for February 29th as 1972.
+#' @family dayte
 #' @export
 dtt_daytt <- function(x, start = 1L) {
   .Deprecated("dtt_dayte or dtt_dayte_time")

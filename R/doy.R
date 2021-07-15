@@ -1,9 +1,11 @@
 #' Day of the Year
-#'
+#' 
+#' @inheritParams params
 #' @param x A Date or POSIXct vector.
-#' @param ... Unused.
 #'
 #' @return A integer vector between 1 and 366 of the day of the year.
+#' @family days
+#' @seealso [dtt_doy_decimal()]
 #' @export
 #'
 #' @examples
@@ -30,6 +32,7 @@ dtt_doy.POSIXct <- function(x, ...) {
 #' @param year An integer scalar or vector of the year.
 #'
 #' @return A Date vector.
+#' @family days
 #' @export
 #'
 #' @examples

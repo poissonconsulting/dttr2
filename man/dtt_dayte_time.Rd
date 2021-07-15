@@ -13,7 +13,7 @@ dtt_dayte_time(x, ...)
 \method{dtt_dayte_time}{POSIXct}(x, start = 1L, ...)
 }
 \arguments{
-\item{x}{A date time vector.}
+\item{x}{A date/time vector.}
 
 \item{...}{Unused.}
 
@@ -39,3 +39,9 @@ Dayte Time
 \examples{
 dtt_dayte_time(as.POSIXct(c("2001-01-01 12:13:14", "2015-12-13"), tz = "Etc/GMT+10"))
 }
+\seealso{
+Other dayte: 
+\code{\link{dtt_dayte}()},
+\code{\link{dtt_daytt}()}
+}
+\concept{dayte}

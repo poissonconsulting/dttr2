@@ -1,10 +1,12 @@
-#' Date Add Time
+#' Add Time to Date
 #' 
 #' Adds times to Dates vector and sets timezone in a single function.
+#' 
+#' @inheritParams params
 #' @param x A Date vector.
-#' @param time A hms vector.
-#' @param tz A string of the timezone.
+#' 
 #' @return A POSIXct vector.
+#' @family add
 #' @export
 #' @examples 
 #' dtt_date_add_time(as.Date("2001-03-05"), hms::as_hms("06:07:08"), tz = "Etc/GMT+9")

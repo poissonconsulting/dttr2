@@ -16,12 +16,12 @@ dtt_completed(x, ...)
 \method{dtt_completed}{hms}(x, units = "seconds", unique = TRUE, sorted = TRUE, ...)
 }
 \arguments{
-\item{x}{A date time vector}
+\item{x}{A date/time vector.}
 
 \item{...}{Unused.}
 
-\item{units}{A string of the time units. The possible values are
-"secs", "minutes", "hours", "days" or "weeks".}
+\item{units}{A string of the time units. The possible values are "secs",
+"minutes", "hours", "days" or "weeks".}
 
 \item{unique}{A flag indicating whether the values must be unique.}
 
@@ -42,3 +42,8 @@ Tests whether a date time is complete.
 \item \code{hms}: Test if POSIXct vector is complete
 }}
 
+\seealso{
+Other complete: 
+\code{\link{dtt_complete}()}
+}
+\concept{complete}

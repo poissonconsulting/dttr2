@@ -1,11 +1,13 @@
 #' Get and Set Hour Values
 #'
 #' Gets and sets hour values for date/time vectors.
-#'
-#' @param x A date/time vector.
+#' 
+#' @inheritParams params
 #' @param value A integer vector of the hour value(s).
-#' @param ... Unused.
+#' 
 #' @return An integer vector (or the modified date/time vector).
+#' @family set time
+#' @seealso [dtt_hour_decimal()]
 #' @export
 #'
 #' @examples

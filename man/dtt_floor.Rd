@@ -5,7 +5,7 @@
 \alias{dtt_floor.Date}
 \alias{dtt_floor.POSIXct}
 \alias{dtt_floor.hms}
-\title{Floor}
+\title{Floor Date/Time}
 \usage{
 dtt_floor(x, units, ...)
 
@@ -18,8 +18,8 @@ dtt_floor(x, units, ...)
 \arguments{
 \item{x}{A date/time vector.}
 
-\item{units}{A string of the time units. The possible values are
-"secs", "minutes", "hours", "days" or "weeks".}
+\item{units}{A string of the time units. The possible values are "secs",
+"minutes", "hours", "days" or "weeks".}
 
 \item{...}{Unused.}
 }
@@ -41,3 +41,11 @@ Floors a date/time vector
 \examples{
 dtt_floor(hms::as_hms("23:59:59"), "hours")
 }
+\seealso{
+Other floor: 
+\code{\link{dtt_date_time}()},
+\code{\link{dtt_date}()},
+\code{\link{dtt_floored}()},
+\code{\link{dtt_set_time}()}
+}
+\concept{floor}

@@ -1,10 +1,9 @@
 #' Get Week Day
 #'
 #' Gets the week days for the locale.
-#'
-#' @param x A date/time vector.
-#' @param abbr A flag specifying whether to abbreviate the week days.
-#' @param ... Unused.
+#' 
+#' @inheritParams params
+#' 
 #' @return An character vector of the week days.
 #' @export
 #'

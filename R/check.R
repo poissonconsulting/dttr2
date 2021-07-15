@@ -2,11 +2,12 @@
 #'
 #' Checks an object's time zone as returned by `dtt_tz()`.
 #'
+#' @inheritParams params
 #' @param x The object to check.
-#' @param x_name A string of the name of the object.
-#' @param error A flag indicating whether to throw an informative error or immediately generate an informative message if the check fails.
 #' @param tz A string of the time zone to check that x's matches.
+#' 
 #' @return An invisible copy of x (if it doesn't throw an error).
+#' @family check
 #' @seealso [dtt_tz()]
 #' @export
 #'

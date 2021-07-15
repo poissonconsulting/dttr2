@@ -1,11 +1,13 @@
 #' Get and Set Year Values
 #'
 #' Gets and sets year values for date/time vectors.
-#'
-#' @param x A date/time vector.
+#' 
+#' @inheritParams params
 #' @param value A integer vector of the year value(s).
-#' @param ... Unused.
+#' 
 #' @return An integer vector (or the modified date/time vector).
+#' @family set date
+#' @seealso [dtt_year_decimal()]
 #' @export
 #'
 #' @examples

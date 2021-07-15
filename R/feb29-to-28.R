@@ -1,10 +1,11 @@
-#' Feb 29 to Feb 28
+#' Convert Feb 29 to Feb 28
 #'
 #' Converts Feb 29 to Feb 28th
 #'
 #' @param x A Date or POSIXct vector.
 #'
 #' @return The modified Date or POSIXct vector.
+#' @family leap year
 #' @export
 #'
 #' @examples

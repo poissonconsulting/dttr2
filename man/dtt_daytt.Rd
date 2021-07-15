@@ -9,7 +9,7 @@ dtt_daytt(x, start = 1L)
 \arguments{
 \item{x}{A Date or POSIXct vector.}
 
-\item{start}{An integer vector specifying the start month of the year or a Date vector of the start dayte.}
+\item{start}{An integer vector of the starting month or a Date vector of the starting date.}
 }
 \value{
 A Date or POSIXct vector with the year for February 29th as 1972.
@@ -17,3 +17,9 @@ A Date or POSIXct vector with the year for February 29th as 1972.
 \description{
 Dayte Time
 }
+\seealso{
+Other dayte: 
+\code{\link{dtt_dayte_time}()},
+\code{\link{dtt_dayte}()}
+}
+\concept{dayte}

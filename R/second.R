@@ -1,11 +1,12 @@
 #' Get and Set Second Values
 #'
 #' Gets and sets second values for date/time vectors.
-#'
-#' @param x A date/time vector.
+#' 
+#' @inheritParams params
 #' @param value A integer vector of the second value(s).
-#' @param ... Unused.
+#' 
 #' @return An integer vector (or the modified date/time vector).
+#' @family set time
 #' @export
 #'
 #' @examples

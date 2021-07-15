@@ -1,0 +1,142 @@
+destination: docs
+
+reference:
+- title: Add Units
+  desc: Add time units
+  contents: 
+  - '`dtt_add_units`'
+  - '`dtt_add_years`' 
+  - '`dtt_add_months`'
+  - '`dtt_add_days`'
+  - '`dtt_add_hours`'
+  - '`dtt_add_minutes`' 
+  - '`dtt_add_seconds`'
+  - '`dtt_date_add_time`'
+- title: Complete Date/Time 
+  desc: Complete and test completed date/time vectors
+  contents: 
+  - '`dtt_complete`'
+  - '`dtt_completed`'
+- title: Floor Vectors
+  desc: Coerce and test floored date/time vectors
+  contents: 
+  - '`dtt_date`'
+  - '`dtt_date_time`'
+  - '`dtt_set_date`'
+  - '`dtt_floor`'
+  - '`dtt_floored`'
+  - '`dtt_time`'
+  - '`dtt_set_time`'
+- title: Get Decimal Date/Time 
+  desc: Get decimal values for date/time vectors
+  contents: 
+  - '`dtt_minute_decimal`'
+  - '`dtt_hour_decimal`'
+  - '`dtt_day_decimal`'
+  - '`dtt_month_decimal`'
+  - '`dtt_year_decimal`'
+  - '`dtt_doy_decimal`'
+- title: Get and Set 
+  desc: Get and set values for date/time vectors
+  contents: 
+  - '`dtt_year`'
+  - '`dtt_years`'
+  - '`dtt_set_year`'
+  - '`dtt_month`'
+  - '`dtt_months`'
+  - '`dtt_set_month`'
+  - '`dtt_day`'
+  - '`dtt_days`'
+  - '`dtt_set_day`'
+  - '`dtt_hour`'
+  - '`dtt_hours`'
+  - '`dtt_set_hour`'
+  - '`dtt_minute`'
+  - '`dtt_minutes`'
+  - '`dtt_set_minute`'
+  - '`dtt_second`'
+  - '`dtt_seconds`'
+  - '`dtt_set_second`'
+- title: Get, Set or Adjust Time Zone
+  desc: Get, set or reset default time
+  contents:
+  - '`dtt_tz`'
+  - '`dtt_adjust_tz`'
+  - '`dtt_default_tz`'
+  - '`dtt_reset_default_tz`'
+  - '`dtt_reset_sys_tz`'
+  - '`dtt_set_tz`'
+  - '`dtt_set_default_tz`'
+  - '`dtt_set_sys_tz`'
+- title: Get System Date/Time 
+  desc: Get system date/time 
+  contents: 
+  - '`dtt_sys_date`'
+  - '`dtt_sys_date_time`'
+  - '`dtt_sys_time`'
+- title: Get Units 
+  desc: Get and adjust units 
+  contents:
+  - '`dtt_adjust_units`'
+  - '`dtt_units`'
+  - '`dtt_units_per_unit`'
+- title: Leap Year 
+  desc: Convert and test leap years
+  contents:
+  - '`dtt_feb29_to_28`'
+  - '`dtt_leap_year`'
+- title: Set Days/Dayte
+  desc: Set days in month/year 
+  contents:
+  - '`dtt_dayte`'
+  - '`dtt_dayte_time`'
+  - '`dtt_daytt`'
+  - '`dtt_days_in_month`'
+  - '`dtt_days_in_year`'
+  - '`dtt_doy_to_date`'
+  - '`dtt_doy`'
+- title: Subtract Units
+  desc: Subtract time units
+  contents: 
+  - '`dtt_subtract_years`'
+  - '`dtt_subtract_months`'
+  - '`dtt_subtract_days`' 
+  - '`dtt_subtract_hours`'
+  - '`dtt_subtract_minutes`' 
+  - '`dtt_subtract_seconds`'
+  - '`dtt_subtract_units`' 
+- title: Check Time 
+  desc: Check time/time zone 
+  contents:
+  - '`check_tz`'
+  - '`chk_time`'
+- title: Test Date/Time Object
+  desc: Test if object is a date/time vector
+  contents: 
+  - '`dtt_is_date`'
+  - '`dtt_is_date_time`'
+  - '`dtt_is_dtt`'
+  - '`is.Date`'
+  - '`is.hms`'
+  - '`is.POSIXct`'
+  - '`is_date`'
+  - '`is_date_time`'
+  - '`is_time`'
+- title: Missing Date/Time 
+  desc: Missing date/time
+  contents:
+  - '`NA_Date_`'
+  - '`NA_hms_`'
+  - '`NA_POSIXct_`'
+- title: Other Date/Time Components
+  desc: Miscellaneous
+  contents: 
+  - '`dtt`'
+  - '`dtt_aggregate`'
+  - '`dtt_diff`'
+  - '`dtt_season`'
+  - '`dtt_study_year`'
+  - '`dtt_wday`'
+  - '`dtt_seq`'
+  - '`dtt_wrap`'
+  - '`vld_time`'

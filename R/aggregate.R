@@ -1,4 +1,4 @@
-#' Aggregates
+#' Aggregate Date/Time
 #'
 #' Aggregates a date/time vector
 #'
@@ -6,8 +6,7 @@
 #'  or 'years'.
 #'
 #' @inheritParams params
-#' @param x A date/time vector.
-#' @param ... Unused.
+#' 
 #' @return The floored date/time vector.
 #' @export
 #'

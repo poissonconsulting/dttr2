@@ -1,6 +1,7 @@
 #' Missing POSIXct
 #'
 #' A missing POSIXct object
+#' @family NA
 #' @export
 NA_POSIXct_ <- set_attr(set_class(NA_real_, c("POSIXct", "POSIXt")), "tzone", "UTC")
 

@@ -18,3 +18,10 @@ Days in the Month
 \examples{
 dtt_days_in_month(as.Date(c("2000-02-11", "2001-02-01")))
 }
+\seealso{
+Other days: 
+\code{\link{dtt_days_in_year}()},
+\code{\link{dtt_doy_to_date}()},
+\code{\link{dtt_doy}()}
+}
+\concept{days}

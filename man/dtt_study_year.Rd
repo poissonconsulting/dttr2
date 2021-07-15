@@ -11,7 +11,8 @@ dtt_study_year(x, start = 1L, full = TRUE)
 
 \item{start}{An integer vector of the starting month or a Date vector of the starting date.}
 
-\item{full}{A flag specifying whether to return a character vector of the study years (or an integer vector of the first year)}
+\item{full}{A flag specifying whether to return a character vector of the
+study years (or an integer vector of the first year)}
 }
 \value{
 A character vector of the study year or an integer vector of the first year.

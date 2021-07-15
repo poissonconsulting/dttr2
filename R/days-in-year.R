@@ -2,6 +2,7 @@
 #'
 #' @param x A Date or POSIXct vector.
 #' @return A integer vector of 365 and 366 indicates the days of the year.
+#' @family days
 #' @export
 #'
 #' @examples

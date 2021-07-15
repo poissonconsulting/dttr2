@@ -7,8 +7,8 @@
 dtt_units_per_unit(units = "seconds", unit = "days")
 }
 \arguments{
-\item{units}{A string of the time units. The possible values are
-"secs", "minutes", "hours", "days" or "weeks".}
+\item{units}{A string of the time units. The possible values are "secs",
+"minutes", "hours", "days" or "weeks".}
 
 \item{unit}{A string of the time unit.}
 }
@@ -21,3 +21,9 @@ Units per Unit
 \examples{
 dtt_units_per_unit("hours")
 }
+\seealso{
+Other units: 
+\code{\link{dtt_adjust_units}()},
+\code{\link{dtt_units}()}
+}
+\concept{units}

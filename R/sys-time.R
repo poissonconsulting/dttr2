@@ -1,7 +1,9 @@
 #' Get System Time
 #'
-#' @param tz A string of the time zone.
+#' @inheritParams params
+#' 
 #' @return A floored hms scalar.
+#' @family sys
 #' @export
 #'
 #' @examples

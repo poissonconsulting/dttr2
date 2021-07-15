@@ -1,11 +1,10 @@
 #' Dayte Time
+#' 
+#' @inheritParams params
 #'
-#' @param x A date time vector.
-#' @param start An integer scalar of the starting month or a Date scalar of the starting date.
-#' @param tz A string of the time zone.
 #' @return A Date vector with the year set to year.
-#' @param ... Unused.
 #' @return A POSIXct vector of the dayte times.
+#' @family dayte
 #' @export
 #'
 #' @examples

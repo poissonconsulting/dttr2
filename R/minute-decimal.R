@@ -1,10 +1,12 @@
 #' Get Decimal Minute Values
 #'
 #' Gets decimal minute values for date/time vectors.
-#'
-#' @param x A date/time vector.
-#' @param ... Unused.
+#' 
+#' @inheritParams params
+#' 
 #' @return A numeric vector.
+#' @family decimal
+#' @seealso [dtt_minute()]
 #' @export
 #'
 #' @examples

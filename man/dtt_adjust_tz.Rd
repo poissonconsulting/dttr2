@@ -14,7 +14,7 @@ dtt_adjust_tz(x, tz = dtt_default_tz(), ...)
 
 \item{tz}{A string of the time zone.}
 
-\item{...}{Unused}
+\item{...}{Unused.}
 }
 \value{
 The date time vector with the new time zone and time.
@@ -34,4 +34,10 @@ dtt_adjust_tz(as.POSIXct("1970-01-01", tz = "Etc/GMT+8"), tz = "UTC")
 }
 \seealso{
 \code{\link[=dtt_set_tz]{dtt_set_tz()}}
+
+Other tz: 
+\code{\link{dtt_set_tz}()},
+\code{\link{dtt_sys_tz}()},
+\code{\link{dtt_tz}()}
 }
+\concept{tz}

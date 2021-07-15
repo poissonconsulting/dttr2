@@ -20,3 +20,9 @@ Get System Time
 dtt_sys_time()
 }
 }
+\seealso{
+Other sys: 
+\code{\link{dtt_sys_date_time}()},
+\code{\link{dtt_sys_date}()}
+}
+\concept{sys}

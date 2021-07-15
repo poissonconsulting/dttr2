@@ -1,11 +1,13 @@
 #' Get and Set Month Values
 #'
 #' Gets and sets month values for date/time vectors.
-#'
-#' @param x A date/time vector.
+#' 
+#' @inheritParams params
 #' @param value A integer vector of the month value(s).
-#' @param ... Unused.
+#' 
 #' @return An integer vector (or the modified date/time vector).
+#' @family set date
+#' @seealso [dtt_month_decimal()]
 #' @export
 #'
 #' @examples

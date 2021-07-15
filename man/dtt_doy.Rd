@@ -20,3 +20,12 @@ Day of the Year
 \examples{
 dtt_doy(Sys.Date())
 }
+\seealso{
+\code{\link[=dtt_doy_decimal]{dtt_doy_decimal()}}
+
+Other days: 
+\code{\link{dtt_days_in_month}()},
+\code{\link{dtt_days_in_year}()},
+\code{\link{dtt_doy_to_date}()}
+}
+\concept{days}

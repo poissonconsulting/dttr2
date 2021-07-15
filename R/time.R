@@ -1,12 +1,13 @@
-#' Time
+#' Floor Time
 #'
 #' Coerces vectors to floored (and wrapped) hms vectors.
 #'
+#' @inheritParams params
 #' @param x A vector.
 #' @param value A time vector.
-#' @param ... Unused.
-#'
+#' 
 #' @return A floored hms vector.
+#' @family floor
 #' @export
 #' @examples
 #' dtt_time(1L)
@@ -76,7 +77,7 @@ dtt_time.POSIXlt <- function(x, ...) {
   do.call("hms", x)
 }
 
-#' @describeIn dtt_date Set time values for a Date vector
+#' @describeIn dtt_time Set time values for a Date vector
 #' @export
 `dtt_time<-.Date` <- function(x, value) {
   x <- dtt_date_time(x)
@@ -84,7 +85,7 @@ dtt_time.POSIXlt <- function(x, ...) {
   x
 }
 
-#' @describeIn dtt_date Set date values for a POSIXct vector
+#' @describeIn dtt_time Set time values for a POSIXct vector
 #' @export
 `dtt_time<-.POSIXct` <- function(x, value) {
   chk_s3_class(value, "hms")

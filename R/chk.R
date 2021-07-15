@@ -5,6 +5,7 @@
 #' @inheritParams chk::chk_flag
 #' @return `NULL`, invisibly. Called for the side effect of throwing an error
 #'   if the condition is not met.
+#' @family check
 #' @export
 #' @examples
 #' chk_time(hms::as_hms("10:00:10"))

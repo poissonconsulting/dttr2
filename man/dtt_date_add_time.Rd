@@ -2,16 +2,16 @@
 % Please edit documentation in R/date-add-time.R
 \name{dtt_date_add_time}
 \alias{dtt_date_add_time}
-\title{Date Add Time}
+\title{Add Time to Date}
 \usage{
 dtt_date_add_time(x, time, tz = dtt_default_tz())
 }
 \arguments{
 \item{x}{A Date vector.}
 
-\item{time}{A hms vector.}
+\item{time}{A hms vector of the time.}
 
-\item{tz}{A string of the timezone.}
+\item{tz}{A string of the time zone.}
 }
 \value{
 A POSIXct vector.
@@ -22,3 +22,8 @@ Adds times to Dates vector and sets timezone in a single function.
 \examples{
 dtt_date_add_time(as.Date("2001-03-05"), hms::as_hms("06:07:08"), tz = "Etc/GMT+9")
 }
+\seealso{
+Other add: 
+\code{\link{dtt_add_units}()}
+}
+\concept{add}

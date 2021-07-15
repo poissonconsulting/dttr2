@@ -8,7 +8,7 @@
 \alias{dtt_add_hours}
 \alias{dtt_add_minutes}
 \alias{dtt_add_seconds}
-\title{Add Units}
+\title{Add Time Units}
 \usage{
 dtt_add_units(x, units, n = 1L)
 
@@ -25,10 +25,10 @@ dtt_add_minutes(x, n = 1L, ...)
 dtt_add_seconds(x, n = 1L, ...)
 }
 \arguments{
-\item{x}{A date time vector.}
+\item{x}{A date/time vector.}
 
-\item{units}{A string of the time units. The possible values are
-"secs", "minutes", "hours", "days" or "weeks".}
+\item{units}{A string of the time units. The possible values are "secs",
+"minutes", "hours", "days" or "weeks".}
 
 \item{n}{An integer of the number of units.}
 
@@ -45,4 +45,8 @@ dtt_add_units(as.Date("1999-12-31"), "days")
 }
 \seealso{
 \code{\link[=dtt_subtract_units]{dtt_subtract_units()}}
+
+Other add: 
+\code{\link{dtt_date_add_time}()}
 }
+\concept{add}

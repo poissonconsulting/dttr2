@@ -11,7 +11,9 @@
 \alias{dtt_time.hms}
 \alias{dtt_time.POSIXct}
 \alias{dtt_time.POSIXlt}
-\title{Time}
+\alias{dtt_time<-.Date}
+\alias{dtt_time<-.POSIXct}
+\title{Floor Time}
 \usage{
 dtt_set_time(x, value)
 
@@ -32,6 +34,10 @@ dtt_time(x) <- value
 \method{dtt_time}{POSIXct}(x, ...)
 
 \method{dtt_time}{POSIXlt}(x, ...)
+
+\method{dtt_time}{Date}(x) <- value
+
+\method{dtt_time}{POSIXct}(x) <- value
 }
 \arguments{
 \item{x}{A vector.}
@@ -61,6 +67,10 @@ Coerces vectors to floored (and wrapped) hms vectors.
 \item \code{POSIXct}: Coerce POSIXct vector to a floored hms vector
 
 \item \code{POSIXlt}: Coerce POSIXlt vector to a floored hms vector
+
+\item \code{Date}: Set time values for a Date vector
+
+\item \code{POSIXct}: Set time values for a POSIXct vector
 }}
 
 \examples{
@@ -71,3 +81,11 @@ dtt_time(Sys.Date())
 dtt_time(as.POSIXct("2001-01-01 02:30:40"))
 dtt_time(as.POSIXct("2001-01-01 02:30:40", tz = "Etc/GMT-8"))
 }
+\seealso{
+Other floor: 
+\code{\link{dtt_date_time}()},
+\code{\link{dtt_date}()},
+\code{\link{dtt_floored}()},
+\code{\link{dtt_floor}()}
+}
+\concept{floor}

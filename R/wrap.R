@@ -1,7 +1,7 @@
 #' Wrap
-#'
-#' @param x A date/time vector.
-#' @param ... Unused.
+#' 
+#' @inheritParams params
+#' 
 #' @export
 #' @examples
 #' dtt_wrap(hms::as_hms("24:00:00"))

@@ -5,7 +5,7 @@
 \alias{dtt_floored.Date}
 \alias{dtt_floored.POSIXct}
 \alias{dtt_floored.hms}
-\title{Floored}
+\title{Test Floored}
 \usage{
 dtt_floored(x, ...)
 
@@ -20,8 +20,8 @@ dtt_floored(x, ...)
 
 \item{...}{Unused.}
 
-\item{units}{A string of the time units. The possible values are
-"secs", "minutes", "hours", "days" or "weeks".}
+\item{units}{A string of the time units. The possible values are "secs",
+"minutes", "hours", "days" or "weeks".}
 }
 \value{
 A flag indicating whether floored.
@@ -41,3 +41,11 @@ Test whether a date time vector is floored.
 \examples{
 dtt_floored(as.Date("2002-02-01"))
 }
+\seealso{
+Other floor: 
+\code{\link{dtt_date_time}()},
+\code{\link{dtt_date}()},
+\code{\link{dtt_floor}()},
+\code{\link{dtt_set_time}()}
+}
+\concept{floor}

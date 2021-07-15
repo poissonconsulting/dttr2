@@ -2,7 +2,7 @@
 % Please edit documentation in R/leap-year.R
 \name{dtt_leap_year}
 \alias{dtt_leap_year}
-\title{Leap Year}
+\title{Test for Leap Year}
 \usage{
 dtt_leap_year(x)
 }
@@ -18,3 +18,8 @@ Tests whether each year is a leap year.
 \examples{
 dtt_leap_year(as.Date("1999-03-04", "2000-02-01"))
 }
+\seealso{
+Other leap year: 
+\code{\link{dtt_feb29_to_28}()}
+}
+\concept{leap year}
