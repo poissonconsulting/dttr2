@@ -1,5 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# dttr2 <img src="man/figures/logo.png" align="right" />
+
 <!-- badges: start -->
 
 [![Lifecycle:
@@ -86,15 +89,15 @@ actual clock time.
 
 ``` r
 time <- hms::as.hms(-3)
-#> Warning: `as.hms()` is deprecated as of hms 0.5.0.
+#> Warning: `as.hms()` was deprecated in hms 0.5.0.
 #> Please use `as_hms()` instead.
-#> This warning is displayed once every 8 hours.
-#> Call `lifecycle::last_warnings()` to see where this warning was generated.
 time
 #> -00:00:03
 dtt_time(time)
 #> 23:59:57
 dtt_time(hms::as.hms("24:00:00"))
+#> Warning: `as.hms()` was deprecated in hms 0.5.0.
+#> Please use `as_hms()` instead.
 #> 00:00:00
 ```
 

@@ -6,10 +6,14 @@
 \alias{dttr2-package}
 \title{dttr2: Manipulate Date, POSIXct and hms Vectors}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 Manipulates date ('Date'), date time ('POSIXct') and
     time ('hms') vectors.  Date/times are considered discrete and are
     floored whenever encountered.  Times are wrapped and time zones are
     maintained unless explicitly altered by the user.
+
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
 Manipulates date ('Date'), date time ('POSIXct') and
     time ('hms') vectors.  Date/times are considered discrete and are

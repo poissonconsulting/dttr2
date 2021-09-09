@@ -13,6 +13,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+# dttr2  <img src="man/figures/logo.png" align="right" />
+
 <!-- badges: start -->
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R build status](https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/dttr2/actions)
