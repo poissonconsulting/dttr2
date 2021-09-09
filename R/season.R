@@ -21,15 +21,15 @@ dtt_season <- function(x, start = c(
   Spring = 3L, Summer = 6L,
   Autumn = 9L, Winter = 12L
 ), first = NULL) {
-  chkor(
-    chk_s3_class(x, "Date"),
-    chk_s3_class(x, "POSIXct")
-  )
   
-  chkor(
-    chk_whole_numeric(start),
-    chk_s3_class(start, "Date")
-  )
+  if(!vld_s3_class(x, "Date") && !vld_s3_class(x, "POSIXct")) {
+    chkor_vld(vld_s3_class(x, "Date"), vld_s3_class(x, "POSIXct"))
+  }
+  
+  if(!vld_whole_numeric(start) && !vld_s3_class(start, "Date")) {
+    chkor_vld(vld_whole_numeric(start), vld_s3_class(start, "Date"))
+  }
+  
   if (is.numeric(start)) chk_range(start, c(1L, 12L))
   chk_not_any_na(start)
   chk_not_empty(start)
