@@ -6,7 +6,7 @@
 #'  or 'years'.
 #'
 #' @inheritParams params
-#' 
+#'
 #' @return The floored date/time vector.
 #' @export
 #'

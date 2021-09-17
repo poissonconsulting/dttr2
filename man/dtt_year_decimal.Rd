@@ -33,7 +33,6 @@ Gets decimal year values for date/time vectors.
 \examples{
 x <- as.Date("1990-01-02")
 dtt_year_decimal(x)
-
 }
 \seealso{
 \code{\link[=dtt_year]{dtt_year()}}

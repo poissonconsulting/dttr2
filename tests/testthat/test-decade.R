@@ -8,8 +8,9 @@ test_that("decade.Date", {
   expect_identical(dtt_decade(as.Date(c("2000-01-01", NA))), c(2000L, NA_integer_))
   expect_identical(
     dtt_decade(as.Date(c("2001-01-01", "2015-12-13"))),
-    c(2000L, 2010L))
+    c(2000L, 2010L)
+  )
   bce <- as.Date("0000-01-01")
   expect_identical(dtt_decade(bce), 0L)
-  expect_identical(dtt_decade(bce-1L), -10L)
+  expect_identical(dtt_decade(bce - 1L), -10L)
 })

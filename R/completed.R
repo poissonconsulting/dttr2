@@ -4,7 +4,7 @@
 #'
 #' @inheritParams params
 #' @param unique A flag indicating whether the values must be unique.
-#' 
+#'
 #' @return A flag indicating whether complete.
 #' @family complete
 #' @export

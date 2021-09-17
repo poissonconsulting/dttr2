@@ -1,9 +1,9 @@
 #' Get Decimal Year Values
 #'
 #' Gets decimal year values for date/time vectors.
-#' 
+#'
 #' @inheritParams params
-#' 
+#'
 #' @return A numeric vector.
 #' @family decimal
 #' @seealso [dtt_year()]
@@ -12,7 +12,6 @@
 #' @examples
 #' x <- as.Date("1990-01-02")
 #' dtt_year_decimal(x)
-#'
 dtt_year_decimal <- function(x, ...) {
   UseMethod("dtt_year_decimal")
 }

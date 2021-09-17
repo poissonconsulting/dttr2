@@ -3,7 +3,7 @@
 #' Floors a date/time vector
 #'
 #' @inheritParams params
-#' 
+#'
 #' @return The floored date/time vector.
 #' @family floor
 #' @export

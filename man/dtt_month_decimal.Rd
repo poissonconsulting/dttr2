@@ -33,7 +33,6 @@ Gets decimal month values for date/time vectors.
 \examples{
 x <- as.POSIXct("1990-01-03 10:00:01")
 dtt_month_decimal(x)
-
 }
 \seealso{
 \code{\link[=dtt_month]{dtt_month()}}

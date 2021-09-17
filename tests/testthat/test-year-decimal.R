@@ -3,8 +3,8 @@ test_that("year_decimal Date", {
   expect_identical(dtt_year_decimal(structure(numeric(0), class = "Date")), numeric(0))
   expect_identical(dtt_year_decimal(dtt_date("2000-01-01")), 2000)
   expect_identical(dtt_year_decimal(dtt_date("1999-01-01")), 1999)
-  expect_identical(dtt_year_decimal(dtt_date("1999-12-31")), 1999 + 364/365)
-  expect_identical(dtt_year_decimal(dtt_date("2000-12-31")), 2000 + 365/366)
+  expect_identical(dtt_year_decimal(dtt_date("1999-12-31")), 1999 + 364 / 365)
+  expect_identical(dtt_year_decimal(dtt_date("2000-12-31")), 2000 + 365 / 366)
 })
 
 test_that("dtt_year.POSIXct", {

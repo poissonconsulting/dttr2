@@ -1,4 +1,4 @@
-#' Floor Date 
+#' Floor Date
 #'
 #' Coerces vectors to floored Date vectors.
 #'
@@ -82,8 +82,9 @@ dtt_date.hms <- function(x, ...) {
     return(x)
   }
   value <- dtt_date(value)
-  if(identical(length(value), 1L))
+  if (identical(length(value), 1L)) {
     return(rep(value, length(x)))
+  }
   return(value)
 }
 

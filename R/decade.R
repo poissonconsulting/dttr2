@@ -1,7 +1,7 @@
 #' Decade
-#' 
+#'
 #' @inheritParams params
-#' 
+#'
 #' @return A integer vector of the decade.
 #' @export
 #'

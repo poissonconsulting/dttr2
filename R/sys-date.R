@@ -1,7 +1,7 @@
 #' Get System Date
-#' 
+#'
 #' @inheritParams params
-#' 
+#'
 #' @return A floored Date scalar.
 #' @family sys
 #' @export

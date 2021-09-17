@@ -103,11 +103,17 @@ test_that("dtt_season.POSIXct", {
 })
 
 test_that("season order", {
-  expect_identical(dtt_season(as.Date(paste("2000", c(1,4,8,12), "01", sep = "-")),
-             start = c(Summer = 6L, Winter = 11L)),
-             structure(c(1L, 1L, 2L, 1L), .Label = c("Winter", "Summer"), class = "factor"))
-  
-  expect_identical(dtt_season(as.Date(paste("2000", c(1,4,8,12), "01", sep = "-")),
-             start = c(Summer = 6L, Winter = 11L), first = "Summer"),
-  structure(c(2L, 2L, 1L, 2L), .Label = c("Summer", "Winter"), class = "factor"))
+  expect_identical(
+    dtt_season(as.Date(paste("2000", c(1, 4, 8, 12), "01", sep = "-")),
+      start = c(Summer = 6L, Winter = 11L)
+    ),
+    structure(c(1L, 1L, 2L, 1L), .Label = c("Winter", "Summer"), class = "factor")
+  )
+
+  expect_identical(
+    dtt_season(as.Date(paste("2000", c(1, 4, 8, 12), "01", sep = "-")),
+      start = c(Summer = 6L, Winter = 11L), first = "Summer"
+    ),
+    structure(c(2L, 2L, 1L, 2L), .Label = c("Summer", "Winter"), class = "factor")
+  )
 })

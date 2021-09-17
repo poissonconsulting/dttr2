@@ -1,9 +1,9 @@
 #' Get Decimal Month Values
 #'
 #' Gets decimal month values for date/time vectors.
-#' 
+#'
 #' @inheritParams params
-#' 
+#'
 #' @return A numeric vector.
 #' @family decimal
 #' @seealso [dtt_month()]
@@ -12,7 +12,6 @@
 #' @examples
 #' x <- as.POSIXct("1990-01-03 10:00:01")
 #' dtt_month_decimal(x)
-#'
 dtt_month_decimal <- function(x, ...) {
   UseMethod("dtt_month_decimal")
 }

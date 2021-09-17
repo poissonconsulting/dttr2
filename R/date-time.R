@@ -1,11 +1,11 @@
 #' Floor Date/Time
 #'
 #' Coerces vectors to floored POSIXct vectors.
-#' 
+#'
 #' @inheritParams params
 #' @param x A vector.
 #' @return A floored POSIXct vector.
-#' 
+#'
 #' @family floor
 #' @export
 #'
@@ -21,8 +21,7 @@ dtt_date_time <- function(x, ...) {
 
 #' @describeIn dtt_date_time Coerce integer vector to a floored POSIXct vector
 #' @export
-dtt_date_time.integer <- function(
-                                  x, tz = dtt_default_tz(), ...) {
+dtt_date_time.integer <- function(x, tz = dtt_default_tz(), ...) {
   chk_unused(...)
   chk_string(tz)
   as.POSIXct(x, tz = tz, origin = as.POSIXct("1970-01-01", tz = "GMT"))
@@ -30,8 +29,7 @@ dtt_date_time.integer <- function(
 
 #' @describeIn dtt_date_time Coerce double vector to a floored POSIXct vector
 #' @export
-dtt_date_time.double <- function(
-                                 x, tz = dtt_default_tz(), ...) {
+dtt_date_time.double <- function(x, tz = dtt_default_tz(), ...) {
   chk_unused(...)
   dtt_date_time(as.integer(floor(x)), tz = tz)
 }
@@ -73,8 +71,7 @@ dtt_date_time.POSIXct <- function(x, tz = dtt_tz(x), ...) {
 
 #' @describeIn dtt_date_time Coerce hms vector to a floored POSIXct vector
 #' @export
-dtt_date_time.hms <- function(
-                              x, date = dtt_date("1970-01-01"), tz = dtt_default_tz(), ...) {
+dtt_date_time.hms <- function(x, date = dtt_date("1970-01-01"), tz = dtt_default_tz(), ...) {
   chk_s3_class(date, "Date")
   chk_subset(length(date), c(1L, length(x)))
   chk_string(tz)

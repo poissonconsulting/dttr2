@@ -4,7 +4,7 @@
 #'
 #' @inheritParams params
 #' @param unique A flag specifying whether to only return unique values.
-#' 
+#'
 #' @return The completed date/time vector.
 #' @family complete
 #' @export

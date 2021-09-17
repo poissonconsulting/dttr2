@@ -5,7 +5,7 @@
 #' If length_out is defined then that number of units are added to from.
 #'
 #' @inheritParams params
-#' 
+#'
 #' @return The date/time vector.
 #' @export
 #'

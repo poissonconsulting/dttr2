@@ -5,7 +5,7 @@
 #' @inheritParams params
 #' @param x The object to check.
 #' @param tz A string of the time zone to check that x's matches.
-#' 
+#'
 #' @return An invisible copy of x (if it doesn't throw an error).
 #' @family check
 #' @seealso [dtt_tz()]

@@ -1,5 +1,5 @@
 #' Day of the Year Decimal
-#' 
+#'
 #' @inheritParams params
 #' @param x A Date or POSIXct vector.
 #'

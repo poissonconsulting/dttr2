@@ -1,5 +1,5 @@
 #' Dayte Time
-#' 
+#'
 #' @inheritParams params
 #'
 #' @return A Date vector with the year set to year.

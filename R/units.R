@@ -34,10 +34,10 @@ dtt_adjust_units <- function(x, from = "seconds", to = "seconds") {
 #'
 #' Gets the smallest units for a date time vector.
 #' The possible values are 'seconds', 'minutes', 'hours', 'days', 'months' or 'years'.
-#' 
+#'
 #' @inheritParams params
 #' @param x A Date, POSIXct or hms vector.
-#' 
+#'
 #' @return A string indicating the date time units.
 #' @family units
 #' @export

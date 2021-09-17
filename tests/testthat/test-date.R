@@ -79,7 +79,7 @@ test_that("set_date Date", {
   expect_identical(dtt_set_date(as.Date("2001-01-01"), as.Date("2002-02-02")), as.Date("2002-02-02"))
   expect_identical(dtt_set_date(as.Date(c("2001-01-01", "2003-04-05")), as.Date("2002-02-02")), as.Date(c("2002-02-02", "2002-02-02")))
   expect_identical(dtt_set_date(as.Date(c("2001-01-01", "2003-04-05")), as.Date(c("2005-02-02", "2007-05-06"))), as.Date(c("2005-02-02", "2007-05-06")))
-  
+
   x <- as.Date(c("2001-01-01", "2003-04-05"))
   dtt_date(x) <- as.Date("2014-02-06")
   expect_identical(x, as.Date(c("2014-02-06", "2014-02-06")))
@@ -87,8 +87,11 @@ test_that("set_date Date", {
 
 test_that("set_date POSIXct", {
   expect_equal(dtt_set_date(as.POSIXct("2001-01-01 04:05:06"), as.Date("2002-02-02")),
-                   as.POSIXct("2002-02-02 04:05:06"), ignore_attr = TRUE)
+    as.POSIXct("2002-02-02 04:05:06"),
+    ignore_attr = TRUE
+  )
   expect_equal(dtt_set_date(as.POSIXct("2001-01-01 04:05:06", tz = "PST8PDT"), as.Date("2002-02-02")),
-                   as.POSIXct("2002-02-02 04:05:06", tz = "PST8PDT"),
-               ignore_attr = TRUE)
+    as.POSIXct("2002-02-02 04:05:06", tz = "PST8PDT"),
+    ignore_attr = TRUE
+  )
 })

@@ -1,7 +1,7 @@
 #' Get System Date Time
 #'
 #' @inheritParams params
-#' 
+#'
 #' @return A floored POSIXct scalar.
 #' @family sys
 #' @export

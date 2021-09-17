@@ -1,7 +1,7 @@
 #' Wrap
-#' 
+#'
 #' @inheritParams params
-#' 
+#'
 #' @export
 #' @examples
 #' dtt_wrap(hms::as_hms("24:00:00"))

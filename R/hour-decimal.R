@@ -1,9 +1,9 @@
 #' Get Decimal Hour Values
 #'
 #' Gets decimal hour values for date/time vectors.
-#' 
+#'
 #' @inheritParams params
-#' 
+#'
 #' @return A numeric vector.
 #' @family decimal
 #' @seealso [dtt_hour()]

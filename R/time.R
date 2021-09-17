@@ -5,7 +5,7 @@
 #' @inheritParams params
 #' @param x A vector.
 #' @param value A time vector.
-#' 
+#'
 #' @return A floored hms vector.
 #' @family floor
 #' @export
