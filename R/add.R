@@ -74,6 +74,8 @@ dtt_add_years.default <- function(x, n = 1L, ...) {
   if (all(is_na)) {
     return(x)
   }
+  print("x")
+  print(x)
   print(names(x))
   x[is_na] <- x[!is_na][1]
   print(names(x))
@@ -82,7 +84,6 @@ dtt_add_years.default <- function(x, n = 1L, ...) {
   print(names(x))
   
   is.na(x[is_na]) <- TRUE
-  print(names(x))
   dtt_floor(x)
 }
 

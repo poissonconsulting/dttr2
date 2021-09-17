@@ -2,36 +2,20 @@
 
 # dttr2 0.4.0
 
-- Same as previous version.
+- Added 
+  - `dtt_decade()`
+  - `dtt_days_in_month()`
+  - `dtt_days_in_year()`
+  - `dtt_month_decimal()`, 
+  - `dtt_year_decimal.Date()`
+  - `dtt_day_decimal()`, 
+  - `dtt_doy_decimal()`, 
+  - `dtt_hour_decimal()`
+  - `dtt_minute_decimal()`
+  - `dtt_leap_year()`
 
-
-# dttr2 0.3.0.9003
-
-- Same as previous version.
-
-
-# dttr2 0.3.0.9002
-
-- Added `dtt_decade()`.
-- Fix `dtt_adjust_units()` so accepts fractional values.
-
-
-# dttr2 0.3.0.9001
-
-- Added `dtt_month_decimal()`, `dtt_day_decimal()`, `dtt_doy_decimal()`, `dtt_minute_decimal()`.
-- `dtt_hour_decimal()` now takes into account seconds.
-- `dtt_year_decimal()` now same as `dtt_year()` for first day.
-- Renamed `days_of_year()` to `days_in_year()`.
-- Added `dtt_days_in_month()`.
-- Added `dtt_days_of_year()`.
-- Added `dtt_hour_decimal()`.
-- Added `dtt_leap_year()` and `dtt_year_decimal.Date()`.
-
-
-# dttr2 0.3.0.9000
-
-- Same as previous version.
-
+- Fixed 
+  - `dtt_adjust_units()` so accepts fractional values.
 
 # dttr2 0.3.0
 
