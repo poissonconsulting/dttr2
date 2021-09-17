@@ -59,7 +59,7 @@ dtt_month.POSIXct <- function(x, ...) {
   if (identical(length(value), 1L)) {
     return(dtt_date(sub_month(x, value)))
   }
-  dtt_date(mapply(sub_month, x, value))
+  dtt_date(mapply(sub_month, x, value, USE.NAMES = FALSE))
 }
 
 #' @describeIn dtt_month Set month values for a POSIXct vector

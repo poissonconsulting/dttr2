@@ -59,7 +59,7 @@ dtt_year.POSIXct <- function(x, ...) {
   if (identical(length(value), 1L)) {
     return(dtt_date(sub_year(x, value)))
   }
-  dtt_date(mapply(FUN = sub_year, x, value))
+  dtt_date(mapply(FUN = sub_year, x, value, USE.NAMES = FALSE))
 }
 
 #' @describeIn dtt_year Set year values for a POSIXct vector
