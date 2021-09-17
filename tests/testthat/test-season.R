@@ -47,7 +47,7 @@ test_that("dtt_season.Date", {
   )
 
   expect_length(dtt_season(dates[1][-1]), 0)
-  expect_is(dtt_season(dates[1][-1]), "factor")
+  expect_s3_class(dtt_season(dates[1][-1]), "factor")
 })
 
 test_that("dtt_season.POSIXct", {
@@ -99,7 +99,7 @@ test_that("dtt_season.POSIXct", {
   )
 
   expect_length(dtt_season(dates[1][-1]), 0)
-  expect_is(dtt_season(dates[1][-1]), "factor")
+  expect_s3_class(dtt_season(dates[1][-1]), "factor")
 })
 
 test_that("season order", {

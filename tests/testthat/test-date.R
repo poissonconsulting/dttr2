@@ -87,7 +87,8 @@ test_that("set_date Date", {
 
 test_that("set_date POSIXct", {
   expect_equal(dtt_set_date(as.POSIXct("2001-01-01 04:05:06"), as.Date("2002-02-02")),
-                   as.POSIXct("2002-02-02 04:05:06"))
+                   as.POSIXct("2002-02-02 04:05:06"), ignore_attr = TRUE)
   expect_equal(dtt_set_date(as.POSIXct("2001-01-01 04:05:06", tz = "PST8PDT"), as.Date("2002-02-02")),
-                   as.POSIXct("2002-02-02 04:05:06", tz = "PST8PDT"))
+                   as.POSIXct("2002-02-02 04:05:06", tz = "PST8PDT"),
+               ignore_attr = TRUE)
 })

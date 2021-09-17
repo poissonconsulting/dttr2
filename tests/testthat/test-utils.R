@@ -27,7 +27,7 @@ test_that("NA", {
 })
 
 test_that("c.POSIXct", {
-  expect_equal(c(as.POSIXct("2001-01-01")), as.POSIXct("2001-01-01"))
+  expect_equal(c(as.POSIXct("2001-01-01")), as.POSIXct("2001-01-01"), ignore_attr = TRUE)
 })
 
 test_that("c.hms", {
