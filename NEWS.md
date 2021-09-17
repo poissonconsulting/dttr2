@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# dttr2 0.4.0
+
+- Same as previous version.
+
+
 # dttr2 0.3.0.9003
 
 - Same as previous version.
