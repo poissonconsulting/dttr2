@@ -18,3 +18,18 @@ We checked 1 reverse dependencies, comparing R CMD check results across CRAN and
 
  * We saw 0 new problems
  * We failed to check 0 packages
+
+## CRAN Package Check Results for Package dttr2
+
+Version: 0.3.0 
+Check: LazyData 
+Result: NOTE 
+     'LazyData' is specified without a 'data' directory 
+
+  Fixed by removing LazyData
+  
+Version: 0.3.0 
+Check: tests 
+Result: ERROR 
+
+  Fixed by removing names from vectors.
