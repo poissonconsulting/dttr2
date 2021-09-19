@@ -48,6 +48,12 @@ test_that("dtt_month<-.Date", {
   expect_identical(dtt_month(x2), c(10L, NA))
 })
 
+test_that("dtt_month<-.Date preserves names", {
+  x <- setNames(as.Date("2001-01-01"), "a name")
+  dtt_month(x) <- 2L
+  expect_identical(names(x), "a name")
+})
+
 test_that("dtt_month<-.POSIXct", {
   x0 <- Sys.time()[-1]
   dtt_month(x0) <- 11L
@@ -87,4 +93,10 @@ test_that("dtt_month<-.POSIXct", {
   is.na(x2[2]) <- TRUE
   dtt_month(x2) <- c(10L, 10L)
   expect_identical(dtt_month(x2), c(10L, NA))
+})
+
+test_that("dtt_month<-.POSIXct preserves names", {
+  x <- setNames(as.POSIXct("1990-01-17 23:40:51", tz = "PST8PDT"), "a name")
+  dtt_month(x) <- 2L
+  expect_identical(names(x), "a name")
 })

@@ -56,10 +56,15 @@ dtt_day.POSIXct <- function(x, ...) {
     return(x)
   }
   x <- format(x)
+  names <- names(x)
   if (identical(length(value), 1L)) {
-    return(dtt_date(sub_day(x, value)))
+    x <- dtt_date(sub_day(x, value))
+    names(x) <- names
+    return(x)
   }
-  dtt_date(mapply(sub_day, x, value, USE.NAMES = FALSE))
+  x <- dtt_date(mapply(sub_day, x, value, USE.NAMES = FALSE))
+  names(x) <- names
+  x
 }
 
 #' @describeIn dtt_day Set day values for a POSIXct vector
