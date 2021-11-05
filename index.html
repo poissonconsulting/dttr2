@@ -43,7 +43,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">dttr2</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.4.0.9000</span>
       </span>
     </div>
 
@@ -58,7 +58,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/poissonconsulting/dttr2/">
+  <a href="https://github.com/poissonconsulting/dttr2/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -76,16 +76,15 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<div id="dttr2-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#dttr2-" class="anchor" aria-hidden="true"></a>dttr2 <img src="reference/figures/logo.png" align="right">
+<div class="section level1">
+<div class="page-header"><h1 id="dttr2-">dttr2 <img src="reference/figures/logo.png" align="right"><a class="anchor" aria-label="anchor" href="#dttr2-"></a>
 </h1></div>
 <!-- badges: start -->
 
 </div>
-<div id="dttr2" class="section level1">
-<h1 class="hasAnchor">
-<a href="#dttr2" class="anchor" aria-hidden="true"></a>dttr2</h1>
+<div class="section level1">
+<h1 id="dttr2">dttr2<a class="anchor" aria-label="anchor" href="#dttr2"></a>
+</h1>
 <p><code>dttr2</code> (Dates, Times and dateTimes in R) is an R package to perform simple manipulations on date (Date), datetime (POSIXct) and time (hms) vectors (collectively referred to as date/times).</p>
 <p>Key design principles include</p>
 <ol style="list-style-type: decimal">
@@ -95,21 +94,21 @@
 <li>maintain the current timezone (principle of least astonishment)</li>
 <li>the origin is always assumed to be 1970-01-01 UTC (keep it simple)</li>
 </ol>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor" aria-hidden="true"></a>Installation</h2>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <p>To install the latest release version from <a href="https://cran.r-project.org/package=dttr2" class="external-link">CRAN</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">"dttr2"</span>)</span></code></pre></div>
 <p>To install the latest development version from <a href="https://github.com/poissonconsulting/dttr2" class="external-link">GitHub</a></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># install.packages("remotes")</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"poissonconsulting/dttr2"</span>)</span></code></pre></div>
 </div>
-<div id="introduction" class="section level2">
-<h2 class="hasAnchor">
-<a href="#introduction" class="anchor" aria-hidden="true"></a>Introduction</h2>
-<div id="time-units" class="section level3">
-<h3 class="hasAnchor">
-<a href="#time-units" class="anchor" aria-hidden="true"></a>Time Units</h3>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<div class="section level3">
+<h3 id="time-units">Time Units<a class="anchor" aria-label="anchor" href="#time-units"></a>
+</h3>
 <p><code>dttr2</code> floors any date/time objects it encounters to the nearest time unit (by default days for Date and seconds for POSIXct and hms).</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/poissonconsulting/dttr2" class="external-link">dttr2</a></span><span class="op">)</span>
@@ -133,9 +132,9 @@
 <span class="fu"><a href="reference/dtt_add_units.html">dtt_add_months</a></span><span class="op">(</span><span class="va">date</span>, <span class="fl">24L</span><span class="op">)</span>
 <span class="co">#&gt; [1] "1972-01-02"</span></code></pre></div>
 </div>
-<div id="times" class="section level3">
-<h3 class="hasAnchor">
-<a href="#times" class="anchor" aria-hidden="true"></a>Times</h3>
+<div class="section level3">
+<h3 id="times">Times<a class="anchor" aria-label="anchor" href="#times"></a>
+</h3>
 <p><code>dttr2</code> wraps negative times or times greater than 23:59:59 to the actual clock time.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">time</span> <span class="op">&lt;-</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/Deprecated.html" class="external-link">as.hms</a></span><span class="op">(</span><span class="op">-</span><span class="fl">3</span><span class="op">)</span>
@@ -150,9 +149,9 @@
 <span class="co">#&gt; Please use `as_hms()` instead.</span>
 <span class="co">#&gt; 00:00:00</span></code></pre></div>
 </div>
-<div id="time-zones" class="section level3">
-<h3 class="hasAnchor">
-<a href="#time-zones" class="anchor" aria-hidden="true"></a>Time Zones</h3>
+<div class="section level3">
+<h3 id="time-zones">Time Zones<a class="anchor" aria-label="anchor" href="#time-zones"></a>
+</h3>
 <p>The user can override the default time zone (UTC) when handling POSIXct vectors using <code><a href="reference/dtt_default_tz.html">dtt_set_default_tz()</a></code>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/dtt_default_tz.html">dtt_default_tz</a></span><span class="op">(</span><span class="op">)</span>
@@ -172,9 +171,9 @@
 <span class="fu"><a href="reference/dtt_adjust_tz.html">dtt_adjust_tz</a></span><span class="op">(</span><span class="va">date_time</span><span class="op">)</span>
 <span class="co">#&gt; [1] "1969-12-31 17:00:00 -10"</span></code></pre></div>
 </div>
-<div id="combining-dates-and-times" class="section level3">
-<h3 class="hasAnchor">
-<a href="#combining-dates-and-times" class="anchor" aria-hidden="true"></a>Combining Dates and Times</h3>
+<div class="section level3">
+<h3 id="combining-dates-and-times">Combining Dates and Times<a class="anchor" aria-label="anchor" href="#combining-dates-and-times"></a>
+</h3>
 <p><code>dttr2</code> makes it easy to decompose POSIXct vectors into Date and hms vectors and then recombine them again.</p>
 <p>As neither dates nor times have associated time zones unless the user passes a value they are assigned the default time zone.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
@@ -190,20 +189,20 @@
 <span class="co">#&gt; [1] "1970-01-01 03:00:00 -10"</span></code></pre></div>
 </div>
 </div>
-<div id="inspiration" class="section level2">
-<h2 class="hasAnchor">
-<a href="#inspiration" class="anchor" aria-hidden="true"></a>Inspiration</h2>
+<div class="section level2">
+<h2 id="inspiration">Inspiration<a class="anchor" aria-label="anchor" href="#inspiration"></a>
+</h2>
 <p>dttr2 was influenced by <a href="https://lubridate.tidyverse.org" class="external-link">lubridate</a>. It aims to provide an alternative for simple manipulations.</p>
 </div>
-<div id="contribution" class="section level2">
-<h2 class="hasAnchor">
-<a href="#contribution" class="anchor" aria-hidden="true"></a>Contribution</h2>
+<div class="section level2">
+<h2 id="contribution">Contribution<a class="anchor" aria-label="anchor" href="#contribution"></a>
+</h2>
 <p>Please report any <a href="https://github.com/poissonconsulting/dttr2/issues" class="external-link">issues</a>.</p>
 <p><a href="https://github.com/poissonconsulting/dttr2/pulls" class="external-link">Pull requests</a> are always welcome.</p>
 </div>
-<div id="code-of-conduct" class="section level2">
-<h2 class="hasAnchor">
-<a href="#code-of-conduct" class="anchor" aria-hidden="true"></a>Code of Conduct</h2>
+<div class="section level2">
+<h2 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
+</h2>
 <p>Please note that the dttr2 project is released with a <a href="https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html" class="external-link">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
@@ -214,12 +213,9 @@
     <div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=dttr2">https://​cloud.r-project.org/​package=dttr2</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/poissonconsulting/dttr2/">https://​github.com/​poissonconsulting/​dttr2/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/poissonconsulting/dttr2/issues">https://​github.com/​poissonconsulting/​dttr2/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=dttr2" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/poissonconsulting/dttr2/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/poissonconsulting/dttr2/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
@@ -227,7 +223,7 @@
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
 
@@ -242,7 +238,7 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Joe Thorley <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7683-4592" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Joe Thorley <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7683-4592" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>Poisson Consulting <br><small class="roles"> Copyright holder, funder </small>  </li>
 </ul>
 </div>
@@ -269,7 +265,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
 </div>
 
       </footer>
