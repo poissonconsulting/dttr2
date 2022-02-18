@@ -30,4 +30,6 @@
 #' @param x_name A string of the name of the object.
 #' @param error A flag indicating whether to throw an informative error or
 #' immediately generate an informative message if the check fails.
+#' @param origin Origin date.
+#' @param modern A flag specifying whether to use the modern or old Excel date system.
 NULL

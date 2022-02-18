@@ -5,6 +5,7 @@
 #' @inheritParams params
 #' @param x A vector.
 #' @param value A date vector.
+#' @param origin Origin date.
 #'
 #' @return A floored Date vector.
 #' @family floor
@@ -30,16 +31,16 @@ dtt_date <- function(x, ...) {
 
 #' @describeIn dtt_date Coerce integer vector to a floored Date vector
 #' @export
-dtt_date.integer <- function(x, ...) {
+dtt_date.integer <- function(x, origin = as.Date("1970-01-01"), ...) {
   chk_unused(...)
-  as.Date(x, origin = as.Date("1970-01-01"))
+  as.Date(x, origin = origin)
 }
 
 #' @describeIn dtt_date Coerce double vector to a floored Date vector
 #' @export
-dtt_date.double <- function(x, ...) {
+dtt_date.double <- function(x, origin = as.Date("1970-01-01"), ...) {
   chk_unused(...)
-  dtt_date(as.integer(floor(x)))
+  dtt_date(as.integer(floor(x)), origin = origin)
 }
 
 #' @describeIn dtt_date Coerce character vector to a floored Date vector

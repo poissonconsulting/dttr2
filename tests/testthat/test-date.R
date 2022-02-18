@@ -95,3 +95,15 @@ test_that("set_date POSIXct", {
     ignore_attr = TRUE
   )
 })
+
+test_that("dtt_excel_to_date", {
+  expect_equal(dtt_excel_to_date(42370L), as.Date("2016-01-01"))
+  expect_equal(dtt_excel_to_date(40908, FALSE), as.Date("2016-01-01"))
+  expect_equal(dtt_excel_to_date(0), as.Date("1899-12-30"))
+  expect_equal(dtt_excel_to_date(0, FALSE), as.Date("1904-01-01"))
+  expect_equal(dtt_excel_to_date(43890), as.Date("2020-02-29"))
+  expect_equal(dtt_excel_to_date(42428, FALSE), as.Date("2020-02-29"))
+  expect_error(dtt_excel_to_date("hello"), "`x` must be numeric.")
+  expect_error(dtt_excel_to_date(40908, 4), "^`modern` must be a flag [(]TRUE or FALSE[)][.]$")
+})
+

@@ -66,6 +66,7 @@ dtt_date_time(as.Date("2000-01-02"), time = hms::as_hms("04:05:06"))
 \seealso{
 Other floor: 
 \code{\link{dtt_date}()},
+\code{\link{dtt_excel_to_date}()},
 \code{\link{dtt_floored}()},
 \code{\link{dtt_floor}()},
 \code{\link{dtt_set_time}()}
