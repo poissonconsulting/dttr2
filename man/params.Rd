@@ -51,6 +51,10 @@ study years (or an integer vector of the first year)}
 
 \item{error}{A flag indicating whether to throw an informative error or
 immediately generate an informative message if the check fails.}
+
+\item{origin}{Origin date.}
+
+\item{modern}{A flag specifying whether to use the modern or old Excel date system.}
 }
 \description{
 Descriptions of the parameters for the dttr2 functions.

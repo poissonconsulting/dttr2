@@ -45,6 +45,7 @@ dtt_floored(as.Date("2002-02-01"))
 Other floor: 
 \code{\link{dtt_date_time}()},
 \code{\link{dtt_date}()},
+\code{\link{dtt_excel_to_date}()},
 \code{\link{dtt_floor}()},
 \code{\link{dtt_set_time}()}
 }

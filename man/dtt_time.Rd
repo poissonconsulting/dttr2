@@ -85,6 +85,7 @@ dtt_time(as.POSIXct("2001-01-01 02:30:40", tz = "Etc/GMT-8"))
 Other floor: 
 \code{\link{dtt_date_time}()},
 \code{\link{dtt_date}()},
+\code{\link{dtt_excel_to_date}()},
 \code{\link{dtt_floored}()},
 \code{\link{dtt_floor}()}
 }

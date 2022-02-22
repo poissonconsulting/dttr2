@@ -18,9 +18,9 @@ dtt_date(x, ...)
 
 dtt_date(x) <- value
 
-\method{dtt_date}{integer}(x, ...)
+\method{dtt_date}{integer}(x, origin = as.Date("1970-01-01"), ...)
 
-\method{dtt_date}{double}(x, ...)
+\method{dtt_date}{double}(x, origin = as.Date("1970-01-01"), ...)
 
 \method{dtt_date}{character}(x, ...)
 
@@ -42,6 +42,8 @@ dtt_set_date(x, value)
 \item{...}{Unused.}
 
 \item{value}{A date vector.}
+
+\item{origin}{Origin date.}
 }
 \value{
 A floored Date vector.
@@ -80,6 +82,7 @@ dtt_date(hms::as_hms("24:00:00"))
 \seealso{
 Other floor: 
 \code{\link{dtt_date_time}()},
+\code{\link{dtt_excel_to_date}()},
 \code{\link{dtt_floored}()},
 \code{\link{dtt_floor}()},
 \code{\link{dtt_set_time}()}
