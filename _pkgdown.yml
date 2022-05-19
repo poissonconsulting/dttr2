@@ -135,6 +135,7 @@ reference:
   - '`dtt_aggregate`'
   - '`dtt_decade`'
   - '`dtt_diff`'
+  - '`dtt_excel_to_date`'
   - '`dtt_season`'
   - '`dtt_study_year`'
   - '`dtt_wday`'
