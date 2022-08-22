@@ -35,13 +35,13 @@ Tests whether a date time is complete.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Test if Date vector is complete
+\item \code{dtt_completed(Date)}: Test if Date vector is complete
 
-\item \code{POSIXct}: Test if POSIXct vector is complete
+\item \code{dtt_completed(POSIXct)}: Test if POSIXct vector is complete
 
-\item \code{hms}: Test if POSIXct vector is complete
+\item \code{dtt_completed(hms)}: Test if POSIXct vector is complete
+
 }}
-
 \seealso{
 Other complete: 
 \code{\link{dtt_complete}()}

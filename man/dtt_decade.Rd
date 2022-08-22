@@ -22,9 +22,9 @@ Decade
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Decade a Date vector
-}}
+\item \code{dtt_decade(Date)}: Decade a Date vector
 
+}}
 \examples{
 dtt_decade(as.Date(c("2001-01-01", "2015-12-13")))
 }

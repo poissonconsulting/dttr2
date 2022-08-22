@@ -31,13 +31,13 @@ Test whether a date time vector is floored.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Test if Date vector is floored
+\item \code{dtt_floored(Date)}: Test if Date vector is floored
 
-\item \code{POSIXct}: Test if POSIXct vector is floored
+\item \code{dtt_floored(POSIXct)}: Test if POSIXct vector is floored
 
-\item \code{hms}: Test if hms vector is floored
+\item \code{dtt_floored(hms)}: Test if hms vector is floored
+
 }}
-
 \examples{
 dtt_floored(as.Date("2002-02-01"))
 }

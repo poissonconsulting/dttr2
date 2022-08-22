@@ -22,9 +22,9 @@ Gets, sets or  the time zone for a date time vector.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{POSIXct}: Get the time zone for a POSIXct vector.
-}}
+\item \code{dtt_tz(POSIXct)}: Get the time zone for a POSIXct vector.
 
+}}
 \examples{
 dtt_tz(as.POSIXct("1970-01-01", tz = "Etc/GMT+8"))
 }

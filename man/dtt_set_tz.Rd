@@ -25,9 +25,9 @@ Equivalent to \code{lubridate::force_tz()}.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{POSIXct}: Set the time zone for a POSIXct vector
-}}
+\item \code{dtt_set_tz(POSIXct)}: Set the time zone for a POSIXct vector
 
+}}
 \examples{
 dtt_set_tz(as.POSIXct("1970-01-01", tz = "Etc/GMT+8"), tz = "UTC")
 }

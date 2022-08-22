@@ -48,17 +48,20 @@ Gets and sets minute values for date/time vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Get integer vector of minute values for a Date vector
+\item \code{dtt_minute(Date)}: Get integer vector of minute values for a Date vector
 
-\item \code{POSIXct}: Get integer vector of minute values for a POSIXct vector
+\item \code{dtt_minute(POSIXct)}: Get integer vector of minute values for a POSIXct vector
 
-\item \code{hms}: Get integer vector of minute values for a hms vector
+\item \code{dtt_minute(hms)}: Get integer vector of minute values for a hms vector
 
-\item \code{POSIXct}: Set minute values for a POSIXct vector
-
-\item \code{hms}: Set minute values for a hms vector
 }}
+\section{Functions}{
+\itemize{
+\item \code{dtt_minute(POSIXct) <- value}: Set minute values for a POSIXct vector
 
+\item \code{dtt_minute(hms) <- value}: Set minute values for a hms vector
+
+}}
 \examples{
 x <- as.POSIXct("1990-01-02 23:40:51")
 dtt_minute(x)

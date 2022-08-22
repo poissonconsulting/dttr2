@@ -48,17 +48,20 @@ Gets and sets hour values for date/time vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Get integer vector of hour values for a Date vector
+\item \code{dtt_hour(Date)}: Get integer vector of hour values for a Date vector
 
-\item \code{POSIXct}: Get integer vector of hour values for a POSIXct vector
+\item \code{dtt_hour(POSIXct)}: Get integer vector of hour values for a POSIXct vector
 
-\item \code{hms}: Get integer vector of hour values for a hms vector
+\item \code{dtt_hour(hms)}: Get integer vector of hour values for a hms vector
 
-\item \code{POSIXct}: Set hour values for a POSIXct vector
-
-\item \code{hms}: Set hour values for a hms vector
 }}
+\section{Functions}{
+\itemize{
+\item \code{dtt_hour(POSIXct) <- value}: Set hour values for a POSIXct vector
 
+\item \code{dtt_hour(hms) <- value}: Set hour values for a hms vector
+
+}}
 \examples{
 x <- as.POSIXct("1990-01-02 23:40:51")
 dtt_hour(x)

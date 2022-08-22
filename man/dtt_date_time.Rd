@@ -43,19 +43,19 @@ Coerces vectors to floored POSIXct vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{integer}: Coerce integer vector to a floored POSIXct vector
+\item \code{dtt_date_time(integer)}: Coerce integer vector to a floored POSIXct vector
 
-\item \code{double}: Coerce double vector to a floored POSIXct vector
+\item \code{dtt_date_time(double)}: Coerce double vector to a floored POSIXct vector
 
-\item \code{character}: Coerce character vector to a floored POSIXct vector
+\item \code{dtt_date_time(character)}: Coerce character vector to a floored POSIXct vector
 
-\item \code{Date}: Coerce Date vector to a floored POSIXct vector
+\item \code{dtt_date_time(Date)}: Coerce Date vector to a floored POSIXct vector
 
-\item \code{POSIXct}: Coerce POSIXct vector to a floored POSIXct vector
+\item \code{dtt_date_time(POSIXct)}: Coerce POSIXct vector to a floored POSIXct vector
 
-\item \code{hms}: Coerce hms vector to a floored POSIXct vector
+\item \code{dtt_date_time(hms)}: Coerce hms vector to a floored POSIXct vector
+
 }}
-
 \examples{
 dtt_date_time(1L)
 dtt_date_time(-1)

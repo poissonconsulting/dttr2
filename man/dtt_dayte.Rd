@@ -29,11 +29,11 @@ Dayte
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Dayte a Date vector
+\item \code{dtt_dayte(Date)}: Dayte a Date vector
 
-\item \code{POSIXct}: Dayte a POSIXct vector
+\item \code{dtt_dayte(POSIXct)}: Dayte a POSIXct vector
+
 }}
-
 \examples{
 dtt_dayte(as.Date(c("2001-01-01", "2015-12-13")))
 }

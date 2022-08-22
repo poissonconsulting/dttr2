@@ -24,9 +24,9 @@ Gets the week days for the locale.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{default}: Get character vector of week days for a Date vector
-}}
+\item \code{dtt_wday(default)}: Get character vector of week days for a Date vector
 
+}}
 \examples{
 x <- as.Date("1990-01-02")
 dtt_wday(x)

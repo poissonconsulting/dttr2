@@ -45,15 +45,18 @@ Gets and sets year values for date/time vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Get integer vector of year values for a Date vector
+\item \code{dtt_year(Date)}: Get integer vector of year values for a Date vector
 
-\item \code{POSIXct}: Get integer vector of year values for a POSIXct vector
+\item \code{dtt_year(POSIXct)}: Get integer vector of year values for a POSIXct vector
 
-\item \code{Date}: Set year values for a Date vector
-
-\item \code{POSIXct}: Set year values for a POSIXct vector
 }}
+\section{Functions}{
+\itemize{
+\item \code{dtt_year(Date) <- value}: Set year values for a Date vector
 
+\item \code{dtt_year(POSIXct) <- value}: Set year values for a POSIXct vector
+
+}}
 \examples{
 x <- as.Date("1990-01-02")
 dtt_year(x)

@@ -63,13 +63,13 @@ Completes date/time vector.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Complete a Date sequence vector
+\item \code{dtt_complete(Date)}: Complete a Date sequence vector
 
-\item \code{POSIXct}: Complete a POSIXct sequence vector
+\item \code{dtt_complete(POSIXct)}: Complete a POSIXct sequence vector
 
-\item \code{hms}: Complete a hms sequence vector
+\item \code{dtt_complete(hms)}: Complete a hms sequence vector
+
 }}
-
 \examples{
 dtt_complete(as.Date(c("2001-01-01", "2001-01-03", "2001-01-01")))
 }

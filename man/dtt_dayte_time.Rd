@@ -31,11 +31,11 @@ Dayte Time
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Dayte Time a Date vector
+\item \code{dtt_dayte_time(Date)}: Dayte Time a Date vector
 
-\item \code{POSIXct}: Dayte Time a POSIXct vector
+\item \code{dtt_dayte_time(POSIXct)}: Dayte Time a POSIXct vector
+
 }}
-
 \examples{
 dtt_dayte_time(as.POSIXct(c("2001-01-01 12:13:14", "2015-12-13"), tz = "Etc/GMT+10"))
 }

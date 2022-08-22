@@ -48,17 +48,20 @@ Gets and sets second values for date/time vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Get integer vector of second values for a Date vector
+\item \code{dtt_second(Date)}: Get integer vector of second values for a Date vector
 
-\item \code{POSIXct}: Get integer vector of second values for a POSIXct vector
+\item \code{dtt_second(POSIXct)}: Get integer vector of second values for a POSIXct vector
 
-\item \code{hms}: Get integer vector of second values for a time vector
+\item \code{dtt_second(hms)}: Get integer vector of second values for a time vector
 
-\item \code{POSIXct}: Set second values for a POSIXct vector
-
-\item \code{hms}: Set second values for a hms vector
 }}
+\section{Functions}{
+\itemize{
+\item \code{dtt_second(POSIXct) <- value}: Set second values for a POSIXct vector
 
+\item \code{dtt_second(hms) <- value}: Set second values for a hms vector
+
+}}
 \examples{
 x <- as.POSIXct("1990-01-02 23:40:51")
 dtt_second(x)

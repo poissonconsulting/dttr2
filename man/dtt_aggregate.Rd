@@ -35,13 +35,13 @@ or 'years'.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Aggregate a Date vector
+\item \code{dtt_aggregate(Date)}: Aggregate a Date vector
 
-\item \code{POSIXct}: Aggregate a POSIXct vector
+\item \code{dtt_aggregate(POSIXct)}: Aggregate a POSIXct vector
 
-\item \code{hms}: Aggregate a hms vector
+\item \code{dtt_aggregate(hms)}: Aggregate a hms vector
+
 }}
-
 \examples{
 dtt_aggregate(as.Date(c("1992-01-01", "1991-02-02", "1991-03-03")), "years")
 }
