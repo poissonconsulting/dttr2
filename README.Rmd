@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/dttr2)
 <!-- badges: end -->
 
-# dttr2
+## Introduction
 
 `dttr2` (Dates, Times and dateTimes in R) is an R package to perform simple manipulations on date (Date), datetime (POSIXct) and time (hms) vectors (collectively referred to as date/times).
 
