@@ -2,12 +2,7 @@
 
 # dttr2 0.4.1
 
-- Same as previous version.
-
-
-# dttr2 0.4.0.9000
-
-- Same as previous version.
+- Fix HTML attribute.
 
 
 # dttr2 0.4.0
