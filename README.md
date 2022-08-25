@@ -7,7 +7,7 @@
 
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![R-CMD-check](https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/dttr2/actions)
+[![R-CMD-check](https://github.com/poissonconsulting/dttr2/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/poissonconsulting/dttr2/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/dttr2/branch/main/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/dttr2?branch=main)
 [![License:
