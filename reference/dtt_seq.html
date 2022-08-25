@@ -57,23 +57,23 @@ If length_out is defined then that number of units are added to from.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">dtt_seq</span><span class="op">(</span><span class="va">from</span>, <span class="va">to</span>, <span class="va">units</span>, length_out <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S3 method for Date</span>
-<span class="fu">dtt_seq</span><span class="op">(</span><span class="va">from</span>, to <span class="op">=</span> <span class="va">from</span>, units <span class="op">=</span> <span class="st">"days"</span>, length_out <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S3 method for POSIXct</span>
-<span class="fu">dtt_seq</span><span class="op">(</span><span class="va">from</span>, to <span class="op">=</span> <span class="va">from</span>, units <span class="op">=</span> <span class="st">"seconds"</span>, length_out <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S3 method for hms</span>
-<span class="fu">dtt_seq</span><span class="op">(</span>
-  <span class="va">from</span>,
-  to <span class="op">=</span> <span class="va">from</span>,
-  units <span class="op">=</span> <span class="st">"seconds"</span>,
-  length_out <span class="op">=</span> <span class="cn">NULL</span>,
-  wrap <span class="op">=</span> <span class="cn">TRUE</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">dtt_seq</span><span class="op">(</span><span class="va">from</span>, <span class="va">to</span>, <span class="va">units</span>, length_out <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S3 method for Date</span></span>
+<span><span class="fu">dtt_seq</span><span class="op">(</span><span class="va">from</span>, to <span class="op">=</span> <span class="va">from</span>, units <span class="op">=</span> <span class="st">"days"</span>, length_out <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S3 method for POSIXct</span></span>
+<span><span class="fu">dtt_seq</span><span class="op">(</span><span class="va">from</span>, to <span class="op">=</span> <span class="va">from</span>, units <span class="op">=</span> <span class="st">"seconds"</span>, length_out <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S3 method for hms</span></span>
+<span><span class="fu">dtt_seq</span><span class="op">(</span></span>
+<span>  <span class="va">from</span>,</span>
+<span>  to <span class="op">=</span> <span class="va">from</span>,</span>
+<span>  units <span class="op">=</span> <span class="st">"seconds"</span>,</span>
+<span>  length_out <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  wrap <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -112,14 +112,14 @@ If length_out is defined then that number of units are added to from.</p>
     <div id="methods-by-class-">
     <h2>Methods (by class)</h2>
     
-<ul><li><p><code>Date</code>: Create a Date sequence vector</p></li>
-<li><p><code>POSIXct</code>: Create a POSIXct sequence vector</p></li>
-<li><p><code>hms</code>: Create a hms sequence vector</p></li>
+<ul><li><p><code>dtt_seq(Date)</code>: Create a Date sequence vector</p></li>
+<li><p><code>dtt_seq(POSIXct)</code>: Create a POSIXct sequence vector</p></li>
+<li><p><code>dtt_seq(hms)</code>: Create a hms sequence vector</p></li>
 </ul></div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">dtt_seq</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"2001-01-01"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"2001-01-05"</span><span class="op">)</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">dtt_seq</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"2001-01-01"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"2001-01-05"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2001-01-01" "2001-01-02" "2001-01-03" "2001-01-04" "2001-01-05"</span>
 </code></pre></div>
     </div>
@@ -135,7 +135,7 @@ If length_out is defined then that number of units are added to from.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>
