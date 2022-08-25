@@ -32,11 +32,11 @@ Get, Set or Reset Default Time Zone
 }
 \section{Functions}{
 \itemize{
-\item \code{dtt_set_default_tz}: Set Default Time Zone
+\item \code{dtt_set_default_tz()}: Set Default Time Zone
 
-\item \code{dtt_reset_default_tz}: Reset Default Time Zone
+\item \code{dtt_reset_default_tz()}: Reset Default Time Zone
+
 }}
-
 \examples{
 \dontrun{
 dtt_default_tz()

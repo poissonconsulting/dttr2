@@ -45,15 +45,18 @@ Gets and sets day values for date/time vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Get integer vector of day values for a Date vector
+\item \code{dtt_day(Date)}: Get integer vector of day values for a Date vector
 
-\item \code{POSIXct}: Get integer vector of day values for a POSIXct vector
+\item \code{dtt_day(POSIXct)}: Get integer vector of day values for a POSIXct vector
 
-\item \code{Date}: Set day values for a Date vector
-
-\item \code{POSIXct}: Set day values for a POSIXct vector
 }}
+\section{Functions}{
+\itemize{
+\item \code{dtt_day(Date) <- value}: Set day values for a Date vector
 
+\item \code{dtt_day(POSIXct) <- value}: Set day values for a POSIXct vector
+
+}}
 \examples{
 x <- as.Date("1990-01-02")
 dtt_day(x)

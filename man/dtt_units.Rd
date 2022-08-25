@@ -29,13 +29,13 @@ The possible values are 'seconds', 'minutes', 'hours', 'days', 'months' or 'year
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Get time units for a Date vector
+\item \code{dtt_units(Date)}: Get time units for a Date vector
 
-\item \code{POSIXct}: Get time units for a POSIXct vector
+\item \code{dtt_units(POSIXct)}: Get time units for a POSIXct vector
 
-\item \code{hms}: Get time units for a hms vector
+\item \code{dtt_units(hms)}: Get time units for a hms vector
+
 }}
-
 \examples{
 dtt_units(as.Date("2000-01-01"))
 dtt_units(as.Date("2000-02-01"))

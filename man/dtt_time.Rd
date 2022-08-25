@@ -54,25 +54,28 @@ Coerces vectors to floored (and wrapped) hms vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{integer}: Coerce integer vector to a floored hms vector
+\item \code{dtt_time(integer)}: Coerce integer vector to a floored hms vector
 
-\item \code{double}: Coerce double vector to a floored hms vector
+\item \code{dtt_time(double)}: Coerce double vector to a floored hms vector
 
-\item \code{character}: Coerce character vector to a floored hms vector
+\item \code{dtt_time(character)}: Coerce character vector to a floored hms vector
 
-\item \code{Date}: Coerce Date vector to a floored hms vector
+\item \code{dtt_time(Date)}: Coerce Date vector to a floored hms vector
 
-\item \code{hms}: Coerce hms vector to a floored hms vector
+\item \code{dtt_time(hms)}: Coerce hms vector to a floored hms vector
 
-\item \code{POSIXct}: Coerce POSIXct vector to a floored hms vector
+\item \code{dtt_time(POSIXct)}: Coerce POSIXct vector to a floored hms vector
 
-\item \code{POSIXlt}: Coerce POSIXlt vector to a floored hms vector
+\item \code{dtt_time(POSIXlt)}: Coerce POSIXlt vector to a floored hms vector
 
-\item \code{Date}: Set time values for a Date vector
-
-\item \code{POSIXct}: Set time values for a POSIXct vector
 }}
+\section{Functions}{
+\itemize{
+\item \code{dtt_time(Date) <- value}: Set time values for a Date vector
 
+\item \code{dtt_time(POSIXct) <- value}: Set time values for a POSIXct vector
+
+}}
 \examples{
 dtt_time(1L)
 dtt_time(1.999)

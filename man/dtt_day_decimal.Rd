@@ -25,11 +25,11 @@ Gets decimal day values for date/time vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Get numeric vector of decimal year values for a Date vector
+\item \code{dtt_day_decimal(Date)}: Get numeric vector of decimal year values for a Date vector
 
-\item \code{POSIXct}: Get numeric vector of decimal year values for a POSIXct vector
+\item \code{dtt_day_decimal(POSIXct)}: Get numeric vector of decimal year values for a POSIXct vector
+
 }}
-
 \examples{
 x <- as.POSIXct("1990-01-03 10:00:01")
 dtt_day_decimal(x)

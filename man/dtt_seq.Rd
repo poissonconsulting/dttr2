@@ -46,13 +46,13 @@ If length_out is defined then that number of units are added to from.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Create a Date sequence vector
+\item \code{dtt_seq(Date)}: Create a Date sequence vector
 
-\item \code{POSIXct}: Create a POSIXct sequence vector
+\item \code{dtt_seq(POSIXct)}: Create a POSIXct sequence vector
 
-\item \code{hms}: Create a hms sequence vector
+\item \code{dtt_seq(hms)}: Create a hms sequence vector
+
 }}
-
 \examples{
 dtt_seq(as.Date("2001-01-01"), as.Date("2001-01-05"))
 }

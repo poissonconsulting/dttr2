@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# dttr2 <img src="man/figures/logo.png" align="right" />
+# dttr2 <img src="man/figures/logo.png" style="float: right;" />
 
 <!-- badges: start -->
 
@@ -17,7 +17,7 @@ status](https://www.r-pkg.org/badges/version/dttr2)](https://cran.r-project.org/
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/dttr2)
 <!-- badges: end -->
 
-# dttr2
+## Introduction
 
 `dttr2` (Dates, Times and dateTimes in R) is an R package to perform
 simple manipulations on date (Date), datetime (POSIXct) and time (hms)

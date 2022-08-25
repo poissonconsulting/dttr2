@@ -45,15 +45,18 @@ Gets and sets month values for date/time vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Get integer vector of month values for a Date vector
+\item \code{dtt_month(Date)}: Get integer vector of month values for a Date vector
 
-\item \code{POSIXct}: Get integer vector of month values for a POSIXct vector
+\item \code{dtt_month(POSIXct)}: Get integer vector of month values for a POSIXct vector
 
-\item \code{Date}: Set month values for a Date vector
-
-\item \code{POSIXct}: Set month values for a POSIXct vector
 }}
+\section{Functions}{
+\itemize{
+\item \code{dtt_month(Date) <- value}: Set month values for a Date vector
 
+\item \code{dtt_month(POSIXct) <- value}: Set month values for a POSIXct vector
+
+}}
 \examples{
 x <- as.Date("1990-01-02")
 dtt_month(x)
