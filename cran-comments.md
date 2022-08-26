@@ -18,3 +18,11 @@ We checked 1 reverse dependencies, comparing R CMD check results across CRAN and
 
  * We saw 0 new problems
  * We failed to check 0 packages
+ 
+## CRAN Checks
+ 
+> Result: NOTE 
+>    Found the following HTML validation problems:
+>    chk-package.html:23:4: Warning: <img> attribute "align" not allowed for HTML5 
+
+Really fixed.
