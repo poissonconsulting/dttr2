@@ -10,7 +10,7 @@ release 4.2.1
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes
+0 errors | 0 warnings | 1 notes
 
 ## revdepcheck results
 
@@ -22,7 +22,18 @@ We checked 1 reverse dependencies, comparing R CMD check results across CRAN and
 ## CRAN Checks
  
 > Result: NOTE 
->    Found the following HTML validation problems:
->    chk-package.html:23:4: Warning: <img> attribute "align" not allowed for HTML5 
-
-Really fixed.
+>
+> * checking CRAN incoming feasibility ... NOTE
+> Maintainer: ‘Ayla Pearson <ayla@poissonconsulting.ca>’
+> 
+> Version contains large components (0.4.1.9001)
+>
+> New maintainer:
+>   Ayla Pearson <ayla@poissonconsulting.ca>
+> Old maintainer(s):
+>   Joe Thorley <joe@poissonconsulting.ca>
+>
+> The Title field should be in title case. Current version is:
+>  ‘Manipulate Date, POSIXct and hms Vectors’
+> In title case that is:
+>  ‘Manipulate Date, POSIXct and Hms Vectors’
