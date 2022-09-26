@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# dttr2 0.4.2
+
+- Same as previous version.
+
+
 # dttr2 0.4.1.9001
 
 - Ayla Pearson now co-author and maintainer.
