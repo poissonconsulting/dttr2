@@ -25,15 +25,16 @@ We checked 1 reverse dependencies, comparing R CMD check results across CRAN and
 >
 > * checking CRAN incoming feasibility ... NOTE
 > Maintainer: ‘Ayla Pearson <ayla@poissonconsulting.ca>’
-> 
-> Version contains large components (0.4.1.9001)
 >
 > New maintainer:
 >   Ayla Pearson <ayla@poissonconsulting.ca>
 > Old maintainer(s):
 >   Joe Thorley <joe@poissonconsulting.ca>
 >
+> Version contains large components (0.4.2)
+>
 > The Title field should be in title case. Current version is:
 >  ‘Manipulate Date, POSIXct and hms Vectors’
 > In title case that is:
 >  ‘Manipulate Date, POSIXct and Hms Vectors’
+>
