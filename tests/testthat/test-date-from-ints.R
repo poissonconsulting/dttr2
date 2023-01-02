@@ -1,19 +1,75 @@
-test_that("create date from vector of values", {
-  
-  year <- c(1990, 1991, 2010, 2022)
+test_that("create dates default values", {
+  dates <- dtt_date_from_ints()
+  expect_identical(dates, as.Date(c("1970-01-01"))
+  )
+})
+
+test_that("create dates from vector of values", {
+  year <- c(1990L, 1991L, 2010L, 2022L)
   month <- c(1L, 5L, 8L, 12L)
   day <- c(1L, 10L, 16L, 31L)
-  
   dates <- dtt_date_from_ints(
     year = year, 
     month = month, 
-    day = day, 
-    tz = "Etc/GMT+8"
+    day = day
   )
-  
   expect_identical(
     dates, 
     as.Date(c("1990-01-01", "1991-05-10", "2010-08-16", "2022-12-31"))
   )
-  
 })
+
+test_that("create dates from dataframe of values", {
+  dates_raw <- data.frame(
+    year = c(1990L, 1991L, 2010L, 2022L),
+    month = c(1L, 5L, 8L, 12L),
+    day = c(1L, 10L, 16L, 31L)
+  )
+  
+  dates <- dtt_date_from_ints(
+    year = dates_raw$year, 
+    month = dates_raw$month, 
+    day = dates_raw$day
+  )
+  expect_identical(
+    dates, 
+    as.Date(c("1990-01-01", "1991-05-10", "2010-08-16", "2022-12-31"))
+  )
+})
+
+test_that("error when non whole number passed", {
+  expect_error(
+    dtt_date_from_ints(year = 1900, month = 10.2, day = 14),
+    regexp = "`month` must be a whole numeric vector"
+  )
+})
+
+test_that("error when string passed passed", {
+  expect_error(
+    dtt_date_from_ints(year = "1900", month = 10, day = 14),
+    regexp = "`year` must be a whole numeric vector"
+  )
+})
+
+test_that("error when negative year passed", {
+  expect_error(
+    dtt_date_from_ints(year = -1900, month = 10, day = 14),
+    regexp = "`year` must be greater than or equal to 0"
+  )
+})
+
+test_that("error when month out of range passed", {
+  expect_error(
+    dtt_date_from_ints(year = 1990, month = 0, day = 14),
+    regexp = "`month` must be between 1 and 12"
+  )
+})
+
+test_that("error when day out of range passed", {
+  expect_error(
+    dtt_date_from_ints(year = 1990, month = 07, day = 32),
+    regexp = "`day` must be between 1 and 31"
+  )
+})
+
+
