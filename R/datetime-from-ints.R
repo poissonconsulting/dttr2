@@ -17,7 +17,7 @@
 #' @export
 #'
 #' @examples
-#' dtt_datetime_from_ints(
+#' dtt_date_time_from_ints(
 #'  year = 1991,
 #'  month = 07,
 #'  day = 23,
@@ -27,7 +27,7 @@
 #'  tz = "Etc/GMT+8"
 #' )
 #' 
-#' dtt_datetime_from_ints(
+#' dtt_date_time_from_ints(
 #'  year = c(1991, 1992, 1993),
 #'  month = c(07, 07, 07),
 #'  day = c(23, 24, 21),
@@ -36,7 +36,7 @@
 #'  second = c(0, 0, 0),
 #'  tz = "Etc/GMT+8"
 #' )
-dtt_datetime_from_ints <- function(year = 1970L , month = 1L, day = 1L, 
+dtt_date_time_from_ints <- function(year = 1970L , month = 1L, day = 1L, 
                                    hour = 0L, minute = 0L, second = 0L, 
                                    tz = dtt_default_tz()) {
   chk::chk_whole_numeric(year)
