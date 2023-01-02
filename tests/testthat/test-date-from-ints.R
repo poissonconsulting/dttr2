@@ -39,35 +39,35 @@ test_that("create dates from dataframe of values", {
 
 test_that("error when non whole number passed", {
   expect_error(
-    dtt_date_from_ints(year = 1900, month = 10.2, day = 14),
+    dtt_date_from_ints(month = 10.2),
     regexp = "`month` must be a whole numeric vector"
   )
 })
 
 test_that("error when string passed passed", {
   expect_error(
-    dtt_date_from_ints(year = "1900", month = 10, day = 14),
+    dtt_date_from_ints(year = "1900"),
     regexp = "`year` must be a whole numeric vector"
   )
 })
 
 test_that("error when negative year passed", {
   expect_error(
-    dtt_date_from_ints(year = -1900, month = 10, day = 14),
+    dtt_date_from_ints(year = -1900),
     regexp = "`year` must be greater than or equal to 0"
   )
 })
 
 test_that("error when month out of range passed", {
   expect_error(
-    dtt_date_from_ints(year = 1990, month = 0, day = 14),
+    dtt_date_from_ints(month = 0),
     regexp = "`month` must be between 1 and 12"
   )
 })
 
 test_that("error when day out of range passed", {
   expect_error(
-    dtt_date_from_ints(year = 1990, month = 07, day = 32),
+    dtt_date_from_ints(day = 32),
     regexp = "`day` must be between 1 and 31"
   )
 })
