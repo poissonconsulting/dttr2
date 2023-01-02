@@ -1,14 +1,26 @@
 #' Create dates from integers
 #'
-#' @param year 
-#' @param month 
-#' @param day 
-#' @param tz 
+#' @param year An integer of the year. The default value is 1970.
+#' @param month An integer of the month between 1 and 12. The default value is
+#'   the 1st month.
+#' @param day An integer of the day between 1 and 31. The default value is the
+#'   1st day.
 #'
-#' @return
+#' @return A floored Date vector. 
 #' @export
 #'
 #' @examples
+#' dtt_date_from_ints(
+#'  year = 1991,
+#'  month = 07,
+#'  day = 23
+#' )
+#' 
+#' dtt_datetime_from_ints(
+#'  year = c(1991, 1992, 1993),
+#'  month = c(07, 07, 07),
+#'  day = c(23, 24, 21)
+#' )
 dtt_date_from_ints <- function(year = 1970L , month = 1L, day = 1L) {
   
   chk::chk_whole_number(year)
