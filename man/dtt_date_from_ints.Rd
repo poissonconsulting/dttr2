@@ -28,7 +28,7 @@ dtt_date_from_ints(
  day = 23
 )
 
-dtt_datetime_from_ints(
+dtt_date_from_ints(
  year = c(1991, 1992, 1993),
  month = c(07, 07, 07),
  day = c(23, 24, 21)
