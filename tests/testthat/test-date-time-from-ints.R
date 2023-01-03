@@ -120,3 +120,23 @@ test_that("error when second is out of range", {
     regexp = "`second` must be between 0 and 59"
   )
 })
+
+test_that("error's when lengths of vectors do not match", {
+  year <- c(1990, 1991)
+  month <- c(1L, 2L, 3L)
+  day <- c(1L, 5L)
+  hour <- c(0L, 2L)
+  minute <- c(0, 2L)
+  second <- c(0, 2L)
+  expect_error(
+    dtt_date_time_from_ints(
+      year = year, 
+      month = month, 
+      day = day, 
+      hour = hour,
+      minute = minute,
+      second = second
+    ),
+    regexp = "`length\\(time\\)` must match 1 or 3, not 2"
+  )
+})
