@@ -51,7 +51,10 @@ test_that("aggregate.Date", {
     as.Date("1991-01-01")
   )
   expect_identical(
-    dtt_aggregate(as.Date(c("1992-01-01", "1991-02-02", "1991-03-03")), "years"),
+    dtt_aggregate(
+      as.Date(c("1992-01-01", "1991-02-02", "1991-03-03")),
+      "years"
+    ),
     as.Date(c("1992-01-01", "1991-01-01"))
   )
   expect_identical(

@@ -110,7 +110,10 @@ test_that("set_time Date", {
     as.POSIXct("2001-01-01 07:08:09", tz = dtt_default_tz())
   )
   expect_equal(
-    dtt_set_time(as.Date(c("2001-01-01", "2003-01-03")), hms::as_hms("07:08:09")),
+    dtt_set_time(
+      as.Date(c("2001-01-01", "2003-01-03")),
+      hms::as_hms("07:08:09")
+    ),
     as.POSIXct(
       c("2001-01-01 07:08:09", "2003-01-03 07:08:09"),
       tz = dtt_default_tz()
