@@ -17,7 +17,8 @@ dtt_dayte(x, ...)
 
 \item{...}{Unused.}
 
-\item{start}{An integer scalar of the starting month or a Date scalar of the starting date.}
+\item{start}{An integer scalar of the starting month or a Date scalar of the
+starting date.}
 }
 \value{
 A Date vector with the year set to year.

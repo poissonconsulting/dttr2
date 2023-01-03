@@ -21,7 +21,8 @@
 
 \item{to}{A date/time scalar of the end.}
 
-\item{start}{An integer scalar of the starting month or a Date scalar of the starting date.}
+\item{start}{An integer scalar of the starting month or a Date scalar of the
+starting date.}
 
 \item{time}{A hms vector of the time.}
 
@@ -29,14 +30,15 @@
 
 \item{length_out}{An integer of the number of units from from.}
 
-\item{wrap}{A flag specifying whether to wrap hms vectors from 23:59:59 to 00:00:00}
+\item{wrap}{A flag specifying whether to wrap hms vectors from 23:59:59 to
+00:00:00}
 
 \item{abbr}{A flag specifying whether to abbreviate the week days.}
 
 \item{as_difftime}{A flag specifying whether to return a difftime vector.}
 
-\item{first}{A string of the name of first season or NULL in which case the first
-season is that which includes Jan 1st.}
+\item{first}{A string of the name of first season or NULL in which case the
+first season is that which includes Jan 1st.}
 
 \item{y}{An object that can be coerced to a POSIXct using dtt_date_time().}
 
@@ -54,7 +56,8 @@ immediately generate an informative message if the check fails.}
 
 \item{origin}{Origin date.}
 
-\item{modern}{A flag specifying whether to use the modern or old Excel date system.}
+\item{modern}{A flag specifying whether to use the modern or old Excel date
+system.}
 }
 \description{
 Descriptions of the parameters for the dttr2 functions.

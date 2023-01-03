@@ -26,14 +26,14 @@ Create time from vectors
 dtt_time_from_ints()
 
 dtt_time_from_ints(
- hour = 10,
- minute = 15,
- second = 30
+  hour = 10,
+  minute = 15,
+  second = 30
 )
 
 dtt_time_from_ints(
- hour = c(10, 11),
- minute = c(15, 15),
- second = c(30, 0)
+  hour = c(10, 11),
+  minute = c(15, 15),
+  second = c(30, 0)
 )
 }

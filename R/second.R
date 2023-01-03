@@ -36,7 +36,8 @@ dtt_second.Date <- function(x, ...) {
   rep(0L, length(x))
 }
 
-#' @describeIn dtt_second Get integer vector of second values for a POSIXct vector
+#' @describeIn dtt_second Get integer vector of second values for a POSIXct
+#'   vector
 #' @export
 dtt_second.POSIXct <- function(x, ...) {
   chk_unused(...)

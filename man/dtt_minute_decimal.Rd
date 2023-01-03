@@ -28,11 +28,14 @@ Gets decimal minute values for date/time vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{dtt_minute_decimal(Date)}: Get numeric vector of decimal minute values for a Date vector
+\item \code{dtt_minute_decimal(Date)}: Get numeric vector of decimal minute values
+for a Date vector
 
-\item \code{dtt_minute_decimal(POSIXct)}: Get numeric vector of decimal minute values for a POSIXct vector
+\item \code{dtt_minute_decimal(POSIXct)}: Get numeric vector of decimal minute values
+for a POSIXct vector
 
-\item \code{dtt_minute_decimal(hms)}: Get numeric vector of decimal minute values for a hms vector
+\item \code{dtt_minute_decimal(hms)}: Get numeric vector of decimal minute values
+for a hms vector
 
 }}
 \examples{

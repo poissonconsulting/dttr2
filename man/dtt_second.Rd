@@ -50,7 +50,8 @@ Gets and sets second values for date/time vectors.
 \itemize{
 \item \code{dtt_second(Date)}: Get integer vector of second values for a Date vector
 
-\item \code{dtt_second(POSIXct)}: Get integer vector of second values for a POSIXct vector
+\item \code{dtt_second(POSIXct)}: Get integer vector of second values for a POSIXct
+vector
 
 \item \code{dtt_second(hms)}: Get integer vector of second values for a time vector
 

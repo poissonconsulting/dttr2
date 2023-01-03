@@ -24,8 +24,8 @@ dtt_units(x, ...)
 A string indicating the date time units.
 }
 \description{
-Gets the smallest units for a date time vector.
-The possible values are 'seconds', 'minutes', 'hours', 'days', 'months' or 'years'.
+Gets the smallest units for a date time vector. The possible values are
+'seconds', 'minutes', 'hours', 'days', 'months' or 'years'.
 }
 \section{Methods (by class)}{
 \itemize{

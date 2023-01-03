@@ -1,8 +1,24 @@
 test_that("seq.Date", {
-  expect_error(dtt_seq(NA_Date_[-1], NA_Date_[-1]), "`from` must be a date", class = "chk_error")
-  expect_error(dtt_seq(NA_Date_, NA_Date_[-1]), "`from` must be a date", class = "chk_error")
-  expect_error(dtt_seq(as.Date("2001-01-01"), NA_Date_[-1]), "`to` must be a date", class = "chk_error")
-  expect_error(dtt_seq(as.Date("2001-01-01"), NA_Date_), "`to` must be a date", class = "chk_error")
+  expect_error(
+    dtt_seq(NA_Date_[-1], NA_Date_[-1]), 
+    "`from` must be a date", 
+    class = "chk_error"
+  )
+  expect_error(
+    dtt_seq(NA_Date_, NA_Date_[-1]), 
+    "`from` must be a date", 
+    class = "chk_error"
+  )
+  expect_error(
+    dtt_seq(as.Date("2001-01-01"), NA_Date_[-1]), 
+    "`to` must be a date", 
+    class = "chk_error"
+  )
+  expect_error(
+    dtt_seq(as.Date("2001-01-01"), NA_Date_), 
+    "`to` must be a date", 
+    class = "chk_error"
+  )
   expect_error(
     dtt_seq(as.Date("2001-01-01"), as.Date("2001-01-01"), units = "hours"),
     "`units` must match 'days', 'months' or 'years'",
@@ -72,12 +88,16 @@ test_that("seq.Date", {
   )
 
   expect_identical(
-    length(dtt_seq(as.Date("2001-12-31"), as.Date("2002-12-31"), units = "months")),
+    length(
+      dtt_seq(as.Date("2001-12-31"), as.Date("2002-12-31"), units = "months")
+    ),
     13L
   )
 
   expect_identical(
-    length(dtt_seq(as.Date("2001-12-31"), as.Date("2002-12-31"), units = "days")),
+    length(
+      dtt_seq(as.Date("2001-12-31"), as.Date("2002-12-31"), units = "days")
+    ),
     366L
   )
 })
@@ -85,8 +105,14 @@ test_that("seq.Date", {
 test_that("seq.POSIXct", {
   expect_error(dtt_seq(NA_POSIXct_[-1], NA_POSIXct_[-1]), class = "chk_error")
   expect_error(dtt_seq(NA_POSIXct_, NA_POSIXct_[-1]), class = "chk_error")
-  expect_error(dtt_seq(as.POSIXct("2001-01-01"), NA_POSIXct_[-1]), class = "chk_error")
-  expect_error(dtt_seq(as.POSIXct("2001-01-01"), NA_POSIXct_), class = "chk_error")
+  expect_error(
+    dtt_seq(as.POSIXct("2001-01-01"), NA_POSIXct_[-1]),
+    class = "chk_error"
+  )
+  expect_error(
+    dtt_seq(as.POSIXct("2001-01-01"), NA_POSIXct_), 
+    class = "chk_error"
+  )
   expect_error(
     dtt_seq(as.POSIXct("2001-01-01"), as.POSIXct("2001-01-01"), units = "hour"),
     "`units` must match 'days', 'hours', 'minutes', 'months', 'seconds' or 'years', not 'hour'",
@@ -94,7 +120,10 @@ test_that("seq.POSIXct", {
   )
 
   expect_error(
-    dtt_seq(as.POSIXct("2001-01-01", tz = "GMT"), as.POSIXct("2001-01-01", tz = "UTC")),
+    dtt_seq(
+      as.POSIXct("2001-01-01", tz = "GMT"), 
+      as.POSIXct("2001-01-01", tz = "UTC")
+    ),
     class = "chk_error"
   )
 
@@ -114,55 +143,102 @@ test_that("seq.POSIXct", {
   )
 
   expect_identical(
-    dtt_seq(as.POSIXct("2001-01-01", tz = "UTC"), as.POSIXct("2001-01-01", tz = "UTC")),
+    dtt_seq(
+      as.POSIXct("2001-01-01", tz = "UTC"), 
+      as.POSIXct("2001-01-01", tz = "UTC")
+    ),
     as.POSIXct("2001-01-01 00:00:00", tz = "UTC")
   )
 
   expect_identical(
-    dtt_seq(as.POSIXct("2001-01-01", tz = "UTC"), as.POSIXct("2001-01-03", tz = "UTC"), units = "days"),
+    dtt_seq(
+      as.POSIXct("2001-01-01", tz = "UTC"), 
+      as.POSIXct("2001-01-03", tz = "UTC"), 
+      units = "days"
+    ),
     as.POSIXct(c("2001-01-01", "2001-01-02", "2001-01-03"), tz = "UTC")
   )
 
   expect_identical(
-    dtt_seq(as.POSIXct("2001-01-03", tz = "UTC"), as.POSIXct("2001-01-01", tz = "UTC"), units = "days"),
+    dtt_seq(
+      as.POSIXct("2001-01-03", tz = "UTC"), 
+      as.POSIXct("2001-01-01", tz = "UTC"), 
+      units = "days"
+    ),
     as.POSIXct(c("2001-01-03", "2001-01-02", "2001-01-01"), tz = "UTC")
   )
 
   expect_identical(
-    dtt_seq(as.POSIXct("2001-01-01", tz = "UTC"), as.POSIXct("2001-01-03", tz = "UTC"), units = "months"),
+    dtt_seq(
+      as.POSIXct("2001-01-01", tz = "UTC"), 
+      as.POSIXct("2001-01-03", tz = "UTC"), 
+      units = "months"
+    ),
     as.POSIXct("2001-01-01", tz = "UTC")
   )
   expect_identical(
-    dtt_seq(as.POSIXct("2001-01-01", tz = "UTC"), as.POSIXct("2001-03-03", tz = "UTC"), units = "months"),
+    dtt_seq(
+      as.POSIXct("2001-01-01", tz = "UTC"), 
+      as.POSIXct("2001-03-03", tz = "UTC"), 
+      units = "months"
+    ),
     as.POSIXct(c("2001-01-01", "2001-02-01", "2001-03-01"), tz = "UTC")
   )
 
   expect_identical(
-    dtt_seq(as.POSIXct("2001-01-01", tz = "UTC"), as.POSIXct("2001-01-03", tz = "UTC"), units = "years"),
+    dtt_seq(
+      as.POSIXct("2001-01-01", tz = "UTC"), 
+      as.POSIXct("2001-01-03", tz = "UTC"), 
+      units = "years"
+    ),
     as.POSIXct("2001-01-01", tz = "UTC")
   )
   expect_identical(
-    dtt_seq(as.POSIXct("2001-01-01", tz = "UTC"), as.POSIXct("2003-03-03", tz = "UTC"), units = "years"),
+    dtt_seq(
+      as.POSIXct("2001-01-01", tz = "UTC"), 
+      as.POSIXct("2003-03-03", tz = "UTC"), 
+      units = "years"
+    ),
     as.POSIXct(c("2001-01-01", "2002-01-01", "2003-01-01"), tz = "UTC")
   )
 
   expect_identical(
-    dtt_seq(as.POSIXct("2001-01-02", tz = "UTC"), as.POSIXct("2003-03-01", tz = "UTC"), units = "years"),
+    dtt_seq(
+      as.POSIXct("2001-01-02", tz = "UTC"), 
+      as.POSIXct("2003-03-01", tz = "UTC"), 
+      units = "years"
+    ),
     as.POSIXct(c("2001-01-01", "2002-01-01", "2003-01-01"), tz = "UTC")
   )
 
   expect_identical(
-    dtt_seq(as.POSIXct("2001-12-13", tz = "UTC"), as.POSIXct("2003-12-31", tz = "UTC"), units = "years"),
+    dtt_seq(
+      as.POSIXct("2001-12-13", tz = "UTC"), 
+      as.POSIXct("2003-12-31", tz = "UTC"), 
+      units = "years"
+    ),
     as.POSIXct(c("2001-01-01", "2002-01-01", "2003-01-01"), tz = "UTC")
   )
 
   expect_identical(
-    length(dtt_seq(as.POSIXct("2001-12-31", tz = "UTC"), as.POSIXct("2002-12-31", tz = "UTC"), units = "months")),
+    length(
+      dtt_seq(
+        as.POSIXct("2001-12-31", tz = "UTC"), 
+        as.POSIXct("2002-12-31", tz = "UTC"), 
+        units = "months"
+      )
+    ),
     13L
   )
 
   expect_identical(
-    length(dtt_seq(as.POSIXct("2001-12-31", tz = "UTC"), as.POSIXct("2002-12-31", tz = "UTC"), units = "days")),
+    length(
+      dtt_seq(
+        as.POSIXct("2001-12-31", tz = "UTC"), 
+        as.POSIXct("2002-12-31", tz = "UTC"), 
+        units = "days"
+      )
+    ),
     366L
   )
 })
@@ -172,7 +248,10 @@ test_that("seq.hms", {
     class = "chk_error"
   )
   expect_error(dtt_seq(NA_hms_, NA_hms_[-1]), class = "chk_error")
-  expect_error(dtt_seq(hms::as_hms("00:00:00"), NA_hms_[-1]), class = "chk_error")
+  expect_error(
+    dtt_seq(hms::as_hms("00:00:00"), NA_hms_[-1]), 
+    class = "chk_error"
+  )
   expect_error(
     dtt_seq(hms::as_hms("00:00:00"), NA_hms_),
     class = "chk_error"
@@ -240,7 +319,11 @@ test_that("seq.hms", {
   )
 
   expect_identical(
-    dtt_seq(hms::as_hms("00:00:00"), hms::as_hms("00:02:02"), units = "minutes"),
+    dtt_seq(
+      hms::as_hms("00:00:00"), 
+      hms::as_hms("00:02:02"), 
+      units = "minutes"
+    ),
     hms::as_hms(c("00:00:00", "00:01:00", "00:02:00"))
   )
 
@@ -259,7 +342,13 @@ test_that("seq.hms", {
     86399L
   )
   expect_identical(
-    length(dtt_seq(hms::as_hms("23:59:59"), hms::as_hms("00:00:01"), wrap = FALSE)),
+    length(
+      dtt_seq(
+        hms::as_hms("23:59:59"), 
+        hms::as_hms("00:00:01"), 
+        wrap = FALSE
+      )
+    ),
     86399L
   )
   expect_identical(

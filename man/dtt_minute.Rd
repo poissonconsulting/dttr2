@@ -50,7 +50,8 @@ Gets and sets minute values for date/time vectors.
 \itemize{
 \item \code{dtt_minute(Date)}: Get integer vector of minute values for a Date vector
 
-\item \code{dtt_minute(POSIXct)}: Get integer vector of minute values for a POSIXct vector
+\item \code{dtt_minute(POSIXct)}: Get integer vector of minute values for a POSIXct
+vector
 
 \item \code{dtt_minute(hms)}: Get integer vector of minute values for a hms vector
 
