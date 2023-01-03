@@ -1,7 +1,7 @@
 test_that("create datetime from default values", {
   datetime <- dtt_date_time_from_ints()
   expect_identical(
-    datetime, 
+    datetime,
     as.POSIXct(c("1970-01-01 00:00:00"), tz = "UTC")
   )
 })
@@ -18,20 +18,22 @@ test_that("create datetime from vector of values", {
   hour <- c(0, 10, 14, 23)
   minute <- c(0, 25, 45, 59)
   second <- c(0, 24, 47, 59)
-  
+
   datetimes <- dtt_date_time_from_ints(
-    year = year, 
-    month = month, 
-    day = day, 
+    year = year,
+    month = month,
+    day = day,
     hour = hour,
     minute = minute,
     second = second
   )
   expect_identical(
-    datetimes, 
+    datetimes,
     as.POSIXct(
-      c("1990-01-01 00:00:00", "1991-05-10 10:25:24", "2010-08-16 14:45:47", 
-        "2022-12-31 23:59:59"),
+      c(
+        "1990-01-01 00:00:00", "1991-05-10 10:25:24", "2010-08-16 14:45:47",
+        "2022-12-31 23:59:59"
+      ),
       tz = "UTC"
     )
   )
@@ -46,20 +48,22 @@ test_that("create datetime from dataframe of values", {
     minute = c(0, 25, 45, 59),
     second = c(0, 24, 47, 59)
   )
-  
+
   datetimes <- dtt_date_time_from_ints(
-    year = raw_datetimes$year, 
-    month = raw_datetimes$month, 
-    day = raw_datetimes$day, 
+    year = raw_datetimes$year,
+    month = raw_datetimes$month,
+    day = raw_datetimes$day,
     hour = raw_datetimes$hour,
     minute = raw_datetimes$minute,
     second = raw_datetimes$second
   )
   expect_identical(
-    datetimes, 
+    datetimes,
     as.POSIXct(
-      c("1990-01-01 00:00:00", "1991-05-10 10:25:24", "2010-08-16 14:45:47", 
-        "2022-12-31 23:59:59"),
+      c(
+        "1990-01-01 00:00:00", "1991-05-10 10:25:24", "2010-08-16 14:45:47",
+        "2022-12-31 23:59:59"
+      ),
       tz = "UTC"
     )
   )
@@ -74,7 +78,7 @@ test_that("error when non whole number passed", {
 
 test_that("error when string passed", {
   expect_error(
-   dtt_date_time_from_ints(day = "15"),
+    dtt_date_time_from_ints(day = "15"),
     regexp = "`day` must be a whole numeric vector"
   )
 })
@@ -130,9 +134,9 @@ test_that("error's when lengths of vectors do not match", {
   second <- c(0, 2L)
   expect_error(
     dtt_date_time_from_ints(
-      year = year, 
-      month = month, 
-      day = day, 
+      year = year,
+      month = month,
+      day = day,
       hour = hour,
       minute = minute,
       second = second
