@@ -2,11 +2,11 @@ test_that("subtract_years.Date", {
   expect_identical(dtt_subtract_years(NA_Date_[-1]), NA_Date_[-1])
   expect_identical(dtt_subtract_years(NA_Date_), NA_Date_)
   expect_identical(
-    dtt_subtract_years(as.Date("2000-01-01"), 0L), 
+    dtt_subtract_years(as.Date("2000-01-01"), 0L),
     as.Date("2000-01-01")
   )
   expect_identical(
-    dtt_subtract_years(as.Date("2000-01-01"), 2L), 
+    dtt_subtract_years(as.Date("2000-01-01"), 2L),
     as.Date("1998-01-01")
   )
   expect_identical(
@@ -42,7 +42,7 @@ test_that("subtract_years.POSIXct", {
   )
   expect_identical(
     dtt_subtract_years(
-      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"),
       2L
     ),
     as.POSIXct(c("1998-01-01", "2000-01-01"), tz = "UTC")
@@ -50,7 +50,7 @@ test_that("subtract_years.POSIXct", {
 
   expect_identical(
     dtt_subtract_years(
-      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"),
       2:3
     ),
     as.POSIXct(c("1998-01-01", "1999-01-01"), tz = "UTC")
@@ -70,11 +70,11 @@ test_that("subtract_months.Date", {
   expect_identical(dtt_subtract_months(NA_Date_[-1]), NA_Date_[-1])
   expect_identical(dtt_subtract_months(NA_Date_), NA_Date_)
   expect_identical(
-    dtt_subtract_months(as.Date("2000-01-01"), 0L), 
+    dtt_subtract_months(as.Date("2000-01-01"), 0L),
     as.Date("2000-01-01")
   )
   expect_identical(
-    dtt_subtract_months(as.Date("2000-01-01"), 2L), 
+    dtt_subtract_months(as.Date("2000-01-01"), 2L),
     as.Date("1999-11-01")
   )
   expect_identical(
@@ -110,7 +110,7 @@ test_that("subtract_months.POSIXct", {
   )
   expect_identical(
     dtt_subtract_months(
-      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"),
       2L
     ),
     as.POSIXct(c("1999-11-01", "2001-11-01"), tz = "UTC")
@@ -118,7 +118,7 @@ test_that("subtract_months.POSIXct", {
 
   expect_identical(
     dtt_subtract_months(
-      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"),
       2:3
     ),
     as.POSIXct(c("1999-11-01", "2001-10-01"), tz = "UTC")
@@ -138,11 +138,11 @@ test_that("subtract_days.Date", {
   expect_identical(dtt_subtract_days(NA_Date_[-1]), NA_Date_[-1])
   expect_identical(dtt_subtract_days(NA_Date_), NA_Date_)
   expect_identical(
-    dtt_subtract_days(as.Date("2000-01-01"), 0L), 
+    dtt_subtract_days(as.Date("2000-01-01"), 0L),
     as.Date("2000-01-01")
   )
   expect_identical(
-    dtt_subtract_days(as.Date("2000-01-01"), 2L), 
+    dtt_subtract_days(as.Date("2000-01-01"), 2L),
     as.Date("1999-12-30")
   )
   expect_identical(
@@ -178,7 +178,7 @@ test_that("subtract_days.POSIXct", {
   )
   expect_identical(
     dtt_subtract_days(
-      as.POSIXct(c("2000-01-01", "2002-01-02"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-02"), tz = "UTC"),
       2L
     ),
     as.POSIXct(c("1999-12-30", "2001-12-31"), tz = "UTC")
@@ -186,7 +186,7 @@ test_that("subtract_days.POSIXct", {
 
   expect_identical(
     dtt_subtract_days(
-      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"),
       2:3
     ),
     as.POSIXct(c("1999-12-30", "2001-12-29"), tz = "UTC")
@@ -215,7 +215,7 @@ test_that("subtract_hours.POSIXct", {
   )
   expect_identical(
     dtt_subtract_hours(
-      as.POSIXct(c("2000-01-01", "2002-01-02"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-02"), tz = "UTC"),
       2L
     ),
     as.POSIXct(c("1999-12-31 22:00:00", "2002-01-01 22:00:00"), tz = "UTC")
@@ -223,7 +223,7 @@ test_that("subtract_hours.POSIXct", {
 
   expect_identical(
     dtt_subtract_hours(
-      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"),
       2:3
     ),
     as.POSIXct(c("1999-12-31 22:00:00", "2001-12-31 21:00:00"), tz = "UTC")
@@ -289,7 +289,7 @@ test_that("subtract_minutes.POSIXct", {
   )
   expect_identical(
     dtt_subtract_minutes(
-      as.POSIXct(c("2000-01-01", "2002-01-02"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-02"), tz = "UTC"),
       2L
     ),
     as.POSIXct(c("1999-12-31 23:58:00", "2002-01-01 23:58:00"), tz = "UTC")
@@ -297,7 +297,7 @@ test_that("subtract_minutes.POSIXct", {
 
   expect_identical(
     dtt_subtract_minutes(
-      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"),
       2:3
     ),
     as.POSIXct(c("1999-12-31 23:58:00", "2001-12-31 23:57:00"), tz = "UTC")
@@ -309,7 +309,7 @@ test_that("subtract_minutes.POSIXct", {
   )
   expect_identical(
     dtt_subtract_minutes(
-      c(as.POSIXct("2002-01-01", tz = "Etc/GMT+8"), NA), 
+      c(as.POSIXct("2002-01-01", tz = "Etc/GMT+8"), NA),
       -3L
     ),
     c(as.POSIXct("2002-01-01 00:03:00", tz = "Etc/GMT+8"), NA)
@@ -366,7 +366,7 @@ test_that("subtract_seconds.POSIXct", {
   )
   expect_identical(
     dtt_subtract_seconds(
-      as.POSIXct(c("2000-01-01", "2002-01-02"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-02"), tz = "UTC"),
       2L
     ),
     as.POSIXct(c("1999-12-31 23:59:58", "2002-01-01 23:59:58"), tz = "UTC")
@@ -374,7 +374,7 @@ test_that("subtract_seconds.POSIXct", {
 
   expect_identical(
     dtt_subtract_seconds(
-      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"), 
+      as.POSIXct(c("2000-01-01", "2002-01-01"), tz = "UTC"),
       2:3
     ),
     as.POSIXct(c("1999-12-31 23:59:58", "2001-12-31 23:59:57"), tz = "UTC")
@@ -386,7 +386,7 @@ test_that("subtract_seconds.POSIXct", {
   )
   expect_identical(
     dtt_subtract_seconds(
-      c(as.POSIXct("2002-01-01", tz = "Etc/GMT+8"), NA), 
+      c(as.POSIXct("2002-01-01", tz = "Etc/GMT+8"), NA),
       -3L
     ),
     c(as.POSIXct("2002-01-01 00:00:03", tz = "Etc/GMT+8"), NA)

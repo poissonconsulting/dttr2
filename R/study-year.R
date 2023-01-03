@@ -11,12 +11,12 @@
 #'
 #' @examples
 #' dtt_study_year(
-#'   as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")), 
+#'   as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")),
 #'   start = 4L
 #' )
 #' dtt_study_year(
-#'   as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")), 
-#'   start = 4L, 
+#'   as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")),
+#'   start = 4L,
 #'   full = FALSE
 #' )
 dtt_study_year <- function(x, start = 1L, full = TRUE) {

@@ -6,13 +6,13 @@ test_that("days_in_year", {
   expect_identical(
     dtt_days_in_year(
       as.Date(c("2001-10-01", NA, "2004-12-31"))
-    ), 
+    ),
     c(365L, NA, 366L)
   )
   expect_identical(
     dtt_days_in_year(
       as.POSIXct(c("2001-10-01", NA, "2004-12-31"), tz = "UTC")
-    ), 
+    ),
     c(365L, NA, 366L)
   )
 })

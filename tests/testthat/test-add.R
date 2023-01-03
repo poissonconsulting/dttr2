@@ -2,11 +2,11 @@ test_that("add_years.Date", {
   expect_identical(dtt_add_years(NA_Date_[-1]), NA_Date_[-1])
   expect_identical(dtt_add_years(NA_Date_), NA_Date_)
   expect_identical(
-    dtt_add_years(as.Date("2000-01-01"), 0L), 
+    dtt_add_years(as.Date("2000-01-01"), 0L),
     as.Date("2000-01-01")
   )
   expect_identical(
-    dtt_add_years(as.Date("2000-01-01"), 2L), 
+    dtt_add_years(as.Date("2000-01-01"), 2L),
     as.Date("2002-01-01")
   )
   expect_identical(
@@ -63,11 +63,11 @@ test_that("add_months.Date", {
   expect_identical(dtt_add_months(NA_Date_[-1]), NA_Date_[-1])
   expect_identical(dtt_add_months(NA_Date_), NA_Date_)
   expect_identical(
-    dtt_add_months(as.Date("2000-01-01"), 0L), 
+    dtt_add_months(as.Date("2000-01-01"), 0L),
     as.Date("2000-01-01")
   )
   expect_identical(
-    dtt_add_months(as.Date("2000-01-01"), 2L), 
+    dtt_add_months(as.Date("2000-01-01"), 2L),
     as.Date("2000-03-01")
   )
   expect_identical(
@@ -125,11 +125,11 @@ test_that("add_days.Date", {
   expect_identical(dtt_add_days(NA_Date_[-1]), NA_Date_[-1])
   expect_identical(dtt_add_days(NA_Date_), NA_Date_)
   expect_identical(
-    dtt_add_days(as.Date("2000-01-01"), 0L), 
+    dtt_add_days(as.Date("2000-01-01"), 0L),
     as.Date("2000-01-01")
   )
   expect_identical(
-    dtt_add_days(as.Date("2000-01-01"), 2L), 
+    dtt_add_days(as.Date("2000-01-01"), 2L),
     as.Date("2000-01-03")
   )
   expect_identical(

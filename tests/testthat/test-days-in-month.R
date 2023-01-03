@@ -6,13 +6,13 @@ test_that("days_in_month", {
   expect_identical(
     dtt_days_in_month(
       as.Date(c("2001-02-01", NA, "2004-02-03"))
-    ), 
+    ),
     c(28L, NA, 29L)
   )
   expect_identical(
     dtt_days_in_month(
       as.POSIXct(c("2001-02-01", NA, "2004-02-03"), tz = "UTC")
-    ), 
+    ),
     c(28L, NA, 29L)
   )
 })

@@ -3,7 +3,7 @@ test_that("dtt_second.Date", {
   expect_identical(dtt_second(as.Date("2001-01-01")), 0L)
   expect_identical(dtt_second(NA_Date_), 0L)
   expect_identical(
-    dtt_second(as.Date(c("2001-01-01", "1972-01-01"))), 
+    dtt_second(as.Date(c("2001-01-01", "1972-01-01"))),
     c(0L, 0L)
   )
   expect_identical(dtt_second(as.Date(c("2001-01-01", NA_Date_))), c(0L, 0L))
@@ -14,7 +14,7 @@ test_that("dtt_second.POSIXct", {
   expect_identical(dtt_second(as.POSIXct("2001-01-01", tz = "UTC")), 0L)
   expect_identical(dtt_second(NA_POSIXct_), NA_integer_)
   expect_identical(
-    dtt_second(as.POSIXct("2001-01-01 00:00:31", tz = "UTC")), 
+    dtt_second(as.POSIXct("2001-01-01 00:00:31", tz = "UTC")),
     31L
   )
   expect_identical(
@@ -28,7 +28,7 @@ test_that("dtt_second.POSIXct", {
     c(31L, NA_integer_)
   )
   expect_identical(
-    dtt_second(as.POSIXct("2001-01-01 00:00:31", tz = "Etc/GMT+8")), 
+    dtt_second(as.POSIXct("2001-01-01 00:00:31", tz = "Etc/GMT+8")),
     31L
   )
 })
@@ -64,7 +64,7 @@ test_that("dtt_second<-.POSIXct", {
 
   x <- as.POSIXct("1970-01-01", tz = "Etc/GMT+1")
   expect_identical(
-    dtt_set_second(x, 30L), 
+    dtt_set_second(x, 30L),
     as.POSIXct("1970-01-01 00:00:30", tz = "Etc/GMT+1")
   )
   dtt_second(x) <- 30L

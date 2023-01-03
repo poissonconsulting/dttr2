@@ -13,7 +13,7 @@ test_that("dtt_hour.POSIXct", {
   expect_identical(dtt_hour(as.POSIXct("2001-01-01 02:03:31", tz = "UTC")), 2L)
   expect_identical(
     dtt_hour(
-      as.POSIXct(c("2001-01-01 05:04:31", "2001-01-02 00:01:33"), tz = "UTC" )
+      as.POSIXct(c("2001-01-01 05:04:31", "2001-01-02 00:01:33"), tz = "UTC")
     ),
     c(5L, 0L)
   )
@@ -22,7 +22,7 @@ test_that("dtt_hour.POSIXct", {
     c(23L, NA_integer_)
   )
   expect_identical(
-    dtt_hour(as.POSIXct("2001-01-01 16:06:31", tz = "Etc/GMT+8")), 
+    dtt_hour(as.POSIXct("2001-01-01 16:06:31", tz = "Etc/GMT+8")),
     16L
   )
 })

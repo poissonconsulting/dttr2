@@ -9,7 +9,8 @@ test_that("completed.Date", {
   )
   expect_false(dtt_completed(as.Date(c("2001-01-01", "2001-01-01"))))
   expect_true(
-    dtt_completed(as.Date(c("2001-01-01", "2001-01-01")), unique = FALSE))
+    dtt_completed(as.Date(c("2001-01-01", "2001-01-01")), unique = FALSE)
+  )
   expect_false(dtt_completed(as.Date(c("2001-01-03", "2001-01-01"))))
   expect_false(dtt_completed(as.Date(c("2001-01-01", "2002-02-01"))))
   expect_false(
@@ -26,57 +27,57 @@ test_that("completed.Date", {
   expect_true(dtt_completed(as.POSIXct("2001-01-01", tz = "Etc/GMT-9")))
   expect_true(
     dtt_completed(
-      as.POSIXct(c("2001-01-01", "2001-01-02"), tz = "Etc/GMT-9"), 
+      as.POSIXct(c("2001-01-01", "2001-01-02"), tz = "Etc/GMT-9"),
       units = "days"
     )
   )
   expect_false(
     dtt_completed(
-      as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT-9"), 
+      as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT-9"),
       units = "days"
     )
   )
   expect_true(
     dtt_completed(
-      as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT-9"), 
-      sorted = FALSE, 
+      as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT-9"),
+      sorted = FALSE,
       units = "days"
     )
   )
   expect_false(
     dtt_completed(
-      as.POSIXct(c("2001-01-01", "2001-01-01"), tz = "Etc/GMT-9"), 
+      as.POSIXct(c("2001-01-01", "2001-01-01"), tz = "Etc/GMT-9"),
       units = "days"
     )
   )
   expect_true(
     dtt_completed(
-      as.POSIXct(c("2001-01-01", "2001-01-01"), tz = "Etc/GMT-9"), 
-      unique = FALSE, 
+      as.POSIXct(c("2001-01-01", "2001-01-01"), tz = "Etc/GMT-9"),
+      unique = FALSE,
       units = "days"
     )
   )
   expect_false(
     dtt_completed(
-      as.POSIXct(c("2001-01-03", "2001-01-01"), tz = "Etc/GMT-9"), 
+      as.POSIXct(c("2001-01-03", "2001-01-01"), tz = "Etc/GMT-9"),
       units = "days"
     )
   )
   expect_false(
     dtt_completed(
-      as.POSIXct(c("2001-01-01", "2002-02-01"), tz = "Etc/GMT-9"), 
+      as.POSIXct(c("2001-01-01", "2002-02-01"), tz = "Etc/GMT-9"),
       units = "days"
     )
   )
   expect_false(
     dtt_completed(
-      as.POSIXct(c("2001-01-01", "2002-02-01"), tz = "Etc/GMT-9"), 
+      as.POSIXct(c("2001-01-01", "2002-02-01"), tz = "Etc/GMT-9"),
       units = "months"
     )
   )
   expect_true(
     dtt_completed(
-      as.POSIXct(c("2001-01-01", "2002-02-01"), tz = "Etc/GMT-9"), 
+      as.POSIXct(c("2001-01-01", "2002-02-01"), tz = "Etc/GMT-9"),
       units = "years"
     )
   )

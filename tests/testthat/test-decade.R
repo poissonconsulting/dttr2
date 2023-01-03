@@ -5,11 +5,11 @@ test_that("decade.Date", {
   expect_identical(dtt_decade(as.Date("2009-12-31")), 2000L)
   expect_identical(dtt_decade(as.Date("2010-01-01")), 2010L)
   expect_identical(
-    dtt_decade(as.Date(c("2000-01-01", NA))), 
+    dtt_decade(as.Date(c("2000-01-01", NA))),
     c(2000L, NA_integer_)
   )
   expect_identical(
-    dtt_decade(as.Date(c("2000-01-01", NA))), 
+    dtt_decade(as.Date(c("2000-01-01", NA))),
     c(2000L, NA_integer_)
   )
   expect_identical(

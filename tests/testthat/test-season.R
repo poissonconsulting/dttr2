@@ -8,7 +8,7 @@ test_that("dtt_season.Date", {
     dtt_season(dates),
     factor(
       c(
-        "Winter", "Spring", "Winter", "Spring", "Summer", "Autumn", "Winter", 
+        "Winter", "Spring", "Winter", "Spring", "Summer", "Autumn", "Winter",
         NA
       ),
       levels = c("Winter", "Spring", "Summer", "Autumn")
@@ -21,7 +21,7 @@ test_that("dtt_season.Date", {
     ),
     factor(
       c(
-        "Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter", 
+        "Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter",
         NA
       ),
       levels = c("Spring", "Summer", "Autumn", "Winter")
@@ -49,7 +49,7 @@ test_that("dtt_season.Date", {
     ),
     factor(
       c(
-        "Dry Period", "Monsoon", "Monsoon", "Monsoon", "Dry Period", 
+        "Dry Period", "Monsoon", "Monsoon", "Monsoon", "Dry Period",
         "Dry Period", "Dry Period", NA
       ),
       levels = c("Dry Period", "Monsoon")
@@ -74,7 +74,8 @@ test_that("dtt_season.POSIXct", {
   expect_identical(
     dtt_season(dates),
     factor(
-      c("Winter", "Spring", "Winter", "Spring", "Summer", "Autumn", "Winter", 
+      c(
+        "Winter", "Spring", "Winter", "Spring", "Summer", "Autumn", "Winter",
         NA
       ),
       levels = c("Winter", "Spring", "Summer", "Autumn")
@@ -86,7 +87,8 @@ test_that("dtt_season.POSIXct", {
       start = c(Spring = 1L, Summer = 6L, Autumn = 8L, Winter = 11L)
     ),
     factor(
-      c("Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter", 
+      c(
+        "Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter",
         NA
       ),
       levels = c("Spring", "Summer", "Autumn", "Winter")
@@ -102,7 +104,7 @@ test_that("dtt_season.POSIXct", {
     ),
     factor(
       c(
-        "Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter", 
+        "Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter",
         NA
       ),
       levels = c("Spring", "Summer", "Autumn", "Winter")
@@ -115,7 +117,7 @@ test_that("dtt_season.POSIXct", {
     ),
     factor(
       c(
-        "Dry Period", "Monsoon", "Monsoon", "Monsoon", "Dry Period", 
+        "Dry Period", "Monsoon", "Monsoon", "Monsoon", "Dry Period",
         "Dry Period", "Dry Period", NA
       ),
       levels = c("Dry Period", "Monsoon")
@@ -137,8 +139,8 @@ test_that("season order", {
       start = c(Summer = 6L, Winter = 11L)
     ),
     structure(
-      c(1L, 1L, 2L, 1L), 
-      .Label = c("Winter", "Summer"), 
+      c(1L, 1L, 2L, 1L),
+      .Label = c("Winter", "Summer"),
       class = "factor"
     )
   )
@@ -148,8 +150,8 @@ test_that("season order", {
       start = c(Summer = 6L, Winter = 11L), first = "Summer"
     ),
     structure(
-      c(2L, 2L, 1L, 2L), 
-      .Label = c("Summer", "Winter"), 
+      c(2L, 2L, 1L, 2L),
+      .Label = c("Summer", "Winter"),
       class = "factor"
     )
   )

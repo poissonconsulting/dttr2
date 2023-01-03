@@ -1,7 +1,7 @@
 test_that("year_decimal Date", {
   expect_identical(dtt_year_decimal(NA_Date_), NA_real_)
   expect_identical(
-    dtt_year_decimal(structure(numeric(0), class = "Date")), 
+    dtt_year_decimal(structure(numeric(0), class = "Date")),
     numeric(0)
   )
   expect_identical(dtt_year_decimal(dtt_date("2000-01-01")), 2000)
@@ -13,12 +13,12 @@ test_that("year_decimal Date", {
 test_that("dtt_year.POSIXct", {
   expect_identical(dtt_year_decimal(Sys.time()[-1]), numeric(0))
   expect_equal(
-    dtt_year_decimal(as.POSIXct("2001-02-01", tz = "UTC")), 
+    dtt_year_decimal(as.POSIXct("2001-02-01", tz = "UTC")),
     2001.08493150685
   )
   expect_identical(dtt_year_decimal(NA_POSIXct_), NA_real_)
   expect_equal(
-    dtt_year_decimal(as.POSIXct("2003-03-01 02:03:31", tz = "UTC")), 
+    dtt_year_decimal(as.POSIXct("2003-03-01 02:03:31", tz = "UTC")),
     2003.16187883688
   )
   expect_equal(
@@ -34,7 +34,7 @@ test_that("dtt_year.POSIXct", {
   expect_equal(
     dtt_year_decimal(
       as.POSIXct("2009-08-12 16:06:31", tz = "Etc/GMT+8")
-    ), 
+    ),
     2009.61279778666
   )
 })

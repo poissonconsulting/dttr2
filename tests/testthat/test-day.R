@@ -22,7 +22,7 @@ test_that("dtt_day.POSIXct", {
     c(1L, NA_integer_)
   )
   expect_identical(
-    dtt_day(as.POSIXct("2001-01-12 16:06:31", tz = "Etc/GMT+8")), 
+    dtt_day(as.POSIXct("2001-01-12 16:06:31", tz = "Etc/GMT+8")),
     12L
   )
 })

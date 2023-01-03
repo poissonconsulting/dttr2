@@ -11,8 +11,8 @@
 #' @export
 #' @examples
 #' dtt_diff(
-#'   as.Date(c("2001-01-02", "2000-12-31")), 
-#'   as.Date("2001-01-01"), 
+#'   as.Date(c("2001-01-02", "2000-12-31")),
+#'   as.Date("2001-01-01"),
 #'   "hours"
 #' )
 #' dtt_diff(as.Date("2001-01-02"), as.Date("2001-01-01"), "weeks")

@@ -4,11 +4,11 @@ test_that("floor.Date", {
   expect_identical(as.double(dtt_floor(as.Date("1970-01-01") + 0.99)), 0)
   expect_identical(dtt_floor(as.Date("1991-02-02")), as.Date("1991-02-02"))
   expect_identical(
-    dtt_floor(as.Date("1991-02-02"), "months"), 
+    dtt_floor(as.Date("1991-02-02"), "months"),
     as.Date("1991-02-01")
   )
   expect_identical(
-    dtt_floor(as.Date("1991-02-02"), "years"), 
+    dtt_floor(as.Date("1991-02-02"), "years"),
     as.Date("1991-01-01")
   )
   expect_identical(
@@ -41,24 +41,24 @@ test_that("floor.POSXIct", {
     as.double(
       dtt_floor(
         as.POSIXct(
-          1.99, 
-          origin = as.POSIXct("1970-01-01", tz = "GMT"), 
+          1.99,
+          origin = as.POSIXct("1970-01-01", tz = "GMT"),
           tz = "GMT"
         )
       )
-    ), 
+    ),
     1
   )
   expect_identical(
     as.double(
       dtt_floor(
         as.POSIXct(
-          -1.99, 
-          origin = as.POSIXct("1970-01-01", tz = "GMT"), 
+          -1.99,
+          origin = as.POSIXct("1970-01-01", tz = "GMT"),
           tz = "GMT"
         )
       )
-    ), 
+    ),
     -2
   )
   expect_identical(
@@ -76,9 +76,9 @@ test_that("floor.POSXIct", {
   expect_identical(
     dtt_floor(
       as.POSIXct(
-        c("1969-01-01 23:59:59", "1969-01-01 01:02:03"), 
+        c("1969-01-01 23:59:59", "1969-01-01 01:02:03"),
         tz = "UTC"
-      ), 
+      ),
       "hours"
     ),
     as.POSIXct(c("1969-01-01 23:00:00", "1969-01-01 01:00:00"), tz = "UTC")
@@ -102,11 +102,11 @@ test_that("floor.hms", {
 
   expect_identical(dtt_floor(hms::as_hms("23:59:59")), hms::as_hms("23:59:59"))
   expect_identical(
-    dtt_floor(hms::as_hms("23:59:59"), "minutes"), 
+    dtt_floor(hms::as_hms("23:59:59"), "minutes"),
     hms::as_hms("23:59:00")
   )
   expect_identical(
-    dtt_floor(hms::as_hms("23:59:59"), "hours"), 
+    dtt_floor(hms::as_hms("23:59:59"), "hours"),
     hms::as_hms("23:00:00")
   )
   expect_identical(

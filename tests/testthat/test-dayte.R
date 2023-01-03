@@ -3,7 +3,7 @@ test_that("dayte.Date", {
   expect_identical(dtt_dayte(NA_Date_), NA_Date_)
   expect_identical(dtt_dayte(as.Date("2000-01-01")), as.Date("1972-01-01"))
   expect_identical(
-    dtt_dayte(as.Date(c("2000-01-01", NA))), 
+    dtt_dayte(as.Date(c("2000-01-01", NA))),
     as.Date(c("1972-01-01", NA))
   )
   expect_identical(

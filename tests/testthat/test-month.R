@@ -14,7 +14,7 @@ test_that("dtt_month.POSIXct", {
   expect_identical(
     dtt_month(
       as.POSIXct(
-        c("2001-04-01 05:06:31", "2001-06-05 00:01:33"), 
+        c("2001-04-01 05:06:31", "2001-06-05 00:01:33"),
         tz = "UTC"
       )
     ),
@@ -25,7 +25,7 @@ test_that("dtt_month.POSIXct", {
     c(7L, NA_integer_)
   )
   expect_identical(
-    dtt_month(as.POSIXct("2001-08-12 16:06:31", tz = "Etc/GMT+8")), 
+    dtt_month(as.POSIXct("2001-08-12 16:06:31", tz = "Etc/GMT+8")),
     8L
   )
 })

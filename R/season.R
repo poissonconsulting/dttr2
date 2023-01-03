@@ -17,7 +17,7 @@
 #' dtt_season(dates)
 #' dtt_season(dates, start = c(Monsoon = 2L, `Dry Period` = 6L))
 #' dtt_season(
-#'   dates, 
+#'   dates,
 #'   start = c(First = dtt_date("2000-01-01"), Second = dtt_date("2000-06-01"))
 #' )
 dtt_season <- function(x, start = c(
