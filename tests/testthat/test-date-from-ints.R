@@ -71,22 +71,14 @@ test_that("error when day out of range passed", {
   )
 })
 
-### Ask Joe about the behaviour of the uneven lengthed vectors.
-test_that("values recycled when lengths of vectors do not match", {
+test_that("error's when lengths of vectors do not match", {
   year <- c(1990, 1991)
   month <- c(1L, 2L, 3L)
   day <- c(1L, 5L, 7L, 16L, 23L)
-  dates <- dtt_date_from_ints(
-    year = year,
-    month = month,
-    day = day
-  )
-  dates
-
-  expect_identical(
-    dates,
-    as.Date(
-      c("1990-01-01", "1991-02-05", "1990-03-07", "1991-01-16", "1990-02-23")
-    )
+  
+  expect_error(
+    dtt_date_from_ints(year = year, month = month, day = day),
+    regexp = "vectors must all be the same length or have length 1"
   )
 })
+

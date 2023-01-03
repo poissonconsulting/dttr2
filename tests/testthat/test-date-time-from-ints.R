@@ -141,6 +141,6 @@ test_that("error's when lengths of vectors do not match", {
       minute = minute,
       second = second
     ),
-    regexp = "`length\\(time\\)` must match 1 or 3, not 2"
+    regexp = "vectors must all be the same length or have length 1"
   )
 })
