@@ -82,3 +82,15 @@ test_that("error's when lengths of vectors do not match", {
   )
 })
 
+test_that("pass when lengths of vectors 1 or the same", {
+  year <- c(1990, 1991, 1992)
+  month <- c(1L, 2L, 3L)
+  day <- c(1L)
+  date <- dtt_date_from_ints(year = year, month = month, day = day)
+  expect_identical(
+    date,
+    as.Date(
+      c("1990-01-01", "1991-02-01", "1992-03-01")
+    )
+  )
+})

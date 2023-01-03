@@ -144,3 +144,30 @@ test_that("error's when lengths of vectors do not match", {
     regexp = "vectors must all be the same length or have length 1"
   )
 })
+
+test_that("pass when lengths of vectors 1 or the same", {
+  year <- c(1990, 1991, 1992)
+  month <- c(1L, 6L, 12)
+  day <- c(1L, 1L, 1L)
+  hour <- c(0L)
+  minute <- c(0)
+  second <- c(0)
+  datetime <- dtt_date_time_from_ints(
+    year = year,
+    month = month,
+    day = day,
+    hour = hour,
+    minute = minute,
+    second = second
+  )
+  expect_identical(
+    datetime,
+    as.POSIXct(
+      c(
+        "1990-01-01 00:00:00 UTC", "1991-06-01 00:00:00 UTC", 
+        "1992-12-01 00:00:00 UTC"
+      ),
+      tz = "UTC"
+    )
+  )
+})

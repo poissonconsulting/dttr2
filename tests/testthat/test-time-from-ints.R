@@ -78,12 +78,23 @@ test_that("error when second is out of range", {
 })
 
 test_that("error's when lengths of vectors do not match", {
-  hour <- c(0L, 2L)
+  hour <- c(0L, 2L, 5L)
   minute <- c(25L, 10L, 17L, 23L)
   second <- c(16L, 30L)
 
   expect_error(
     dtt_time_from_ints(hour = hour, minute = minute, second = second),
     regexp = "vectors must all be the same length or have length 1"
+  )
+})
+
+test_that("pass when lengths of vectors 1 or the same", {
+  hour <- c(0L, 2L, 4L)
+  minute <- 25L
+  second <- c(16L, 30L, 45L)
+  time <- dtt_time_from_ints(hour = hour, minute = minute, second = second)
+  expect_identical(
+    time,
+    as_hms(c("00:35:16", "02:25:30", "04:25:45"))
   )
 })
