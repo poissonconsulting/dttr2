@@ -86,7 +86,7 @@ test_that("error when string passed", {
 test_that("error when negatie year passed", {
   expect_error(
     dtt_date_time_from_ints(year = -1990),
-    regexp = "`year` must be greater than or equal to 0"
+    regexp = "`year` must be between 0 and 9999, not -1990"
   )
 })
 
@@ -141,7 +141,9 @@ test_that("error's when lengths of vectors do not match", {
       minute = minute,
       second = second
     ),
-    regexp = "vectors must all be the same length or have length 1"
+    regexp = paste0(
+      "Vectors must be all the same length or length 1 but not lengths 2 and 3"
+    )
   )
 })
 

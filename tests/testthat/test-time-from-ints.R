@@ -84,7 +84,10 @@ test_that("error's when lengths of vectors do not match", {
 
   expect_error(
     dtt_time_from_ints(hour = hour, minute = minute, second = second),
-    regexp = "vectors must all be the same length or have length 1"
+    regexp = paste0(
+      "Vectors must be all the same length or length 1 but not lengths 3, 4 ",
+      "and 2\\."
+    )
   )
 })
 
@@ -95,6 +98,6 @@ test_that("pass when lengths of vectors 1 or the same", {
   time <- dtt_time_from_ints(hour = hour, minute = minute, second = second)
   expect_identical(
     time,
-    as_hms(c("00:35:16", "02:25:30", "04:25:45"))
+    as_hms(c("00:25:16", "02:25:30", "04:25:45"))
   )
 })

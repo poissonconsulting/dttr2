@@ -53,7 +53,7 @@ test_that("error when string passed passed", {
 test_that("error when negative year passed", {
   expect_error(
     dtt_date_from_ints(year = -1900),
-    regexp = "`year` must be greater than or equal to 0"
+    regexp = "`year` must be between 0 and 9999, not -1900"
   )
 })
 
@@ -75,10 +75,12 @@ test_that("error's when lengths of vectors do not match", {
   year <- c(1990, 1991)
   month <- c(1L, 2L, 3L)
   day <- c(1L, 5L, 7L, 16L, 23L)
-  
   expect_error(
     dtt_date_from_ints(year = year, month = month, day = day),
-    regexp = "vectors must all be the same length or have length 1"
+    regexp = paste0(
+      "Vectors must be all the same length or length 1 but not lengths ",
+      "2, 3 and 5"
+    )
   )
 })
 
