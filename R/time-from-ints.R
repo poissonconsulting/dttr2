@@ -9,7 +9,7 @@
 #'
 #' @return A floored hms vector.
 #' @export
-#'
+#' @family creates
 #' @examples
 #' dtt_time_from_ints()
 #'
@@ -24,6 +24,11 @@
 #'   minute = c(15, 15),
 #'   second = c(30, 0)
 #' )
+#' 
+#' hour <- c(9, 10, 11)
+#' minute <- c(15, 30, 45)
+#' second <- 0
+#' dtt_time_from_ints(hour, minute, second)
 dtt_time_from_ints <- function(hour = 0L, minute = 0L, second = 0L) {
   chk::chk_whole_numeric(hour)
   chk::chk_range(hour, range = c(0L, 23L))

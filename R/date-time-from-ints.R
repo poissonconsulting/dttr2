@@ -15,7 +15,7 @@
 #'
 #' @return A POSIXct vector
 #' @export
-#'
+#' @family creates
 #' @examples
 #' dtt_date_time_from_ints(
 #'   year = 1991,
@@ -36,6 +36,16 @@
 #'   second = c(0, 0, 0),
 #'   tz = "Etc/GMT+8"
 #' )
+#'
+#' year <- c(1991, 1992, 1993)
+#' month <- c(07, 08, 09)
+#' day <- c(23, 24, 21)
+#' hour <- c(06, 05, 07)
+#' minute <- c(25, 24, 15)
+#' second <- 30
+#' dtt_date_time_from_ints(year, month, day, hour, minute, second)
+#'
+#' dtt_date_time_from_ints(year, month, day)
 dtt_date_time_from_ints <- function(year = 1970L, month = 1L, day = 1L,
                                     hour = 0L, minute = 0L, second = 0L,
                                     tz = dtt_default_tz()) {
@@ -53,7 +63,7 @@ dtt_date_time_from_ints <- function(year = 1970L, month = 1L, day = 1L,
   chk::chk_range(second, range = c(0L, 59L))
   chk::chk_string(tz)
   chk::chk_lengths_into(year, month, day, hour, minute, second)
-  
+
   datetimes <- dtt_date_time(
     dtt_date(paste(year, month, day, sep = "-")),
     dtt_time(paste(hour, minute, second, sep = ":")),
