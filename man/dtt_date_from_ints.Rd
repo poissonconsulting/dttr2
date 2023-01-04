@@ -23,14 +23,14 @@ Create dates from integers
 }
 \examples{
 dtt_date_from_ints(
- year = 1991,
- month = 07,
- day = 23
+  year = 1991,
+  month = 07,
+  day = 23
 )
 
 dtt_date_from_ints(
- year = c(1991, 1992, 1993),
- month = c(07, 07, 07),
- day = c(23, 24, 21)
+  year = c(1991, 1992, 1993),
+  month = c(07, 07, 07),
+  day = c(23, 24, 21)
 )
 }

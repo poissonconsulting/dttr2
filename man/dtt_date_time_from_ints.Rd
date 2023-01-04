@@ -42,22 +42,22 @@ Create datetimes from integers
 }
 \examples{
 dtt_date_time_from_ints(
- year = 1991,
- month = 07,
- day = 23,
- hour = 06,
- minute = 25,
- second = 0,
- tz = "Etc/GMT+8"
+  year = 1991,
+  month = 07,
+  day = 23,
+  hour = 06,
+  minute = 25,
+  second = 0,
+  tz = "Etc/GMT+8"
 )
 
 dtt_date_time_from_ints(
- year = c(1991, 1992, 1993),
- month = c(07, 07, 07),
- day = c(23, 24, 21),
- hour = c(06, 05, 07),
- minute = c(25, 24, 15),
- second = c(0, 0, 0),
- tz = "Etc/GMT+8"
+  year = c(1991, 1992, 1993),
+  month = c(07, 07, 07),
+  day = c(23, 24, 21),
+  hour = c(06, 05, 07),
+  minute = c(25, 24, 15),
+  second = c(0, 0, 0),
+  tz = "Etc/GMT+8"
 )
 }
