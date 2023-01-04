@@ -24,7 +24,7 @@ Pass vectors of hour, minute and second values to create a time object.
 }
 \details{
 This can be very helpful when needing to create a time column in a
-dataframe from hour, minute and second columns. Vectors must all be the
+data frame from hour, minute and second columns. Vectors must all be the
 same length or be of length one.
 }
 \examples{

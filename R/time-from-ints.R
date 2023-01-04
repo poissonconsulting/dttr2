@@ -9,7 +9,7 @@
 #' @param second An integer of the second between 0 to 59. The default value is
 #'   second zero.
 #' @details This can be very helpful when needing to create a time column in a
-#'   dataframe from hour, minute and second columns. Vectors must all be the
+#'   data frame from hour, minute and second columns. Vectors must all be the
 #'   same length or be of length one.
 #' @return A floored hms vector.
 #' @export
