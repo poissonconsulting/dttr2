@@ -1,4 +1,6 @@
-#' Create time from vectors
+#' Create Time from Vectors
+#'
+#' Pass vectors of hour, minute and second values to create a time object.
 #'
 #' @param hour An integer of the hour between 0 and 23.The default value is hour
 #'   zero.
@@ -6,7 +8,9 @@
 #'   minute zero.
 #' @param second An integer of the second between 0 to 59. The default value is
 #'   second zero.
-#'
+#' @details This can be very helpful when needing to create a time column in a
+#'   dataframe from hour, minute and second columns. Vectors must all be the
+#'   same length or be of length one.
 #' @return A floored hms vector.
 #' @export
 #' @family creates
