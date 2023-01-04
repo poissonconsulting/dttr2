@@ -166,7 +166,7 @@ test_that("pass when lengths of vectors 1 or the same", {
     datetime,
     as.POSIXct(
       c(
-        "1990-01-01 00:00:00 UTC", "1991-06-01 00:00:00 UTC", 
+        "1990-01-01 00:00:00 UTC", "1991-06-01 00:00:00 UTC",
         "1992-12-01 00:00:00 UTC"
       ),
       tz = "UTC"
