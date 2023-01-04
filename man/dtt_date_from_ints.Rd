@@ -2,9 +2,9 @@
 % Please edit documentation in R/date-from-ints.R
 \name{dtt_date_from_ints}
 \alias{dtt_date_from_ints}
-\title{Create dates from integers}
+\title{Create Dates from Integers}
 \usage{
-dtt_date_from_ints(year = 1970L, month = 1L, day = 1L)
+dtt_date_from_ints(year = 1972L, month = 1L, day = 1L)
 }
 \arguments{
 \item{year}{An integer of the year. The default value is 1970.}
@@ -19,7 +19,12 @@ the 1st month.}
 A floored Date vector.
 }
 \description{
-Create dates from integers
+Create date object from vectors of year, month and day values.
+}
+\details{
+This can be very helpful when needing to create a date column in a
+data frame from year, month and days columns. Vectors must all be the same
+length or be of length one.
 }
 \examples{
 dtt_date_from_ints(
