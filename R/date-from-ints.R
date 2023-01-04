@@ -28,8 +28,7 @@ dtt_date_from_ints <- function(year = 1970L, month = 1L, day = 1L) {
   chk::chk_range(month, range = c(1L, 12L))
   chk::chk_whole_numeric(day)
   chk::chk_range(day, range = c(1L, 31L))
-
-  ### check length of each vector before proceeding
+  chk::chk_lengths_into(year, month, day)
   
   dates <- dtt_date(paste(year, month, day, sep = "-"))
   dates
