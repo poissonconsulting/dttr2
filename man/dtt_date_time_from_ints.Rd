@@ -60,4 +60,20 @@ dtt_date_time_from_ints(
   second = c(0, 0, 0),
   tz = "Etc/GMT+8"
 )
+
+year <- c(1991, 1992, 1993)
+month <- c(07, 08, 09)
+day <- c(23, 24, 21)
+hour <- c(06, 05, 07)
+minute <- c(25, 24, 15)
+second <- 30
+dtt_date_time_from_ints(year, month, day, hour, minute, second)
+
+dtt_date_time_from_ints(year, month, day)
 }
+\seealso{
+Other creates: 
+\code{\link{dtt_date_from_ints}()},
+\code{\link{dtt_time_from_ints}()}
+}
+\concept{creates}

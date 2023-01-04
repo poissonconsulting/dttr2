@@ -33,4 +33,22 @@ dtt_date_from_ints(
   month = c(07, 07, 07),
   day = c(23, 24, 21)
 )
+
+year_vals <- c(1991, 1992, 1993)
+month_vals <- c(07, 07, 07)
+day_vals <- c(23, 24, 21)
+dtt_date_from_ints(year_vals, month_vals, day_vals)
+
+year_vals <- 2022
+month_vals <- 1:12
+day_vals <- 15
+dtt_date_from_ints(year_vals, month_vals, day_vals)
+
+dtt_date_from_ints(year_vals, month_vals)
 }
+\seealso{
+Other creates: 
+\code{\link{dtt_date_time_from_ints}()},
+\code{\link{dtt_time_from_ints}()}
+}
+\concept{creates}

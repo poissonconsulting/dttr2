@@ -36,4 +36,15 @@ dtt_time_from_ints(
   minute = c(15, 15),
   second = c(30, 0)
 )
+
+hour <- c(9, 10, 11)
+minute <- c(15, 30, 45)
+second <- 0
+dtt_time_from_ints(hour, minute, second)
 }
+\seealso{
+Other creates: 
+\code{\link{dtt_date_from_ints}()},
+\code{\link{dtt_date_time_from_ints}()}
+}
+\concept{creates}
