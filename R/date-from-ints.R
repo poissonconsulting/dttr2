@@ -1,11 +1,15 @@
-#' Create dates from integers
+#' Create Dates from Integers
+#'
+#' Create date object from vectors of year, month and day values.
 #'
 #' @param year An integer of the year. The default value is 1970.
 #' @param month An integer of the month between 1 and 12. The default value is
 #'   the 1st month.
 #' @param day An integer of the day between 1 and 31. The default value is the
 #'   1st day.
-#'
+#' @details This can be very helpful when needing to create a date column in a
+#'   data frame from year, month and days columns. Vectors must all be the same
+#'   length or be of length one.
 #' @return A floored Date vector.
 #' @export
 #' @family creates
@@ -33,7 +37,7 @@
 #' dtt_date_from_ints(year_vals, month_vals, day_vals)
 #'
 #' dtt_date_from_ints(year_vals, month_vals)
-dtt_date_from_ints <- function(year = 1970L, month = 1L, day = 1L) {
+dtt_date_from_ints <- function(year = 1972L, month = 1L, day = 1L) {
   chk::chk_whole_numeric(year)
   chk::chk_range(year, range = c(0L, 9999L))
   chk::chk_whole_numeric(month)

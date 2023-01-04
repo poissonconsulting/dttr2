@@ -1,6 +1,6 @@
 test_that("create dates default values", {
   dates <- dtt_date_from_ints()
-  expect_identical(dates, as.Date(c("1970-01-01")))
+  expect_identical(dates, as.Date(c("1972-01-01")))
 })
 
 test_that("create dates from vector of values", {

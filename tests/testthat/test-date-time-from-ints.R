@@ -2,13 +2,13 @@ test_that("create datetime from default values", {
   datetime <- dtt_date_time_from_ints()
   expect_identical(
     datetime,
-    as.POSIXct(c("1970-01-01 00:00:00"), tz = "UTC")
+    as.POSIXct(c("1972-01-01 00:00:00"), tz = "UTC")
   )
 })
 
 test_that("test timezone is being set", {
   datetime <- dtt_date_time_from_ints(tz = "Etc/GMT+8")
-  expect_identical(datetime, as.POSIXct("1970-01-01", tz = "Etc/GMT+8"))
+  expect_identical(datetime, as.POSIXct("1972-01-01", tz = "Etc/GMT+8"))
 })
 
 test_that("create datetime from vector of values", {
