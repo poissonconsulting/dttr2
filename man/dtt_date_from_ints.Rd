@@ -7,7 +7,7 @@
 dtt_date_from_ints(year = 1972L, month = 1L, day = 1L)
 }
 \arguments{
-\item{year}{An integer of the year. The default value is 1970.}
+\item{year}{An integer of the year. The default value is 1972.}
 
 \item{month}{An integer of the month between 1 and 12. The default value is
 the 1st month.}

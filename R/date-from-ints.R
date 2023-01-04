@@ -2,7 +2,7 @@
 #'
 #' Create date object from vectors of year, month and day values.
 #'
-#' @param year An integer of the year. The default value is 1970.
+#' @param year An integer of the year. The default value is 1972.
 #' @param month An integer of the month between 1 and 12. The default value is
 #'   the 1st month.
 #' @param day An integer of the day between 1 and 31. The default value is the
