@@ -44,7 +44,7 @@ dtt_date_from_ints <- function(year = 1972L, month = 1L, day = 1L) {
   chk::chk_range(month, range = c(1L, 12L))
   chk::chk_whole_numeric(day)
   chk::chk_range(day, range = c(1L, 31L))
-  chk::chk_lengths_into(year, month, day)
+  chk::chk_compatible_lengths(year, month, day)
 
   dates <- dtt_date(paste(year, month, day, sep = "-"))
   dates

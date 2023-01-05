@@ -142,7 +142,8 @@ test_that("error's when lengths of vectors do not match", {
       second = second
     ),
     regexp = paste0(
-      "Vectors must be all the same length or length 1 but not lengths 2 and 3"
+      "... objects must be all zero length or the same length with some of ",
+      "length of 1 but not lengths 2 and 3"
     )
   )
 })

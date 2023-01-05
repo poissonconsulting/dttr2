@@ -66,7 +66,7 @@ dtt_date_time_from_ints <- function(year = 1972L, month = 1L, day = 1L,
   chk::chk_whole_numeric(second)
   chk::chk_range(second, range = c(0L, 59L))
   chk::chk_string(tz)
-  chk::chk_lengths_into(year, month, day, hour, minute, second)
+  chk::chk_compatible_lengths(year, month, day, hour, minute, second)
 
   datetimes <- dtt_date_time(
     dtt_date(paste(year, month, day, sep = "-")),

@@ -40,7 +40,7 @@ dtt_time_from_ints <- function(hour = 0L, minute = 0L, second = 0L) {
   chk::chk_range(minute, range = c(0L, 59L))
   chk::chk_whole_numeric(second)
   chk::chk_range(second, range = c(0L, 59L))
-  chk::chk_lengths_into(hour, minute, second)
+  chk::chk_compatible_lengths(hour, minute, second)
   
   times <- dtt_time(paste(hour, minute, second, sep = ":"))
   times

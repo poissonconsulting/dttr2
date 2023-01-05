@@ -78,8 +78,8 @@ test_that("error's when lengths of vectors do not match", {
   expect_error(
     dtt_date_from_ints(year = year, month = month, day = day),
     regexp = paste0(
-      "Vectors must be all the same length or length 1 but not lengths ",
-      "2, 3 and 5"
+      "... objects must be all zero length or the same length with some of ",
+      "length of 1 but not lengths 2, 3 and 5"
     )
   )
 })
