@@ -76,7 +76,13 @@
     <loc>/reference/dtt_date_add_time.html</loc>
   </url>
   <url>
+    <loc>/reference/dtt_date_from_ints.html</loc>
+  </url>
+  <url>
     <loc>/reference/dtt_date_time.html</loc>
+  </url>
+  <url>
+    <loc>/reference/dtt_date_time_from_ints.html</loc>
   </url>
   <url>
     <loc>/reference/dtt_day.html</loc>
@@ -188,6 +194,9 @@
   </url>
   <url>
     <loc>/reference/dtt_time.html</loc>
+  </url>
+  <url>
+    <loc>/reference/dtt_time_from_ints.html</loc>
   </url>
   <url>
     <loc>/reference/dtt_tz.html</loc>

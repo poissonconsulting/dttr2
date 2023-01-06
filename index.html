@@ -136,16 +136,12 @@
 </h3>
 <p><code>dttr2</code> wraps negative times or times greater than 23:59:59 to the actual clock time.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">time</span> <span class="op">&lt;-</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/Deprecated.html" class="external-link">as.hms</a></span><span class="op">(</span><span class="op">-</span><span class="fl">3</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: `as.hms()` was deprecated in hms 0.5.0.</span></span>
-<span><span class="co">#&gt; Please use `as_hms()` instead.</span></span>
+<code class="sourceCode R"><span><span class="va">time</span> <span class="op">&lt;-</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/hms.html" class="external-link">as_hms</a></span><span class="op">(</span><span class="op">-</span><span class="fl">3</span><span class="op">)</span></span>
 <span><span class="va">time</span></span>
 <span><span class="co">#&gt; -00:00:03</span></span>
 <span><span class="fu"><a href="reference/dtt_time.html">dtt_time</a></span><span class="op">(</span><span class="va">time</span><span class="op">)</span></span>
 <span><span class="co">#&gt; 23:59:57</span></span>
-<span><span class="fu"><a href="reference/dtt_time.html">dtt_time</a></span><span class="op">(</span><span class="fu">hms</span><span class="fu">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/Deprecated.html" class="external-link">as.hms</a></span><span class="op">(</span><span class="st">"24:00:00"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: `as.hms()` was deprecated in hms 0.5.0.</span></span>
-<span><span class="co">#&gt; Please use `as_hms()` instead.</span></span>
+<span><span class="fu"><a href="reference/dtt_time.html">dtt_time</a></span><span class="op">(</span><span class="fu">hms</span><span class="fu">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/hms.html" class="external-link">as_hms</a></span><span class="op">(</span><span class="st">"24:00:00"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; 00:00:00</span></span></code></pre></div>
 </div>
 <div class="section level3">
