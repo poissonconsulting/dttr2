@@ -18,13 +18,15 @@ BugReports: https://github.com/poissonconsulting/dttr2/issues
 Depends: 
     R (>= 3.4)
 Imports: 
-    chk,
+    chk (>= 0.8.1.9002),
     hms,
     lifecycle
 Suggests: 
     covr,
     rlang,
     testthat (>= 3.0.0)
+Remotes:
+    poissonconsulting/chk
 RdMacros: 
     lifecycle
 Config/testthat/edition: 3

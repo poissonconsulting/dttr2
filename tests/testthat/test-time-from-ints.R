@@ -77,20 +77,27 @@ test_that("error when second is out of range", {
   )
 })
 
-### Ask Joe about what the best expected output of this should be
-test_that("values recycled when lengths of vectors do not match", {
-  hour <- c(0L, 2L)
+test_that("error's when lengths of vectors do not match", {
+  hour <- c(0L, 2L, 5L)
   minute <- c(25L, 10L, 17L, 23L)
   second <- c(16L, 30L)
 
-  times <- dtt_time_from_ints(
-    hour = hour,
-    minute = minute,
-    second = second
+  expect_error(
+    dtt_time_from_ints(hour = hour, minute = minute, second = second),
+    regexp = paste0(
+      "... objects must be all zero length or the same length with some of ",
+      "length of 1 but not lengths 2, 3 and 4\\."
+    )
   )
+})
 
+test_that("pass when lengths of vectors 1 or the same", {
+  hour <- c(0L, 2L, 4L)
+  minute <- 25L
+  second <- c(16L, 30L, 45L)
+  time <- dtt_time_from_ints(hour = hour, minute = minute, second = second)
   expect_identical(
-    times,
-    as_hms(c("00:25:16", "02:10:30", "00:17:16", "02:23:30"))
+    time,
+    as_hms(c("00:25:16", "02:25:30", "04:25:45"))
   )
 })

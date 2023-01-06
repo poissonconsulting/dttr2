@@ -142,3 +142,6 @@ reference:
   - '`dtt_seq`'
   - '`dtt_wrap`'
   - '`vld_time`'
+  - '`dtt_date_from_ints`'
+  - '`dtt_time_from_ints`'
+  - '`dtt_date_time_from_ints`'

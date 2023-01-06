@@ -2,10 +2,10 @@
 % Please edit documentation in R/date-time-from-ints.R
 \name{dtt_date_time_from_ints}
 \alias{dtt_date_time_from_ints}
-\title{Create datetimes from integers}
+\title{Create Date Times from Integers}
 \usage{
 dtt_date_time_from_ints(
-  year = 1970L,
+  year = 1972L,
   month = 1L,
   day = 1L,
   hour = 0L,
@@ -15,7 +15,7 @@ dtt_date_time_from_ints(
 )
 }
 \arguments{
-\item{year}{An integer of the year. The default value is 1970.}
+\item{year}{An integer of the year. The default value is 1972.}
 
 \item{month}{An integer of the month between 1 and 12. The default value is
 the 1st month.}
@@ -38,7 +38,12 @@ second zero.}
 A POSIXct vector
 }
 \description{
-Create datetimes from integers
+Create date object from vectors of year, month and day values.
+}
+\details{
+This can be very helpful when needing to create a date time column
+in a data frame from year, month, day, hour, minute, and second columns.
+Vectors must all be the same length or be of length one.
 }
 \examples{
 dtt_date_time_from_ints(
@@ -60,4 +65,20 @@ dtt_date_time_from_ints(
   second = c(0, 0, 0),
   tz = "Etc/GMT+8"
 )
+
+year <- c(1991, 1992, 1993)
+month <- c(07, 08, 09)
+day <- c(23, 24, 21)
+hour <- c(06, 05, 07)
+minute <- c(25, 24, 15)
+second <- 30
+dtt_date_time_from_ints(year, month, day, hour, minute, second)
+
+dtt_date_time_from_ints(year, month, day)
 }
+\seealso{
+Other creates: 
+\code{\link{dtt_date_from_ints}()},
+\code{\link{dtt_time_from_ints}()}
+}
+\concept{creates}

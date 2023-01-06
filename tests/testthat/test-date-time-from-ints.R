@@ -2,13 +2,13 @@ test_that("create datetime from default values", {
   datetime <- dtt_date_time_from_ints()
   expect_identical(
     datetime,
-    as.POSIXct(c("1970-01-01 00:00:00"), tz = "UTC")
+    as.POSIXct(c("1972-01-01 00:00:00"), tz = "UTC")
   )
 })
 
 test_that("test timezone is being set", {
   datetime <- dtt_date_time_from_ints(tz = "Etc/GMT+8")
-  expect_identical(datetime, as.POSIXct("1970-01-01", tz = "Etc/GMT+8"))
+  expect_identical(datetime, as.POSIXct("1972-01-01", tz = "Etc/GMT+8"))
 })
 
 test_that("create datetime from vector of values", {
@@ -86,7 +86,7 @@ test_that("error when string passed", {
 test_that("error when negatie year passed", {
   expect_error(
     dtt_date_time_from_ints(year = -1990),
-    regexp = "`year` must be greater than or equal to 0"
+    regexp = "`year` must be between 0 and 9999, not -1990"
   )
 })
 
@@ -141,6 +141,36 @@ test_that("error's when lengths of vectors do not match", {
       minute = minute,
       second = second
     ),
-    regexp = "`length\\(time\\)` must match 1 or 3, not 2"
+    regexp = paste0(
+      "... objects must be all zero length or the same length with some of ",
+      "length of 1 but not lengths 2 and 3"
+    )
+  )
+})
+
+test_that("pass when lengths of vectors 1 or the same", {
+  year <- c(1990, 1991, 1992)
+  month <- c(1L, 6L, 12)
+  day <- c(1L, 1L, 1L)
+  hour <- c(0L)
+  minute <- c(0)
+  second <- c(0)
+  datetime <- dtt_date_time_from_ints(
+    year = year,
+    month = month,
+    day = day,
+    hour = hour,
+    minute = minute,
+    second = second
+  )
+  expect_identical(
+    datetime,
+    as.POSIXct(
+      c(
+        "1990-01-01 00:00:00 UTC", "1991-06-01 00:00:00 UTC",
+        "1992-12-01 00:00:00 UTC"
+      ),
+      tz = "UTC"
+    )
   )
 })

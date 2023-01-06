@@ -1,6 +1,6 @@
 test_that("create dates default values", {
   dates <- dtt_date_from_ints()
-  expect_identical(dates, as.Date(c("1970-01-01")))
+  expect_identical(dates, as.Date(c("1972-01-01")))
 })
 
 test_that("create dates from vector of values", {
@@ -53,7 +53,7 @@ test_that("error when string passed passed", {
 test_that("error when negative year passed", {
   expect_error(
     dtt_date_from_ints(year = -1900),
-    regexp = "`year` must be greater than or equal to 0"
+    regexp = "`year` must be between 0 and 9999, not -1900"
   )
 })
 
@@ -71,22 +71,28 @@ test_that("error when day out of range passed", {
   )
 })
 
-### Ask Joe about the behaviour of the uneven lengthed vectors.
-test_that("values recycled when lengths of vectors do not match", {
+test_that("error's when lengths of vectors do not match", {
   year <- c(1990, 1991)
   month <- c(1L, 2L, 3L)
   day <- c(1L, 5L, 7L, 16L, 23L)
-  dates <- dtt_date_from_ints(
-    year = year,
-    month = month,
-    day = day
+  expect_error(
+    dtt_date_from_ints(year = year, month = month, day = day),
+    regexp = paste0(
+      "... objects must be all zero length or the same length with some of ",
+      "length of 1 but not lengths 2, 3 and 5"
+    )
   )
-  dates
+})
 
+test_that("pass when lengths of vectors 1 or the same", {
+  year <- c(1990, 1991, 1992)
+  month <- c(1L, 2L, 3L)
+  day <- c(1L)
+  date <- dtt_date_from_ints(year = year, month = month, day = day)
   expect_identical(
-    dates,
+    date,
     as.Date(
-      c("1990-01-01", "1991-02-05", "1990-03-07", "1991-01-16", "1990-02-23")
+      c("1990-01-01", "1991-02-01", "1992-03-01")
     )
   )
 })

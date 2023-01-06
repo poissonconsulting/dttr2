@@ -2,7 +2,7 @@
 % Please edit documentation in R/time-from-ints.R
 \name{dtt_time_from_ints}
 \alias{dtt_time_from_ints}
-\title{Create time from vectors}
+\title{Create Time from Vectors}
 \usage{
 dtt_time_from_ints(hour = 0L, minute = 0L, second = 0L)
 }
@@ -20,7 +20,12 @@ second zero.}
 A floored hms vector.
 }
 \description{
-Create time from vectors
+Pass vectors of hour, minute and second values to create a time object.
+}
+\details{
+This can be very helpful when needing to create a time column in a
+data frame from hour, minute and second columns. Vectors must all be the
+same length or be of length one.
 }
 \examples{
 dtt_time_from_ints()
@@ -36,4 +41,15 @@ dtt_time_from_ints(
   minute = c(15, 15),
   second = c(30, 0)
 )
+
+hour <- c(9, 10, 11)
+minute <- c(15, 30, 45)
+second <- 0
+dtt_time_from_ints(hour, minute, second)
 }
+\seealso{
+Other creates: 
+\code{\link{dtt_date_from_ints}()},
+\code{\link{dtt_date_time_from_ints}()}
+}
+\concept{creates}
