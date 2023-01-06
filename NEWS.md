@@ -1,5 +1,24 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# dttr2 0.4.2.9000
+
+- Merge pull request #25 from poissonconsulting/lint-run.
+
+Lint run
+
+- Merge pull request #23 from poissonconsulting/dev.
+
+adding functions to create date/time vectors from integers
+
+- Merge pull request #22 from poissonconsulting/dev.
+
+package general clean up and updates
+
+- Merge pull request #19 from poissonconsulting/dev.
+
+updating function with depreciation warning
+
+
 # dttr2 0.4.2
 
 - Same as previous version.
