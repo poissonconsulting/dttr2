@@ -111,4 +111,3 @@ test_that("dtt_excel_to_date", {
   expect_error(dtt_excel_to_date("hello"), "`x` must be numeric.")
   expect_error(dtt_excel_to_date(40908, 4), "^`modern` must be a flag [(]TRUE or FALSE[)][.]$")
 })
-

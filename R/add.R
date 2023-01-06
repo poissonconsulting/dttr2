@@ -75,7 +75,7 @@ dtt_add_years.default <- function(x, n = 1L, ...) {
     return(x)
   }
   x[is_na] <- x[!is_na][1]
-  
+
   dtt_year(x) <- dtt_year(x) + n
 
   is.na(x[is_na]) <- TRUE

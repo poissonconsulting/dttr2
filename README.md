@@ -84,16 +84,12 @@ dtt_add_months(date, 24L)
 actual clock time.
 
 ``` r
-time <- hms::as.hms(-3)
-#> Warning: `as.hms()` was deprecated in hms 0.5.0.
-#> Please use `as_hms()` instead.
+time <- hms::as_hms(-3)
 time
 #> -00:00:03
 dtt_time(time)
 #> 23:59:57
-dtt_time(hms::as.hms("24:00:00"))
-#> Warning: `as.hms()` was deprecated in hms 0.5.0.
-#> Please use `as_hms()` instead.
+dtt_time(hms::as_hms("24:00:00"))
 #> 00:00:00
 ```
 
