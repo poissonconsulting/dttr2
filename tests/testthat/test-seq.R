@@ -115,7 +115,10 @@ test_that("seq.POSIXct", {
   )
   expect_error(
     dtt_seq(as.POSIXct("2001-01-01"), as.POSIXct("2001-01-01"), units = "hour"),
-    "`units` must match 'days', 'hours', 'minutes', 'months', 'seconds' or 'years', not 'hour'",
+    paste0(
+      "`units` must match 'days', 'hours', 'minutes', 'months', ", 
+      "'seconds' or 'years', not 'hour'" 
+    ),
     class = "chk_error"
   )
 

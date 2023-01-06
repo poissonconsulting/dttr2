@@ -37,7 +37,10 @@ test_that("doy_to_date", {
   )
   expect_error(
     dtt_doy_to_date(0.33, 2000),
-    "^`x` must be a whole numeric vector [(]integer vector or double equivalent[)][.]$",
+    paste0(
+      "^`x` must be a whole numeric vector [(]integer vector or double ", 
+      "equivalent[)][.]$"
+    ),
     class = "chk_error"
   )
 })
