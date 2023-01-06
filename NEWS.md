@@ -2,27 +2,11 @@
 
 # dttr2 0.4.2.9000
 
-- Merge pull request #25 from poissonconsulting/lint-run.
-
-Lint run
-
-- Merge pull request #23 from poissonconsulting/dev.
-
-adding functions to create date/time vectors from integers
-
-- Merge pull request #22 from poissonconsulting/dev.
-
-package general clean up and updates
-
-- Merge pull request #19 from poissonconsulting/dev.
-
-updating function with depreciation warning
-
+- added `dtt_date_from_ints()`, `dtt_time_from_ints()` and `dtt_date_time_from_ints()` which create date or time objects from vectors of integers. 
 
 # dttr2 0.4.2
 
 - Same as previous version.
-
 
 # dttr2 0.4.1.9001
 
