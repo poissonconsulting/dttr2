@@ -40,7 +40,7 @@ Dayte Time
 \examples{
 dtt_dayte_time(
   as.POSIXct(
-    c("2001-01-01 12:13:14", "2015-12-13"), 
+    c("2001-01-01 12:13:14", "2015-12-13"),
     tz = "Etc/GMT+10"
   )
 )
