@@ -2,7 +2,11 @@ test_that("units_per_unit", {
   expect_identical(dtt_units_per_unit(), 86400)
   expect_identical(dtt_units_per_unit("hours"), 24)
   expect_identical(dtt_units_per_unit("minutes", "seconds"), 1 / 60)
-  expect_equal(dtt_units_per_unit("days", "months"), 30.41667, tolerance = 1e-06)
+  expect_equal(
+    dtt_units_per_unit("days", "months"),
+    30.41667,
+    tolerance = 1e-06
+  )
 })
 
 test_that("adjust_units", {
@@ -27,7 +31,11 @@ test_that("NA", {
 })
 
 test_that("c.POSIXct", {
-  expect_equal(c(as.POSIXct("2001-01-01")), as.POSIXct("2001-01-01"), ignore_attr = TRUE)
+  expect_equal(
+    c(as.POSIXct("2001-01-01")),
+    as.POSIXct("2001-01-01"),
+    ignore_attr = TRUE
+  )
 })
 
 test_that("c.hms", {

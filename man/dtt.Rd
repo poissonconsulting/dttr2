@@ -4,5 +4,6 @@
 \alias{dtt}
 \title{dtt Object}
 \description{
-A dtt (short for date time) object is an object of class Date (date), POSIXct (datetime) or hms (time).
+A dtt (short for date time) object is an object of class Date (date), POSIXct
+(datetime) or hms (time).
 }

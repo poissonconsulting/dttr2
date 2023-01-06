@@ -2,7 +2,10 @@ test_that("dtt_minute.Date", {
   expect_identical(dtt_minute(as.Date("2001-01-01")[-1]), integer(0))
   expect_identical(dtt_minute(as.Date("2001-01-01")), 0L)
   expect_identical(dtt_minute(NA_Date_), 0L)
-  expect_identical(dtt_minute(as.Date(c("2001-01-01", "1972-01-01"))), c(0L, 0L))
+  expect_identical(
+    dtt_minute(as.Date(c("2001-01-01", "1972-01-01"))),
+    c(0L, 0L)
+  )
   expect_identical(dtt_minute(as.Date(c("2001-01-01", NA_Date_))), c(0L, 0L))
 })
 
@@ -10,16 +13,26 @@ test_that("dtt_minute.POSIXct", {
   expect_identical(dtt_minute(Sys.time()[-1]), integer(0))
   expect_identical(dtt_minute(as.POSIXct("2001-01-01", tz = "UTC")), 0L)
   expect_identical(dtt_minute(NA_POSIXct_), NA_integer_)
-  expect_identical(dtt_minute(as.POSIXct("2001-01-01 00:03:31", tz = "UTC")), 3L)
   expect_identical(
-    dtt_minute(as.POSIXct(c("2001-01-01 00:04:31", "2001-01-02 00:01:33"), tz = "UTC")),
+    dtt_minute(as.POSIXct("2001-01-01 00:03:31", tz = "UTC")),
+    3L
+  )
+  expect_identical(
+    dtt_minute(
+      as.POSIXct(c("2001-01-01 00:04:31", "2001-01-02 00:01:33"), tz = "UTC")
+    ),
     c(4L, 1L)
   )
   expect_identical(
     dtt_minute(c(as.POSIXct("2001-01-01 00:32:31", tz = "UTC"), NA_POSIXct_)),
     c(32L, NA_integer_)
   )
-  expect_identical(dtt_minute(as.POSIXct("2001-01-01 00:06:31", tz = "Etc/GMT+8")), 6L)
+  expect_identical(
+    dtt_minute(
+      as.POSIXct("2001-01-01 00:06:31", tz = "Etc/GMT+8")
+    ),
+    6L
+  )
 })
 
 test_that("dtt_minute.hms", {

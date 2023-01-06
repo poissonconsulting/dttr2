@@ -6,5 +6,7 @@ test_that("floored", {
   expect_true(dtt_floored(hms::as_hms("01:02:00"), "seconds"))
   expect_true(dtt_floored(hms::as_hms("01:20:00"), "minutes"))
   expect_false(dtt_floored(hms::as_hms("01:00:10"), "minutes"))
-  expect_true(dtt_floored(as.POSIXct("2000-02-02", tz = "Etc/GMT+9"), "seconds"))
+  expect_true(
+    dtt_floored(as.POSIXct("2000-02-02", tz = "Etc/GMT+9"), "seconds")
+  )
 })

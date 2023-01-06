@@ -28,7 +28,7 @@
 #'   minute = c(15, 15),
 #'   second = c(30, 0)
 #' )
-#' 
+#'
 #' hour <- c(9, 10, 11)
 #' minute <- c(15, 30, 45)
 #' second <- 0
@@ -41,7 +41,7 @@ dtt_time_from_ints <- function(hour = 0L, minute = 0L, second = 0L) {
   chk::chk_whole_numeric(second)
   chk::chk_range(second, range = c(0L, 59L))
   chk::chk_compatible_lengths(hour, minute, second)
-  
+
   times <- dtt_time(paste(hour, minute, second, sep = ":"))
   times
 }

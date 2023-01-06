@@ -34,7 +34,8 @@ dtt_seq(from, to, units, length_out = NULL, ...)
 
 \item{...}{Unused.}
 
-\item{wrap}{A flag specifying whether to wrap hms vectors from 23:59:59 to 00:00:00}
+\item{wrap}{A flag specifying whether to wrap hms vectors from 23:59:59 to
+00:00:00}
 }
 \value{
 The date/time vector.

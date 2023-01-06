@@ -13,11 +13,11 @@ dtt_season(
 \arguments{
 \item{x}{A Date or POSIXct vector}
 
-\item{start}{A uniquely named integer vector of the first month of each season
-or a uniquely named Date vector of the first date of each season.}
+\item{start}{A uniquely named integer vector of the first month of each
+season or a uniquely named Date vector of the first date of each season.}
 
-\item{first}{A string of the name of first season or NULL in which case the first
-season is that which includes Jan 1st.}
+\item{first}{A string of the name of first season or NULL in which case the
+first season is that which includes Jan 1st.}
 }
 \value{
 A factor of the seasons.
@@ -26,12 +26,15 @@ A factor of the seasons.
 Returns a factor of the user specified seasons.
 }
 \details{
-If the first month of the first season isn't January (1L), then
-the last season is considered to wrap into the following year.
+If the first month of the first season isn't January (1L), then the last
+season is considered to wrap into the following year.
 }
 \examples{
 dates <- as.Date(c("2001-01-01", "2001-02-28", "2012-09-01", "2012-12-01"))
 dtt_season(dates)
 dtt_season(dates, start = c(Monsoon = 2L, `Dry Period` = 6L))
-dtt_season(dates, start = c(First = dtt_date("2000-01-01"), Second = dtt_date("2000-06-01")))
+dtt_season(
+  dates,
+  start = c(First = dtt_date("2000-01-01"), Second = dtt_date("2000-06-01"))
+)
 }

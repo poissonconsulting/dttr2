@@ -9,18 +9,27 @@ dtt_study_year(x, start = 1L, full = TRUE)
 \arguments{
 \item{x}{A Date or POSIXct vector.}
 
-\item{start}{An integer vector of the starting month or a Date vector of the starting date.}
+\item{start}{An integer vector of the starting month or a Date vector of the
+starting date.}
 
 \item{full}{A flag specifying whether to return a character vector of the
 study years (or an integer vector of the first year)}
 }
 \value{
-A character vector of the study year or an integer vector of the first year.
+A character vector of the study year or an integer vector of the
+first year.
 }
 \description{
 Study Year
 }
 \examples{
-dtt_study_year(as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")), start = 4L)
-dtt_study_year(as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")), start = 4L, full = FALSE)
+dtt_study_year(
+  as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")),
+  start = 4L
+)
+dtt_study_year(
+  as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")),
+  start = 4L,
+  full = FALSE
+)
 }

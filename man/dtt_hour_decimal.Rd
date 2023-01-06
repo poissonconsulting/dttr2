@@ -28,11 +28,14 @@ Gets decimal hour values for date/time vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{dtt_hour_decimal(Date)}: Get numeric vector of decimal hour values for a Date vector
+\item \code{dtt_hour_decimal(Date)}: Get numeric vector of decimal hour values for a
+Date vector
 
-\item \code{dtt_hour_decimal(POSIXct)}: Get numeric vector of decimal hour values for a POSIXct vector
+\item \code{dtt_hour_decimal(POSIXct)}: Get numeric vector of decimal hour values for a
+POSIXct vector
 
-\item \code{dtt_hour_decimal(hms)}: Get numeric vector of decimal hour values for a hms vector
+\item \code{dtt_hour_decimal(hms)}: Get numeric vector of decimal hour values for a
+hms vector
 
 }}
 \examples{

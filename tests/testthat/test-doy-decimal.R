@@ -15,7 +15,11 @@ test_that("doy_decimal.POSIXct", {
     c(1, 365, NA)
   )
   expect_equal(
-    dtt_doy_decimal(as.POSIXct(c("2001-01-01 00:00:01", "2001-12-31 23:59:59", NA))),
+    dtt_doy_decimal(
+      as.POSIXct(
+        c("2001-01-01 00:00:01", "2001-12-31 23:59:59", NA)
+      )
+    ),
     c(1.00001157407407, 365.999988425926, NA)
   )
 })

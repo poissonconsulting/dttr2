@@ -6,7 +6,11 @@ test_that("dtt_season.Date", {
 
   expect_identical(
     dtt_season(dates),
-    factor(c("Winter", "Spring", "Winter", "Spring", "Summer", "Autumn", "Winter", NA),
+    factor(
+      c(
+        "Winter", "Spring", "Winter", "Spring", "Summer", "Autumn", "Winter",
+        NA
+      ),
       levels = c("Winter", "Spring", "Summer", "Autumn")
     )
   )
@@ -15,7 +19,11 @@ test_that("dtt_season.Date", {
     dtt_season(dates,
       start = c(Spring = 1L, Summer = 6L, Autumn = 8L, Winter = 11L)
     ),
-    factor(c("Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter", NA),
+    factor(
+      c(
+        "Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter",
+        NA
+      ),
       levels = c("Spring", "Summer", "Autumn", "Winter")
     )
   )
@@ -27,7 +35,10 @@ test_that("dtt_season.Date", {
         Autumn = as.Date("1972-08-01"), Winter = as.Date("1972-11-01")
       )
     ),
-    factor(c("Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter", NA),
+    factor(
+      c(
+        "Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter", NA
+      ),
       levels = c("Spring", "Summer", "Autumn", "Winter")
     )
   )
@@ -36,7 +47,11 @@ test_that("dtt_season.Date", {
     dtt_season(dates,
       start = c(Monsoon = 2L, `Dry Period` = 6L)
     ),
-    factor(c("Dry Period", "Monsoon", "Monsoon", "Monsoon", "Dry Period", "Dry Period", "Dry Period", NA),
+    factor(
+      c(
+        "Dry Period", "Monsoon", "Monsoon", "Monsoon", "Dry Period",
+        "Dry Period", "Dry Period", NA
+      ),
       levels = c("Dry Period", "Monsoon")
     )
   )
@@ -58,7 +73,11 @@ test_that("dtt_season.POSIXct", {
 
   expect_identical(
     dtt_season(dates),
-    factor(c("Winter", "Spring", "Winter", "Spring", "Summer", "Autumn", "Winter", NA),
+    factor(
+      c(
+        "Winter", "Spring", "Winter", "Spring", "Summer", "Autumn", "Winter",
+        NA
+      ),
       levels = c("Winter", "Spring", "Summer", "Autumn")
     )
   )
@@ -67,7 +86,11 @@ test_that("dtt_season.POSIXct", {
     dtt_season(dates,
       start = c(Spring = 1L, Summer = 6L, Autumn = 8L, Winter = 11L)
     ),
-    factor(c("Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter", NA),
+    factor(
+      c(
+        "Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter",
+        NA
+      ),
       levels = c("Spring", "Summer", "Autumn", "Winter")
     )
   )
@@ -79,7 +102,11 @@ test_that("dtt_season.POSIXct", {
         Autumn = as.Date("1972-08-01"), Winter = as.Date("1972-11-01")
       )
     ),
-    factor(c("Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter", NA),
+    factor(
+      c(
+        "Spring", "Spring", "Spring", "Spring", "Summer", "Autumn", "Winter",
+        NA
+      ),
       levels = c("Spring", "Summer", "Autumn", "Winter")
     )
   )
@@ -88,7 +115,11 @@ test_that("dtt_season.POSIXct", {
     dtt_season(dates,
       start = c(Monsoon = 2L, `Dry Period` = 6L)
     ),
-    factor(c("Dry Period", "Monsoon", "Monsoon", "Monsoon", "Dry Period", "Dry Period", "Dry Period", NA),
+    factor(
+      c(
+        "Dry Period", "Monsoon", "Monsoon", "Monsoon", "Dry Period",
+        "Dry Period", "Dry Period", NA
+      ),
       levels = c("Dry Period", "Monsoon")
     )
   )
@@ -107,13 +138,21 @@ test_that("season order", {
     dtt_season(as.Date(paste("2000", c(1, 4, 8, 12), "01", sep = "-")),
       start = c(Summer = 6L, Winter = 11L)
     ),
-    structure(c(1L, 1L, 2L, 1L), .Label = c("Winter", "Summer"), class = "factor")
+    structure(
+      c(1L, 1L, 2L, 1L),
+      .Label = c("Winter", "Summer"),
+      class = "factor"
+    )
   )
 
   expect_identical(
     dtt_season(as.Date(paste("2000", c(1, 4, 8, 12), "01", sep = "-")),
       start = c(Summer = 6L, Winter = 11L), first = "Summer"
     ),
-    structure(c(2L, 2L, 1L, 2L), .Label = c("Summer", "Winter"), class = "factor")
+    structure(
+      c(2L, 2L, 1L, 2L),
+      .Label = c("Summer", "Winter"),
+      class = "factor"
+    )
   )
 })

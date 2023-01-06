@@ -37,7 +37,8 @@ dtt_minute.Date <- function(x, ...) {
   rep(0L, length(x))
 }
 
-#' @describeIn dtt_minute Get integer vector of minute values for a POSIXct vector
+#' @describeIn dtt_minute Get integer vector of minute values for a POSIXct
+#'   vector
 #' @export
 dtt_minute.POSIXct <- function(x, ...) {
   chk_unused(...)

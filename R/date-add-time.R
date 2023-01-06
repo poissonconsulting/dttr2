@@ -9,7 +9,11 @@
 #' @family add
 #' @export
 #' @examples
-#' dtt_date_add_time(as.Date("2001-03-05"), hms::as_hms("06:07:08"), tz = "Etc/GMT+9")
+#' dtt_date_add_time(
+#'   as.Date("2001-03-05"),
+#'   hms::as_hms("06:07:08"),
+#'   tz = "Etc/GMT+9"
+#' )
 dtt_date_add_time <- function(x, time, tz = dtt_default_tz()) {
   chk_s3_class(x, "Date")
   chk_s3_class(time, "hms")

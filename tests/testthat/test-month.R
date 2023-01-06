@@ -12,14 +12,22 @@ test_that("dtt_month.POSIXct", {
   expect_identical(dtt_month(NA_POSIXct_), NA_integer_)
   expect_identical(dtt_month(as.POSIXct("2001-03-01 02:03:31", tz = "UTC")), 3L)
   expect_identical(
-    dtt_month(as.POSIXct(c("2001-04-01 05:06:31", "2001-06-05 00:01:33"), tz = "UTC")),
+    dtt_month(
+      as.POSIXct(
+        c("2001-04-01 05:06:31", "2001-06-05 00:01:33"),
+        tz = "UTC"
+      )
+    ),
     c(4L, 6L)
   )
   expect_identical(
     dtt_month(c(as.POSIXct("2001-07-01 23:32:31", tz = "UTC"), NA_POSIXct_)),
     c(7L, NA_integer_)
   )
-  expect_identical(dtt_month(as.POSIXct("2001-08-12 16:06:31", tz = "Etc/GMT+8")), 8L)
+  expect_identical(
+    dtt_month(as.POSIXct("2001-08-12 16:06:31", tz = "Etc/GMT+8")),
+    8L
+  )
 })
 
 test_that("dtt_month<-.Date", {

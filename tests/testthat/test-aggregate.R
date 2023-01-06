@@ -2,14 +2,22 @@ test_that("aggregate.Date", {
   expect_identical(dtt_aggregate(NA_Date_[-1]), NA_Date_[-1])
   expect_identical(dtt_aggregate(NA_Date_), NA_Date_)
   expect_identical(dtt_aggregate(as.Date("1991-02-02")), as.Date("1991-02-02"))
-  expect_identical(dtt_aggregate(as.Date("1991-02-02"), "months"), as.Date("1991-02-01"))
-  expect_identical(dtt_aggregate(as.Date("1991-02-02"), "years"), as.Date("1991-01-01"))
+  expect_identical(
+    dtt_aggregate(as.Date("1991-02-02"), "months"),
+    as.Date("1991-02-01")
+  )
+  expect_identical(
+    dtt_aggregate(as.Date("1991-02-02"), "years"),
+    as.Date("1991-01-01")
+  )
   expect_identical(
     dtt_aggregate(as.Date(c("1991-02-02", "1991-03-03")), "years"),
     as.Date("1991-01-01")
   )
   expect_identical(
-    dtt_aggregate(as.Date(c("1992-01-01", "1991-02-02", "1991-03-03")), "years"),
+    dtt_aggregate(
+      as.Date(c("1992-01-01", "1991-02-02", "1991-03-03")), "years"
+    ),
     as.Date(c("1992-01-01", "1991-01-01"))
   )
   expect_identical(
@@ -30,14 +38,23 @@ test_that("aggregate.Date", {
   expect_identical(dtt_aggregate(NA_Date_[-1]), NA_Date_[-1])
   expect_identical(dtt_aggregate(NA_Date_), NA_Date_)
   expect_identical(dtt_aggregate(as.Date("1991-02-02")), as.Date("1991-02-02"))
-  expect_identical(dtt_aggregate(as.Date("1991-02-02"), "months"), as.Date("1991-02-01"))
-  expect_identical(dtt_aggregate(as.Date("1991-02-02"), "years"), as.Date("1991-01-01"))
+  expect_identical(
+    dtt_aggregate(as.Date("1991-02-02"), "months"),
+    as.Date("1991-02-01")
+  )
+  expect_identical(
+    dtt_aggregate(as.Date("1991-02-02"), "years"),
+    as.Date("1991-01-01")
+  )
   expect_identical(
     dtt_aggregate(as.Date(c("1991-02-02", "1991-03-03")), "years"),
     as.Date("1991-01-01")
   )
   expect_identical(
-    dtt_aggregate(as.Date(c("1992-01-01", "1991-02-02", "1991-03-03")), "years"),
+    dtt_aggregate(
+      as.Date(c("1992-01-01", "1991-02-02", "1991-03-03")),
+      "years"
+    ),
     as.Date(c("1992-01-01", "1991-01-01"))
   )
   expect_identical(
@@ -95,7 +112,10 @@ test_that("aggregate.POSIXct", {
 test_that("aggregate.hms", {
   expect_identical(dtt_aggregate(NA_hms_[-1]), NA_hms_[-1])
   expect_identical(dtt_aggregate(NA_hms_), NA_hms_)
-  expect_identical(dtt_aggregate(hms::as_hms("02:12:59")), hms::as_hms("02:12:59"))
+  expect_identical(
+    dtt_aggregate(hms::as_hms("02:12:59")),
+    hms::as_hms("02:12:59")
+  )
   expect_identical(
     dtt_aggregate(hms::as_hms("02:12:59"), "minutes"),
     hms::as_hms("02:12:00")

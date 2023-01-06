@@ -23,16 +23,26 @@ test_that("complete.Date", {
   )
 
   expect_identical(
-    dtt_complete(as.Date(c("2001-01-03", "2001-01-01", "2001-01-03")), sort = FALSE),
+    dtt_complete(
+      as.Date(c("2001-01-03", "2001-01-01", "2001-01-03")),
+      sort = FALSE
+    ),
     as.Date(c("2001-01-03", "2001-01-01", "2001-01-02"))
   )
   expect_identical(
-    dtt_complete(as.Date(c("2001-01-03", "2001-01-01", "2001-01-03")), sort = FALSE, unique = FALSE),
+    dtt_complete(
+      as.Date(c("2001-01-03", "2001-01-01", "2001-01-03")),
+      sort = FALSE,
+      unique = FALSE
+    ),
     as.Date(c("2001-01-03", "2001-01-01", "2001-01-03", "2001-01-02"))
   )
 
   expect_identical(
-    dtt_complete(as.Date(c("2001-01-03", "2001-01-01", "2001-01-03")), unique = FALSE),
+    dtt_complete(
+      as.Date(c("2001-01-03", "2001-01-01", "2001-01-03")),
+      unique = FALSE
+    ),
     as.Date(c("2001-01-01", "2001-01-02", "2001-01-03", "2001-01-03"))
   )
 
@@ -50,64 +60,127 @@ test_that("complete.POSIXct", {
     as.POSIXct("2001-01-02", tz = "Etc/GMT+7")
   )
   expect_identical(
-    length(dtt_complete(as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT+7"))),
+    length(
+      dtt_complete(as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT+7"))
+    ),
     86401L
   )
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT+7"), units = "days"),
+    dtt_complete(
+      as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT+7"),
+      units = "days"
+    ),
     as.POSIXct(c("2001-01-01", "2001-01-02"), tz = "Etc/GMT+7")
   )
 
 
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT+7"), units = "days", sort = FALSE),
+    dtt_complete(
+      as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT+7"),
+      units = "days",
+      sort = FALSE
+    ),
     as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT+7")
   )
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-03", "2001-01-01"), tz = "Etc/GMT+7"), units = "days"),
+    dtt_complete(
+      as.POSIXct(c("2001-01-03", "2001-01-01"), tz = "Etc/GMT+7"),
+      units = "days"
+    ),
     as.POSIXct(c("2001-01-01", "2001-01-02", "2001-01-03"), tz = "Etc/GMT+7")
   )
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-03", "2001-01-01"), tz = "Etc/GMT+7"), units = "days", sort = FALSE),
+    dtt_complete(
+      as.POSIXct(c("2001-01-03", "2001-01-01"), tz = "Etc/GMT+7"),
+      units = "days",
+      sort = FALSE
+    ),
     as.POSIXct(c("2001-01-03", "2001-01-01", "2001-01-02"), tz = "Etc/GMT+7")
   )
-
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-03", "2001-01-01", "2001-01-03"), tz = "Etc/GMT+7"), sort = FALSE, units = "days"),
+    dtt_complete(
+      as.POSIXct(c("2001-01-03", "2001-01-01", "2001-01-03"), tz = "Etc/GMT+7"),
+      sort = FALSE,
+      units = "days"
+    ),
     as.POSIXct(c("2001-01-03", "2001-01-01", "2001-01-02"), tz = "Etc/GMT+7")
   )
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-03", "2001-01-01", "2001-01-03"), tz = "Etc/GMT+7"), units = "days", sort = FALSE, unique = FALSE),
-    as.POSIXct(c("2001-01-03", "2001-01-01", "2001-01-03", "2001-01-02"), tz = "Etc/GMT+7")
+    dtt_complete(
+      as.POSIXct(c("2001-01-03", "2001-01-01", "2001-01-03"), tz = "Etc/GMT+7"),
+      units = "days",
+      sort = FALSE,
+      unique = FALSE
+    ),
+    as.POSIXct(
+      c("2001-01-03", "2001-01-01", "2001-01-03", "2001-01-02"),
+      tz = "Etc/GMT+7"
+    )
   )
-
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-03", "2001-01-01", "2001-01-03"), tz = "Etc/GMT+7"), unique = FALSE, units = "days"),
-    as.POSIXct(c("2001-01-01", "2001-01-02", "2001-01-03", "2001-01-03"), tz = "Etc/GMT+7")
+    dtt_complete(
+      as.POSIXct(c("2001-01-03", "2001-01-01", "2001-01-03"), tz = "Etc/GMT+7"),
+      unique = FALSE,
+      units = "days"
+    ),
+    as.POSIXct(
+      c("2001-01-01", "2001-01-02", "2001-01-03", "2001-01-03"),
+      tz = "Etc/GMT+7"
+    )
   )
-
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-03", "2001-01-01"), tz = "Etc/GMT+7"), units = "months"),
+    dtt_complete(
+      as.POSIXct(c("2001-01-03", "2001-01-01"), tz = "Etc/GMT+7"),
+      units = "months"
+    ),
     as.POSIXct("2001-01-01", tz = "Etc/GMT+7")
   )
-
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-01 00:00:00", "2001-01-01 00:00:00"), tz = "Etc/GMT+7")),
+    dtt_complete(
+      as.POSIXct(
+        c("2001-01-01 00:00:00", "2001-01-01 00:00:00"),
+        tz = "Etc/GMT+7"
+      )
+    ),
     as.POSIXct("2001-01-01", tz = "Etc/GMT+7")
   )
-
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-01 00:00:00", "2001-01-01 00:00:02"), tz = "Etc/GMT+7")),
-    as.POSIXct(c("2001-01-01 00:00:00", "2001-01-01 00:00:01", "2001-01-01 00:00:02"), tz = "Etc/GMT+7")
+    dtt_complete(
+      as.POSIXct(
+        c("2001-01-01 00:00:00", "2001-01-01 00:00:02"),
+        tz = "Etc/GMT+7"
+      )
+    ),
+    as.POSIXct(
+      c("2001-01-01 00:00:00", "2001-01-01 00:00:01", "2001-01-01 00:00:02"),
+      tz = "Etc/GMT+7"
+    )
   )
 
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-01 00:00:04", "2001-01-01 00:00:02"), tz = "Etc/GMT+7"), sort = FALSE),
-    as.POSIXct(c("2001-01-01 00:00:04", "2001-01-01 00:00:02", "2001-01-01 00:00:03"), tz = "Etc/GMT+7")
+    dtt_complete(
+      as.POSIXct(
+        c("2001-01-01 00:00:04", "2001-01-01 00:00:02"),
+        tz = "Etc/GMT+7"
+      ),
+      sort = FALSE
+    ),
+    as.POSIXct(
+      c("2001-01-01 00:00:04", "2001-01-01 00:00:02", "2001-01-01 00:00:03"),
+      tz = "Etc/GMT+7"
+    )
   )
   expect_identical(
-    dtt_complete(as.POSIXct(c("2001-01-01 00:00:04", "2001-01-01 00:00:02"), tz = "Etc/GMT+7")),
-    as.POSIXct(c("2001-01-01 00:00:02", "2001-01-01 00:00:03", "2001-01-01 00:00:04"), tz = "Etc/GMT+7")
+    dtt_complete(
+      as.POSIXct(
+        c("2001-01-01 00:00:04", "2001-01-01 00:00:02"),
+        tz = "Etc/GMT+7"
+      )
+    ),
+    as.POSIXct(
+      c("2001-01-01 00:00:02", "2001-01-01 00:00:03", "2001-01-01 00:00:04"),
+      tz = "Etc/GMT+7"
+    )
   )
 })
 
@@ -138,7 +211,9 @@ test_that("complete.hms", {
     86399L
   )
   expect_identical(
-    length(dtt_complete(hms::as_hms(c("23:59:59", "00:00:01")), units = "hours")),
+    length(
+      dtt_complete(hms::as_hms(c("23:59:59", "00:00:01")), units = "hours")
+    ),
     24L
   )
 })

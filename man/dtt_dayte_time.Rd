@@ -17,7 +17,8 @@ dtt_dayte_time(x, ...)
 
 \item{...}{Unused.}
 
-\item{start}{An integer scalar of the starting month or a Date scalar of the starting date.}
+\item{start}{An integer scalar of the starting month or a Date scalar of the
+starting date.}
 
 \item{tz}{A string of the time zone.}
 }
@@ -37,7 +38,12 @@ Dayte Time
 
 }}
 \examples{
-dtt_dayte_time(as.POSIXct(c("2001-01-01 12:13:14", "2015-12-13"), tz = "Etc/GMT+10"))
+dtt_dayte_time(
+  as.POSIXct(
+    c("2001-01-01 12:13:14", "2015-12-13"),
+    tz = "Etc/GMT+10"
+  )
+)
 }
 \seealso{
 Other dayte: 

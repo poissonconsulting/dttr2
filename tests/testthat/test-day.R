@@ -12,14 +12,19 @@ test_that("dtt_day.POSIXct", {
   expect_identical(dtt_day(NA_POSIXct_), NA_integer_)
   expect_identical(dtt_day(as.POSIXct("2001-01-03 02:03:31", tz = "UTC")), 3L)
   expect_identical(
-    dtt_day(as.POSIXct(c("2001-01-04 05:04:31", "2001-01-05 00:01:33"), tz = "UTC")),
+    dtt_day(
+      as.POSIXct(c("2001-01-04 05:04:31", "2001-01-05 00:01:33"), tz = "UTC")
+    ),
     c(4L, 5L)
   )
   expect_identical(
     dtt_day(c(as.POSIXct("2001-01-01 23:32:31", tz = "UTC"), NA_POSIXct_)),
     c(1L, NA_integer_)
   )
-  expect_identical(dtt_day(as.POSIXct("2001-01-12 16:06:31", tz = "Etc/GMT+8")), 12L)
+  expect_identical(
+    dtt_day(as.POSIXct("2001-01-12 16:06:31", tz = "Etc/GMT+8")),
+    12L
+  )
 })
 
 test_that("dtt_day<-.Date", {

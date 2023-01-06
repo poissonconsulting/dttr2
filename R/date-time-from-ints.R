@@ -1,5 +1,5 @@
 #' Create Date Times from Integers
-#' 
+#'
 #' Create date object from vectors of year, month and day values.
 #'
 #' @param year An integer of the year. The default value is 1972.

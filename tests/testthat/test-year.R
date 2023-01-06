@@ -2,7 +2,10 @@ test_that("dtt_year.Date", {
   expect_identical(dtt_year(as.Date("2001-01-01")[-1]), integer(0))
   expect_identical(dtt_year(as.Date("2001-01-01")), 2001L)
   expect_identical(dtt_year(NA_Date_), NA_integer_)
-  expect_identical(dtt_year(as.Date(c("2001-01-01", "1972-02-01"))), c(2001L, 1972L))
+  expect_identical(
+    dtt_year(as.Date(c("2001-01-01", "1972-02-01"))),
+    c(2001L, 1972L)
+  )
   expect_identical(dtt_year(as.Date(c("2001-04-03", NA_Date_))), c(2001L, NA))
 })
 
@@ -10,16 +13,24 @@ test_that("dtt_year.POSIXct", {
   expect_identical(dtt_year(Sys.time()[-1]), integer(0))
   expect_identical(dtt_year(as.POSIXct("2001-02-01", tz = "UTC")), 2001L)
   expect_identical(dtt_year(NA_POSIXct_), NA_integer_)
-  expect_identical(dtt_year(as.POSIXct("2003-03-01 02:03:31", tz = "UTC")), 2003L)
   expect_identical(
-    dtt_year(as.POSIXct(c("2004-04-01 05:06:31", "2005-06-05 00:01:33"), tz = "UTC")),
+    dtt_year(as.POSIXct("2003-03-01 02:03:31", tz = "UTC")),
+    2003L
+  )
+  expect_identical(
+    dtt_year(
+      as.POSIXct(c("2004-04-01 05:06:31", "2005-06-05 00:01:33"), tz = "UTC")
+    ),
     c(2004L, 2005L)
   )
   expect_identical(
     dtt_year(c(as.POSIXct("2008-07-01 23:32:31", tz = "UTC"), NA_POSIXct_)),
     c(2008L, NA_integer_)
   )
-  expect_identical(dtt_year(as.POSIXct("2009-08-12 16:06:31", tz = "Etc/GMT+8")), 2009L)
+  expect_identical(
+    dtt_year(as.POSIXct("2009-08-12 16:06:31", tz = "Etc/GMT+8")),
+    2009L
+  )
 })
 
 test_that("dtt_year<-.Date", {

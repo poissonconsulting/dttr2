@@ -2,14 +2,23 @@
 #'
 #' @inheritParams params
 #' @param x A Date or POSIXct vector.
-#' @param start An integer vector of the starting month or a Date vector of the starting date.
+#' @param start An integer vector of the starting month or a Date vector of the
+#'   starting date.
 #'
-#' @return A character vector of the study year or an integer vector of the first year.
+#' @return A character vector of the study year or an integer vector of the
+#'   first year.
 #' @export
 #'
 #' @examples
-#' dtt_study_year(as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")), start = 4L)
-#' dtt_study_year(as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")), start = 4L, full = FALSE)
+#' dtt_study_year(
+#'   as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")),
+#'   start = 4L
+#' )
+#' dtt_study_year(
+#'   as.Date(c("2000-03-31", "2000-04-01", "2001-04-01")),
+#'   start = 4L,
+#'   full = FALSE
+#' )
 dtt_study_year <- function(x, start = 1L, full = TRUE) {
   if (!vld_s3_class(x, "Date") && !vld_s3_class(x, "POSIXct")) {
     chkor_vld(vld_s3_class(x, "Date"), vld_s3_class(x, "POSIXct"))

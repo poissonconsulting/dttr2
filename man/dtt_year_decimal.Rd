@@ -25,9 +25,11 @@ Gets decimal year values for date/time vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{dtt_year_decimal(Date)}: Get numeric vector of decimal year values for a Date vector
+\item \code{dtt_year_decimal(Date)}: Get numeric vector of decimal year values for a
+Date vector
 
-\item \code{dtt_year_decimal(POSIXct)}: Get numeric vector of decimal year values for a POSIXct vector
+\item \code{dtt_year_decimal(POSIXct)}: Get numeric vector of decimal year values for a
+POSIXct vector
 
 }}
 \examples{

@@ -44,7 +44,8 @@ dtt_date_time.character <- function(x, tz = dtt_default_tz(), ...) {
 
 #' @describeIn dtt_date_time Coerce Date vector to a floored POSIXct vector
 #' @export
-dtt_date_time.Date <- function(x, time = hms::as_hms("00:00:00"), tz = dtt_default_tz(), ...) {
+dtt_date_time.Date <- function(x, time = hms::as_hms("00:00:00"),
+                               tz = dtt_default_tz(), ...) {
   chk_unused(...)
   chk_string(tz)
   chk_s3_class(time, "hms")
@@ -71,7 +72,8 @@ dtt_date_time.POSIXct <- function(x, tz = dtt_tz(x), ...) {
 
 #' @describeIn dtt_date_time Coerce hms vector to a floored POSIXct vector
 #' @export
-dtt_date_time.hms <- function(x, date = dtt_date("1970-01-01"), tz = dtt_default_tz(), ...) {
+dtt_date_time.hms <- function(x, date = dtt_date("1970-01-01"),
+                              tz = dtt_default_tz(), ...) {
   chk_s3_class(date, "Date")
   chk_subset(length(date), c(1L, length(x)))
   chk_string(tz)

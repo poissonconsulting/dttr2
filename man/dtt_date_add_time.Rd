@@ -20,7 +20,11 @@ A POSIXct vector.
 Adds times to Dates vector and sets timezone in a single function.
 }
 \examples{
-dtt_date_add_time(as.Date("2001-03-05"), hms::as_hms("06:07:08"), tz = "Etc/GMT+9")
+dtt_date_add_time(
+  as.Date("2001-03-05"),
+  hms::as_hms("06:07:08"),
+  tz = "Etc/GMT+9"
+)
 }
 \seealso{
 Other add: 

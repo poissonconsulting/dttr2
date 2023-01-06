@@ -17,7 +17,8 @@ dtt_seq <- function(from, to, units, length_out = NULL, ...) {
 
 #' @describeIn dtt_seq Create a Date sequence vector
 #' @export
-dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL, ...) {
+dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL,
+                         ...) {
   chk_date(from)
   chk_string(units)
   chk_subset(units, c("days", "months", "years"))
@@ -57,7 +58,8 @@ dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL, ...
 
 #' @describeIn dtt_seq Create a POSIXct sequence vector
 #' @export
-dtt_seq.POSIXct <- function(from, to = from, units = "seconds", length_out = NULL, ...) {
+dtt_seq.POSIXct <- function(from, to = from, units = "seconds",
+                            length_out = NULL, ...) {
   chk_date_time(from)
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours", "days", "months", "years"))
@@ -142,6 +144,10 @@ dtt_seq.hms <- function(from, to = from, units = "seconds", length_out = NULL,
     }
   }
 
-  seq <- seq(as.integer(from), as.integer(to), by = dtt_units_per_unit("seconds", units))
+  seq <- seq(
+    as.integer(from),
+    as.integer(to),
+    by = dtt_units_per_unit("seconds", units)
+  )
   return(dtt_time(seq))
 }
