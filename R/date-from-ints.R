@@ -49,7 +49,7 @@ dtt_date_from_ints <- function(year = 1972L, month = 1L, day = 1L) {
   date_string <- paste(year, month, day, sep = "-")
   na_positions <- grep("NA", date_string)
   date_string[na_positions] <- NA_character_
-  
+
   dates <- dtt_date(date_string)
   dates
 }

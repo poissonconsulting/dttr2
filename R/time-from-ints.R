@@ -45,7 +45,7 @@ dtt_time_from_ints <- function(hour = 0L, minute = 0L, second = 0L) {
   time_string <- paste(hour, minute, second, sep = ":")
   na_positions <- grep("NA", time_string)
   time_string[na_positions] <- NA_character_
-  
+
   times <- dtt_time(time_string)
   times
 }

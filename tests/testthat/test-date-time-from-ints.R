@@ -182,7 +182,7 @@ test_that("handles missing values by returning NA for that value", {
   hour <- c(0, 10, 14, 23)
   minute <- c(0, 25, 45, 59)
   second <- c(0, 24, 47, 59)
-  
+
   datetimes <- dtt_date_time_from_ints(
     year = year,
     month = month,
@@ -209,7 +209,7 @@ test_that("handles missing values when first value is missing", {
   hour <- c(0, 10, 14, 23)
   minute <- c(0, 25, 45, 59)
   second <- c(0, 24, 47, 59)
-  
+
   datetimes <- dtt_date_time_from_ints(
     year = year,
     month = month,
@@ -234,7 +234,7 @@ test_that("outputs NA when all values missing instead of erroring", {
   hour <- NA_real_
   minute <- NA_real_
   second <- NA_real_
-  
+
   datetimes <- dtt_date_time_from_ints(
     year = year,
     month = month,

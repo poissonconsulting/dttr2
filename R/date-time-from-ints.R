@@ -71,10 +71,10 @@ dtt_date_time_from_ints <- function(year = 1972L, month = 1L, day = 1L,
   date_string <- paste(year, month, day, sep = "-")
   time_string <- paste(hour, minute, second, sep = ":")
   date_time_string <- paste(date_string, time_string)
-  
+
   na_positions <- grep("NA", date_time_string)
   date_time_string[na_positions] <- NA_character_
-  
+
   datetimes <- dtt_date_time(
     date_time_string,
     tz = tz
