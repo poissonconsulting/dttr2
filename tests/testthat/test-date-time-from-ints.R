@@ -175,7 +175,7 @@ test_that("pass when lengths of vectors 1 or the same", {
   )
 })
 
-test_that("handles missing values", {
+test_that("handles missing values by returning NA for that value", {
   year <- c(1990, NA_real_, 2010, 2022)
   month <- c(1L, 5L, 8L, 12L)
   day <- c(1L, 10L, 16L, 31L)
@@ -227,7 +227,7 @@ test_that("handles missing values when first value is missing", {
   )
 })
 
-test_that("outputs NA when all values missing", {
+test_that("outputs NA when all values missing instead of erroring", {
   year <- NA_real_
   month <- NA_real_
   day <- NA_real_
