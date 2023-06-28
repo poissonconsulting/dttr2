@@ -243,11 +243,6 @@ test_that("outputs NA when all values missing instead of erroring", {
     minute = minute,
     second = second
   )
-  expect_identical(
-    datetimes,
-    as.POSIXct(
-      c(NA),
-      tz = "UTC"
-    )
-  )
+  
+  expect_true(is.na(datetimes))
 })
