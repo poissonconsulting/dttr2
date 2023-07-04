@@ -1,4 +1,11 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
+
+# dttr2 0.4.2.9001
+
+- Merge pull request #27 from poissonconsulting/dev.
+
+  Updating `dtt_*_from_ints()` functions to handle missing values better
+
 
 # dttr2 0.4.2.9000
 
