@@ -2,10 +2,7 @@
 
 # dttr2 0.4.2.9001
 
-- Merge pull request #27 from poissonconsulting/dev.
-
-  Updating `dtt_*_from_ints()` functions to handle missing values better
-
+- Updating `dtt_*_from_ints()` functions to handle missing values by setting the whole value to be `NA` if one part is missing 
 
 # dttr2 0.4.2.9000
 
