@@ -68,9 +68,15 @@ dtt_date_time_from_ints <- function(year = 1972L, month = 1L, day = 1L,
   chk::chk_string(tz)
   chk::chk_compatible_lengths(year, month, day, hour, minute, second)
 
+  date_string <- paste(year, month, day, sep = "-")
+  time_string <- paste(hour, minute, second, sep = ":")
+  date_time_string <- paste(date_string, time_string)
+
+  na_positions <- grep("NA", date_time_string)
+  date_time_string[na_positions] <- NA_character_
+
   datetimes <- dtt_date_time(
-    dtt_date(paste(year, month, day, sep = "-")),
-    dtt_time(paste(hour, minute, second, sep = ":")),
+    date_time_string,
     tz = tz
   )
   datetimes

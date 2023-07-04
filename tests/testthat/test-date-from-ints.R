@@ -96,3 +96,29 @@ test_that("pass when lengths of vectors 1 or the same", {
     )
   )
 })
+
+test_that("missing value is first in vector and still creates dates", {
+  year <- c(1990, 1991, 1992)
+  month <- c(NA_integer_, 2L, 3L)
+  day <- c(1L, 1L, 2L)
+  date <- dtt_date_from_ints(year = year, month = month, day = day)
+  expect_identical(
+    date,
+    as.Date(
+      c(NA, "1991-02-01", "1992-03-02")
+    )
+  )
+})
+
+test_that("missing value returned when all missing", {
+  year <- NA_integer_
+  month <- NA_integer_
+  day <- NA_integer_
+  date <- dtt_date_from_ints(year = year, month = month, day = day)
+  expect_identical(
+    date,
+    as.Date(
+      c(NA)
+    )
+  )
+})

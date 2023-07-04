@@ -18,7 +18,7 @@ check_tz <- function(x, tz = dtt_tz(x),
                      error = TRUE) {
   lifecycle::deprecate_soft("0.1.0", "dttr2::check_tz()",
     details = paste0(
-      "Replace with `chk::chk_identical(dtt_tz(x), tz)`. To check whether a ", 
+      "Replace with `chk::chk_identical(dtt_tz(x), tz)`. To check whether a ",
       "valid time zone use `chk::chk_tz(x)`."
     )
   )

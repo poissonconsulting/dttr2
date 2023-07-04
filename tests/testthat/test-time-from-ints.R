@@ -101,3 +101,36 @@ test_that("pass when lengths of vectors 1 or the same", {
     as_hms(c("00:25:16", "02:25:30", "04:25:45"))
   )
 })
+
+test_that("handles missing value by returning NA for that value", {
+  hour <- c(0, 10, 14, 23)
+  minute <- c(0, 25, 45, 59)
+  second <- c(0, NA_real_, 47, 59)
+  time <- dtt_time_from_ints(hour = hour, minute = minute, second = second)
+  expect_identical(
+    time,
+    as_hms(c("00:00:00", NA, "14:45:47", "23:59:59"))
+  )
+})
+
+test_that("handles missing value as first value", {
+  hour <- c(0, 10, 14, 23)
+  minute <- c(NA_real_, 25, 45, 59)
+  second <- c(0, NA_real_, 47, 59)
+  time <- dtt_time_from_ints(hour = hour, minute = minute, second = second)
+  expect_identical(
+    time,
+    as_hms(c(NA, NA, "14:45:47", "23:59:59"))
+  )
+})
+
+test_that("outputs NA when only NA passed", {
+  hour <- NA_integer_
+  minute <- NA_integer_
+  second <- NA_integer_
+  time <- dtt_time_from_ints(hour = hour, minute = minute, second = second)
+  expect_identical(
+    time,
+    as_hms(c(NA))
+  )
+})

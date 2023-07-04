@@ -42,6 +42,10 @@ dtt_time_from_ints <- function(hour = 0L, minute = 0L, second = 0L) {
   chk::chk_range(second, range = c(0L, 59L))
   chk::chk_compatible_lengths(hour, minute, second)
 
-  times <- dtt_time(paste(hour, minute, second, sep = ":"))
+  time_string <- paste(hour, minute, second, sep = ":")
+  na_positions <- grep("NA", time_string)
+  time_string[na_positions] <- NA_character_
+
+  times <- dtt_time(time_string)
   times
 }
