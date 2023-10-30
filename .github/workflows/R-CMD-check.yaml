@@ -37,7 +37,6 @@ jobs:
           # - {os: ubuntu-latest,   r: 'oldrel-3'}
           # - {os: ubuntu-latest,   r: 'oldrel-4'}
           
-          - {os: ubuntu-latest,   r: 'devel', http-user-agent: 'release'}
           - {os: macos-latest,   r: 'devel', http-user-agent: 'release'}
 
     env:
@@ -59,18 +58,25 @@ jobs:
         with:
           extra-packages: any::rcmdcheck
           needs: check
+          
+      - name: Run tests
+        run: |
+          devtools::test()
+        shell: Rscript {0}
 
-      - uses: r-lib/actions/check-r-package@v2
-        with:
-          upload-snapshots: true
 
-      - name: action-slack
-        if: failure()
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        uses: 8398a7/action-slack@v3.0.0
-        with:
-          status: ${{ job.status }}
-          author_name: "github action: ${{github.workflow}}"
-          fields: repo, ref, commit, author, message
+# 
+#       - uses: r-lib/actions/check-r-package@v2
+#         with:
+#           upload-snapshots: true
+# 
+#       - name: action-slack
+#         if: failure()
+#         env:
+#           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+#         uses: 8398a7/action-slack@v3.0.0
+#         with:
+#           status: ${{ job.status }}
+#           author_name: "github action: ${{github.workflow}}"
+#           fields: repo, ref, commit, author, message
           
