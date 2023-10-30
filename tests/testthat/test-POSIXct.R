@@ -63,9 +63,9 @@ test_that("POSIXct", {
     "1970-01-01 00:00:01"
   )
 
-  skip_on_os("linux")
-  skip_on_os("solaris")
-  skip_on_os("windows")
+  # skip_on_os("linux")
+  # skip_on_os("solaris")
+  # skip_on_os("windows")
 
   expect_identical(
     format(
