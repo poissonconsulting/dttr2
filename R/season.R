@@ -20,10 +20,9 @@
 #'   dates,
 #'   start = c(First = dtt_date("2000-01-01"), Second = dtt_date("2000-06-01"))
 #' )
-dtt_season <- function(x, start = c(
-                         Spring = 3L, Summer = 6L,
-                         Autumn = 9L, Winter = 12L
-                       ), first = NULL) {
+dtt_season <- function(x, 
+                       start = c(Spring = 3L, Summer = 6L, Autumn = 9L, Winter = 12L), 
+                       first = NULL) {
   if (!vld_s3_class(x, "Date") && !vld_s3_class(x, "POSIXct")) {
     chkor_vld(vld_s3_class(x, "Date"), vld_s3_class(x, "POSIXct"))
   }
