@@ -38,7 +38,7 @@ jobs:
           # - {os: ubuntu-latest,   r: 'oldrel-4'}
           
           - {os: ubuntu-latest,   r: 'devel', http-user-agent: 'release'}
-          - {os: mac-latest,   r: 'devel', http-user-agent: 'release'}
+          - {os: macos-latest,   r: 'devel', http-user-agent: 'release'}
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
