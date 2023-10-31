@@ -1,5 +1,9 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.4.2.9002
+
+- Updating tests due POSIXct bug fix
+
 # dttr2 0.4.2.9001
 
 - Updating `dtt_*_from_ints()` functions to handle missing values by setting the whole value to be `NA` if one part is missing 
