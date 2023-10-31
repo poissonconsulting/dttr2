@@ -243,6 +243,6 @@ test_that("outputs NA when all values missing instead of erroring", {
     minute = minute,
     second = second
   )
-  
+
   expect_true(is.na(datetimes))
 })
