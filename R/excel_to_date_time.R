@@ -36,9 +36,9 @@ dtt_excel_to_date_time <- function(x, tz = dtt_default_tz(), modern = TRUE, ...)
   second <- minute%%1
   second <- second * 60
   
-  hour <- floor(hour)
-  minute <- floor(minute)
-  second <- floor(second)
+  hour <- as.integer(floor(hour))
+  minute <- as.integer(floor(minute))
+  second <- as.integer(floor(second))
   
   time <- dtt_time_from_ints(hour, minute, second)
   # combine to be date time 
