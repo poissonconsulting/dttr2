@@ -69,7 +69,7 @@ test_that("handles empty values", {
 test_that("handles NA values", {
   expect_equal(
     dtt_excel_to_date_time(NA_real_),
-    as.POSIXct(NA_integer_, tz = "UTC")
+    as.POSIXct(NA_integer_, tz = "UTC", origin = "1900-01-01")
   )
   expect_equal(
     dtt_excel_to_date_time(NA_integer_),
@@ -89,7 +89,7 @@ test_that("date times before 1901-12-14 fail due to integer overflow", {
 
   expect_equal(
     output,
-    as.POSIXct(NA, "UTC")
+    as.POSIXct(NA, "UTC", origin = "1900-01-01")
   )
 
   expect_warning(
@@ -99,7 +99,7 @@ test_that("date times before 1901-12-14 fail due to integer overflow", {
 
   expect_equal(
     output,
-    as.POSIXct(NA, "UTC")
+    as.POSIXct(NA, "UTC", origin = "1900-01-01")
   )
 })
 
