@@ -22,11 +22,8 @@ Imports:
     hms,
     lifecycle
 Suggests: 
-    covr,
     rlang,
     testthat (>= 3.0.0)
-Remotes:
-    poissonconsulting/chk
 RdMacros: 
     lifecycle
 Config/testthat/edition: 3
