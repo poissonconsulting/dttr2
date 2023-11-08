@@ -18,7 +18,8 @@
 #' dtt_excel_to_date_time(c(1000.1145, 43397.84578))
 #' dtt_excel_to_date_time(45324.1234, tz = "UTC")
 #' dtt_excel_to_date_time(42370.1234, modern = FALSE)
-dtt_excel_to_date_time <- function(x, tz = dtt_default_tz(), modern = TRUE, ...) {
+dtt_excel_to_date_time <- function(x, tz = dtt_default_tz(), 
+                                   modern = TRUE, ...) {
   chk::chk_unused(...)
   chk::chk_flag(modern)
   chk::chk_numeric(x)
