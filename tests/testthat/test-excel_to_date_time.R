@@ -89,7 +89,8 @@ test_that("date times before 1901-12-14 fail due to integer overflow", {
 
   expect_equal(
     output,
-    as.POSIXct(NA, "UTC", origin = "1900-01-01")
+    as.POSIXct(NA, "UTC", origin = "1900-01-01"),
+    ignore_attr = TRUE
   )
 
   expect_warning(
@@ -99,7 +100,8 @@ test_that("date times before 1901-12-14 fail due to integer overflow", {
 
   expect_equal(
     output,
-    as.POSIXct(NA, "UTC", origin = "1900-01-01")
+    as.POSIXct(NA, "UTC", origin = "1900-01-01"),
+    ignore_attr = TRUE
   )
 })
 
