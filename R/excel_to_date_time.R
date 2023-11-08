@@ -20,10 +20,10 @@
 #' dtt_excel_to_date_time(42370.1234, modern = FALSE)
 dtt_excel_to_date_time <- function(x, tz = dtt_default_tz(), 
                                    modern = TRUE, ...) {
-  chk::chk_unused(...)
-  chk::chk_flag(modern)
   chk::chk_numeric(x)
   chk::chk_string(tz)
+  chk::chk_flag(modern)
+  chk::chk_unused(...)
 
   if (length(x) == 0) {
     return(dtt_date_time(integer(0)))
