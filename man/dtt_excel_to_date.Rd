@@ -21,10 +21,10 @@ A floored Date vector.
 Converts Excel dates encoded as serial numbers to date class.
 }
 \details{
-Defaults to the modern Excel date encoding system. Excel for Mac 2008 and
-earlier Mac versions of Excel use a different date system. If the date
-2016-01-01 is represented by 42370, it's the modern system. If it's 40908,
-it's the old system.
+Defaults to the modern Excel date encoding system. Excel for Mac
+2008 and earlier Mac versions of Excel use a different date system. If the
+date 2016-01-01 is represented by 42370, it's the modern system. If it's
+40908, it's the old system.
 }
 \examples{
 dtt_excel_to_date(42370)
