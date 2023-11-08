@@ -73,7 +73,7 @@ test_that("handles NA values", {
   )
   expect_equal(
     dtt_excel_to_date_time(NA_integer_),
-    as.POSIXct(NA_integer_, tz = "UTC")
+    as.POSIXct(NA_integer_, tz = "UTC", origin = "1900-01-01")
   )
   expect_equal(
     dtt_excel_to_date_time(c(NA_real_, 1000.1145)),
