@@ -2,10 +2,7 @@
 
 # dttr2 0.5.0
 
-- Merge pull request #32 from poissonconsulting/f-excel-dt.
-
-  Adding excel to date time function to package
-
+- Adding excel to date time function to package `dtt_excel_to_date_time()`
 
 # dttr2 0.4.2.9002
 
