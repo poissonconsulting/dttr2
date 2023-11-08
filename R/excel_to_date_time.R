@@ -2,15 +2,22 @@
 #'
 #' Converts Excel serial date times to date time class.
 #'
-#' @param x 
-#' @param modern 
-#' @param ... 
-#' @param tz 
+#' @inheritParams params
+#' @param x A vector of numbers to convert.
 #'
-#' @return
+#' @details Defaults to the modern Excel date encoding system. Excel for Mac
+#'   2008 and earlier Mac versions of Excel use a different date system. If the
+#'   date 2016-01-01 is represented by 42370, it's the modern system. If it's
+#'   40908, it's the old system.
+#'
+#' @return A floored POSIXct vector.
 #' @export
 #'
 #' @examples
+#' dtt_excel_to_date_time(42370.1234)
+#' dtt_excel_to_date_time(c(1000.1145, 43397.84578))
+#' dtt_excel_to_date_time(45324.1234, tz = "UTC")
+#' dtt_excel_to_date_time(42370.1234, modern = FALSE)
 dtt_excel_to_date_time <- function(x, tz = dtt_default_tz(), modern = TRUE, ...) {
   chk::chk_unused(...)
   chk::chk_flag(modern)
