@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.5.0
+
+- Merge pull request #32 from poissonconsulting/f-excel-dt.
+
+  Adding excel to date time function to package
+
+
 # dttr2 0.4.2.9002
 
 - Updating tests due POSIXct bug fix

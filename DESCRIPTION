@@ -1,6 +1,6 @@
 Package: dttr2
 Title: Manipulate Date, POSIXct and hms Vectors
-Version: 0.4.2.9002
+Version: 0.5.0
 Authors@R: c(
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", role = "aut",
            comment = c(ORCID = "0000-0002-7683-4592")),
