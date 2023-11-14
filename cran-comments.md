@@ -1,16 +1,16 @@
 ## Test environments
 
-release 4.2.1
+release 0.5.0
 
 * OSX (local) - release
-* OSX (actions) - release
-* Ubuntu (actions) - 3.4 to 3.6, oldrel, release and devel
-* Windows (actions) - release
+* OSX (actions) - release and devel
+* Windows (actions) - 3.6, 4.1, release and devel
+* Ubuntu (actions) - 3.6, 4.0, 4.1, 4.2, release and devel
 * Windows (winbuilder) - devel
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 notes
+0 errors | 0 warnings | 0 notes
 
 ## revdepcheck results
 
@@ -19,22 +19,7 @@ We checked 1 reverse dependencies, comparing R CMD check results across CRAN and
  * We saw 0 new problems
  * We failed to check 0 packages
  
-## CRAN Checks
+## Response to Emails from CRAN
  
-> Result: NOTE 
->
-> * checking CRAN incoming feasibility ... NOTE
-> Maintainer: ‘Ayla Pearson <ayla@poissonconsulting.ca>’
->
-> New maintainer:
->   Ayla Pearson <ayla@poissonconsulting.ca>
-> Old maintainer(s):
->   Joe Thorley <joe@poissonconsulting.ca>
->
-> Version contains large components (0.4.2)
->
-> The Title field should be in title case. Current version is:
->  ‘Manipulate Date, POSIXct and hms Vectors’
-> In title case that is:
->  ‘Manipulate Date, POSIXct and Hms Vectors’
->
+Removed the skip tests on various operating systems. 
+Removed tests that were failing due to fix of fractional seconds bug in R. 
