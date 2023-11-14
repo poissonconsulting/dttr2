@@ -18,7 +18,7 @@ BugReports: https://github.com/poissonconsulting/dttr2/issues
 Depends: 
     R (>= 3.4)
 Imports: 
-    chk (>= 0.8.1.9002),
+    chk (>= 0.9.1),
     hms,
     lifecycle
 Suggests: 
