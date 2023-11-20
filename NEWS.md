@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.5.0.9000
+
+- Internal changes only.
+
+
 # dttr2 0.5.0
 
 - Adding excel to date time function to package `dtt_excel_to_date_time()`
