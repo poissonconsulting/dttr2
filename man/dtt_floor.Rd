@@ -43,8 +43,8 @@ dtt_floor(hms::as_hms("23:59:59"), "hours")
 }
 \seealso{
 Other floor: 
-\code{\link{dtt_date_time}()},
 \code{\link{dtt_date}()},
+\code{\link{dtt_date_time}()},
 \code{\link{dtt_excel_to_date}()},
 \code{\link{dtt_floored}()},
 \code{\link{dtt_set_time}()}
