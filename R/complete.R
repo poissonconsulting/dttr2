@@ -36,7 +36,7 @@ dtt_complete.Date <- function(x, from = min(x), to = max(x), units = "days",
   if (from > min(x) || to < max(x)) err("from and to must span x")
 
   seq <- dtt_seq(from, to, units = units)
-  seq <- as.Date(setdiff(seq, x), origin = "1970-01-01")
+  seq <- as.Date(setdiff(as.vector(seq), as.vector(x)), origin = "1970-01-01")
   if (unique) x <- unique(x)
   x <- c(x, seq)
   if (sort) x <- sort(x)
@@ -71,7 +71,7 @@ dtt_complete.POSIXct <- function(x, from = min(x), to = max(x),
   if (inherits(seq, "try-error")) {
     err("attempting to generate more than 2^32 POSIXct values")
   }
-  seq <- as.Date(setdiff(seq, x), origin = "1970-01-01")
+  seq <- as.Date(setdiff(as.vector(seq), as.vector(x)), origin = "1970-01-01")
   if (unique) x <- unique(x)
   x <- c(x, seq)
   if (sort) x <- sort(x)
@@ -105,7 +105,7 @@ dtt_complete.hms <- function(x, from = min(x), to = max(x), units = "seconds",
   if (inherits(seq, "try-error")) {
     err("attempting to generate more than 2^32 hms values")
   }
-  seq <- as.Date(setdiff(seq, x), origin = "1970-01-01")
+  seq <- as.Date(setdiff(as.vector(seq), as.vector(x)), origin = "1970-01-01")
   if (unique) x <- unique(x)
   x <- c(x, seq)
   if (sort) x <- sort(x)
