@@ -1,240 +1,81 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>/CONTRIBUTING.html</loc>
-  </url>
-  <url>
-    <loc>/ISSUE_TEMPLATE.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>/SUPPORT.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/pull_request_template.html</loc>
-  </url>
-  <url>
-    <loc>/reference/NA_Date_.html</loc>
-  </url>
-  <url>
-    <loc>/reference/NA_POSIXct_.html</loc>
-  </url>
-  <url>
-    <loc>/reference/NA_hms_.html</loc>
-  </url>
-  <url>
-    <loc>/reference/check_tz.html</loc>
-  </url>
-  <url>
-    <loc>/reference/chk_time.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_add_units.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_adjust_tz.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_adjust_units.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_aggregate.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_complete.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_completed.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_date.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_date_add_time.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_date_from_ints.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_date_time.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_date_time_from_ints.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_day.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_day_decimal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_days_in_month.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_days_in_year.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_dayte.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_dayte_time.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_daytt.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_decade.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_default_tz.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_diff.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_doy.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_doy_decimal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_doy_to_date.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_excel_to_date.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_excel_to_date_time.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_feb29_to_28.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_floor.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_floored.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_hour.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_hour_decimal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_is_date.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_is_date_time.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_is_dtt.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_leap_year.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_minute.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_minute_decimal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_month.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_month_decimal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_season.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_second.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_seq.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_set_tz.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_study_year.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_subtract_units.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_sys_date.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_sys_date_time.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_sys_time.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_time.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_time_from_ints.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_tz.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_units.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_units_per_unit.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_wday.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_wrap.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_year.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dtt_year_decimal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dttr2-package.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/is_date_time.html</loc>
-  </url>
-  <url>
-    <loc>/reference/params.html</loc>
-  </url>
-  <url>
-    <loc>/reference/vld_time.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>/CONTRIBUTING.html</loc></url>
+<url><loc>/ISSUE_TEMPLATE.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/SUPPORT.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/NA_Date_.html</loc></url>
+<url><loc>/reference/NA_POSIXct_.html</loc></url>
+<url><loc>/reference/NA_hms_.html</loc></url>
+<url><loc>/reference/check_tz.html</loc></url>
+<url><loc>/reference/chk_time.html</loc></url>
+<url><loc>/reference/dtt.html</loc></url>
+<url><loc>/reference/dtt_add_units.html</loc></url>
+<url><loc>/reference/dtt_adjust_tz.html</loc></url>
+<url><loc>/reference/dtt_adjust_units.html</loc></url>
+<url><loc>/reference/dtt_aggregate.html</loc></url>
+<url><loc>/reference/dtt_complete.html</loc></url>
+<url><loc>/reference/dtt_completed.html</loc></url>
+<url><loc>/reference/dtt_date.html</loc></url>
+<url><loc>/reference/dtt_date_add_time.html</loc></url>
+<url><loc>/reference/dtt_date_from_ints.html</loc></url>
+<url><loc>/reference/dtt_date_time.html</loc></url>
+<url><loc>/reference/dtt_date_time_from_ints.html</loc></url>
+<url><loc>/reference/dtt_day.html</loc></url>
+<url><loc>/reference/dtt_day_decimal.html</loc></url>
+<url><loc>/reference/dtt_days_in_month.html</loc></url>
+<url><loc>/reference/dtt_days_in_year.html</loc></url>
+<url><loc>/reference/dtt_dayte.html</loc></url>
+<url><loc>/reference/dtt_dayte_time.html</loc></url>
+<url><loc>/reference/dtt_daytt.html</loc></url>
+<url><loc>/reference/dtt_decade.html</loc></url>
+<url><loc>/reference/dtt_default_tz.html</loc></url>
+<url><loc>/reference/dtt_diff.html</loc></url>
+<url><loc>/reference/dtt_doy.html</loc></url>
+<url><loc>/reference/dtt_doy_decimal.html</loc></url>
+<url><loc>/reference/dtt_doy_to_date.html</loc></url>
+<url><loc>/reference/dtt_excel_to_date.html</loc></url>
+<url><loc>/reference/dtt_excel_to_date_time.html</loc></url>
+<url><loc>/reference/dtt_feb29_to_28.html</loc></url>
+<url><loc>/reference/dtt_floor.html</loc></url>
+<url><loc>/reference/dtt_floored.html</loc></url>
+<url><loc>/reference/dtt_hour.html</loc></url>
+<url><loc>/reference/dtt_hour_decimal.html</loc></url>
+<url><loc>/reference/dtt_is_date.html</loc></url>
+<url><loc>/reference/dtt_is_date_time.html</loc></url>
+<url><loc>/reference/dtt_is_dtt.html</loc></url>
+<url><loc>/reference/dtt_leap_year.html</loc></url>
+<url><loc>/reference/dtt_minute.html</loc></url>
+<url><loc>/reference/dtt_minute_decimal.html</loc></url>
+<url><loc>/reference/dtt_month.html</loc></url>
+<url><loc>/reference/dtt_month_decimal.html</loc></url>
+<url><loc>/reference/dtt_season.html</loc></url>
+<url><loc>/reference/dtt_second.html</loc></url>
+<url><loc>/reference/dtt_seq.html</loc></url>
+<url><loc>/reference/dtt_set_tz.html</loc></url>
+<url><loc>/reference/dtt_study_year.html</loc></url>
+<url><loc>/reference/dtt_subtract_units.html</loc></url>
+<url><loc>/reference/dtt_sys_date.html</loc></url>
+<url><loc>/reference/dtt_sys_date_time.html</loc></url>
+<url><loc>/reference/dtt_sys_time.html</loc></url>
+<url><loc>/reference/dtt_time.html</loc></url>
+<url><loc>/reference/dtt_time_from_ints.html</loc></url>
+<url><loc>/reference/dtt_tz.html</loc></url>
+<url><loc>/reference/dtt_units.html</loc></url>
+<url><loc>/reference/dtt_units_per_unit.html</loc></url>
+<url><loc>/reference/dtt_wday.html</loc></url>
+<url><loc>/reference/dtt_wrap.html</loc></url>
+<url><loc>/reference/dtt_year.html</loc></url>
+<url><loc>/reference/dtt_year_decimal.html</loc></url>
+<url><loc>/reference/dttr2-package.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/is_date_time.html</loc></url>
+<url><loc>/reference/params.html</loc></url>
+<url><loc>/reference/vld_time.html</loc></url>
 </urlset>
+
