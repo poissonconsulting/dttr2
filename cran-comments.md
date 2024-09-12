@@ -1,13 +1,3 @@
-## Test environments
-
-release 0.5.0
-
-* OSX (local) - release
-* OSX (actions) - release and devel
-* Windows (actions) - 3.6, 4.1, release and devel
-* Ubuntu (actions) - 3.6, 4.0, 4.1, 4.2, release and devel
-* Windows (winbuilder) - devel
-
 ## R CMD check results
 
 0 errors | 0 warnings | 0 notes

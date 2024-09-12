@@ -1,4 +1,6 @@
-destination: docs
+url: https://poissonconsulting.github.io/dttr2/
+template:
+  bootstrap: 5
 
 reference:
 - title: Add Units

@@ -86,8 +86,8 @@ dtt_date(hms::as_hms("24:00:00"))
 Other floor: 
 \code{\link{dtt_date_time}()},
 \code{\link{dtt_excel_to_date}()},
-\code{\link{dtt_floored}()},
 \code{\link{dtt_floor}()},
+\code{\link{dtt_floored}()},
 \code{\link{dtt_set_time}()}
 }
 \concept{floor}

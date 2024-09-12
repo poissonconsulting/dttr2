@@ -8,9 +8,10 @@
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R-CMD-check](https://github.com/poissonconsulting/dttr2/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/poissonconsulting/dttr2/actions/workflows/R-CMD-check.yaml)
-[![codecov](https://codecov.io/gh/poissonconsulting/dttr2/branch/main/graph/badge.svg?token=L8GpqAVzaP)](https://app.codecov.io/gh/poissonconsulting/dttr2)
+[![Codecov test
+coverage](https://codecov.io/gh/poissonconsulting/dttr2/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/dttr2)
 [![License:
-MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/mit/)
+MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/MIT)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/dttr2)](https://cran.r-project.org/package=dttr2)
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/dttr2)
@@ -40,8 +41,8 @@ To install the latest release version from
 To install the latest development version from
 [GitHub](https://github.com/poissonconsulting/dttr2)
 
-    # install.packages("remotes")
-    remotes::install_github("poissonconsulting/dttr2")
+    # install.packages("pak")
+    pak::pak("poissonconsulting/dttr2")
 
 ## Introduction
 

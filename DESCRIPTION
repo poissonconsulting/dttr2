@@ -13,10 +13,11 @@ Description: Manipulates date ('Date'), date time ('POSIXct') and time
     whenever encountered.  Times are wrapped and time zones are maintained
     unless explicitly altered by the user.
 License: MIT + file LICENSE
-URL: https://github.com/poissonconsulting/dttr2
+URL: https://github.com/poissonconsulting/dttr2,
+    https://poissonconsulting.github.io/dttr2/
 BugReports: https://github.com/poissonconsulting/dttr2/issues
 Depends: 
-    R (>= 3.4)
+    R (>= 4.0)
 Imports: 
     chk (>= 0.9.1),
     hms,
@@ -31,4 +32,4 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2

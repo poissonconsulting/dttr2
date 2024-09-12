@@ -32,10 +32,10 @@ dtt_excel_to_date(40908, modern = FALSE)
 }
 \seealso{
 Other floor: 
-\code{\link{dtt_date_time}()},
 \code{\link{dtt_date}()},
-\code{\link{dtt_floored}()},
+\code{\link{dtt_date_time}()},
 \code{\link{dtt_floor}()},
+\code{\link{dtt_floored}()},
 \code{\link{dtt_set_time}()}
 }
 \concept{floor}
