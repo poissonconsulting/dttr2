@@ -16,7 +16,7 @@ License: MIT + file LICENSE
 URL: https://github.com/poissonconsulting/dttr2, https://poissonconsulting.github.io/dttr2/
 BugReports: https://github.com/poissonconsulting/dttr2/issues
 Depends: 
-    R (>= 3.4)
+    R (>= 4.0)
 Imports: 
     chk (>= 0.9.1),
     hms,
