@@ -1,5 +1,9 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.5.0.9001
+
+- Update set operators code due to failures on development version of R.
+
 # dttr2 0.5.0.9000
 
 - Internal changes only.
