@@ -11,7 +11,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/dttr2/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/dttr2)
 [![License:
-MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/mit/)
+MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/MIT)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/dttr2)](https://cran.r-project.org/package=dttr2)
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/dttr2)
