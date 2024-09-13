@@ -28,7 +28,7 @@ sub_day <- function(x, value) {
   sub("^(\\d{1,4}-\\d{1,2}-)(\\d{1,2})$", paste0("\\1", value), x)
 }
 
-#' @export
+#' @exportS3Method base::max
 max.hms <- function(..., na.rm = FALSE) {
   dots <- list(...)
   dots <- c(unlist(lapply(dots, unclass)))
@@ -37,7 +37,7 @@ max.hms <- function(..., na.rm = FALSE) {
   dtt_time(max)
 }
 
-#' @export
+#' @exportS3Method base::min
 min.hms <- function(..., na.rm = FALSE) {
   dots <- list(...)
   dots <- c(unlist(lapply(dots, unclass)))
@@ -46,7 +46,7 @@ min.hms <- function(..., na.rm = FALSE) {
   dtt_time(min)
 }
 
-#' @export
+#' @exportS3Method base::unique
 unique.hms <- function(x, incomparables = FALSE, ...) {
   chk_unused(...)
   x <- dtt_floor(x)
