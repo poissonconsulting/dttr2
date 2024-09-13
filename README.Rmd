@@ -55,7 +55,7 @@ pak::pak("poissonconsulting/dttr2")
 
 `dttr2` floors any date/time objects it encounters to the nearest time unit (by default days for Date and seconds for POSIXct and hms).
 
-```{r, message=FALSE}
+```{r}
 library(dttr2)
 date <- as.Date(1.75, origin = "1970-01-01")
 date
