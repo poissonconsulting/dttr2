@@ -1,5 +1,9 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.5.2
+
+- Updated how S3 methods are registered so internal methods do not overwrite S3 methods. 
+
 # dttr2 0.5.1
 
 - Housekeeping tasks. 
