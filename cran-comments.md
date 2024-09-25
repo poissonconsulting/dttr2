@@ -9,7 +9,3 @@ We checked  reverse dependencies (0 from CRAN + 2 from Bioconductor), comparing 
  * We saw 0 new problems
  * We failed to check 0 packages
  
- # Response to CRAN email
- 
- - Updated the code to fix failures due to the set operators changes in r-devel. 
- 
