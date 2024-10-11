@@ -46,6 +46,7 @@ Other floor:
 \code{\link{dtt_date}()},
 \code{\link{dtt_date_time}()},
 \code{\link{dtt_excel_to_date}()},
+\code{\link{dtt_excel_to_time}()},
 \code{\link{dtt_floor}()},
 \code{\link{dtt_set_time}()}
 }
