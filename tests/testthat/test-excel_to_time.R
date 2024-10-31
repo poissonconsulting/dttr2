@@ -22,6 +22,13 @@ test_that("multiple values can be passed", {
   )
 })
 
+test_that("handles empty values", {
+  expect_equal(
+    dtt_excel_to_time(numeric(0L)),
+    hms()
+  )
+})
+
 test_that("handles NA values", {
   expect_equal(
     dtt_excel_to_time(NA_real_),
