@@ -1,8 +1,11 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# dttr2 0.5.2.9000
+# dttr2 0.5.2.9001
 
- 
+- Added `dtt_excel_to_time()` to convert excel times encoded as a fraction of a day to hms class.
+- Fixed S3 internal methods exporting.
+
+# dttr2 0.5.2.9000
 
 # dttr2 0.5.2
 
