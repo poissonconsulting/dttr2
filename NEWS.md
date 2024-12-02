@@ -7,6 +7,8 @@
 
 # dttr2 0.5.2.9000
 
+- Internal changes. 
+
 # dttr2 0.5.2
 
 - Updated how S3 methods are registered so internal methods do not overwrite S3 methods. 
