@@ -2,11 +2,12 @@
 
 # dttr2 0.5.2.9001
 
-- Internal changes. 
-
+- Added `dtt_excel_to_time()` to convert excel times encoded as a fraction of a day to hms class.
+- Fixed S3 internal methods exporting.
 
 # dttr2 0.5.2.9000
- 
+
+- Internal changes. 
 
 # dttr2 0.5.2
 
