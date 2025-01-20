@@ -2,7 +2,6 @@
 % Please edit documentation in R/dttr-package.R, R/dttr2-package.R
 \docType{package}
 \name{dttr2-package}
-\alias{dttr2}
 \alias{dttr2-package}
 \title{dttr2: Manipulate Date, POSIXct and hms Vectors}
 \description{
@@ -18,6 +17,7 @@ Manipulates date ('Date'), date time ('POSIXct') and time ('hms') vectors. Date/
 Useful links:
 \itemize{
   \item \url{https://github.com/poissonconsulting/dttr2}
+  \item \url{https://poissonconsulting.github.io/dttr2/}
   \item Report bugs at \url{https://github.com/poissonconsulting/dttr2/issues}
 }
 
@@ -25,6 +25,7 @@ Useful links:
 Useful links:
 \itemize{
   \item \url{https://github.com/poissonconsulting/dttr2}
+  \item \url{https://poissonconsulting.github.io/dttr2/}
   \item Report bugs at \url{https://github.com/poissonconsulting/dttr2/issues}
 }
 

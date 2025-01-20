@@ -1,8 +1,23 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# dttr2 0.5.0.9000
+# dttr2 0.5.2.9001
 
-- Internal changes only.
+- Added `dtt_excel_to_time()` to convert excel times encoded as a fraction of a day to hms class.
+- Fixed S3 internal methods exporting.
+
+# dttr2 0.5.2.9000
+
+- Internal changes. 
+
+# dttr2 0.5.2
+
+- Updated how S3 methods are registered so internal methods do not overwrite S3 methods. 
+
+# dttr2 0.5.1
+
+- Housekeeping tasks. 
+- Updated how S3 methods are registered.
+- Update set operators code due to failures on development version of R.
 
 
 # dttr2 0.5.0

@@ -20,7 +20,7 @@ Dayte Time
 }
 \seealso{
 Other dayte: 
-\code{\link{dtt_dayte_time}()},
-\code{\link{dtt_dayte}()}
+\code{\link{dtt_dayte}()},
+\code{\link{dtt_dayte_time}()}
 }
 \concept{dayte}

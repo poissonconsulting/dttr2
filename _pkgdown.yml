@@ -1,4 +1,6 @@
-destination: docs
+url: https://poissonconsulting.github.io/dttr2/
+template:
+  package: poissontemplate
 
 reference:
 - title: Add Units
@@ -137,6 +139,7 @@ reference:
   - '`dtt_diff`'
   - '`dtt_excel_to_date`'
   - '`dtt_excel_to_date_time`'
+  - '`dtt_excel_to_time`'
   - '`dtt_season`'
   - '`dtt_study_year`'
   - '`dtt_wday`'
