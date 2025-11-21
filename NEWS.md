@@ -1,5 +1,48 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.5.2.9002
+
+## Chore
+
+- Auto-update from GitHub Actions (#57).
+
+- Check if spelling is installed rather than checking unconditionally (#50).
+
+## Continuous integration
+
+- Install binaries from r-universe for dev workflow (#62).
+
+- Fix reviewdog and add commenting workflow (#61).
+
+- Use workflows for fledge (#60).
+
+- Sync (#59).
+
+- Use reviewdog for external PRs (#58).
+
+- Cleanup and fix macOS (#56).
+
+- Format with air, check detritus, better handling of `extra-packages` (#55).
+
+- Enhance permissions for workflow (#53).
+
+- Permissions, better tests for missing suggests, lints (#52).
+
+- Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#51).
+
+- Correct installation of xml2 (#49).
+
+- Sync (#48).
+
+## Uncategorized
+
+- Merge pull request #54 from poissonconsulting/duncan-ctb.
+
+  added myself as ctb to DESCRIPTION
+
+- Merge branch 'main' of github.com:poissonconsulting/dttr2.
+
+
 # dttr2 0.5.2.9001
 
 - Added `dtt_excel_to_time()` to convert excel times encoded as a fraction of a day to hms class.
