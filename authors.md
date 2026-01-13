@@ -22,14 +22,14 @@
 Source:
 [`DESCRIPTION`](https://github.com/poissonconsulting/dttr2/blob/main/DESCRIPTION)
 
-Thorley J, Pearson A (2025). *dttr2: Manipulate Date, POSIXct and hms
-Vectors*. R package version 0.5.2.9001,
+Thorley J, Pearson A (2026). *dttr2: Manipulate Date, POSIXct and hms
+Vectors*. R package version 0.5.2.9002,
 <https://github.com/poissonconsulting/dttr2>.
 
     @Manual{,
       title = {dttr2: Manipulate Date, POSIXct and hms Vectors},
       author = {Joe Thorley and Ayla Pearson},
-      year = {2025},
-      note = {R package version 0.5.2.9001},
+      year = {2026},
+      note = {R package version 0.5.2.9002},
       url = {https://github.com/poissonconsulting/dttr2},
     }

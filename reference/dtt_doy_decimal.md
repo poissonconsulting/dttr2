@@ -37,5 +37,5 @@ Other decimal:
 
 ``` r
 dtt_doy_decimal(Sys.Date())
-#> [1] 321
+#> [1] 13
 ```

@@ -1,5 +1,61 @@
 # Changelog
 
+## dttr2 0.5.2.9002
+
+### Chore
+
+- Auto-update from GitHub Actions
+  ([\#57](https://github.com/poissonconsulting/dttr2/issues/57)).
+
+- Check if spelling is installed rather than checking unconditionally
+  ([\#50](https://github.com/poissonconsulting/dttr2/issues/50)).
+
+### Continuous integration
+
+- Install binaries from r-universe for dev workflow
+  ([\#62](https://github.com/poissonconsulting/dttr2/issues/62)).
+
+- Fix reviewdog and add commenting workflow
+  ([\#61](https://github.com/poissonconsulting/dttr2/issues/61)).
+
+- Use workflows for fledge
+  ([\#60](https://github.com/poissonconsulting/dttr2/issues/60)).
+
+- Sync ([\#59](https://github.com/poissonconsulting/dttr2/issues/59)).
+
+- Use reviewdog for external PRs
+  ([\#58](https://github.com/poissonconsulting/dttr2/issues/58)).
+
+- Cleanup and fix macOS
+  ([\#56](https://github.com/poissonconsulting/dttr2/issues/56)).
+
+- Format with air, check detritus, better handling of `extra-packages`
+  ([\#55](https://github.com/poissonconsulting/dttr2/issues/55)).
+
+- Enhance permissions for workflow
+  ([\#53](https://github.com/poissonconsulting/dttr2/issues/53)).
+
+- Permissions, better tests for missing suggests, lints
+  ([\#52](https://github.com/poissonconsulting/dttr2/issues/52)).
+
+- Always use `_R_CHECK_FORCE_SUGGESTS_=false`
+  ([\#51](https://github.com/poissonconsulting/dttr2/issues/51)).
+
+- Correct installation of xml2
+  ([\#49](https://github.com/poissonconsulting/dttr2/issues/49)).
+
+- Sync ([\#48](https://github.com/poissonconsulting/dttr2/issues/48)).
+
+### Uncategorized
+
+- Merge pull request
+  [\#54](https://github.com/poissonconsulting/dttr2/issues/54) from
+  poissonconsulting/duncan-ctb.
+
+  added myself as ctb to DESCRIPTION
+
+- Merge branch ‘main’ of github.com:poissonconsulting/dttr2.
+
 ## dttr2 0.5.2.9001
 
 - Added
