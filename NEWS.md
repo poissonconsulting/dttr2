@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.5.2.9003
+
+## Continuous integration
+
+- Test all R versions on branches that start with cran- (#64).
+
+
 # dttr2 0.5.2.9002
 
 ## Chore
