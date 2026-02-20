@@ -1,5 +1,12 @@
 # Changelog
 
+## dttr2 0.5.2.9003
+
+### Continuous integration
+
+- Test all R versions on branches that start with cran-
+  ([\#64](https://github.com/poissonconsulting/dttr2/issues/64)).
+
 ## dttr2 0.5.2.9002
 
 ### Chore
