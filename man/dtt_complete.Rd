@@ -74,7 +74,7 @@ Completes date/time vector.
 dtt_complete(as.Date(c("2001-01-01", "2001-01-03", "2001-01-01")))
 }
 \seealso{
-Other complete: 
+Other complete:
 \code{\link{dtt_completed}()}
 }
 \concept{complete}

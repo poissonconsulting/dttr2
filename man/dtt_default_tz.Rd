@@ -49,7 +49,7 @@ dtt_default_tz()
 }
 }
 \seealso{
-Other tz: 
+Other tz:
 \code{\link{dtt_adjust_tz}()},
 \code{\link{dtt_set_tz}()},
 \code{\link{dtt_tz}()}

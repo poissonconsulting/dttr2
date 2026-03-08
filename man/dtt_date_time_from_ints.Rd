@@ -77,7 +77,7 @@ dtt_date_time_from_ints(year, month, day, hour, minute, second)
 dtt_date_time_from_ints(year, month, day)
 }
 \seealso{
-Other creates: 
+Other creates:
 \code{\link{dtt_date_from_ints}()},
 \code{\link{dtt_time_from_ints}()}
 }

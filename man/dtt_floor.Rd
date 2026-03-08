@@ -42,7 +42,7 @@ Floors a date/time vector
 dtt_floor(hms::as_hms("23:59:59"), "hours")
 }
 \seealso{
-Other floor: 
+Other floor:
 \code{\link{dtt_date}()},
 \code{\link{dtt_date_time}()},
 \code{\link{dtt_excel_to_date}()},

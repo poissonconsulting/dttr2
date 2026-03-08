@@ -42,7 +42,7 @@ dtt_units(as.Date("2000-02-01"))
 dtt_units(as.Date("2000-01-02"))
 }
 \seealso{
-Other units: 
+Other units:
 \code{\link{dtt_adjust_units}()},
 \code{\link{dtt_units_per_unit}()}
 }

@@ -21,7 +21,7 @@ Day of the Year to Date
 dtt_doy_to_date(3)
 }
 \seealso{
-Other days: 
+Other days:
 \code{\link{dtt_days_in_month}()},
 \code{\link{dtt_days_in_year}()},
 \code{\link{dtt_doy}()}

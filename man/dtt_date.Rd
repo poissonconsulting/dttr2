@@ -83,7 +83,7 @@ dtt_date(hms::as_hms("23:59:59"))
 dtt_date(hms::as_hms("24:00:00"))
 }
 \seealso{
-Other floor: 
+Other floor:
 \code{\link{dtt_date_time}()},
 \code{\link{dtt_excel_to_date}()},
 \code{\link{dtt_excel_to_time}()},

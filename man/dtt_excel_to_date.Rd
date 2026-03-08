@@ -31,7 +31,7 @@ dtt_excel_to_date(42370)
 dtt_excel_to_date(40908, modern = FALSE)
 }
 \seealso{
-Other floor: 
+Other floor:
 \code{\link{dtt_date}()},
 \code{\link{dtt_date_time}()},
 \code{\link{dtt_excel_to_time}()},

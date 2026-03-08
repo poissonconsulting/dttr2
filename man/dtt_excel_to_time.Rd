@@ -23,7 +23,7 @@ dtt_excel_to_time(0.25)
 dtt_excel_to_time(0.75)
 }
 \seealso{
-Other floor: 
+Other floor:
 \code{\link{dtt_date}()},
 \code{\link{dtt_date_time}()},
 \code{\link{dtt_excel_to_date}()},

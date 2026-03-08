@@ -77,7 +77,7 @@ x
 \seealso{
 \code{\link[=dtt_minute_decimal]{dtt_minute_decimal()}}
 
-Other set time: 
+Other set time:
 \code{\link{dtt_hours}()},
 \code{\link{dtt_seconds}()}
 }

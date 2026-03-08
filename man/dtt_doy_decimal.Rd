@@ -23,7 +23,7 @@ dtt_doy_decimal(Sys.Date())
 \seealso{
 \code{\link[=dtt_doy]{dtt_doy()}}
 
-Other decimal: 
+Other decimal:
 \code{\link{dtt_day_decimal}()},
 \code{\link{dtt_hour_decimal}()},
 \code{\link{dtt_minute_decimal}()},
