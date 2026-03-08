@@ -39,7 +39,7 @@ Dayte
 dtt_dayte(as.Date(c("2001-01-01", "2015-12-13")))
 }
 \seealso{
-Other dayte: 
+Other dayte:
 \code{\link{dtt_dayte_time}()},
 \code{\link{dtt_daytt}()}
 }

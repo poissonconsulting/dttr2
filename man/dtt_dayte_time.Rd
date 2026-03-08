@@ -46,7 +46,7 @@ dtt_dayte_time(
 )
 }
 \seealso{
-Other dayte: 
+Other dayte:
 \code{\link{dtt_dayte}()},
 \code{\link{dtt_daytt}()}
 }

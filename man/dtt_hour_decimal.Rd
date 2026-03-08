@@ -47,7 +47,7 @@ dtt_hour_decimal(x)
 \seealso{
 \code{\link[=dtt_hour]{dtt_hour()}}
 
-Other decimal: 
+Other decimal:
 \code{\link{dtt_day_decimal}()},
 \code{\link{dtt_doy_decimal}()},
 \code{\link{dtt_minute_decimal}()},

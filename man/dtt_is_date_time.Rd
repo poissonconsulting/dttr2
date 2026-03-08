@@ -16,7 +16,7 @@ A flag indicating whether R is a POSIXct vector.
 Is Date Time
 }
 \seealso{
-Other is: 
+Other is:
 \code{\link{dtt_is_date}()},
 \code{\link{is_date_time}()}
 }

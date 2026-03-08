@@ -16,7 +16,7 @@ A flag indicating whether R is a Date vector.
 Is Date
 }
 \seealso{
-Other is: 
+Other is:
 \code{\link{dtt_is_date_time}()},
 \code{\link{is_date_time}()}
 }

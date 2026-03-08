@@ -52,7 +52,7 @@ dtt_date_from_ints(year_vals, month_vals, day_vals)
 dtt_date_from_ints(year_vals, month_vals)
 }
 \seealso{
-Other creates: 
+Other creates:
 \code{\link{dtt_date_time_from_ints}()},
 \code{\link{dtt_time_from_ints}()}
 }
