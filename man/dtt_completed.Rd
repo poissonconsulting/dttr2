@@ -43,7 +43,7 @@ Tests whether a date time is complete.
 
 }}
 \seealso{
-Other complete: 
-\code{\link{dtt_complete}()}
+Other complete:
+\code{\link[=dtt_complete]{dtt_complete()}}
 }
 \concept{complete}

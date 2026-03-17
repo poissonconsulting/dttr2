@@ -49,9 +49,9 @@ dtt_default_tz()
 }
 }
 \seealso{
-Other tz: 
-\code{\link{dtt_adjust_tz}()},
-\code{\link{dtt_set_tz}()},
-\code{\link{dtt_tz}()}
+Other tz:
+\code{\link[=dtt_adjust_tz]{dtt_adjust_tz()}},
+\code{\link[=dtt_set_tz]{dtt_set_tz()}},
+\code{\link[=dtt_tz]{dtt_tz()}}
 }
 \concept{tz}

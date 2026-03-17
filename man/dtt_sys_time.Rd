@@ -21,8 +21,8 @@ dtt_sys_time()
 }
 }
 \seealso{
-Other sys: 
-\code{\link{dtt_sys_date}()},
-\code{\link{dtt_sys_date_time}()}
+Other sys:
+\code{\link[=dtt_sys_date]{dtt_sys_date()}},
+\code{\link[=dtt_sys_date_time]{dtt_sys_date_time()}}
 }
 \concept{sys}

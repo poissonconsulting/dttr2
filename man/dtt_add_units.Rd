@@ -46,7 +46,7 @@ dtt_add_units(as.Date("1999-12-31"), "days")
 \seealso{
 \code{\link[=dtt_subtract_units]{dtt_subtract_units()}}
 
-Other add: 
-\code{\link{dtt_date_add_time}()}
+Other add:
+\code{\link[=dtt_date_add_time]{dtt_date_add_time()}}
 }
 \concept{add}
