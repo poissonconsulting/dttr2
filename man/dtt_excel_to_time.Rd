@@ -23,12 +23,12 @@ dtt_excel_to_time(0.25)
 dtt_excel_to_time(0.75)
 }
 \seealso{
-Other floor: 
-\code{\link{dtt_date}()},
-\code{\link{dtt_date_time}()},
-\code{\link{dtt_excel_to_date}()},
-\code{\link{dtt_floor}()},
-\code{\link{dtt_floored}()},
-\code{\link{dtt_set_time}()}
+Other floor:
+\code{\link[=dtt_date]{dtt_date()}},
+\code{\link[=dtt_date_time]{dtt_date_time()}},
+\code{\link[=dtt_excel_to_date]{dtt_excel_to_date()}},
+\code{\link[=dtt_floor]{dtt_floor()}},
+\code{\link[=dtt_floored]{dtt_floored()}},
+\code{\link[=dtt_set_time]{dtt_set_time()}}
 }
 \concept{floor}

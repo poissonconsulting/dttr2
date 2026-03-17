@@ -25,8 +25,8 @@ dtt_sys_date(tz = "Etc/GMT+12")
 }
 }
 \seealso{
-Other sys: 
-\code{\link{dtt_sys_date_time}()},
-\code{\link{dtt_sys_time}()}
+Other sys:
+\code{\link[=dtt_sys_date_time]{dtt_sys_date_time()}},
+\code{\link[=dtt_sys_time]{dtt_sys_time()}}
 }
 \concept{sys}

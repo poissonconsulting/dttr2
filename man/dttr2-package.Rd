@@ -21,20 +21,13 @@ Useful links:
   \item Report bugs at \url{https://github.com/poissonconsulting/dttr2/issues}
 }
 
-
-Useful links:
-\itemize{
-  \item \url{https://github.com/poissonconsulting/dttr2}
-  \item \url{https://poissonconsulting.github.io/dttr2/}
-  \item Report bugs at \url{https://github.com/poissonconsulting/dttr2/issues}
-}
-
 }
 \author{
 \strong{Maintainer}: Ayla Pearson \email{ayla@poissonconsulting.ca} (\href{https://orcid.org/0000-0001-7388-1222}{ORCID})
 
 Authors:
 \itemize{
+  \item Ayla Pearson \email{ayla@poissonconsulting.ca} (\href{https://orcid.org/0000-0001-7388-1222}{ORCID})
   \item Joe Thorley \email{joe@poissonconsulting.ca} (\href{https://orcid.org/0000-0002-7683-4592}{ORCID})
 }
 

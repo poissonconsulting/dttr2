@@ -27,7 +27,7 @@ dtt_date_add_time(
 )
 }
 \seealso{
-Other add: 
-\code{\link{dtt_add_units}()}
+Other add:
+\code{\link[=dtt_add_units]{dtt_add_units()}}
 }
 \concept{add}

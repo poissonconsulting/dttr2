@@ -19,7 +19,7 @@ Converts Feb 29 to Feb 28th
 dtt_feb29_to_28(as.Date("2004-02-29"))
 }
 \seealso{
-Other leap year: 
-\code{\link{dtt_leap_year}()}
+Other leap year:
+\code{\link[=dtt_leap_year]{dtt_leap_year()}}
 }
 \concept{leap year}

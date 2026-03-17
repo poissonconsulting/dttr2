@@ -71,8 +71,8 @@ x
 \seealso{
 \code{\link[=dtt_month_decimal]{dtt_month_decimal()}}
 
-Other set date: 
-\code{\link{dtt_day}()},
-\code{\link{dtt_years}()}
+Other set date:
+\code{\link[=dtt_day]{dtt_day()}},
+\code{\link[=dtt_years]{dtt_years()}}
 }
 \concept{set date}

@@ -23,11 +23,11 @@ dtt_doy_decimal(Sys.Date())
 \seealso{
 \code{\link[=dtt_doy]{dtt_doy()}}
 
-Other decimal: 
-\code{\link{dtt_day_decimal}()},
-\code{\link{dtt_hour_decimal}()},
-\code{\link{dtt_minute_decimal}()},
-\code{\link{dtt_month_decimal}()},
-\code{\link{dtt_year_decimal}()}
+Other decimal:
+\code{\link[=dtt_day_decimal]{dtt_day_decimal()}},
+\code{\link[=dtt_hour_decimal]{dtt_hour_decimal()}},
+\code{\link[=dtt_minute_decimal]{dtt_minute_decimal()}},
+\code{\link[=dtt_month_decimal]{dtt_month_decimal()}},
+\code{\link[=dtt_year_decimal]{dtt_year_decimal()}}
 }
 \concept{decimal}

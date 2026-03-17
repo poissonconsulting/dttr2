@@ -48,8 +48,8 @@ second <- 0
 dtt_time_from_ints(hour, minute, second)
 }
 \seealso{
-Other creates: 
-\code{\link{dtt_date_from_ints}()},
-\code{\link{dtt_date_time_from_ints}()}
+Other creates:
+\code{\link[=dtt_date_from_ints]{dtt_date_from_ints()}},
+\code{\link[=dtt_date_time_from_ints]{dtt_date_time_from_ints()}}
 }
 \concept{creates}

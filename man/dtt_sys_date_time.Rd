@@ -25,8 +25,8 @@ dtt_sys_date_time(tz = "UTC")
 }
 }
 \seealso{
-Other sys: 
-\code{\link{dtt_sys_date}()},
-\code{\link{dtt_sys_time}()}
+Other sys:
+\code{\link[=dtt_sys_date]{dtt_sys_date()}},
+\code{\link[=dtt_sys_time]{dtt_sys_time()}}
 }
 \concept{sys}

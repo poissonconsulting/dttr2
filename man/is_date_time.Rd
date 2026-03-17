@@ -31,8 +31,8 @@ A flag indicating whether x inherits from Date, POSIXct or hms.
 Tests whether an object is a Date, POSIXct, or hms vector.
 }
 \seealso{
-Other is: 
-\code{\link{dtt_is_date}()},
-\code{\link{dtt_is_date_time}()}
+Other is:
+\code{\link[=dtt_is_date]{dtt_is_date()}},
+\code{\link[=dtt_is_date_time]{dtt_is_date_time()}}
 }
 \concept{is}

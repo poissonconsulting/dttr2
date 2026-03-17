@@ -19,8 +19,8 @@ A Date or POSIXct vector with the year for February 29th as 1972.
 Dayte Time
 }
 \seealso{
-Other dayte: 
-\code{\link{dtt_dayte}()},
-\code{\link{dtt_dayte_time}()}
+Other dayte:
+\code{\link[=dtt_dayte]{dtt_dayte()}},
+\code{\link[=dtt_dayte_time]{dtt_dayte_time()}}
 }
 \concept{dayte}

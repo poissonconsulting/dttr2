@@ -75,8 +75,8 @@ dtt_second(x) <- 27L
 x
 }
 \seealso{
-Other set time: 
-\code{\link{dtt_hours}()},
-\code{\link{dtt_minutes}()}
+Other set time:
+\code{\link[=dtt_hours]{dtt_hours()}},
+\code{\link[=dtt_minutes]{dtt_minutes()}}
 }
 \concept{set time}

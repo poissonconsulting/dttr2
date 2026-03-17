@@ -19,7 +19,7 @@ Tests whether each year is a leap year.
 dtt_leap_year(as.Date("1999-03-04", "2000-02-01"))
 }
 \seealso{
-Other leap year: 
-\code{\link{dtt_feb29_to_28}()}
+Other leap year:
+\code{\link[=dtt_feb29_to_28]{dtt_feb29_to_28()}}
 }
 \concept{leap year}

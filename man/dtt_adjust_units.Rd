@@ -27,8 +27,8 @@ dtt_adjust_units(60, to = "minutes")
 
 \code{\link[=dtt_subtract_units]{dtt_subtract_units()}}
 
-Other units: 
-\code{\link{dtt_units}()},
-\code{\link{dtt_units_per_unit}()}
+Other units:
+\code{\link[=dtt_units]{dtt_units()}},
+\code{\link[=dtt_units_per_unit]{dtt_units_per_unit()}}
 }
 \concept{units}
