@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.5.2.9005
+
+## Chore
+
+- Auto-update from GitHub Actions (#74).
+
+
 # dttr2 0.5.2.9004
 
 - Merge pull request #67 from poissonconsulting/add-hex-logo.
