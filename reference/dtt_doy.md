@@ -35,5 +35,5 @@ Other days:
 
 ``` r
 dtt_doy(Sys.Date())
-#> [1] 51
+#> [1] 125
 ```

@@ -7,7 +7,3 @@ A missing Date object
 ``` r
 NA_Date_
 ```
-
-## Format
-
-An object of class `Date` of length 1.

@@ -39,6 +39,7 @@ pak::pak("poissonconsulting/dttr2")
 unit (by default days for Date and seconds for POSIXct and hms).
 
 ``` r
+
 library(dttr2)
 date <- as.Date(1.75, origin = "1970-01-01")
 date
@@ -61,6 +62,7 @@ etc) and settor functions as well as the functions to add (ie
 and subtract time units return or require integers.
 
 ``` r
+
 dtt_day(date)
 #> [1] 2
 dtt_add_days(date, 2L)
@@ -75,6 +77,7 @@ dtt_add_months(date, 24L)
 actual clock time.
 
 ``` r
+
 time <- hms::as_hms(-3)
 time
 #> -00:00:03
@@ -91,6 +94,7 @@ vectors using
 [`dtt_set_default_tz()`](https://poissonconsulting.github.io/dttr2/reference/dtt_default_tz.md).
 
 ``` r
+
 dtt_default_tz()
 #> [1] "UTC"
 date_time <- dtt_date_time("1970-01-01 03:00:00")
@@ -109,6 +113,7 @@ altered using
 [`dtt_adjust_tz()`](https://poissonconsulting.github.io/dttr2/reference/dtt_adjust_tz.md)
 
 ``` r
+
 date_time
 #> [1] "1970-01-01 03:00:00 UTC"
 dtt_set_tz(date_time)
@@ -126,6 +131,7 @@ As neither dates nor times have associated time zones unless the user
 passes a value they are assigned the default time zone.
 
 ``` r
+
 date_time
 #> [1] "1970-01-01 03:00:00 UTC"
 date <- dtt_date(date_time)

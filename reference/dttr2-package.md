@@ -20,20 +20,15 @@ Useful links:
 
 - Report bugs at <https://github.com/poissonconsulting/dttr2/issues>
 
-Useful links:
-
-- <https://github.com/poissonconsulting/dttr2>
-
-- <https://poissonconsulting.github.io/dttr2/>
-
-- Report bugs at <https://github.com/poissonconsulting/dttr2/issues>
-
 ## Author
 
 **Maintainer**: Ayla Pearson <ayla@poissonconsulting.ca>
 ([ORCID](https://orcid.org/0000-0001-7388-1222))
 
 Authors:
+
+- Ayla Pearson <ayla@poissonconsulting.ca>
+  ([ORCID](https://orcid.org/0000-0001-7388-1222))
 
 - Joe Thorley <joe@poissonconsulting.ca>
   ([ORCID](https://orcid.org/0000-0002-7683-4592))

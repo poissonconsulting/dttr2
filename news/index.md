@@ -1,5 +1,20 @@
 # Changelog
 
+## dttr2 0.5.2.9005
+
+### Chore
+
+- Auto-update from GitHub Actions
+  ([\#74](https://github.com/poissonconsulting/dttr2/issues/74)).
+
+## dttr2 0.5.2.9004
+
+- Merge pull request
+  [\#67](https://github.com/poissonconsulting/dttr2/issues/67) from
+  poissonconsulting/add-hex-logo.
+
+  Add hex logo
+
 ## dttr2 0.5.2.9003
 
 ### Continuous integration
