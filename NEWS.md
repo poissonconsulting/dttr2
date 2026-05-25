@@ -1,5 +1,44 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.5.2.9006
+
+## Chore
+
+- Add ccache to `.gitignore` and `.Rbuildignore`.
+
+- Auto-update from GitHub Actions (#78).
+
+## Continuous integration
+
+- Update ccache-action reference.
+
+- Bump action version.
+
+- Create snapshot update PR against correct branch.
+
+- Add reference to `/apply-patch` workflow in commit message.
+
+- Clarify rationale for not deploying on schedule.
+
+- Only run fledge on pushes to main.
+
+- Tweak fledge workflow and ccache action.
+
+- Cosmetics.
+
+- Bump action versions.
+
+- Install clang-format-21.
+
+- Align fledge workflow.
+
+- Harmonize.
+
+## fledge
+
+- Bump version to 0.5.2.9006 (#86).
+
+
 # dttr2 0.5.2.9005
 
 ## Chore
