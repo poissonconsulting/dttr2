@@ -20,3 +20,5 @@
 ^CRAN-SUBMISSION$
 ^dev$
 ^\.ccache$
+^\.positai$
+^\.claude$
