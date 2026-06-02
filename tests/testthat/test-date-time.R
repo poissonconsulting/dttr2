@@ -202,3 +202,8 @@ test_that("date_time.hms", {
     as.POSIXct(c("1970-01-01 23:59:59", NA), tz = "UTC")
   )
 })
+
+test_that("date-times at midnight do not coerce all other times to dates.", {
+  expect_equal(length(unique(dttr2::dtt_date_time(as.POSIXct(0:1, tz = "UTC")))), 2L)
+  expect_equal(length(unique(dttr2::dtt_date_time(as.character(as.POSIXct(0:1, tz = "UTC"))))), 2L)
+})
