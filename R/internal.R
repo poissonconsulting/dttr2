@@ -28,6 +28,23 @@ sub_day <- function(x, value) {
   sub("^(\\d{1,4}-\\d{1,2}-)(\\d{1,2})$", paste0("\\1", value), x)
 }
 
+sanitize_date_time <- function(x) {
+  sub("[^[:digit:]/:-]*$", "", x)
+}
+
+add_hms_date_time <- function(x) {
+  if(!length(x)) return(x)
+  
+  ncolon <- nchar(x) - nchar(gsub(":", "", x, fixed = TRUE))
+  
+  n0 <- !is.na(ncolon) & ncolon == 0L
+  n2 <- !is.na(ncolon) & ncolon == 2L
+  if (any(n0) && any(n2)) {
+    x[n0] <- paste(sanitize_date_time(x[n0]), "00:00:00")
+  }
+  x
+}
+
 #' @exportS3Method NULL
 max.hms <- function(..., na.rm = FALSE) {
   dots <- list(...)
