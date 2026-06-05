@@ -91,13 +91,16 @@ test_that("date_time.character", {
 test_that("date_time.character handles midnight", {
 
   expect_identical(
-    as.character(dtt_date_time("2025-02-02 00:00:01", tz = "UTC")), "2025-02-02 00:00:01")
-
+    dtt_date_time("2025-02-02 00:00:01", tz = "UTC"),
+    as.POSIXct("2025-02-02 00:00:01", tz = "UTC"))
+  
   expect_identical(
-    as.character(dtt_date_time(c("2025-02-02 00:00:01", "2025-02-02 00:00:00"), tz = "UTC")[1]), "2025-02-02 00:00:01")
- 
+    dtt_date_time(c("2025-02-02 00:00:01", "2025-02-02 00:00:00"), tz = "UTC"),
+    as.POSIXct(c("2025-02-02 00:00:01", "2025-02-02 00:00:00"), tz = "UTC"))
+  
   expect_identical(
-    as.character(dtt_date_time(c("2025-02-02 00:00:01", "2025-02-02"), tz = "UTC")[1]), "2025-02-02 00:00:01")
+    dtt_date_time(c("2025-02-02 00:00:01", "2025-02-02"), tz = "UTC"),
+    as.POSIXct(c("2025-02-02 00:00:01", "2025-02-02 00:00:00"), tz = "UTC"))
 })
 
 test_that("date_time.Date", {
