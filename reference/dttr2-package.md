@@ -35,7 +35,7 @@ Authors:
 
 Other contributors:
 
-- Duncan Kennedy <duncan@poissonconsulting.ca>
-  ([ORCID](https://orcid.org/0009-0001-4880-5751)) \[contributor\]
+- Duncan Kennedy ([ORCID](https://orcid.org/0009-0001-4880-5751))
+  \[contributor\]
 
 - Poisson Consulting \[copyright holder, funder\]
