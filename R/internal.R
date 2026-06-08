@@ -28,29 +28,43 @@ sub_day <- function(x, value) {
   sub("^(\\d{1,4}-\\d{1,2}-)(\\d{1,2})$", paste0("\\1", value), x)
 }
 
-# Strip trailing time-zone abbreviations (e.g. " UTC") so that a date-only
-# string can have a time component appended.
-sanitize_date_time <- function(x) {
-  sub("[^[:digit:]/:-]*$", "", x)
-}
+# Base R's `as.POSIXct.character()` guesses a single format for the whole vector
+# (the first of `tryFormats` that parses every element). `as.character()` drops
+# the "00:00:00" time from midnight POSIXct values, so a single date-only value
+# mixed in with date-times forces the whole vector to be parsed with a date-only
+# format, silently discarding the time component from every element (see #66).
+#
+# Parse with the date-time formats first (forcing each explicitly so date-only
+# values become NA rather than dictating the format) and only fall back to the
+# date-only formats (i.e. midnight) for the values that did not parse. The
+# formats mirror the default `tryFormats` of `as.POSIXct.character()`.
+parse_date_time_character <- function(x, tz) {
+  formats <- c(
+    "%Y-%m-%d %H:%M:%OS", "%Y/%m/%d %H:%M:%OS",
+    "%Y-%m-%d %H:%M", "%Y/%m/%d %H:%M",
+    "%Y-%m-%d", "%Y/%m/%d"
+  )
 
-# `as.character()` drops the "00:00:00" time from midnight POSIXct values. When
-# such date-only strings are mixed with date-time strings, base R's
-# `as.POSIXct.character()` guesses a single date-only format for the whole
-# vector and discards the time component from every element (see #66). Restore a
-# uniform format by appending "00:00:00" to the date-only elements whenever the
-# vector also contains full date-times.
-add_hms_date_time <- function(x) {
-  if (!length(x)) {
-    return(x)
+  out <- as.POSIXct(rep(NA_character_, length(x)), tz = tz)
+  unparsed <- !is.na(x)
+  for (format in formats) {
+    if (!any(unparsed)) {
+      break
+    }
+    i <- which(unparsed)
+    parsed <- as.POSIXct(x[i], tz = tz, format = format)
+    ok <- !is.na(parsed)
+    out[i[ok]] <- parsed[ok]
+    unparsed[i[ok]] <- FALSE
   }
 
-  n0 <- !grepl(":", x) & !is.na(x)
-  n2 <- grepl(":.*:", x)
-  if (any(n0) && any(n2)) {
-    x[n0] <- paste(sanitize_date_time(x[n0]), "00:00:00")
+  # Defer to base R for anything still unparsed so that genuinely malformed
+  # input raises the usual "not in a standard unambiguous format" error.
+  if (any(unparsed)) {
+    i <- which(unparsed)
+    out[i] <- as.POSIXct(x[i], tz = tz)
   }
-  x
+  out
 }
 
 #' @exportS3Method NULL

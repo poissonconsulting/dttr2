@@ -39,8 +39,7 @@ dtt_date_time.double <- function(x, tz = dtt_default_tz(), ...) {
 dtt_date_time.character <- function(x, tz = dtt_default_tz(), ...) {
   chk_unused(...)
   chk_string(tz)
-  x <- add_hms_date_time(x)
-  dtt_floor(as.POSIXct(x, tz = tz))
+  dtt_floor(parse_date_time_character(x, tz))
 }
 
 #' @describeIn dtt_date_time Coerce Date vector to a floored POSIXct vector
