@@ -88,6 +88,45 @@ test_that("date_time.character", {
   )
 })
 
+test_that("date_time.character handles midnight", {
+  expect_identical(
+    dtt_date_time("2025-02-02 00:00:01", tz = "UTC"),
+    as.POSIXct("2025-02-02 00:00:01", tz = "UTC")
+  )
+
+  expect_identical(
+    dtt_date_time(c("2025-02-02 00:00:01", "2025-02-02 00:00:00"), tz = "UTC"),
+    as.POSIXct(c("2025-02-02 00:00:01", "2025-02-02 00:00:00"), tz = "UTC")
+  )
+
+  expect_identical(
+    dtt_date_time(c("2025-02-02 00:00:01", "2025-02-02"), tz = "UTC"),
+    as.POSIXct(c("2025-02-02 00:00:01", "2025-02-02 00:00:00"), tz = "UTC")
+  )
+})
+
+test_that("date_time.character does not drop times for long vectors (#66)", {
+  # `as.character()` drops "00:00:00" from midnight values; a single midnight
+  # mixed in must not collapse the whole vector to dates.
+  x <- as.character(as.POSIXct(0:86400, tz = "Etc/GMT+8"))
+  expect_identical(
+    length(unique(dtt_date_time(x, tz = "Etc/GMT+8"))),
+    86401L
+  )
+
+  # The reprex from #66.
+  expect_identical(
+    dtt_date_time(
+      c("1970-01-01 23:59:58", "1970-01-01 23:59:59", "1970-01-02"),
+      tz = "Etc/GMT+1"
+    ),
+    as.POSIXct(
+      c("1970-01-01 23:59:58", "1970-01-01 23:59:59", "1970-01-02 00:00:00"),
+      tz = "Etc/GMT+1"
+    )
+  )
+})
+
 test_that("date_time.Date", {
   expect_identical(
     dtt_date_time(Sys.Date()[-1]),

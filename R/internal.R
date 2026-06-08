@@ -28,6 +28,31 @@ sub_day <- function(x, value) {
   sub("^(\\d{1,4}-\\d{1,2}-)(\\d{1,2})$", paste0("\\1", value), x)
 }
 
+# Strip trailing time-zone abbreviations (e.g. " UTC") so that a date-only
+# string can have a time component appended.
+sanitize_date_time <- function(x) {
+  sub("[^[:digit:]/:-]*$", "", x)
+}
+
+# `as.character()` drops the "00:00:00" time from midnight POSIXct values. When
+# such date-only strings are mixed with date-time strings, base R's
+# `as.POSIXct.character()` guesses a single date-only format for the whole
+# vector and discards the time component from every element (see #66). Restore a
+# uniform format by appending "00:00:00" to the date-only elements whenever the
+# vector also contains full date-times.
+add_hms_date_time <- function(x) {
+  if (!length(x)) {
+    return(x)
+  }
+
+  n0 <- !grepl(":", x) & !is.na(x)
+  n2 <- grepl(":.*:", x)
+  if (any(n0) && any(n2)) {
+    x[n0] <- paste(sanitize_date_time(x[n0]), "00:00:00")
+  }
+  x
+}
+
 #' @exportS3Method NULL
 max.hms <- function(..., na.rm = FALSE) {
   dots <- list(...)
