@@ -1,5 +1,12 @@
 # Changelog
 
+## dttr2 0.5.2.9007
+
+- Remove Duncan Kennedy poissonconsulting.ca email
+  ([\#112](https://github.com/poissonconsulting/dttr2/issues/112))
+- Add CODEOWNERS assigning [@aylapear](https://github.com/aylapear)
+  ([\#106](https://github.com/poissonconsulting/dttr2/issues/106))
+
 ## dttr2 0.5.2.9006
 
 ### Chore
