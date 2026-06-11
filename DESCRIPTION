@@ -8,6 +8,10 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-7388-1222")),
     person("Duncan", "Kennedy", , role = "ctb",
            comment = c(ORCID = "0009-0001-4880-5751")),
+    person("Kirill", "Müller", role = "ctb",
+           comment = c(ORCID = "0000-0002-1416-3412")),
+    person("Nadine", "Hussein", role = "ctb",
+           comment = c(ORCID = "0000-0003-4470-8361")),
     person("Poisson Consulting", role = c("cph", "fnd"))
   )
 Description: Manipulates date ('Date'), date time ('POSIXct') and time
