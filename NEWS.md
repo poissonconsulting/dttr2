@@ -2,13 +2,8 @@
 
 # dttr2 0.5.2.9007
 
-- Merge pull request #112 from poissonconsulting/remove-duncan-poisson-email.
-
-  Remove Duncan Kennedy poissonconsulting.ca email
-
-- Merge pull request #106 from poissonconsulting/add-codeowners.
-
-  Add CODEOWNERS assigning @aylapear
+- Remove Duncan Kennedy poissonconsulting.ca email (#112)
+- Add CODEOWNERS assigning @aylapear (#106)
 
 
 # dttr2 0.5.2.9006
