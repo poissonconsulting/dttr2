@@ -14,6 +14,13 @@
   Kennedy](https://www.poissonconsulting.ca/author/duncan-kennedy/)**.
   Contributor. [](https://orcid.org/0009-0001-4880-5751)
 
+- **[Kirill Müller](https://krlmlr.info)**. Contributor.
+  [](https://orcid.org/0000-0002-1416-3412)
+
+- **[Nadine
+  Hussein](https://www.poissonconsulting.ca/author/nadine-hussein/)**.
+  Contributor. [](https://orcid.org/0000-0003-4470-8361)
+
 - **[![](https://github.com/poissonconsulting.png)](https://www.poissonconsulting.ca/)**.
   Copyright holder, funder.
 
