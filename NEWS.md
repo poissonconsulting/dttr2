@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.5.2.9008
+
+- Fix date-time parsing to preserve time component with mixed formats (#66, #114).
+
+- Add Kirill Müller and Nadine Hussein as contributors (#108).
+
+
 # dttr2 0.5.2.9007
 
 - Remove Duncan Kennedy poissonconsulting.ca email (#112)
