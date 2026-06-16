@@ -40,6 +40,7 @@ A floored POSIXct vector.
 }
 \description{
 Coerces vectors to floored POSIXct vectors.
+Does not ensure time changes are handled correctly.
 }
 \section{Methods (by class)}{
 \itemize{

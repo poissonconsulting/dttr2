@@ -1,6 +1,7 @@
 #' Floor Date/Time
 #'
 #' Coerces vectors to floored POSIXct vectors.
+#' Does not ensure time changes are handled correctly.
 #'
 #' @inheritParams params
 #' @param x A vector.
