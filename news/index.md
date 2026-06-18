@@ -1,5 +1,28 @@
 # Changelog
 
+## dttr2 0.5.2.9009
+
+- Add fledge-bump workflow
+- Add fledge-tag-on-merge workflow
+- Fix date-time parsing to preserve time component with mixed formats
+  ([\#114](https://github.com/poissonconsulting/dttr2/issues/114))
+- ci: Test all R versions on branches that start with cran-
+- ci: Tweaks
+- ci: Fix comment
+- ci: Use workflows for fledge
+- ci: Review env vers when installing, more careful foreign runs, format
+  with `clang-format`
+- ci: Sync
+- ci: Sync
+- ci: Always use `_R_CHECK_FORCE_SUGGESTS_=false`
+- ci: Only fail covr builds if token is given
+- ci: Sync
+- ci: Fix
+- ci: Add xml2 for covr, print testthat results
+- ci: Explain
+- ci: Fetch tags for fledge workflow to avoid unnecessary NEWS entries
+- ci: Avoid failure in fledge workflow if no changes
+
 ## dttr2 0.5.2.9008
 
 - Fix date-time parsing to preserve time component with mixed formats
