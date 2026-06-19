@@ -1,11 +1,15 @@
 #' Floor Date/Time
 #'
 #' Coerces vectors to floored POSIXct vectors.
-#' Does not ensure time changes are handled correctly.
 #'
 #' @inheritParams params
 #' @param x A vector.
 #' @return A floored POSIXct vector.
+#'
+#' @details
+#' Does not ensure time changes are handled correctly.
+#' Particularly, conversions of strings to date-time objects may duplicate time
+#' changes and result in incorrect times. 
 #'
 #' @family floor
 #' @export

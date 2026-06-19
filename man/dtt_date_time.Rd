@@ -40,7 +40,11 @@ A floored POSIXct vector.
 }
 \description{
 Coerces vectors to floored POSIXct vectors.
+}
+\details{
 Does not ensure time changes are handled correctly.
+Particularly, conversions of strings to date-time objects may duplicate time
+changes and result in incorrect times.
 }
 \section{Methods (by class)}{
 \itemize{
