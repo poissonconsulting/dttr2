@@ -6,6 +6,13 @@
 #' @param x A vector.
 #' @return A floored POSIXct vector.
 #'
+#' @details
+#' `dtt_date_time()` does not resolve ambiguous local times that occur at
+#' daylight saving time transitions. In particular, when coercing character
+#' strings across a "fall back" transition, a repeated clock time may be
+#' assigned the same UTC offset for both occurrences, producing incorrect
+#' times. Such values should be verified manually.
+#'
 #' @family floor
 #' @export
 #'

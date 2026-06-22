@@ -41,6 +41,13 @@ A floored POSIXct vector.
 \description{
 Coerces vectors to floored POSIXct vectors.
 }
+\details{
+\code{dtt_date_time()} does not resolve ambiguous local times that occur at
+daylight saving time transitions. In particular, when coercing character
+strings across a "fall back" transition, a repeated clock time may be
+assigned the same UTC offset for both occurrences, producing incorrect
+times. Such values should be verified manually.
+}
 \section{Methods (by class)}{
 \itemize{
 \item \code{dtt_date_time(integer)}: Coerce integer vector to a floored POSIXct vector
