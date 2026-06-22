@@ -7,9 +7,11 @@
 #' @return A floored POSIXct vector.
 #'
 #' @details
-#' Does not ensure time changes are handled correctly.
-#' Particularly, conversions of strings to date-time objects may duplicate time
-#' changes and result in incorrect times. 
+#' `dtt_date_time()` does not resolve ambiguous local times that occur at
+#' daylight saving time transitions. In particular, when coercing character
+#' strings across a "fall back" transition, a repeated clock time may be
+#' assigned the same UTC offset for both occurrences, producing incorrect
+#' times. Such values should be verified manually.
 #'
 #' @family floor
 #' @export

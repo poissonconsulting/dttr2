@@ -42,9 +42,11 @@ A floored POSIXct vector.
 Coerces vectors to floored POSIXct vectors.
 }
 \details{
-Does not ensure time changes are handled correctly.
-Particularly, conversions of strings to date-time objects may duplicate time
-changes and result in incorrect times.
+\code{dtt_date_time()} does not resolve ambiguous local times that occur at
+daylight saving time transitions. In particular, when coercing character
+strings across a "fall back" transition, a repeated clock time may be
+assigned the same UTC offset for both occurrences, producing incorrect
+times. Such values should be verified manually.
 }
 \section{Methods (by class)}{
 \itemize{
