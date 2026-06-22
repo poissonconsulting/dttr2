@@ -52,6 +52,14 @@ dtt_date_time(x, date = dtt_date("1970-01-01"), tz = dtt_default_tz(), ...)
 
 A floored POSIXct vector.
 
+## Details
+
+`dtt_date_time()` does not resolve ambiguous local times that occur at
+daylight saving time transitions. In particular, when coercing character
+strings across a "fall back" transition, a repeated clock time may be
+assigned the same UTC offset for both occurrences, producing incorrect
+times. Such values should be verified manually.
+
 ## Methods (by class)
 
 - `dtt_date_time(integer)`: Coerce integer vector to a floored POSIXct
