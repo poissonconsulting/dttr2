@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# dttr2 0.5.2.9010
+
+- expand description of `dtt_date_time()` on user being responsible for checking time changes (#119)
+
+
 # dttr2 0.5.2.9009
 
 * Add fledge-bump workflow
