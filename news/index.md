@@ -1,5 +1,12 @@
 # Changelog
 
+## dttr2 0.5.2.9010
+
+- expand description of
+  [`dtt_date_time()`](https://poissonconsulting.github.io/dttr2/reference/dtt_date_time.md)
+  on user being responsible for checking time changes
+  ([\#119](https://github.com/poissonconsulting/dttr2/issues/119))
+
 ## dttr2 0.5.2.9009
 
 - Add fledge-bump workflow
