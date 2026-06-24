@@ -33,7 +33,6 @@ Authors:
 
 Other contributors:
 \itemize{
-  \item Duncan Kennedy (\href{https://orcid.org/0009-0001-4880-5751}{ORCID}) [contributor]
   \item Kirill Müller (\href{https://orcid.org/0000-0002-1416-3412}{ORCID}) [contributor]
   \item Nadine Hussein (\href{https://orcid.org/0000-0003-4470-8361}{ORCID}) [contributor]
   \item Poisson Consulting [copyright holder, funder]
