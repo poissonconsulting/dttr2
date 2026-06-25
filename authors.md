@@ -10,10 +10,6 @@
   Pearson](https://www.poissonconsulting.ca/author/ayla-pearson/)**.
   Author, maintainer. [](https://orcid.org/0000-0001-7388-1222)
 
-- **[Duncan
-  Kennedy](https://www.poissonconsulting.ca/author/duncan-kennedy/)**.
-  Contributor. [](https://orcid.org/0009-0001-4880-5751)
-
 - **[Kirill Müller](https://krlmlr.info)**. Contributor.
   [](https://orcid.org/0000-0002-1416-3412)
 

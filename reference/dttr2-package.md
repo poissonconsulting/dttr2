@@ -35,9 +35,6 @@ Authors:
 
 Other contributors:
 
-- Duncan Kennedy ([ORCID](https://orcid.org/0009-0001-4880-5751))
-  \[contributor\]
-
 - Kirill Müller ([ORCID](https://orcid.org/0000-0002-1416-3412))
   \[contributor\]
 
