@@ -20,14 +20,16 @@ test_that("date_add_time", {
   )
   expect_identical(
     dtt_date_add_time(
-      as.Date(character(0)), hms::as_hms("06:07:08"),
+      as.Date(character(0)),
+      hms::as_hms("06:07:08"),
       tz = "Etc/GMT+7"
     ),
     as.POSIXct(character(0), tz = "Etc/GMT+7")
   )
   expect_identical(
     dtt_date_add_time(
-      as.Date("2001-01-05"), hms::as_hms(NA),
+      as.Date("2001-01-05"),
+      hms::as_hms(NA),
       tz = "Etc/GMT+7"
     ),
     as.POSIXct(NA_character_, tz = "Etc/GMT+7")

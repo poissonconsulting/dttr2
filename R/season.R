@@ -20,10 +20,16 @@
 #'   dates,
 #'   start = c(First = dtt_date("2000-01-01"), Second = dtt_date("2000-06-01"))
 #' )
-dtt_season <- function(x, start = c(
-                         Spring = 3L, Summer = 6L,
-                         Autumn = 9L, Winter = 12L
-                       ), first = NULL) {
+dtt_season <- function(
+  x,
+  start = c(
+    Spring = 3L,
+    Summer = 6L,
+    Autumn = 9L,
+    Winter = 12L
+  ),
+  first = NULL
+) {
   if (!vld_s3_class(x, "Date") && !vld_s3_class(x, "POSIXct")) {
     chkor_vld(vld_s3_class(x, "Date"), vld_s3_class(x, "POSIXct"))
   }
@@ -32,7 +38,9 @@ dtt_season <- function(x, start = c(
     chkor_vld(vld_whole_numeric(start), vld_s3_class(start, "Date"))
   }
 
-  if (is.numeric(start)) chk_range(start, c(1L, 12L))
+  if (is.numeric(start)) {
+    chk_range(start, c(1L, 12L))
+  }
   chk_not_any_na(start)
   chk_not_empty(start)
   chk_unique(start)
@@ -60,7 +68,9 @@ dtt_season <- function(x, start = c(
   chk_unique(start)
 
   is_length <- length(x)
-  if (!is_length) x <- as.Date("2000-01-01")
+  if (!is_length) {
+    x <- as.Date("2000-01-01")
+  }
 
   if (start[1] != dtt_date(c("1972-01-01"))) {
     first2 <- dtt_date("1972-01-01")
@@ -84,6 +94,8 @@ dtt_season <- function(x, start = c(
     }
   }
 
-  if (!is_length) x <- x[-1]
+  if (!is_length) {
+    x <- x[-1]
+  }
   x
 }

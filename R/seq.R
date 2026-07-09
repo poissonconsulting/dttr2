@@ -17,12 +17,19 @@ dtt_seq <- function(from, to, units, length_out = NULL, ...) {
 
 #' @describeIn dtt_seq Create a Date sequence vector
 #' @export
-dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL,
-                         ...) {
+dtt_seq.Date <- function(
+  from,
+  to = from,
+  units = "days",
+  length_out = NULL,
+  ...
+) {
   chk_date(from)
   chk_string(units)
   chk_subset(units, c("days", "months", "years"))
-  if (!is.null(length_out)) chk_whole_number(length_out)
+  if (!is.null(length_out)) {
+    chk_whole_number(length_out)
+  }
   chk_unused(...)
 
   from <- dtt_floor(from, units = units)
@@ -52,18 +59,27 @@ dtt_seq.Date <- function(from, to = from, units = "days", length_out = NULL,
 
   seq <- seq(from, to, by = units2by(units))
   seq <- dtt_aggregate(seq, units = units)
-  if (!ascending) seq <- rev(seq)
+  if (!ascending) {
+    seq <- rev(seq)
+  }
   seq
 }
 
 #' @describeIn dtt_seq Create a POSIXct sequence vector
 #' @export
-dtt_seq.POSIXct <- function(from, to = from, units = "seconds",
-                            length_out = NULL, ...) {
+dtt_seq.POSIXct <- function(
+  from,
+  to = from,
+  units = "seconds",
+  length_out = NULL,
+  ...
+) {
   chk_date_time(from)
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours", "days", "months", "years"))
-  if (!is.null(length_out)) chk_whole_number(length_out)
+  if (!is.null(length_out)) {
+    chk_whole_number(length_out)
+  }
   chk_unused(...)
 
   from <- dtt_floor(from, units = units)
@@ -95,19 +111,29 @@ dtt_seq.POSIXct <- function(from, to = from, units = "seconds",
 
   seq <- seq(from, to, by = units2by(units), tz = tz)
   seq <- dtt_aggregate(seq, units = units)
-  if (!ascending) seq <- rev(seq)
+  if (!ascending) {
+    seq <- rev(seq)
+  }
   seq
 }
 
 
 #' @describeIn dtt_seq Create a hms sequence vector
 #' @export
-dtt_seq.hms <- function(from, to = from, units = "seconds", length_out = NULL,
-                        wrap = TRUE, ...) {
+dtt_seq.hms <- function(
+  from,
+  to = from,
+  units = "seconds",
+  length_out = NULL,
+  wrap = TRUE,
+  ...
+) {
   chk_time(from)
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours"))
-  if (!is.null(length_out)) chk_whole_number(length_out)
+  if (!is.null(length_out)) {
+    chk_whole_number(length_out)
+  }
   chk_flag(wrap)
   chk_unused(...)
 

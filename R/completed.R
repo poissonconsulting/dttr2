@@ -14,8 +14,13 @@ dtt_completed <- function(x, ...) {
 
 #' @describeIn dtt_completed Test if Date vector is complete
 #' @export
-dtt_completed.Date <- function(x, units = "days", unique = TRUE, sorted = TRUE,
-                               ...) {
+dtt_completed.Date <- function(
+  x,
+  units = "days",
+  unique = TRUE,
+  sorted = TRUE,
+  ...
+) {
   chk_string(units)
   chk_subset(units, c("days", "months", "years"))
   chk_flag(unique)
@@ -43,8 +48,13 @@ dtt_completed.Date <- function(x, units = "days", unique = TRUE, sorted = TRUE,
 
 #' @describeIn dtt_completed Test if POSIXct vector is complete
 #' @export
-dtt_completed.POSIXct <- function(x, units = "seconds", unique = TRUE,
-                                  sorted = TRUE, ...) {
+dtt_completed.POSIXct <- function(
+  x,
+  units = "seconds",
+  unique = TRUE,
+  sorted = TRUE,
+  ...
+) {
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours", "days", "months", "years"))
   chk_flag(unique)
@@ -72,8 +82,13 @@ dtt_completed.POSIXct <- function(x, units = "seconds", unique = TRUE,
 
 #' @describeIn dtt_completed Test if POSIXct vector is complete
 #' @export
-dtt_completed.hms <- function(x, units = "seconds", unique = TRUE,
-                              sorted = TRUE, ...) {
+dtt_completed.hms <- function(
+  x,
+  units = "seconds",
+  unique = TRUE,
+  sorted = TRUE,
+  ...
+) {
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours"))
   chk_flag(unique)

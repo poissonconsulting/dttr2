@@ -31,7 +31,9 @@ test_that("create datetime from vector of values", {
     datetimes,
     as.POSIXct(
       c(
-        "1990-01-01 00:00:00", "1991-05-10 10:25:24", "2010-08-16 14:45:47",
+        "1990-01-01 00:00:00",
+        "1991-05-10 10:25:24",
+        "2010-08-16 14:45:47",
         "2022-12-31 23:59:59"
       ),
       tz = "UTC"
@@ -61,7 +63,9 @@ test_that("create datetime from dataframe of values", {
     datetimes,
     as.POSIXct(
       c(
-        "1990-01-01 00:00:00", "1991-05-10 10:25:24", "2010-08-16 14:45:47",
+        "1990-01-01 00:00:00",
+        "1991-05-10 10:25:24",
+        "2010-08-16 14:45:47",
         "2022-12-31 23:59:59"
       ),
       tz = "UTC"
@@ -167,7 +171,8 @@ test_that("pass when lengths of vectors 1 or the same", {
     datetime,
     as.POSIXct(
       c(
-        "1990-01-01 00:00:00 UTC", "1991-06-01 00:00:00 UTC",
+        "1990-01-01 00:00:00 UTC",
+        "1991-06-01 00:00:00 UTC",
         "1992-12-01 00:00:00 UTC"
       ),
       tz = "UTC"
@@ -195,7 +200,10 @@ test_that("handles missing values by returning NA for that value", {
     datetimes,
     as.POSIXct(
       c(
-        "1990-01-01 00:00:00", NA, "2010-08-16 14:45:47", "2022-12-31 23:59:59"
+        "1990-01-01 00:00:00",
+        NA,
+        "2010-08-16 14:45:47",
+        "2022-12-31 23:59:59"
       ),
       tz = "UTC"
     )

@@ -73,7 +73,6 @@ test_that("complete.POSIXct", {
     as.POSIXct(c("2001-01-01", "2001-01-02"), tz = "Etc/GMT+7")
   )
 
-
   expect_identical(
     dtt_complete(
       as.POSIXct(c("2001-01-02", "2001-01-01"), tz = "Etc/GMT+7"),

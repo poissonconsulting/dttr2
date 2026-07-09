@@ -40,9 +40,12 @@ sub_day <- function(x, value) {
 # formats mirror the default `tryFormats` of `as.POSIXct.character()`.
 parse_date_time_character <- function(x, tz) {
   formats <- c(
-    "%Y-%m-%d %H:%M:%OS", "%Y/%m/%d %H:%M:%OS",
-    "%Y-%m-%d %H:%M", "%Y/%m/%d %H:%M",
-    "%Y-%m-%d", "%Y/%m/%d"
+    "%Y-%m-%d %H:%M:%OS",
+    "%Y/%m/%d %H:%M:%OS",
+    "%Y-%m-%d %H:%M",
+    "%Y/%m/%d %H:%M",
+    "%Y-%m-%d",
+    "%Y/%m/%d"
   )
 
   out <- as.POSIXct(rep(NA_character_, length(x)), tz = tz)

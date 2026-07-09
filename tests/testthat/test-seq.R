@@ -247,9 +247,7 @@ test_that("seq.POSIXct", {
 })
 
 test_that("seq.hms", {
-  expect_error(dtt_seq(NA_hms_[-1], NA_hms_[-1]),
-    class = "chk_error"
-  )
+  expect_error(dtt_seq(NA_hms_[-1], NA_hms_[-1]), class = "chk_error")
   expect_error(dtt_seq(NA_hms_, NA_hms_[-1]), class = "chk_error")
   expect_error(
     dtt_seq(hms::as_hms("00:00:00"), NA_hms_[-1]),
@@ -287,18 +285,42 @@ test_that("seq.hms", {
 
   expect_identical(
     dtt_seq(hms::as_hms("00:00:00"), length_out = 24L, units = "hours"),
-    hms::as_hms(paste0(c(
-      "00", "01", "02", "03", "04", "05",
-      "06", "07", "08", "09", 10:23
-    ), ":00:00"))
+    hms::as_hms(paste0(
+      c(
+        "00",
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        10:23
+      ),
+      ":00:00"
+    ))
   )
 
   expect_identical(
     dtt_seq(hms::as_hms("01:00:00"), length_out = 24L, units = "hours"),
-    hms::as_hms(paste0(c(
-      "01", "02", "03", "04", "05",
-      "06", "07", "08", "09", 10:23, "00"
-    ), ":00:00"))
+    hms::as_hms(paste0(
+      c(
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        10:23,
+        "00"
+      ),
+      ":00:00"
+    ))
   )
 
   expect_identical(
