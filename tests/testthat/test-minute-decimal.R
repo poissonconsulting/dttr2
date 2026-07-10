@@ -48,7 +48,8 @@ test_that("dtt_minute_decimal.hms", {
   expect_equal(dtt_minute_decimal(hms::as_hms("20:30:32")), 30.5333333333333)
   expect_equal(dtt_minute_decimal(hms::as_hms(-63)), 58.95)
   expect_identical(
-    dtt_minute_decimal(c(hms::as_hms(60), NA_hms_)), c(1, NA_real_)
+    dtt_minute_decimal(c(hms::as_hms(60), NA_hms_)),
+    c(1, NA_real_)
   )
   expect_identical(dtt_minute_decimal(hms::as_hms("24:00:00")), 0)
 })

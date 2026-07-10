@@ -17,8 +17,15 @@ dtt_complete <- function(x, ...) {
 
 #' @describeIn dtt_complete Complete a Date sequence vector
 #' @export
-dtt_complete.Date <- function(x, from = min(x), to = max(x), units = "days",
-                              unique = TRUE, sort = TRUE, ...) {
+dtt_complete.Date <- function(
+  x,
+  from = min(x),
+  to = max(x),
+  units = "days",
+  unique = TRUE,
+  sort = TRUE,
+  ...
+) {
   chk_not_empty(x)
   chk_date(from)
   chk_date(to)
@@ -32,22 +39,36 @@ dtt_complete.Date <- function(x, from = min(x), to = max(x), units = "days",
   from <- dtt_floor(from, units = units)
   to <- dtt_floor(to, units = units)
 
-  if (from > to) err("from must not be greater than to")
-  if (from > min(x) || to < max(x)) err("from and to must span x")
+  if (from > to) {
+    err("from must not be greater than to")
+  }
+  if (from > min(x) || to < max(x)) {
+    err("from and to must span x")
+  }
 
   seq <- dtt_seq(from, to, units = units)
   seq <- as.Date(setdiff(as.vector(seq), as.vector(x)), origin = "1970-01-01")
-  if (unique) x <- unique(x)
+  if (unique) {
+    x <- unique(x)
+  }
   x <- c(x, seq)
-  if (sort) x <- sort(x)
+  if (sort) {
+    x <- sort(x)
+  }
   x
 }
 
 #' @describeIn dtt_complete Complete a POSIXct sequence vector
 #' @export
-dtt_complete.POSIXct <- function(x, from = min(x), to = max(x),
-                                 units = "seconds", unique = TRUE, sort = TRUE,
-                                 ...) {
+dtt_complete.POSIXct <- function(
+  x,
+  from = min(x),
+  to = max(x),
+  units = "seconds",
+  unique = TRUE,
+  sort = TRUE,
+  ...
+) {
   chk_not_empty(x)
   chk_date_time(from)
   chk_date_time(to)
@@ -64,24 +85,39 @@ dtt_complete.POSIXct <- function(x, from = min(x), to = max(x),
   from <- dtt_floor(from, units = units)
   to <- dtt_floor(to, units = units)
 
-  if (from > to) err("from must not be greater than to")
-  if (from > min(x) || to < max(x)) err("from and to must span x")
+  if (from > to) {
+    err("from must not be greater than to")
+  }
+  if (from > min(x) || to < max(x)) {
+    err("from and to must span x")
+  }
 
   seq <- try(dtt_seq(from, to, units = units), silent = FALSE)
   if (inherits(seq, "try-error")) {
     err("attempting to generate more than 2^32 POSIXct values")
   }
   seq <- as.Date(setdiff(as.vector(seq), as.vector(x)), origin = "1970-01-01")
-  if (unique) x <- unique(x)
+  if (unique) {
+    x <- unique(x)
+  }
   x <- c(x, seq)
-  if (sort) x <- sort(x)
+  if (sort) {
+    x <- sort(x)
+  }
   x
 }
 
 #' @describeIn dtt_complete Complete a hms sequence vector
 #' @export
-dtt_complete.hms <- function(x, from = min(x), to = max(x), units = "seconds",
-                             unique = TRUE, sort = TRUE, ...) {
+dtt_complete.hms <- function(
+  x,
+  from = min(x),
+  to = max(x),
+  units = "seconds",
+  unique = TRUE,
+  sort = TRUE,
+  ...
+) {
   chk_s3_class(x, "hms")
   chk_not_any_na(x)
   chk_not_empty(x)
@@ -98,16 +134,24 @@ dtt_complete.hms <- function(x, from = min(x), to = max(x), units = "seconds",
   from <- dtt_floor(from, units = units)
   to <- dtt_floor(to, units = units)
 
-  if (from > to) err("from must not be greater than to")
-  if (from > min(x) || to < max(x)) err("from and to must span x")
+  if (from > to) {
+    err("from must not be greater than to")
+  }
+  if (from > min(x) || to < max(x)) {
+    err("from and to must span x")
+  }
 
   seq <- try(dtt_seq(from, to, units = units), silent = FALSE)
   if (inherits(seq, "try-error")) {
     err("attempting to generate more than 2^32 hms values")
   }
   seq <- as.Date(setdiff(as.vector(seq), as.vector(x)), origin = "1970-01-01")
-  if (unique) x <- unique(x)
+  if (unique) {
+    x <- unique(x)
+  }
   x <- c(x, seq)
-  if (sort) x <- sort(x)
+  if (sort) {
+    x <- sort(x)
+  }
   dtt_time(x)
 }

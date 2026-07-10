@@ -14,7 +14,11 @@ test_that("dayte.Date", {
 
 test_that("dayte.Date with start and leap year", {
   more_dates <- c(
-    "1998-02-27", "1999-02-28", "2000-02-29", "2003-03-01", "2004-03-02"
+    "1998-02-27",
+    "1999-02-28",
+    "2000-02-29",
+    "2003-03-01",
+    "2004-03-02"
   )
   more_dates <- as.Date(more_dates)
 

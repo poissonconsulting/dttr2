@@ -15,7 +15,8 @@ dtt_add_units <- function(x, units, n = 1L) {
   chk_string(units)
   chk_subset(units, c("seconds", "minutes", "hours", "days", "months", "years"))
 
-  switch(units,
+  switch(
+    units,
     years = dtt_add_years(x, n),
     months = dtt_add_months(x, n),
     days = dtt_add_days(x, n),

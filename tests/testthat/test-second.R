@@ -57,7 +57,8 @@ test_that("dtt_second<-.POSIXct", {
 
   x <- as.POSIXct("1970-01-01", tz = "UTC")
   expect_identical(
-    dtt_set_second(x, 30L), as.POSIXct("1970-01-01 00:00:30", tz = "UTC")
+    dtt_set_second(x, 30L),
+    as.POSIXct("1970-01-01 00:00:30", tz = "UTC")
   )
   dtt_second(x) <- 30L
   expect_identical(x, as.POSIXct("1970-01-01 00:00:30", tz = "UTC"))

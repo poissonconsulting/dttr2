@@ -1,12 +1,14 @@
 test_that("date_time.integer", {
   expect_identical(
-    dtt_date_time(integer(0)), as.POSIXct("1970-01-01", tz = "UTC")[-1]
+    dtt_date_time(integer(0)),
+    as.POSIXct("1970-01-01", tz = "UTC")[-1]
   )
   expect_identical(dtt_date_time(NA_integer_), NA_POSIXct_)
   expect_identical(as.integer(as.POSIXct("1970-01-01", tz = "UTC")), 0L)
   expect_identical(dtt_date_time(0L), as.POSIXct("1970-01-01", tz = "UTC"))
   expect_identical(
-    dtt_date_time(-1L), as.POSIXct("1969-12-31 23:59:59", tz = "UTC")
+    dtt_date_time(-1L),
+    as.POSIXct("1969-12-31 23:59:59", tz = "UTC")
   )
   expect_identical(
     dtt_date_time(0L, tz = "Etc/GMT+8"),
@@ -14,10 +16,12 @@ test_that("date_time.integer", {
   )
 
   expect_identical(
-    dtt_date_time(2L), as.POSIXct("1970-01-01 00:00:02", tz = "UTC")
+    dtt_date_time(2L),
+    as.POSIXct("1970-01-01 00:00:02", tz = "UTC")
   )
   expect_identical(
-    dtt_date_time(-2L), as.POSIXct("1969-12-31 23:59:58", tz = "UTC")
+    dtt_date_time(-2L),
+    as.POSIXct("1969-12-31 23:59:58", tz = "UTC")
   )
 
   expect_identical(
@@ -28,7 +32,8 @@ test_that("date_time.integer", {
 
 test_that("date_time.double", {
   expect_identical(
-    dtt_date_time(double(0)), as.POSIXct("1970-01-01", tz = "UTC")[-1]
+    dtt_date_time(double(0)),
+    as.POSIXct("1970-01-01", tz = "UTC")[-1]
   )
   expect_identical(dtt_date_time(NA_real_), NA_POSIXct_)
   expect_identical(as.double(as.POSIXct("1970-01-01", tz = "UTC")), 0)

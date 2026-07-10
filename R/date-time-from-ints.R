@@ -50,9 +50,15 @@
 #' dtt_date_time_from_ints(year, month, day, hour, minute, second)
 #'
 #' dtt_date_time_from_ints(year, month, day)
-dtt_date_time_from_ints <- function(year = 1972L, month = 1L, day = 1L,
-                                    hour = 0L, minute = 0L, second = 0L,
-                                    tz = dtt_default_tz()) {
+dtt_date_time_from_ints <- function(
+  year = 1972L,
+  month = 1L,
+  day = 1L,
+  hour = 0L,
+  minute = 0L,
+  second = 0L,
+  tz = dtt_default_tz()
+) {
   chk::chk_whole_numeric(year)
   chk::chk_range(year, range = c(0L, 9999L))
   chk::chk_whole_numeric(month)

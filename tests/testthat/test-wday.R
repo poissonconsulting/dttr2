@@ -5,7 +5,12 @@ test_that("wday for Dates", {
   expect_identical(
     dtt_wday(as.Date("2020-03-05") + 0:6),
     c(
-      "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+      "Monday",
+      "Tuesday",
       "Wednesday"
     )
   )
@@ -22,7 +27,12 @@ test_that("wday for POSIXct", {
   expect_identical(
     dtt_wday(as.POSIXct("2020-03-05") + 0:6 * 86400),
     c(
-      "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+      "Monday",
+      "Tuesday",
       "Wednesday"
     )
   )
