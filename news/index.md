@@ -1,5 +1,10 @@
 # Changelog
 
+## dttr2 0.5.2.9014
+
+- Standardize CI (tier: cran) - update fledge system
+  ([\#134](https://github.com/poissonconsulting/dttr2/issues/134)).
+
 ## dttr2 0.5.2.9013
 
 - Same as previous version.
