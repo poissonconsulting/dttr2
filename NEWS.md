@@ -1,4 +1,9 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
+
+# dttr2 0.5.2.9014
+
+- Standardize CI (tier: cran) - update fledge system (#134).
+
 
 # dttr2 0.5.2.9013
 
