@@ -1,5 +1,15 @@
 # Changelog
 
+## dttr2 0.5.2.9015
+
+- Replace
+  [`rlang::with_options`](https://rlang.r-lib.org/reference/local_options.html)
+  with
+  [`rlang::scoped_options()`](https://rlang.r-lib.org/reference/scoped_interactive.html)
+  fixes [\#7](https://github.com/poissonconsulting/dttr2/issues/7)
+  ([\#131](https://github.com/poissonconsulting/dttr2/issues/131))
+  ([\#7](https://github.com/poissonconsulting/dttr2/issues/7)).
+
 ## dttr2 0.5.2.9014
 
 - Standardize CI (tier: cran) - update fledge system
