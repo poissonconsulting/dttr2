@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.5.2.9015
+
+- Replace `rlang::with_options` with `rlang::scoped_options()` fixes #7 (#131) (#7).
+
+
 # dttr2 0.5.2.9014
 
 - Standardize CI (tier: cran) - update fledge system (#134).
