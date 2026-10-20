@@ -13,10 +13,10 @@ devtools::document()
 devtools::build_readme()
 
 # Note: Only use pkgdown to build a documentation website for public facing packages
-pkgdown::build_home()
-pkgdown::build_reference()
-pkgdown::build_site()
-browseURL("docs/index.html")
+if (file.exists("_pkgdown.yml")) {
+  pkgdown::build_site()
+  browseURL("docs/index.html")
+}
 
 devtools::test()
 devtools::check()
